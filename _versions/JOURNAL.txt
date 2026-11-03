@@ -138,3 +138,14 @@ v6 — Mise en ligne sur Netlify (3 novembre 2026)
   Ajout (même jour) : ENVOYER-SUR-GITHUB.bat — double-clic pour envoyer le
   site sur GitHub (Neressoffi/nyaka) ; le résultat est écrit dans
   envoi-github-journal.txt (ignoré par Git).
+
+--------------------------------------------------------------------------------
+v7 — Suppression du badge « Powered by Netlify » (3 novembre 2026)
+--------------------------------------------------------------------------------
+  MODIFIÉ
+    app/globals.css            Règle CSS qui masque le badge Netlify
+                               (#nl-badge-frame). Rien d'autre ne change.
+    ENVOYER-SUR-GITHUB.bat     Message d'enregistrement générique daté
+                               (« Mise a jour du site NYAKA - date »).
+  RESTAURER LA VERSION D'AVANT (v6)
+    Copier les fichiers de « v7/avant » à leur place (retirer « .txt »).

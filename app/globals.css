@@ -63,3 +63,8 @@ header nav a:hover,
 header nav span[data-state="open"] {
   color: #c9a227;
 }
+
+/* Masque le badge « Powered by Netlify » ajouté automatiquement par Netlify */
+#nl-badge-frame {
+  display: none !important;
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-0: #0a0a0a;
+  --surface-1: #141414;
+  --surface-2: #1e1e1e;
+
+  --foreground-0: #ffffff;
+  --foreground-1: rgba(255, 255, 255, 0.9);
+  --foreground-2: rgba(255, 255, 255, 0.7);
+  --foreground-3: rgba(255, 255, 255, 0.5);
+
+  --accent: #ff58ae;
+
+  --beige-950: #1a1614;
+  --maroon-900: #3d1f1f;
+  --maroon-950: #2a1515;
+  --neutral-875: #262626;
+
+  --marketing-surface-0: #f5f2ed;
+  --marketing-surface-1: #ffffff;
+  --marketing-foreground-0: #171717;
+  --marketing-foreground-1: #404040;
+  --marketing-foreground-2: #737373;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--surface-0);
+  color: var(--foreground-0);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+header nav span,
+header nav a {
+  color: #ffffff;
+  outline: none;
+}
+
+header nav span:hover,
+header nav a:hover,
+header nav span[data-state="open"] {
+  color: #c9a227;
+}
