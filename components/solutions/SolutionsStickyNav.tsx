@@ -66,7 +66,7 @@ export function SolutionsStickyNav() {
 
   return (
     <div
-      className={`sticky top-0 z-30 border-b border-white/10 bg-surface-0/90 backdrop-blur transition-all duration-300 ${
+      className={`sticky top-0 z-30 max-lg:-mb-[61px] border-b border-white/10 bg-surface-0/90 backdrop-blur transition-all duration-300 ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none -translate-y-2 opacity-0"

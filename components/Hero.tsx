@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/40" />
 
-      <div className="relative flex min-h-screen flex-col justify-end">
+      <div className="relative flex min-h-screen flex-col justify-end max-lg:min-h-[100svh]">
         <div className="relative mx-auto flex w-full max-w-screen-2xl items-end justify-between px-4 pb-20 pt-40 lg:px-8 lg:pb-28">
           <div className="max-w-2xl">
             <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur">

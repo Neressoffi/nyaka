@@ -11,11 +11,11 @@ export function HomeReferences() {
         <p className="mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60 sm:text-xs">
           {TXT.titre}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-[10rem]">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 max-sm:gap-x-4 sm:gap-x-[10rem]">
           {LOGOS.map((logo) => (
             <div
               key={logo.name}
-              className="flex h-12 items-center justify-center sm:h-[3.5rem]"
+              className="flex h-12 items-center justify-center max-sm:basis-[28%] sm:h-[3.5rem]"
             >
               <img
                 src={logo.src}

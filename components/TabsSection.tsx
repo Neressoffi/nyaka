@@ -40,7 +40,7 @@ function TabPanel({ tab }: { tab: TabContent }) {
   }, [activeItem, tab.items.length]);
 
   return (
-    <div className="grid min-h-[650px] grid-cols-1 gap-8 overflow-hidden rounded-2lg bg-beige-950 p-6 lg:h-[650px] lg:grid-cols-[320px_minmax(0,1fr)] lg:p-10 xl:grid-cols-[360px_minmax(0,1fr)]">
+    <div className="grid grid-cols-1 lg:min-h-[650px] gap-8 overflow-hidden rounded-2lg bg-beige-950 p-6 lg:h-[650px] lg:grid-cols-[320px_minmax(0,1fr)] lg:p-10 xl:grid-cols-[360px_minmax(0,1fr)]">
 
       <div className="flex min-w-0 flex-col">
 

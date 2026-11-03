@@ -149,3 +149,27 @@ v7 — Suppression du badge « Powered by Netlify » (3 novembre 2026)
                                (« Mise a jour du site NYAKA - date »).
   RESTAURER LA VERSION D'AVANT (v6)
     Copier les fichiers de « v7/avant » à leur place (retirer « .txt »).
+
+--------------------------------------------------------------------------------
+v8 — Responsive mobile (3 novembre 2026)
+--------------------------------------------------------------------------------
+  Uniquement l'affichage sur téléphone et tablette. L'affichage ordinateur est
+  identique au pixel près (comparaison automatique sur les 8 pages, en 1024,
+  1280 et 1440 px).
+
+  CORRIGÉ SUR MOBILE
+    - En-tête : bouton « Démarrer un projet » énorme sur 2 lignes qui cachait le
+      logo -> bouton compact sur une ligne ; icône de recherche visible ;
+      boutons menu et recherche plus grands (44 px, faciles à toucher).
+    - Hero : hauteur adaptée aux barres des navigateurs mobiles (100svh).
+    - Nos quatre pôles : grand vide sous l'image supprimé.
+    - Ils nous font confiance : logos 3 + 2 bien centrés.
+    - Appel final : titre qui ne se coupe plus sur « Parlons-en ».
+    - Pages Solutions, Situation, Approche, À propos : bande noire vide sous
+      l'en-tête supprimée.
+
+  FICHIERS MODIFIÉS
+    components/Header.tsx, Hero.tsx, TabsSection.tsx, HomeReferences.tsx,
+    FinalCta.tsx, approche/ApprocheStickyNav.tsx, apropos/AproposStickyNav.tsx,
+    situation/SituationStickyNav.tsx, solutions/SolutionsStickyNav.tsx
+  RESTAURER : copier les fichiers de « v8/avant » (les « _ » du nom = dossiers).

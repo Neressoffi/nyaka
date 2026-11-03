@@ -19,8 +19,8 @@ export function FinalCta() {
           {TXT.surtitre}
         </p>
 
-        <h2 className="mt-4 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
-          {TXT.titre}
+        <h2 className="mt-4 font-display text-[26px] font-bold leading-[1.2] text-white max-lg:text-balance sm:text-[32px] sm:leading-tight lg:text-[40px]">
+          {TXT.titre.replace(/ ([?!:;])/g, "\u00a0$1")}
         </h2>
 
         <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">

@@ -217,11 +217,12 @@ export function Header() {
 
       <div className="mx-auto flex h-[72px] max-w-screen-2xl items-center justify-between px-4 lg:px-8">
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-3 max-lg:min-w-0 sm:gap-8">
 
           <button
-            className="text-foreground-0 lg:hidden"
+            className="-ml-2 flex h-11 w-11 items-center justify-center rounded-lg text-foreground-0 transition-colors hover:bg-white/10 lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-expanded={mobileOpen}
             aria-label="Ouvrir le menu"
           >
 
@@ -266,19 +267,19 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 max-lg:shrink-0 sm:gap-2">
 
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-2xl leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex"
+            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-base leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex lg:text-2xl lg:leading-none"
           >
             <Search className="h-5 w-5" />{TXT.texte_03}</button>
 
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="p-2 text-foreground-1 md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-foreground-1 transition-colors hover:bg-white/10 md:hidden"
             aria-label="Rechercher"
           >
             <Search className="h-5 w-5" />
@@ -286,12 +287,12 @@ export function Header() {
 
           <Link
             href="/notre-approche"
-            className="hidden rounded-lg px-4 py-2 text-2xl font-medium leading-none text-foreground-1 transition-colors hover:bg-white/10 sm:block"
+            className="hidden rounded-lg px-4 max-lg:whitespace-nowrap py-2 text-base font-medium leading-none text-foreground-1 transition-colors hover:bg-white/10 sm:block lg:text-2xl lg:leading-none"
           >{TXT.texte_04}</Link>
 
           <Link
             href="/demarrer-un-projet"
-            className="rounded-lg bg-white px-4 py-2 text-2xl font-medium leading-none text-black transition-opacity hover:opacity-90"
+            className="rounded-lg bg-white max-lg:whitespace-nowrap px-3 py-2.5 text-sm font-medium leading-none text-black transition-opacity hover:opacity-90 sm:px-4 sm:py-2 sm:text-base lg:text-2xl lg:leading-none"
           >{TXT.texte_05}</Link>
         </div>
       </div>
@@ -309,7 +310,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-lg px-3 py-2.5 text-base text-foreground-1 transition-colors hover:bg-white/5 hover:text-accent"
+              className="rounded-lg px-3 py-3 text-base text-foreground-1 transition-colors hover:bg-white/5 hover:text-accent"
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
