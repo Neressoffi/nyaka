@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { situationsOverview } from "@/lib/situation-data";
+import contenu from "@/content/pages/situation.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/situation.json
+const TXT = contenu.SituationOverview;
 
 export function SituationOverview() {
   return (
@@ -10,17 +14,9 @@ export function SituationOverview() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-            Vue d&apos;ensemble
-          </p>
-          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Commencez par vous reconnaître.
-          </h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-            Cinq situations concrètes pour identifier le moment que traverse
-            votre organisation — avant de parler d&apos;approche ou de
-            solutions.
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -44,9 +40,7 @@ export function SituationOverview() {
                 </p>
               </div>
 
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]">
-                Voir cette situation
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]">{TXT.texte_04}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
           ))}

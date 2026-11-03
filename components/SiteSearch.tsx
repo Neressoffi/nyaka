@@ -10,6 +10,10 @@ import {
 import { useRouter } from "next/navigation";
 import { ArrowRight, Search, X } from "lucide-react";
 import { searchSite, type SearchItem } from "@/lib/search-data";
+import contenu from "@/content/pages/site.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/site.json
+const TXT = contenu.SiteSearch;
 
 type SiteSearchProps = {
   open: boolean;
@@ -138,14 +142,11 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
         <div className="max-h-[50vh] overflow-y-auto p-2">
           {!query.trim() && (
-            <p className="px-3 py-6 text-sm text-foreground-3">
-              Essayez « branding », « KAWA », « vous lancez » ou « IA ».
-            </p>
+            <p className="px-3 py-6 text-sm text-foreground-3">{TXT.texte_01}</p>
           )}
 
           {query.trim() && results.length === 0 && (
-            <p className="px-3 py-6 text-sm text-foreground-3">
-              Aucun résultat pour « {query.trim()} ».
+            <p className="px-3 py-6 text-sm text-foreground-3">{TXT.texte_02}{query.trim()} ».
             </p>
           )}
 
@@ -190,8 +191,8 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
         </div>
 
         <div className="flex items-center justify-between border-t border-white/10 px-4 py-2.5 text-[11px] text-foreground-3">
-          <span>↑↓ naviguer · Entrée ouvrir · Esc fermer</span>
-          <span>Ctrl / ⌘ K</span>
+          <span>{TXT.texte_03}</span>
+          <span>{TXT.texte_04}</span>
         </div>
       </div>
     </div>

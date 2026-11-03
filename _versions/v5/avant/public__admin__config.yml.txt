@@ -1,0 +1,1733 @@
+# Administration NYAKA (Decap CMS)
+# En local : lancer « npm run admin » puis ouvrir http://localhost:3000/admin
+# Fichier généré : la structure correspond aux fichiers du dossier content/.
+
+local_backend: true
+backend:
+  name: github
+  repo: Neressoffi/magic
+  branch: main
+locale: fr
+media_folder: public/media
+public_folder: /media
+collections:
+- name: accueil
+  label: 1. Page d'accueil
+  format: json
+  editor:
+    preview: false
+  files:
+  - label: Page d'accueil — toutes les sections
+    name: accueil
+    file: content/pages/accueil.json
+    fields:
+    - label: En-tête (Hero)
+      name: hero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image
+        widget: image
+      - label: Pastille au-dessus du titre
+        name: pastille
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Sous-texte
+        name: sous_texte
+        widget: string
+      - label: Bouton principal
+        name: bouton_principal
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Bouton secondaire
+        name: bouton_secondaire
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Mention courte
+        name: mention
+        widget: text
+      - label: Séquence dynamique (phrases qui défilent)
+        name: sequence_dynamique
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+    - label: Ils nous font confiance
+      name: references
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Logos
+        name: logos
+        widget: list
+        collapsed: true
+        fields:
+        - label: Nom
+          name: nom
+          widget: string
+        - label: Logo
+          name: logo
+          widget: image
+        summary: '{{fields.nom}}'
+    - label: Nos quatre pôles (titres)
+      name: poles
+      widget: object
+      collapsed: true
+      fields:
+      - label: Surtitre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Sous-texte
+        name: sous_texte
+        widget: text
+    - label: Que souhaitez-vous construire ?
+      name: besoins
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Sous-texte
+        name: sous_texte
+        widget: text
+      - label: Lien en bas de section
+        name: lien_bas
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Cartes
+        name: cartes
+        widget: list
+        collapsed: true
+        fields:
+        - label: Titre
+          name: titre
+          widget: string
+        - label: Description
+          name: description
+          widget: string
+        - label: Icône
+          name: icone
+          widget: select
+          options:
+          - image
+          - agrandir
+          - video
+          - ciseaux
+          - baguette
+          - micro
+          - musique
+          - boite
+        - label: Couleur
+          name: couleur
+          widget: select
+          options:
+          - violet
+          - bleu-ciel
+          - bleu
+          - vert
+          - orange
+        - label: Lien
+          name: lien
+          widget: string
+        summary: '{{fields.titre}}'
+    - label: Nos réalisations
+      name: realisations
+      widget: object
+      collapsed: true
+      fields:
+      - label: Surtitre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Sous-texte
+        name: sous_texte
+        widget: string
+      - label: Étiquette du projet phare
+        name: etiquette_phare
+        widget: string
+      - label: Projet phare
+        name: projet_phare
+        widget: object
+        collapsed: true
+        fields:
+        - label: Nom
+          name: nom
+          widget: string
+        - label: Catégorie
+          name: categorie
+          widget: string
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Image
+          name: image
+          widget: image
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Projets
+        name: projets
+        widget: list
+        collapsed: true
+        fields:
+        - label: Nom
+          name: nom
+          widget: string
+        - label: Catégorie
+          name: categorie
+          widget: string
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Image
+          name: image
+          widget: image
+        - label: Lien
+          name: lien
+          widget: string
+        summary: '{{fields.nom}}'
+      - label: Bouton
+        name: bouton
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+    - label: Pourquoi NYAKA ?
+      name: pourquoi
+      widget: object
+      collapsed: true
+      fields:
+      - label: Surtitre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Cartes
+        name: cartes
+        widget: list
+        collapsed: true
+        fields:
+        - label: Titre
+          name: titre
+          widget: string
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Icône
+          name: icone
+          widget: select
+          options:
+          - balance
+          - calques
+          - branches
+          - etincelles
+        summary: '{{fields.titre}}'
+      - label: Signature
+        name: signature
+        widget: string
+      - label: Bouton principal
+        name: bouton_principal
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Bouton secondaire
+        name: bouton_secondaire
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+    - label: FAQ — Réponses à vos questions
+      name: faq
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Bouton
+        name: bouton
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Questions
+        name: questions
+        widget: list
+        collapsed: true
+        fields:
+        - label: Question
+          name: question
+          widget: string
+        - label: Réponse
+          name: reponse
+          widget: text
+        summary: '{{fields.question}}'
+    - label: Parlons de votre projet (appel final)
+      name: appel_final
+      widget: object
+      collapsed: true
+      fields:
+      - label: Surtitre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Bouton principal
+        name: bouton_principal
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Bouton WhatsApp
+        name: bouton_whatsapp
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: texte
+          widget: string
+        - label: Lien
+          name: lien
+          widget: string
+      - label: Mention courte
+        name: mention
+        widget: string
+  - label: Nos quatre pôles — contenu des onglets
+    name: poles
+    file: content/donnees/tabs-data.json
+    fields:
+    - label: Onglets des pôles
+      name: tabs
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Libellé
+        name: label
+        widget: string
+      - label: Libellé court (mobile)
+        name: shortLabel
+        widget: string
+      - label: Accroche
+        name: panelTitle
+        widget: string
+      - label: Description
+        name: panelDescription
+        widget: text
+      - label: Texte du bouton
+        name: ctaLabel
+        widget: string
+      - label: Lien du bouton
+        name: ctaHref
+        widget: string
+      - label: Composantes
+        name: items
+        widget: list
+        collapsed: true
+        fields:
+        - label: Icône
+          name: icon
+          widget: select
+          options:
+          - image
+          - video
+          - audio
+          - box
+          - layout
+        - label: Titre
+          name: title
+          widget: string
+        - label: Description
+          name: description
+          widget: string
+        - label: Image
+          name: image
+          widget: image
+        summary: '{{fields.title}}'
+      summary: '{{fields.label}}'
+- name: realisations
+  editor:
+    preview: false
+  label: 2. Réalisations
+  format: json
+  files:
+  - label: Projets, projet phare et étude de cas KAWA
+    name: projets
+    file: content/donnees/realisations-data.json
+    fields:
+    - label: Filtres des réalisations
+      name: projectFilters
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Libellé
+        name: label
+        widget: string
+      summary: '{{fields.label}}'
+    - label: Projet phare (page Réalisations)
+      name: featuredProject
+      widget: object
+      collapsed: true
+      fields:
+      - label: Nom
+        name: name
+        widget: string
+      - label: Phrase d'accroche
+        name: tagline
+        widget: string
+      - label: Secteur / catégorie
+        name: sector
+        widget: string
+      - label: Lieu
+        name: location
+        widget: string
+      - label: Situation
+        name: situation
+        widget: text
+      - label: Enjeu
+        name: challenge
+        widget: text
+      - label: Interventions
+        name: interventions
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: text
+      - label: Livrables
+        name: deliverables
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+      - label: Résultat
+        name: result
+        widget: text
+      - label: Image
+        name: image
+        widget: image
+      - label: Galerie d'images
+        name: gallery
+        widget: list
+        field:
+          label: Image
+          name: element
+          widget: image
+      - label: Lien de l'étude de cas
+        name: caseStudyHref
+        widget: string
+    - label: Autres projets
+      name: projects
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Nom
+        name: name
+        widget: string
+      - label: Secteur / catégorie
+        name: sector
+        widget: string
+      - label: Situation
+        name: situation
+        widget: text
+      - label: Interventions
+        name: interventions
+        widget: string
+      - label: Pôles
+        name: poles
+        widget: select
+        multiple: true
+        options:
+        - branding
+        - design
+        - video
+        - ia-data
+      - label: Image
+        name: image
+        widget: image
+      - label: Note interne
+        name: note
+        widget: text
+      summary: '{{fields.name}}'
+    - label: Étude de cas KAWA
+      name: kawaCaseStudy
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Sous-titre
+        name: subtitle
+        widget: string
+      - label: Secteur / catégorie
+        name: sector
+        widget: string
+      - label: Lieu
+        name: location
+        widget: string
+      - label: Image d'en-tête
+        name: heroImage
+        widget: image
+      - label: Sections
+        name: sections
+        widget: list
+        collapsed: true
+        fields:
+        - label: Identifiant (technique — ne pas modifier)
+          name: id
+          widget: string
+          hint: Sert aux liens internes (#ancre). À ne pas modifier.
+        - label: Titre
+          name: title
+          widget: string
+        - label: Contenu
+          name: content
+          widget: text
+        - label: Image
+          name: image
+          widget: image
+        summary: '{{fields.title}}'
+  - label: Textes des pages Réalisations
+    name: textes_realisations
+    file: content/pages/realisations.json
+    fields:
+    - label: Page étude de cas KAWA
+      name: Page_kawa_coffee_shop
+      widget: object
+      collapsed: true
+      fields:
+      - label: Retour aux réalisations
+        name: texte_01
+        widget: string
+      - label: Étude de cas
+        name: texte_02
+        widget: string
+      - label: Votre projet peut être le prochain.
+        name: texte_03
+        widget: string
+      - label: Présentez-nous votre besoin, votre idée ou la transformat…
+        name: texte_04
+        widget: text
+      - label: Démarrer un projet
+        name: texte_05
+        widget: string
+      - label: Voir toutes les réalisations
+        name: texte_06
+        widget: string
+    - label: Projet phare
+      name: RealisationsFeatured
+      widget: object
+      collapsed: true
+      fields:
+      - label: Projet à la une
+        name: texte_01
+        widget: string
+      - label: 'Secteur :'
+        name: texte_02
+        widget: string
+      - label: 'Localisation :'
+        name: texte_03
+        widget: string
+      - label: Situation
+        name: texte_04
+        widget: string
+      - label: Enjeu
+        name: texte_05
+        widget: string
+      - label: Intervention NYAKA
+        name: texte_06
+        widget: string
+      - label: Résultat
+        name: texte_07
+        widget: string
+      - label: Voir l'étude de cas complète
+        name: texte_08
+        widget: string
+      - label: Voir tous les projets
+        name: texte_09
+        widget: string
+    - label: Appel final
+      name: RealisationsFinalCta
+      widget: object
+      collapsed: true
+      fields:
+      - label: Votre projet peut être le prochain.
+        name: texte_01
+        widget: string
+      - label: Présentez-nous votre besoin, votre idée ou la transformat…
+        name: texte_02
+        widget: text
+      - label: Démarrer un projet
+        name: texte_03
+        widget: string
+      - label: Découvrir nos solutions
+        name: texte_04
+        widget: string
+    - label: Grille des projets
+      name: RealisationsGrid
+      widget: object
+      collapsed: true
+      fields:
+      - label: 'Interventions :'
+        name: texte_01
+        widget: string
+      - label: Autres réalisations
+        name: texte_02
+        widget: string
+      - label: Sélection de projets
+        name: texte_03
+        widget: string
+      - label: Des cartes courtes pour montrer la diversité des situatio…
+        name: texte_04
+        widget: text
+    - label: En-tête (Hero)
+      name: RealisationsHero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image_01
+        widget: image
+      - label: Réalisations
+        name: texte_01
+        widget: string
+      - label: Des projets pensés pour résoudre un problème, pas simplem…
+        name: texte_02
+        widget: string
+      - label: Découvrez comment NYAKA transforme un besoin initial en i…
+        name: texte_03
+        widget: text
+      - label: Découvrir le projet KAWA
+        name: texte_04
+        widget: string
+      - label: Parler de votre projet
+        name: texte_05
+        widget: string
+- name: solutions
+  editor:
+    preview: false
+  label: 3. Solutions
+  format: json
+  files:
+  - label: Pôles et solutions
+    name: solutions_donnees
+    file: content/donnees/solutions-data.json
+    fields:
+    - label: Vue d'ensemble des pôles
+      name: solutionsOverview
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Détail des pôles
+      name: solutionsPoles
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Libellé
+        name: label
+        widget: string
+      - label: Titre
+        name: title
+        widget: string
+      - label: Sous-titre
+        name: subtitle
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      - label: Quand ce pôle est pertinent
+        name: whenRelevant
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+      - label: Solutions proposées
+        name: solutions
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+      - label: Preuve / projet
+        name: proof
+        widget: object
+        collapsed: true
+        fields:
+        - label: Projet
+          name: project
+          widget: string
+        - label: Note interne
+          name: note
+          widget: string
+        - label: Image
+          name: image
+          widget: image
+      - label: Bouton principal
+        name: primaryCta
+        widget: object
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+      - label: Bouton secondaire
+        name: secondaryCta
+        widget: object
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+      summary: '{{fields.title}}'
+    - label: Exemples de combinaisons
+      name: combinationExamples
+      widget: list
+      collapsed: true
+      fields:
+      - label: Situation
+        name: situation
+        widget: string
+      - label: Combinaison
+        name: combination
+        widget: string
+      summary: '{{fields.situation}}'
+  - label: Textes de la page Solutions
+    name: textes_solutions
+    file: content/pages/solutions.json
+    fields:
+    - label: Combinaisons
+      name: SolutionsCombination
+      widget: object
+      collapsed: true
+      fields:
+      - label: Combinaison des pôles
+        name: texte_01
+        widget: string
+      - label: Un projet ne se limite pas toujours à une seule expertise
+        name: texte_02
+        widget: string
+      - label: Vous pouvez venir pour un logo, une vidéo, un catalogue o…
+        name: texte_03
+        widget: text
+      - label: Après compréhension de votre situation, NYAKA peut recomm…
+        name: texte_04
+        widget: text
+      - label: Exemples simples
+        name: texte_05
+        widget: string
+    - label: Appel final
+      name: SolutionsFinalCta
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vous avez déjà une idée de ce qu'il vous faut ?
+        name: texte_01
+        widget: string
+      - label: Présentez-nous votre projet, même s'il n'est pas encore t…
+        name: texte_02
+        widget: text
+      - label: Démarrer un projet
+        name: texte_03
+        widget: string
+      - label: Découvrir notre approche
+        name: texte_04
+        widget: string
+    - label: En-tête (Hero)
+      name: SolutionsHero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image_01
+        widget: image
+      - label: Nos solutions
+        name: texte_01
+        widget: string
+      - label: Quatre expertises pour construire une réponse cohérente.
+        name: texte_02
+        widget: string
+      - label: NYAKA accompagne les organisations à travers le branding,…
+        name: texte_03
+        widget: text
+      - label: Parler de votre projet
+        name: texte_04
+        widget: string
+      - label: Voir les quatre pôles
+        name: texte_05
+        widget: string
+      - label: Explorer les expertises
+        name: texte_06
+        widget: string
+    - label: Vue d'ensemble
+      name: SolutionsOverview
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vue d'ensemble
+        name: texte_01
+        widget: string
+      - label: Quatre pôles. Une réponse construite autour de votre besoin.
+        name: texte_02
+        widget: string
+      - label: Identifiez rapidement l'expertise qui correspond à votre …
+        name: texte_03
+        widget: text
+      - label: Voir ce pôle
+        name: texte_04
+        widget: string
+    - label: Détail d'un pôle
+      name: SolutionsPole
+      widget: object
+      collapsed: true
+      fields:
+      - label: Quand ce pôle est pertinent
+        name: texte_01
+        widget: string
+      - label: Solutions principales
+        name: texte_02
+        widget: string
+      - label: Preuve / projet associé
+        name: texte_03
+        widget: string
+- name: situation
+  editor:
+    preview: false
+  label: 4. Votre situation
+  format: json
+  files:
+  - label: Situations
+    name: situation_donnees
+    file: content/donnees/situation-data.json
+    fields:
+    - label: Vue d'ensemble des situations
+      name: situationsOverview
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Détail des situations
+      name: situations
+      widget: list
+      collapsed: true
+      fields:
+      - label: Identifiant (technique — ne pas modifier)
+        name: id
+        widget: string
+        hint: Sert aux liens internes (#ancre). À ne pas modifier.
+      - label: Numéro
+        name: number
+        widget: string
+      - label: Titre
+        name: title
+        widget: string
+      - label: Sous-titre
+        name: subtitle
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      - label: Présentation
+        name: overview
+        widget: string
+      - label: Vous vous reconnaissez si…
+        name: recognizeIf
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+      - label: Comment nous aidons
+        name: howWeHelp
+        widget: list
+        field:
+          label: Élément
+          name: element
+          widget: string
+      - label: Pôles
+        name: poles
+        widget: list
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+        summary: '{{fields.label}}'
+      - label: Bouton
+        name: cta
+        widget: object
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+      - label: Image
+        name: image
+        widget: image
+      summary: '{{fields.title}}'
+  - label: Textes de la page Votre situation
+    name: textes_situation
+    file: content/pages/situation.json
+    fields:
+    - label: Appel final
+      name: SituationFinalCta
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vous vous reconnaissez dans l'une de ces situations ?
+        name: texte_01
+        widget: string
+      - label: Présentez-nous votre projet, même si votre besoin n'est p…
+        name: texte_02
+        widget: text
+      - label: Démarrer un projet
+        name: texte_03
+        widget: string
+      - label: Découvrir nos solutions
+        name: texte_04
+        widget: string
+    - label: En-tête (Hero)
+      name: SituationHero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image_01
+        widget: image
+      - label: Votre situation
+        name: texte_01
+        widget: string
+      - label: À chaque étape importante, votre organisation a besoin d'…
+        name: texte_02
+        widget: string
+      - label: Vous pouvez venir avec une idée précise ou simplement ave…
+        name: texte_03
+        widget: text
+      - label: Identifier votre situation
+        name: texte_04
+        widget: string
+      - label: Parler de votre projet
+        name: texte_05
+        widget: string
+    - label: Vue d'ensemble
+      name: SituationOverview
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vue d'ensemble
+        name: texte_01
+        widget: string
+      - label: Commencez par vous reconnaître.
+        name: texte_02
+        widget: string
+      - label: Cinq situations concrètes pour identifier le moment que t…
+        name: texte_03
+        widget: text
+      - label: Voir cette situation
+        name: texte_04
+        widget: string
+    - label: Sections
+      name: SituationSection
+      widget: object
+      collapsed: true
+      fields:
+      - label: · Votre situation
+        name: texte_01
+        widget: string
+      - label: Vous vous reconnaissez si…
+        name: texte_02
+        widget: string
+      - label: Comment NYAKA peut intervenir
+        name: texte_03
+        widget: string
+      - label: Pôles susceptibles d'être mobilisés
+        name: texte_04
+        widget: string
+      - label: Situation
+        name: texte_05
+        widget: string
+    - label: Transition
+      name: SituationTransition
+      widget: object
+      collapsed: true
+      fields:
+      - label: Transition
+        name: texte_01
+        widget: string
+      - label: Vous n'avez pas besoin d'entrer dans une seule case
+        name: texte_02
+        widget: string
+      - label: Une organisation peut lancer, professionnaliser, communiq…
+        name: texte_03
+        widget: string
+      - label: Les situations présentées servent à vous aider à vous rec…
+        name: texte_04
+        widget: text
+      - label: 'Le principe reste simple : vous venez avec votre réalité …'
+        name: texte_05
+        widget: text
+- name: approche
+  editor:
+    preview: false
+  label: 5. Notre approche
+  format: json
+  files:
+  - label: Modèle, Framework, bénéfices, exemple
+    name: approche_donnees
+    file: content/donnees/approche-data.json
+    fields:
+    - label: Dimensions du modèle
+      name: modeleDimensions
+      widget: list
+      collapsed: true
+      fields:
+      - label: Nom
+        name: name
+        widget: string
+      - label: Question
+        name: question
+        widget: string
+      - label: Ce que l'on regarde
+        name: looksAt
+        widget: string
+      summary: '{{fields.name}}'
+    - label: Phases du Framework
+      name: frameworkPhases
+      widget: list
+      collapsed: true
+      fields:
+      - label: Numéro
+        name: number
+        widget: string
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Bénéfices de l'approche
+      name: approachBenefits
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Lignes de l'exemple
+      name: exampleRows
+      widget: list
+      collapsed: true
+      fields:
+      - label: Libellé
+        name: label
+        widget: string
+      - label: Valeur
+        name: value
+        widget: string
+      summary: '{{fields.label}}'
+  - label: Textes de la page Notre approche
+    name: textes_approche
+    file: content/pages/approche.json
+    fields:
+    - label: Bénéfices
+      name: ApprocheBenefices
+      widget: object
+      collapsed: true
+      fields:
+      - label: Ce que cette approche apporte
+        name: texte_01
+        widget: string
+      - label: Une réponse plus juste, pas une réponse plus compliquée
+        name: texte_02
+        widget: string
+    - label: Exemple
+      name: ApprocheExemple
+      widget: object
+      collapsed: true
+      fields:
+      - label: Exemple concret
+        name: texte_01
+        widget: string
+      - label: Ce que l'approche change dans un projet
+        name: texte_02
+        widget: string
+      - label: 'Demande initiale : « Nous voulons une vidéo publicitaire. »'
+        name: texte_03
+        widget: string
+      - label: 'Autre exemple : un client demande une solution IA ; NYAKA…'
+        name: texte_04
+        widget: text
+    - label: Appel final
+      name: ApprocheFinalCta
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vous avez déjà une idée de ce que vous voulez construire ?
+        name: texte_01
+        widget: string
+      - label: Présentez-nous votre besoin. Nous partirons de votre idée…
+        name: texte_02
+        widget: text
+      - label: Démarrer un projet
+        name: texte_03
+        widget: string
+      - label: Voir nos réalisations
+        name: texte_04
+        widget: string
+    - label: Framework
+      name: ApprocheFramework
+      widget: object
+      collapsed: true
+      fields:
+      - label: Le Framework NYAKA
+        name: texte_01
+        widget: string
+      - label: Six phases, du besoin initial à l'évolution
+        name: texte_02
+        widget: string
+      - label: Le Framework décrit la manière dont NYAKA accompagne un p…
+        name: texte_03
+        widget: text
+    - label: En-tête (Hero)
+      name: ApprocheHero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image_01
+        widget: image
+      - label: Notre approche
+        name: texte_01
+        widget: string
+      - label: Nous ne commençons pas par produire. Nous commençons par …
+        name: texte_02
+        widget: text
+      - label: Un logo, une vidéo, un support ou une solution d'intellig…
+        name: texte_03
+        widget: text
+      - label: Parler de votre projet
+        name: texte_04
+        widget: string
+      - label: Découvrir nos solutions
+        name: texte_05
+        widget: string
+    - label: Modèle
+      name: ApprocheModele
+      widget: object
+      collapsed: true
+      fields:
+      - label: Le Modèle NYAKA
+        name: texte_01
+        widget: string
+      - label: Cinq dimensions à faire évoluer ensemble
+        name: texte_02
+        widget: string
+      - label: NYAKA lit une organisation comme un système. Une solution…
+        name: texte_03
+        widget: text
+    - label: Principe
+      name: ApprochePrincipe
+      widget: object
+      collapsed: true
+      fields:
+      - label: Le principe
+        name: texte_01
+        widget: string
+      - label: Votre demande est le point de départ
+        name: texte_02
+        widget: string
+      - label: 'Vous pouvez venir chez NYAKA avec une demande précise : c…'
+        name: texte_03
+        widget: text
+      - label: Le bon livrable n'est pas toujours la première solution i…
+        name: texte_04
+        widget: string
+      - label: Notre rôle consiste à relier le besoin visible à la réali…
+        name: texte_05
+        widget: text
+    - label: Menu de navigation de la page
+      name: ApprocheStickyNav
+      widget: object
+      collapsed: true
+      fields:
+      - label: 'Libellé : Principe'
+        name: libelle_01
+        widget: string
+      - label: 'Libellé : Modèle'
+        name: libelle_02
+        widget: string
+      - label: 'Libellé : Framework'
+        name: libelle_03
+        widget: string
+      - label: 'Libellé : Exemple'
+        name: libelle_04
+        widget: string
+- name: apropos
+  editor:
+    preview: false
+  label: 6. À propos
+  format: json
+  files:
+  - label: Pôles, principes, équipe, références
+    name: apropos_donnees
+    file: content/donnees/apropos-data.json
+    fields:
+    - label: Pôles
+      name: aproposPoles
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Lien
+        name: href
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Principes
+      name: aproposPrinciples
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      summary: '{{fields.title}}'
+    - label: Rôles de l'équipe
+      name: teamRoles
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      summary: '{{fields.title}}'
+    - label: Références clients
+      name: clientReferences
+      widget: list
+      collapsed: true
+      fields:
+      - label: Nom
+        name: name
+        widget: string
+      - label: Lien
+        name: href
+        widget: string
+      summary: '{{fields.name}}'
+  - label: Textes de la page À propos
+    name: textes_apropos
+    file: content/pages/apropos.json
+    fields:
+    - label: Direction
+      name: AproposDirection
+      widget: object
+      collapsed: true
+      fields:
+      - label: Notre direction
+        name: texte_01
+        widget: string
+      - label: Construire une organisation capable d'évoluer avec ses cl…
+        name: texte_02
+        widget: string
+      - label: NYAKA ne veut pas être définie durablement par une liste …
+        name: texte_03
+        widget: text
+      - label: Cela signifie développer nos compétences, structurer notr…
+        name: texte_04
+        widget: text
+      - label: Les moyens peuvent évoluer. L'exigence de cohérence reste.
+        name: texte_05
+        widget: string
+    - label: Empreinte
+      name: AproposEmpreinte
+      widget: object
+      collapsed: true
+      fields:
+      - label: L'empreinte
+        name: texte_01
+        widget: string
+      - label: « L'empreinte de votre marque »
+        name: texte_02
+        widget: string
+      - label: Pour NYAKA, une marque ne se limite pas à son logo. Elle …
+        name: texte_03
+        widget: text
+      - label: Cette empreinte se construit dans l'identité, les message…
+        name: texte_04
+        widget: text
+      - label: L'objectif n'est pas d'être visible partout. Il est d'êtr…
+        name: texte_05
+        widget: text
+    - label: Équipe
+      name: AproposEquipe
+      widget: object
+      collapsed: true
+      fields:
+      - label: L'équipe et le réseau
+        name: texte_01
+        widget: string
+      - label: Une structure collective, adaptée aux projets
+        name: texte_02
+        widget: string
+      - label: NYAKA fonctionne avec une équipe créative et un réseau de…
+        name: texte_03
+        widget: text
+    - label: Appel final
+      name: AproposFinalCta
+      widget: object
+      collapsed: true
+      fields:
+      - label: Vous voulez voir comment cette approche prend forme dans …
+        name: texte_01
+        widget: string
+      - label: Découvrez nos réalisations ou présentez-nous directement …
+        name: texte_02
+        widget: text
+      - label: Voir nos réalisations
+        name: texte_03
+        widget: string
+      - label: Démarrer un projet
+        name: texte_04
+        widget: string
+    - label: En-tête (Hero)
+      name: AproposHero
+      widget: object
+      collapsed: true
+      fields:
+      - label: Image
+        name: image_01
+        widget: image
+      - label: À propos de NYAKA
+        name: texte_01
+        widget: string
+      - label: Nous aidons les organisations à construire une identité c…
+        name: texte_02
+        widget: text
+      - label: NYAKA réunit création, réflexion stratégique et technolog…
+        name: texte_03
+        widget: text
+      - label: Découvrir nos réalisations
+        name: texte_04
+        widget: string
+      - label: Parler de votre projet
+        name: texte_05
+        widget: string
+    - label: Origine
+      name: AproposOrigine
+      widget: object
+      collapsed: true
+      fields:
+      - label: Notre origine
+        name: texte_01
+        widget: string
+      - label: Pourquoi NYAKA existe
+        name: texte_02
+        widget: string
+      - label: 'NYAKA est née d''un constat simple : une organisation peut…'
+        name: texte_03
+        widget: text
+      - label: Avec le temps, les besoins changent, les équipes grandiss…
+        name: texte_04
+        widget: text
+      - label: Notre rôle est d'aider les organisations à évoluer sans p…
+        name: texte_05
+        widget: text
+    - label: Pôles
+      name: AproposPoles
+      widget: object
+      collapsed: true
+      fields:
+      - label: Ce que nous construisons
+        name: texte_01
+        widget: string
+      - label: Des expertises différentes, réunies autour d'une même log…
+        name: texte_02
+        widget: string
+      - label: NYAKA intervient aujourd'hui à travers quatre pôles. Ils …
+        name: texte_03
+        widget: text
+      - label: Voir toutes nos solutions
+        name: texte_04
+        widget: string
+    - label: Principes
+      name: AproposPrincipes
+      widget: object
+      collapsed: true
+      fields:
+      - label: Nos principes de travail
+        name: texte_01
+        widget: string
+      - label: La manière dont nous choisissons de travailler
+        name: texte_02
+        widget: string
+    - label: Références
+      name: AproposReferences
+      widget: object
+      collapsed: true
+      fields:
+      - label: Preuves et références
+        name: texte_01
+        widget: string
+      - label: La meilleure manière de comprendre NYAKA reste de voir ce…
+        name: texte_02
+        widget: string
+      - label: Plutôt que d'allonger cette page avec des promesses, NYAK…
+        name: texte_03
+        widget: string
+    - label: Menu de navigation de la page
+      name: AproposStickyNav
+      widget: object
+      collapsed: true
+      fields:
+      - label: 'Libellé : Origine'
+        name: libelle_01
+        widget: string
+      - label: 'Libellé : Empreinte'
+        name: libelle_02
+        widget: string
+      - label: 'Libellé : Principes'
+        name: libelle_03
+        widget: string
+      - label: 'Libellé : Équipe'
+        name: libelle_04
+        widget: string
+      - label: 'Libellé : Direction'
+        name: libelle_05
+        widget: string
+- name: demarrer
+  editor:
+    preview: false
+  label: 7. Démarrer un projet
+  format: json
+  files:
+  - label: Textes de la page Démarrer un projet
+    name: textes_demarrer
+    file: content/pages/demarrer.json
+    fields:
+    - label: Page Démarrer un projet
+      name: Page_demarrer_un_projet
+      widget: object
+      collapsed: true
+      fields:
+      - label: Démarrer un projet
+        name: texte_01
+        widget: string
+      - label: Présentez-nous votre projet, même s'il n'est pas encore t…
+        name: texte_02
+        widget: string
+      - label: Un premier échange sert à comprendre votre situation, cla…
+        name: texte_03
+        widget: text
+      - label: Nous écrire
+        name: texte_04
+        widget: string
+      - label: Découvrir nos solutions
+        name: texte_05
+        widget: string
+- name: site
+  editor:
+    preview: false
+  label: 8. Menu, pied de page et recherche
+  format: json
+  files:
+  - label: Menu principal (sous-menus)
+    name: menu
+    file: content/donnees/menu-data.json
+    fields:
+    - label: Menu « Solutions » (colonnes)
+      name: creativeSuiteColumns
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Icône
+        name: icon
+        widget: select
+        options: &id001
+        - image
+        - video
+        - audio
+        - box
+        - palette
+        - wrench
+        - newspaper
+        - graduation
+        - book
+        - users
+        - help
+        - sparkles
+      - label: Liens
+        name: links
+        widget: list
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+        summary: '{{fields.label}}'
+      summary: '{{fields.title}}'
+    - label: Menu « Votre situation » (colonnes)
+      name: stockColumns
+      widget: list
+      collapsed: true
+      fields:
+      - label: Titre
+        name: title
+        widget: string
+      - label: Icône
+        name: icon
+        widget: select
+        options: *id001
+      - label: Liens
+        name: links
+        widget: list
+        collapsed: true
+        fields:
+        - label: Libellé
+          name: label
+          widget: string
+        - label: Lien
+          name: href
+          widget: string
+        summary: '{{fields.label}}'
+      summary: '{{fields.title}}'
+  - label: En-tête, pied de page et recherche
+    name: textes_site
+    file: content/pages/site.json
+    fields:
+    - label: En-tête du site (menu)
+      name: Header
+      widget: object
+      collapsed: true
+      fields:
+      - label: Réalisations
+        name: texte_01
+        widget: string
+      - label: À propos
+        name: texte_02
+        widget: string
+      - label: Rechercher
+        name: texte_03
+        widget: string
+      - label: Notre approche
+        name: texte_04
+        widget: string
+      - label: Démarrer un projet
+        name: texte_05
+        widget: string
+      - label: 'Libellé : Solutions'
+        name: libelle_01
+        widget: string
+      - label: 'Libellé : Votre situation'
+        name: libelle_02
+        widget: string
+      - label: 'Libellé : Notre approche'
+        name: libelle_03
+        widget: string
+      - label: 'Libellé : Ressources'
+        name: libelle_04
+        widget: string
+      - label: 'Libellé : Réalisations'
+        name: libelle_05
+        widget: string
+      - label: 'Libellé : À propos'
+        name: libelle_06
+        widget: string
+    - label: Pied de page
+      name: Footer
+      widget: object
+      collapsed: true
+      fields:
+      - label: 'Libellé : À propos'
+        name: libelle_01
+        widget: string
+      - label: 'Libellé : Notre approche'
+        name: libelle_02
+        widget: string
+      - label: 'Libellé : Réalisations'
+        name: libelle_03
+        widget: string
+      - label: 'Libellé : Démarrer un projet'
+        name: libelle_04
+        widget: string
+      - label: 'Libellé : Branding'
+        name: libelle_05
+        widget: string
+      - label: 'Libellé : Design'
+        name: libelle_06
+        widget: string
+      - label: 'Libellé : Vidéo & campagnes'
+        name: libelle_07
+        widget: string
+      - label: 'Libellé : IA & données'
+        name: libelle_08
+        widget: string
+      - label: 'Libellé : FAQ'
+        name: libelle_09
+        widget: string
+      - label: 'Libellé : LinkedIn'
+        name: libelle_10
+        widget: string
+      - label: 'Libellé : TikTok'
+        name: libelle_11
+        widget: string
+      - label: 'Libellé : WhatsApp'
+        name: libelle_12
+        widget: string
+      - label: NYAKA accompagne les organisations dans la construction e…
+        name: texte_01
+        widget: text
+      - label: © 2026 NYAKA — L'empreinte de votre marque.
+        name: texte_02
+        widget: string
+    - label: Recherche du site
+      name: SiteSearch
+      widget: object
+      collapsed: true
+      fields:
+      - label: Essayez « branding », « KAWA », « vous lancez » ou « IA ».
+        name: texte_01
+        widget: string
+      - label: Aucun résultat pour «
+        name: texte_02
+        widget: string
+      - label: ↑↓ naviguer · Entrée ouvrir · Esc fermer
+        name: texte_03
+        widget: string
+      - label: Ctrl / ⌘ K
+        name: texte_04
+        widget: string

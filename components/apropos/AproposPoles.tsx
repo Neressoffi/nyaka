@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { aproposPoles } from "@/lib/apropos-data";
+import contenu from "@/content/pages/apropos.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/apropos.json
+const TXT = contenu.AproposPoles;
 
 export function AproposPoles() {
   return (
@@ -8,26 +12,15 @@ export function AproposPoles() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-              Ce que nous construisons
-            </p>
-            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-              Des expertises différentes, réunies autour d&apos;une même
-              logique
-            </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-              NYAKA intervient aujourd&apos;hui à travers quatre pôles. Ils
-              peuvent être mobilisés séparément ou combinés selon le besoin du
-              projet.
-            </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
+            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
           </div>
 
           <Link
             href="/solutions"
             className="group inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]"
-          >
-            Voir toutes nos solutions
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          >{TXT.texte_04}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
 

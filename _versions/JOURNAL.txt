@@ -1,0 +1,140 @@
+================================================================================
+NYAKA — JOURNAL DES VERSIONS (modifications faites avec Claude)
+================================================================================
+Chaque version garde une copie des fichiers concernés, pour pouvoir revenir
+en arrière à tout moment. Pour restaurer une version : copier le fichier
+« .tsx.txt » de la version voulue à son emplacement d'origine et retirer
+l'extension « .txt ».
+
+--------------------------------------------------------------------------------
+v1 — ÉTAT DE DÉPART (référence, 2 novembre 2026)
+--------------------------------------------------------------------------------
+  Projet tel qu'il était avant toute modification avec Claude
+  (= la « Version 6 » locale décrite dans HISTORIQUE-VERSIONS-NYAKA.txt).
+  Copies d'origine conservées :
+    v1/TextRoulette.tsx.txt  ->  components/TextRoulette.tsx
+
+--------------------------------------------------------------------------------
+v2 — Triangle de l'accueil en jaune or (2 novembre 2026)
+--------------------------------------------------------------------------------
+  Fichier modifié : components/TextRoulette.tsx (ligne 69)
+  Avant : border-l-[#323232]   (gris foncé)
+  Après : border-l-[#D8A53A]   (jaune or, couleur mesurée sur le logo)
+  Rien d'autre n'a été changé.
+  Copie : v2/TextRoulette.tsx.txt
+
+--------------------------------------------------------------------------------
+v3 — Cahier de corrections n°1 : page d'accueil (2 novembre 2026)
+--------------------------------------------------------------------------------
+  Source : « Cahier de corrections n°1 — Page d'accueil » (01.11.2026).
+
+  NOUVEL ORDRE DE L'ACCUEIL (8 sections)
+    01 Hero · 02 Ils nous font confiance · 03 Nos quatre pôles ·
+    04 Que souhaitez-vous construire ? · 05 Nos réalisations ·
+    06 Pourquoi NYAKA ? · 07 Réponses à vos questions · 08 Parlons de votre projet
+
+  RETIRÉ DE L'ACCUEIL (les fichiers sont conservés, seulement plus affichés)
+    - « Différence NYAKA »                       (components/BentoGrid.tsx)
+    - « À quel moment avez-vous besoin de NYAKA ? » (components/UseCases.tsx)
+    - « Notre manière de travailler »            (components/HomeFramework.tsx)
+    - « Projet phare » KAWA + carrousel « Autres réalisations »
+      (components/HomeKawa.tsx, components/VideosCarousel.tsx)
+      -> remplacés par la galerie unique de la section 05
+
+  FICHIERS MODIFIÉS
+    app/page.tsx                 ordre des 8 sections
+    components/Hero.tsx          titre, sous-texte, 2 boutons ; long paragraphe retiré
+                                 (séquence dynamique et triangle or inchangés)
+    components/TabsSection.tsx   titre + sous-texte des pôles
+    lib/tabs-data.ts             textes des 4 pôles (accroches, descriptions,
+                                 3 composantes, boutons) ; noms des onglets
+    components/TeamPlans.tsx     Pourquoi NYAKA : titre, 4 cartes ; paragraphe
+                                 introductif retiré
+    components/FinalCta.tsx      titre, description, mention courte
+  FICHIER AJOUTÉ
+    components/HomeRealisations.tsx   section 05 : KAWA en grand + grille 2 × 2
+
+  NON MODIFIÉ (conformément au cahier)
+    Ils nous font confiance, Que souhaitez-vous construire ?, FAQ.
+
+  RESTAURER LA VERSION D'AVANT : copier les fichiers de « v1 » (ou « v2 »
+  pour TextRoulette) à leur place et remettre dans app/page.tsx l'ancien
+  contenu (copie : v1/page.tsx.txt). HomeRealisations.tsx peut rester, il ne
+  s'affiche que s'il est appelé dans page.tsx.
+  Copies de cette version : v3/
+
+--------------------------------------------------------------------------------
+v4 — Espace d'administration local (Decap CMS) (3 novembre 2026)
+--------------------------------------------------------------------------------
+  OBJECTIF
+    Modifier soi-même tous les textes, projets et images du site, sans toucher
+    au code. Mode d'emploi : ADMIN-MODE-D-EMPLOI.txt (à la racine de magic).
+
+  UTILISATION
+    npm install        (une seule fois)
+    npm run admin      puis ouvrir http://localhost:3000/admin
+
+  AJOUTÉ
+    content/pages/accueil.json      Page d'accueil (toutes les sections)
+    content/pages/*.json            Textes des autres pages + en-tête, pied de page
+    content/donnees/*.json          Pôles, projets, situations, approche, à propos, menu
+    public/admin/index.html         Page d'administration
+    public/admin/config.yml         Réglages de l'administration
+    ADMIN-MODE-D-EMPLOI.txt
+
+  MODIFIÉ
+    Les composants et fichiers lib/*-data.ts lisent désormais leurs textes
+    dans le dossier content/ au lieu de les contenir en dur.
+    next.config.mjs : /admin redirige vers l'administration.
+    package.json / package-lock.json : scripts « admin » et « cms »,
+    outils concurrently et decap-server.
+
+  VÉRIFICATION
+    Les 8 pages du site affichent exactement les mêmes textes, images et liens
+    qu'en v3 (comparaison automatique page par page).
+
+  RESTAURER LA VERSION D'AVANT (v3)
+    Copier chaque fichier de « v4/avant » à son emplacement d'origine
+    (les « __ » du nom correspondent aux dossiers, ex.
+    components__Hero.tsx.txt -> components/Hero.tsx) et retirer « .txt ».
+    Les dossiers content/ et public/admin/ peuvent alors être supprimés.
+
+--------------------------------------------------------------------------------
+v5 — Design de l'espace d'administration aux couleurs NYAKA (3 novembre 2026)
+--------------------------------------------------------------------------------
+  Seule l'administration (/admin) change. Les pages du site ne sont pas touchées.
+
+  AJOUTÉ
+    public/admin/admin.css   Thème NYAKA : noir et jaune or, polices du site
+                             (Geist, Space Grotesk), cartes arrondies, ombres
+                             douces, animations d'apparition, effets au survol,
+                             champs plus confortables, version mobile.
+  MODIFIÉ
+    public/admin/index.html  Charge le thème et les polices.
+    public/admin/config.yml  Logo NYAKA sur la page de connexion et bouton
+                             « Voir le site ».
+
+  RESTAURER LA VERSION D'AVANT (v4)
+    Copier les 2 fichiers de « v5/avant » à leur place (public/admin/) en
+    retirant « .txt », puis supprimer public/admin/admin.css.
+
+--------------------------------------------------------------------------------
+v6 — Mise en ligne sur Netlify (3 novembre 2026)
+--------------------------------------------------------------------------------
+  PROBLÈME
+    nyakaagency.com affichait « Page not found » : Netlify construisait bien le
+    site (next build) mais sans son moteur Next.js, donc aucune page n'était
+    publiée (journal : « 0 new function(s) to upload »).
+
+  AJOUTÉ
+    netlify.toml   Réglages de construction + moteur Next.js de Netlify
+                   (@netlify/plugin-nextjs).
+  MODIFIÉ
+    package.json / package-lock.json : ajout de @netlify/plugin-nextjs.
+
+  RESTAURER LA VERSION D'AVANT (v5)
+    Copier les 2 fichiers de « v6/avant » à leur place (retirer « .txt ») et
+    supprimer netlify.toml.
+  Ajout (même jour) : ENVOYER-SUR-GITHUB.bat — double-clic pour envoyer le
+  site sur GitHub (Neressoffi/nyaka) ; le résultat est écrit dans
+  envoi-github-journal.txt (ignoré par Git).

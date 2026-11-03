@@ -1,0 +1,64 @@
+{
+  "AproposDirection": {
+    "texte_01": "Notre direction",
+    "texte_02": "Construire une organisation capable d'évoluer avec ses clients",
+    "texte_03": "NYAKA ne veut pas être définie durablement par une liste fixe de prestations. Les outils et les technologies changeront. Notre direction est de renforcer progressivement notre capacité à accompagner les organisations là où leur identité, leur communication, leur expérience et leurs outils doivent évoluer ensemble.",
+    "texte_04": "Cela signifie développer nos compétences, structurer notre réseau de partenaires et intégrer de nouvelles technologies lorsque leur usage apporte une valeur concrète aux projets.",
+    "texte_05": "Les moyens peuvent évoluer. L'exigence de cohérence reste."
+  },
+  "AproposEmpreinte": {
+    "texte_01": "L'empreinte",
+    "texte_02": "« L'empreinte de votre marque »",
+    "texte_03": "Pour NYAKA, une marque ne se limite pas à son logo. Elle laisse une empreinte à travers ce que les personnes reconnaissent, comprennent, ressentent et retiennent lorsqu'elles interagissent avec elle.",
+    "texte_04": "Cette empreinte se construit dans l'identité, les messages, les supports, les contenus, les expériences et les outils utilisés par l'organisation.",
+    "texte_05": "L'objectif n'est pas d'être visible partout. Il est d'être reconnaissable et cohérent là où cela compte."
+  },
+  "AproposEquipe": {
+    "texte_01": "L'équipe et le réseau",
+    "texte_02": "Une structure collective, adaptée aux projets",
+    "texte_03": "NYAKA fonctionne avec une équipe créative et un réseau de partenaires mobilisés selon la nature et l'ampleur des projets. Cette organisation permet de réunir les compétences nécessaires sans prétendre tout produire en interne."
+  },
+  "AproposFinalCta": {
+    "texte_01": "Vous voulez voir comment cette approche prend forme dans des projets réels ?",
+    "texte_02": "Découvrez nos réalisations ou présentez-nous directement ce que votre organisation cherche à construire, améliorer ou transformer.",
+    "texte_03": "Voir nos réalisations",
+    "texte_04": "Démarrer un projet"
+  },
+  "AproposHero": {
+    "image_01": "/media/1011.jpg",
+    "texte_01": "À propos de NYAKA",
+    "texte_02": "Nous aidons les organisations à construire une identité claire et à la faire évoluer avec cohérence.",
+    "texte_03": "NYAKA réunit création, réflexion stratégique et technologie pour accompagner les marques et les organisations dans les moments qui façonnent durablement leur perception et leur évolution.",
+    "texte_04": "Découvrir nos réalisations",
+    "texte_05": "Parler de votre projet"
+  },
+  "AproposOrigine": {
+    "texte_01": "Notre origine",
+    "texte_02": "Pourquoi NYAKA existe",
+    "texte_03": "NYAKA est née d'un constat simple : une organisation peut multiplier les logos, les contenus, les supports et les outils sans construire une identité réellement cohérente.",
+    "texte_04": "Avec le temps, les besoins changent, les équipes grandissent, les technologies évoluent et de nouvelles opportunités apparaissent. Le risque est alors de prendre chaque décision séparément et de perdre progressivement ce qui rend l'organisation claire, reconnaissable et crédible.",
+    "texte_05": "Notre rôle est d'aider les organisations à évoluer sans perdre le fil qui relie ce qu'elles sont, ce qu'elles montrent et ce qu'elles construisent."
+  },
+  "AproposPoles": {
+    "texte_01": "Ce que nous construisons",
+    "texte_02": "Des expertises différentes, réunies autour d'une même logique",
+    "texte_03": "NYAKA intervient aujourd'hui à travers quatre pôles. Ils peuvent être mobilisés séparément ou combinés selon le besoin du projet.",
+    "texte_04": "Voir toutes nos solutions"
+  },
+  "AproposPrincipes": {
+    "texte_01": "Nos principes de travail",
+    "texte_02": "La manière dont nous choisissons de travailler"
+  },
+  "AproposReferences": {
+    "texte_01": "Preuves et références",
+    "texte_02": "La meilleure manière de comprendre NYAKA reste de voir ce que nous construisons",
+    "texte_03": "Plutôt que d'allonger cette page avec des promesses, NYAKA renvoie vers ses réalisations."
+  },
+  "AproposStickyNav": {
+    "libelle_01": "Origine",
+    "libelle_02": "Empreinte",
+    "libelle_03": "Principes",
+    "libelle_04": "Équipe",
+    "libelle_05": "Direction"
+  }
+}

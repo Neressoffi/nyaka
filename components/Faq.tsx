@@ -2,54 +2,15 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import Link from "next/link";
 import { Plus } from "lucide-react";
+import contenu from "@/content/pages/accueil.json";
 
-const QUESTIONS = [
-  {
-    question: "Quels types de projets NYAKA accompagne-t-elle ?",
-    answer:
-      "NYAKA intervient sur des projets de branding et d'identité de marque, de design et de supports de communication, de contenus vidéo et de campagnes créatives, ainsi que sur certains besoins liés à l'intelligence artificielle, à l'automatisation et aux données.",
-  },
-  {
-    question: "Puis-je vous contacter si mon idée n'est pas encore bien structurée ?",
-    answer:
-      "Oui. Vous pouvez nous présenter une idée, un besoin ou une difficulté encore imprécise. Le premier échange sert justement à clarifier la situation, le résultat attendu et le bon point de départ.",
-  },
-  {
-    question: "Travaillez-vous seulement avec des entreprises déjà établies ?",
-    answer:
-      "Non. NYAKA peut accompagner un projet au stade de l'idée, une marque en lancement, une organisation déjà active ou une entreprise qui prépare une évolution importante.",
-  },
-  {
-    question: "Puis-je commander uniquement un logo, une vidéo ou un support précis ?",
-    answer:
-      "Oui, lorsqu'une intervention ciblée correspond réellement au besoin. Nous prendrons néanmoins le temps de comprendre le contexte afin que le livrable soit cohérent avec votre objectif et votre organisation.",
-  },
-  {
-    question: "Comment se déroule un projet avec NYAKA ?",
-    answer:
-      "Après la présentation du besoin, nous cadrons la mission, clarifions les objectifs, proposons une démarche et un périmètre, puis nous avançons après validation. Selon le projet, NYAKA produit directement, coordonne des partenaires et peut accompagner la mise en œuvre ou l'évolution.",
-  },
-  {
-    question: "Travaillez-vous avec des clients situés dans d'autres pays ?",
-    answer:
-      "Oui. Une partie des projets peut être conduite à distance. Lorsque le projet exige une présence locale ou une compétence particulière, nous définissons les modalités et les partenaires nécessaires.",
-  },
-  {
-    question: "Que propose NYAKA en intelligence artificielle et en données ?",
-    answer:
-      "Nous aidons à identifier des usages utiles, puis à concevoir ou coordonner des assistants intelligents, des automatisations ciblées, des systèmes de collecte et de structuration de données ou des expériences connectées. Le périmètre dépend du besoin, des données disponibles et de la faisabilité technique.",
-  },
-  {
-    question: "Comment sont calculés les tarifs ?",
-    answer:
-      "Les tarifs dépendent du périmètre, de la complexité, des livrables, des délais et des expertises mobilisées. Après un premier échange, nous transmettons une proposition claire avec les étapes, les responsabilités et les conditions de collaboration.",
-  },
-  {
-    question: "Combien de temps faut-il pour réaliser un projet ?",
-    answer:
-      "La durée varie selon la nature du besoin et les validations nécessaires. Le calendrier est défini avant le démarrage et ajusté uniquement lorsque le périmètre évolue ou qu'une dépendance externe le nécessite.",
-  },
-];
+// Questions gérées depuis l'administration (Decap CMS) : content/pages/accueil.json
+const TXT = contenu.faq;
+
+const QUESTIONS = TXT.questions.map((item) => ({
+  question: item.question,
+  answer: item.reponse,
+}));
 
 export function Faq() {
   return (
@@ -58,14 +19,14 @@ export function Faq() {
 
         <div>
           <h2 className="max-w-xs font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Réponses à vos questions
+            {TXT.titre}
           </h2>
 
           <Link
-            href="/demarrer-un-projet"
+            href={TXT.bouton.lien}
             className="mt-6 inline-block rounded-lg border border-black/20 px-5 py-2.5 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5 sm:text-[15px]"
           >
-            Parler de votre projet
+            {TXT.bouton.texte}
           </Link>
         </div>
 

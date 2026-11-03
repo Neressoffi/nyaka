@@ -1,0 +1,37 @@
+{
+  "name": "magic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cms": "decap-server",
+    "admin": "concurrently --names \"site,admin\" \"next dev\" \"decap-server\""
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.16",
+    "@radix-ui/react-popover": "^1.1.19",
+    "@radix-ui/react-tabs": "^1.1.17",
+    "geist": "^1.7.2",
+    "keen-slider": "^6.8.6",
+    "lucide-react": "^1.24.0",
+    "next": "^14.2.35",
+    "next-themes": "^0.4.6",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "concurrently": "^10.0.6",
+    "decap-server": "^3.11.6"
+  }
+}

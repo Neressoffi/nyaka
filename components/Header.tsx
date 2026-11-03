@@ -32,6 +32,10 @@ import {
 import { SiteSearch } from "@/components/SiteSearch";
 import { ANNOUNCEMENT } from "@/components/TopBanner";
 import { NyakaLogo } from "@/components/NyakaLogo";
+import contenu from "@/content/pages/site.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/site.json
+const TXT = contenu.Header;
 
 const ICONS: Record<string, React.ElementType> = {
   image: ImageIcon,
@@ -253,16 +257,12 @@ export function Header() {
             <Link
               href="/realisations"
               className="hidden text-2xl leading-none xl:block"
-            >
-              Réalisations
-            </Link>
+            >{TXT.texte_01}</Link>
 
             <Link
               href="/a-propos"
               className="text-2xl leading-none"
-            >
-              À propos
-            </Link>
+            >{TXT.texte_02}</Link>
           </nav>
         </div>
 
@@ -273,9 +273,7 @@ export function Header() {
             onClick={() => setSearchOpen(true)}
             className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-2xl leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex"
           >
-            <Search className="h-5 w-5" />
-            Rechercher
-          </button>
+            <Search className="h-5 w-5" />{TXT.texte_03}</button>
 
           <button
             type="button"
@@ -289,28 +287,24 @@ export function Header() {
           <Link
             href="/notre-approche"
             className="hidden rounded-lg px-4 py-2 text-2xl font-medium leading-none text-foreground-1 transition-colors hover:bg-white/10 sm:block"
-          >
-            Notre approche
-          </Link>
+          >{TXT.texte_04}</Link>
 
           <Link
             href="/demarrer-un-projet"
             className="rounded-lg bg-white px-4 py-2 text-2xl font-medium leading-none text-black transition-opacity hover:opacity-90"
-          >
-            Démarrer un projet
-          </Link>
+          >{TXT.texte_05}</Link>
         </div>
       </div>
 
       {mobileOpen && (
         <nav className="mx-4 mt-2 flex flex-col gap-1 rounded-2lg bg-surface-1 p-4 lg:hidden">
           {[
-            { label: "Solutions", href: "/solutions" },
-            { label: "Votre situation", href: "/votre-situation" },
-            { label: "Notre approche", href: "/notre-approche" },
-            { label: "Ressources", href: "#" },
-            { label: "Réalisations", href: "/realisations" },
-            { label: "À propos", href: "/a-propos" },
+            { label: TXT.libelle_01, href: "/solutions" },
+            { label: TXT.libelle_02, href: "/votre-situation" },
+            { label: TXT.libelle_03, href: "/notre-approche" },
+            { label: TXT.libelle_04, href: "#" },
+            { label: TXT.libelle_05, href: "/realisations" },
+            { label: TXT.libelle_06, href: "/a-propos" },
           ].map((item) => (
             <Link
               key={item.label}

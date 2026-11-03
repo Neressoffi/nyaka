@@ -1,0 +1,70 @@
+================================================================================
+NYAKA — ESPACE D'ADMINISTRATION (Decap CMS) — MODE D'EMPLOI
+================================================================================
+
+À QUOI ÇA SERT
+  Modifier vous-même tous les textes, projets et images du site, sans toucher
+  au code. Tout est enregistré dans vos propres fichiers (dossier « content »).
+
+--------------------------------------------------------------------------------
+1. LA PREMIÈRE FOIS SEULEMENT
+--------------------------------------------------------------------------------
+  Ouvrez un terminal dans le dossier « magic » et tapez :
+
+      npm install
+
+--------------------------------------------------------------------------------
+2. OUVRIR L'ADMINISTRATION (à chaque fois)
+--------------------------------------------------------------------------------
+  Dans le terminal, dossier « magic » :
+
+      npm run admin
+
+  Attendez la ligne « Ready » puis ouvrez dans votre navigateur :
+
+      http://localhost:3000/admin      -> l'administration
+      http://localhost:3000            -> le site (se met à jour en direct)
+
+  Cliquez sur « Se connecter » (aucun mot de passe en local).
+
+  Pour arrêter : dans le terminal, Ctrl + C.
+
+--------------------------------------------------------------------------------
+3. MODIFIER UN CONTENU
+--------------------------------------------------------------------------------
+  1) À gauche, choisissez la page (1. Page d'accueil, 2. Réalisations…).
+  2) Ouvrez le fichier voulu, dépliez la section (flèche >).
+  3) Modifiez le texte ou cliquez sur « Choisir une image différente ».
+  4) Cliquez sur « Publier » puis « Publier maintenant ».
+  5) Rechargez http://localhost:3000 : la modification est visible.
+
+  Les images ajoutées sont enregistrées dans public/media.
+
+--------------------------------------------------------------------------------
+4. OÙ SONT VOS DONNÉES
+--------------------------------------------------------------------------------
+  content/pages/accueil.json        Page d'accueil (toutes les sections)
+  content/donnees/*.json            Pôles, projets, situations, approche,
+                                    à propos, menu
+  content/pages/*.json              Textes des autres pages, en-tête,
+                                    pied de page
+  public/admin/config.yml           Réglages de l'administration
+
+  Ce sont de simples fichiers texte : vous pouvez les copier, les sauvegarder
+  et les retrouver sur GitHub.
+
+--------------------------------------------------------------------------------
+5. METTRE LES MODIFICATIONS EN LIGNE
+--------------------------------------------------------------------------------
+  En local, les modifications restent sur votre ordinateur. Pour les mettre
+  sur le site public : les envoyer sur GitHub (commit + push), l'hébergeur
+  (Netlify) met alors le site à jour automatiquement.
+
+--------------------------------------------------------------------------------
+CONSEILS
+--------------------------------------------------------------------------------
+  - Les champs « Identifiant » servent aux liens internes : ne pas les changer.
+  - Les champs « Lien » commencent par / pour une page du site
+    (ex. /realisations) ou par https:// pour un site externe.
+  - En cas d'erreur, une copie de chaque version est dans le dossier
+    _versions (voir JOURNAL.txt).

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cms": "decap-server",
+    "admin": "concurrently --names \"site,admin\" \"next dev\" \"decap-server\""
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.16",
@@ -21,9 +23,12 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.16.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^10.0.6",
+    "decap-server": "^3.11.6",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",

@@ -1,0 +1,9 @@
+# Configuration Netlify du site NYAKA (Next.js)
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Moteur officiel Next.js de Netlify : transforme le résultat de « next build »
+# en vraies pages servies par Netlify (sans lui, le site affiche « Page not found »).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

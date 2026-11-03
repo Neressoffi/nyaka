@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import type { SolutionPole } from "@/lib/solutions-data";
+import contenu from "@/content/pages/solutions.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/solutions.json
+const TXT = contenu.SolutionsPole;
 
 export function SolutionsPole({
   pole,
@@ -59,9 +63,7 @@ export function SolutionsPole({
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
                   }`}
-                >
-                  Quand ce pôle est pertinent
-                </h3>
+                >{TXT.texte_01}</h3>
                 <ul className="mt-4 flex flex-col gap-3">
                   {pole.whenRelevant.map((item) => (
                     <li
@@ -90,9 +92,7 @@ export function SolutionsPole({
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
                   }`}
-                >
-                  Solutions principales
-                </h3>
+                >{TXT.texte_02}</h3>
                 <ul className="mt-4 flex flex-col gap-3">
                   {pole.solutions.map((item) => (
                     <li
@@ -149,9 +149,7 @@ export function SolutionsPole({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/80 sm:text-xs">
-                Preuve / projet associé
-              </p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/80 sm:text-xs">{TXT.texte_03}</p>
               <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
                 {pole.proof.project}
               </p>

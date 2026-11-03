@@ -5,6 +5,10 @@ import { TopBanner } from "@/components/TopBanner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { kawaCaseStudy } from "@/lib/realisations-data";
+import contenu from "@/content/pages/realisations.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/realisations.json
+const TXT = contenu.Page_kawa_coffee_shop;
 
 export const metadata: Metadata = {
   title: "Étude de cas KAWA Coffee Shop | NYAKA",
@@ -31,13 +35,9 @@ export default function KawaCaseStudyPage() {
             href="/realisations"
             className="mb-8 inline-flex w-fit items-center gap-2 text-sm text-white/70 transition-colors hover:text-white sm:text-[15px]"
           >
-            <ArrowLeft className="h-4 w-4" />
-            Retour aux réalisations
-          </Link>
+            <ArrowLeft className="h-4 w-4" />{TXT.texte_01}</Link>
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white sm:text-xs">
-            Étude de cas
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white sm:text-xs">{TXT.texte_02}</p>
           <h1 className="mt-4 max-w-4xl font-display text-[30px] font-bold leading-[1.15] text-white sm:text-[38px] lg:text-[52px]">
             {kawaCaseStudy.title}
           </h1>
@@ -115,29 +115,19 @@ export default function KawaCaseStudyPage() {
         <div className="absolute left-1/2 top-1/2 h-px w-[160%] -translate-x-1/2 -rotate-[8deg] bg-accent/70" />
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Votre projet peut être le prochain.
-          </h2>
-          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
-            Présentez-nous votre besoin, votre idée ou la transformation que
-            vous préparez. Nous partirons de votre situation pour construire
-            la réponse adaptée.
-          </p>
+          <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_03}</h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">{TXT.texte_04}</p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="#"
               className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-85 sm:text-[15px]"
-            >
-              Démarrer un projet
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            >{TXT.texte_05}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               href="/realisations"
               className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
-            >
-              Voir toutes les réalisations
-            </Link>
+            >{TXT.texte_06}</Link>
           </div>
         </div>
       </section>

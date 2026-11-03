@@ -1,0 +1,35 @@
+{
+  "SolutionsCombination": {
+    "texte_01": "Combinaison des pôles",
+    "texte_02": "Un projet ne se limite pas toujours à une seule expertise",
+    "texte_03": "Vous pouvez venir pour un logo, une vidéo, un catalogue ou une idée liée à l'IA. Le besoin initial reste le point de départ.",
+    "texte_04": "Après compréhension de votre situation, NYAKA peut recommander une intervention limitée à un seul pôle ou une combinaison de plusieurs expertises. L'objectif n'est pas d'ajouter des prestations, mais de construire la réponse réellement nécessaire.",
+    "texte_05": "Exemples simples"
+  },
+  "SolutionsFinalCta": {
+    "texte_01": "Vous avez déjà une idée de ce qu'il vous faut ?",
+    "texte_02": "Présentez-nous votre projet, même s'il n'est pas encore totalement structuré. Nous vous aiderons à clarifier le besoin et à définir la réponse adaptée.",
+    "texte_03": "Démarrer un projet",
+    "texte_04": "Découvrir notre approche"
+  },
+  "SolutionsHero": {
+    "image_01": "/media/1036.jpg",
+    "texte_01": "Nos solutions",
+    "texte_02": "Quatre expertises pour construire une réponse cohérente.",
+    "texte_03": "NYAKA accompagne les organisations à travers le branding, le design, la création vidéo, l'intelligence artificielle et les données. Selon votre situation, nous mobilisons une ou plusieurs expertises autour d'un même objectif.",
+    "texte_04": "Parler de votre projet",
+    "texte_05": "Voir les quatre pôles",
+    "texte_06": "Explorer les expertises"
+  },
+  "SolutionsOverview": {
+    "texte_01": "Vue d'ensemble",
+    "texte_02": "Quatre pôles. Une réponse construite autour de votre besoin.",
+    "texte_03": "Identifiez rapidement l'expertise qui correspond à votre situation. Un même projet peut ensuite mobiliser plusieurs pôles.",
+    "texte_04": "Voir ce pôle"
+  },
+  "SolutionsPole": {
+    "texte_01": "Quand ce pôle est pertinent",
+    "texte_02": "Solutions principales",
+    "texte_03": "Preuve / projet associé"
+  }
+}

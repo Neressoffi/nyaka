@@ -13,6 +13,10 @@ import {
 } from "lucide-react";
 
 import { tabs, type TabContent } from "@/lib/tabs-data";
+import contenu from "@/content/pages/accueil.json";
+
+// Titres gérés depuis l'administration : content/pages/accueil.json
+const TXT = contenu.poles;
 
 const ICONS: Record<string, React.ElementType> = {
   image: ImageIcon,
@@ -168,15 +172,14 @@ export function TabsSection() {
       <div className="mx-auto max-w-screen-2xl">
 
         <p className="text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-          Nos quatre pôles
+          {TXT.surtitre}
         </p>
         <h2 className="mt-3 text-center font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-          Une idée peut demander plusieurs expertises.
+          {TXT.titre}
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-center text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-          Nos quatre pôles peuvent intervenir séparément ou se combiner autour
-          d&apos;une même direction, selon la réalité de votre projet.
+          {TXT.sous_texte}
         </p>
 
         <Tabs.Root value={activeTab} onValueChange={setActiveTab}>

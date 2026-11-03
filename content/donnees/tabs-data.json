@@ -1,0 +1,120 @@
+{
+  "tabs": [
+    {
+      "id": "branding",
+      "label": "Branding",
+      "shortLabel": "Branding",
+      "panelTitle": "Une identité qui vous distingue.",
+      "panelDescription": "Nous créons et faisons évoluer des identités de marque fortes, reconnaissables et cohérentes.",
+      "ctaLabel": "Explorer le branding",
+      "ctaHref": "/solutions#branding",
+      "items": [
+        {
+          "icon": "image",
+          "title": "Positionnement",
+          "description": "Définir ce qui vous rend unique.",
+          "image": "/media/1025.jpg"
+        },
+        {
+          "icon": "layout",
+          "title": "Identité visuelle",
+          "description": "Créer un univers reconnaissable.",
+          "image": "/media/1065.jpg"
+        },
+        {
+          "icon": "box",
+          "title": "Direction artistique",
+          "description": "Assurer la cohérence de votre image.",
+          "image": "/media/1055.jpg"
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "shortLabel": "Design",
+      "panelTitle": "Des supports qui valorisent vos idées.",
+      "panelDescription": "Nous concevons des supports visuels professionnels pour présenter vos offres et donner de l'impact à vos messages.",
+      "ctaLabel": "Explorer le design",
+      "ctaHref": "/solutions#design",
+      "items": [
+        {
+          "icon": "layout",
+          "title": "Design graphique",
+          "description": "Flyers, affiches et créations visuelles.",
+          "image": "/media/1065.jpg"
+        },
+        {
+          "icon": "image",
+          "title": "Édition & print",
+          "description": "Brochures, catalogues et menus.",
+          "image": "/media/1025.jpg"
+        },
+        {
+          "icon": "box",
+          "title": "Supports digitaux",
+          "description": "Présentations et expériences visuelles.",
+          "image": "/media/1055.jpg"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "label": "Vidéo & campagnes",
+      "shortLabel": "Vidéo & campagnes",
+      "panelTitle": "Des contenus qui captent l'attention.",
+      "panelDescription": "Nous donnons vie à vos messages avec des vidéos et des campagnes créatives pensées pour votre public.",
+      "ctaLabel": "Découvrir nos productions",
+      "ctaHref": "/solutions#video",
+      "items": [
+        {
+          "icon": "video",
+          "title": "Production vidéo",
+          "description": "Spots, teasers et vidéos publicitaires.",
+          "image": "/media/1035.jpg"
+        },
+        {
+          "icon": "box",
+          "title": "Concept créatif",
+          "description": "Scénarios, messages et direction de campagne.",
+          "image": "/media/1045.jpg"
+        },
+        {
+          "icon": "image",
+          "title": "Montage & déclinaisons",
+          "description": "Des contenus adaptés à chaque canal.",
+          "image": "/media/1025.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ia-data",
+      "label": "IA & Data",
+      "shortLabel": "IA & Data",
+      "panelTitle": "Des solutions intelligentes pour vos activités.",
+      "panelDescription": "Nous concevons des solutions d'IA, de collecte de données et d'automatisation adaptées à vos besoins.",
+      "ctaLabel": "Explorer nos solutions IA",
+      "ctaHref": "/solutions#ia-data",
+      "items": [
+        {
+          "icon": "audio",
+          "title": "Assistants IA",
+          "description": "Chatbots et assistants spécialisés.",
+          "image": "/media/1055.jpg"
+        },
+        {
+          "icon": "layout",
+          "title": "Automatisation",
+          "description": "Simplifier les tâches et les processus.",
+          "image": "/media/1065.jpg"
+        },
+        {
+          "icon": "box",
+          "title": "Data & analyse",
+          "description": "Collecter, structurer et exploiter les données.",
+          "image": "/media/1045.jpg"
+        }
+      ]
+    }
+  ]
+}

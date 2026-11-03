@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { frameworkPhases } from "@/lib/approche-data";
+import contenu from "@/content/pages/approche.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/approche.json
+const TXT = contenu.ApprocheFramework;
 
 export function ApprocheFramework() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,16 +24,9 @@ export function ApprocheFramework() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-            Le Framework NYAKA
-          </p>
-          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Six phases, du besoin initial à l&apos;évolution
-          </h2>
-          <p className="mt-5 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-            Le Framework décrit la manière dont NYAKA accompagne un projet.
-            Un parcours continu, du cadrage jusqu&apos;à l&apos;évolution.
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
         </div>
 
         <div className="mt-10 h-1 overflow-hidden rounded-full bg-black/10">

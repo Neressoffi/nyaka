@@ -1,0 +1,480 @@
+/* ==========================================================================
+   NYAKA — Thème de l'espace d'administration (Decap CMS)
+   Ne concerne que /admin : les pages publiques du site ne sont pas touchées.
+   ========================================================================== */
+
+:root {
+  --nk-noir: #0b0b0c;
+  --nk-noir-2: #161618;
+  --nk-or: #d8a53a;
+  --nk-or-fonce: #b9872a;
+  --nk-or-clair: #f6ead0;
+  --nk-fond: #f5f2ed;
+  --nk-carte: #ffffff;
+  --nk-texte: #171717;
+  --nk-texte-2: #5f5b55;
+  --nk-bord: #e7e1d6;
+  --nk-rayon: 14px;
+  --nk-ombre: 0 1px 2px rgba(20, 16, 8, 0.04), 0 8px 24px rgba(20, 16, 8, 0.06);
+  --nk-ombre-forte: 0 2px 4px rgba(20, 16, 8, 0.06), 0 16px 40px rgba(20, 16, 8, 0.12);
+  --nk-transition: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --nk-police: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --nk-police-titre: "Space Grotesk", "Geist", system-ui, sans-serif;
+}
+
+/* ---------- Base ---------- */
+html,
+body {
+  background: var(--nk-fond) !important;
+}
+
+#nc-root,
+#nc-root button,
+#nc-root input,
+#nc-root textarea,
+#nc-root select {
+  font-family: var(--nk-police) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+#nc-root a,
+#nc-root button,
+#nc-root input,
+#nc-root textarea,
+#nc-root [class*="-ListCard"],
+#nc-root [class*="-TopBarContainer"],
+#nc-root [class*="-SidebarNavLink"] {
+  transition: background-color var(--nk-transition), color var(--nk-transition),
+    border-color var(--nk-transition), box-shadow var(--nk-transition),
+    transform var(--nk-transition), opacity var(--nk-transition);
+}
+
+/* Apparition douce des écrans */
+@keyframes nk-apparition {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#nc-root [class*="-AppMainContainer"] > *,
+#nc-root [class*="-EditorContainer"],
+#nc-root [class*="-StyledAuthenticationPage"] > * {
+  animation: nk-apparition 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Barres de défilement discrètes */
+#nc-root ::-webkit-scrollbar { width: 10px; height: 10px; }
+#nc-root ::-webkit-scrollbar-thumb { background: #d9d2c4; border-radius: 10px; border: 2px solid var(--nk-fond); }
+#nc-root ::-webkit-scrollbar-thumb:hover { background: var(--nk-or); }
+
+/* Focus clavier visible et élégant */
+#nc-root :focus-visible {
+  outline: 2px solid var(--nk-or) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- Page de connexion ---------- */
+#nc-root [class*="-StyledAuthenticationPage"] {
+  min-height: 100vh;
+  background:
+    radial-gradient(60% 50% at 50% 35%, rgba(216, 165, 58, 0.22), transparent 70%),
+    radial-gradient(40% 40% at 85% 90%, rgba(216, 165, 58, 0.10), transparent 70%),
+    linear-gradient(180deg, #0b0b0c 0%, #141210 100%) !important;
+  gap: 18px;
+}
+#nc-root [class*="-StyledAuthenticationPage"] img {
+  max-width: 260px !important;
+  max-height: 90px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 30px rgba(216, 165, 58, 0.25));
+}
+#nc-root [class*="-StyledAuthenticationPage"]::after {
+  content: "Espace d’administration — gérez vos contenus en toute simplicité";
+  order: 99;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 0 24px;
+}
+#nc-root [class*="-LoginButton"] {
+  background: var(--nk-or) !important;
+  color: var(--nk-noir) !important;
+  border-radius: 999px !important;
+  padding: 0 34px !important;
+  height: 46px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  box-shadow: 0 10px 30px rgba(216, 165, 58, 0.35) !important;
+}
+#nc-root [class*="-LoginButton"]:hover {
+  background: #e4b44b !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(216, 165, 58, 0.45) !important;
+}
+
+/* ---------- En-tête de l'application ---------- */
+#nc-root header[class*="-AppHeader"] {
+  background: var(--nk-noir) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+}
+#nc-root [class*="-AppHeaderContent"]::before {
+  content: "NYAKA";
+  font-family: var(--nk-police-titre);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  font-size: 15px;
+  color: var(--nk-or);
+  margin-right: 28px;
+  display: flex;
+  align-items: center;
+}
+#nc-root [class*="-AppHeaderButton"],
+#nc-root [class*="-AppHeaderNavLink"] {
+  color: rgba(255, 255, 255, 0.72) !important;
+  border-radius: 10px !important;
+}
+#nc-root [class*="-AppHeaderButton"] svg,
+#nc-root [class*="-AppHeaderNavLink"] svg {
+  color: inherit !important;
+}
+#nc-root [class*="-AppHeaderButton"]:hover,
+#nc-root [class*="-AppHeaderNavLink"]:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+#nc-root .header-link-active {
+  color: var(--nk-or) !important;
+  background: rgba(216, 165, 58, 0.12) !important;
+}
+#nc-root header[class*="-AppHeader"] [class*="-IconWrapper"] { color: inherit !important; }
+#nc-root [class*="-AvatarDropdownButton"] svg { color: var(--nk-or) !important; }
+
+/* Lien « Voir le site » */
+#nc-root [class*="-AppHeaderSiteLink"] {
+  font-size: 0 !important;
+  border: 1px solid rgba(216, 165, 58, 0.55) !important;
+  border-radius: 999px !important;
+  padding: 0 16px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center;
+  background: transparent !important;
+}
+#nc-root [class*="-AppHeaderSiteLink"]::before {
+  content: "Voir le site ↗";
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--nk-or);
+}
+#nc-root [class*="-AppHeaderSiteLink"]:hover {
+  background: var(--nk-or) !important;
+}
+#nc-root [class*="-AppHeaderSiteLink"]:hover::before { color: var(--nk-noir); }
+#nc-root [class*="-ToolbarContainer"] [class*="-AppHeaderSiteLink"]::before { color: var(--nk-or-fonce); }
+
+/* ---------- Barre latérale ---------- */
+#nc-root [class*="-SidebarContainer"] {
+  background: var(--nk-carte) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--nk-ombre) !important;
+  border: 1px solid var(--nk-bord);
+  padding: 8px 0 12px !important;
+  overflow: hidden;
+}
+#nc-root [class*="-SidebarHeading"] {
+  font-family: var(--nk-police-titre) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--nk-texte-2) !important;
+}
+#nc-root [class*="-SidebarNavLink"] {
+  margin: 2px 10px !important;
+  border-radius: 10px !important;
+  border-left: none !important;
+  padding: 11px 14px !important;
+  color: var(--nk-texte) !important;
+  font-weight: 500 !important;
+}
+#nc-root [class*="-SidebarNavLink"]:hover {
+  background: var(--nk-fond) !important;
+  transform: translateX(2px);
+}
+#nc-root .sidebar-active {
+  background: var(--nk-noir) !important;
+  color: #fff !important;
+  box-shadow: inset 3px 0 0 var(--nk-or);
+}
+#nc-root .sidebar-active svg { color: var(--nk-or) !important; }
+
+/* Recherche */
+#nc-root [class*="-SearchInput"] {
+  border-radius: 999px !important;
+  background: var(--nk-fond) !important;
+  border: 1px solid var(--nk-bord) !important;
+}
+#nc-root [class*="-SearchInput"]:focus {
+  border-color: var(--nk-or) !important;
+  box-shadow: 0 0 0 4px rgba(216, 165, 58, 0.15) !important;
+}
+
+/* ---------- Liste des fichiers d'une collection ---------- */
+#nc-root [class*="-ViewControlsButton"] { color: #b9b1a3 !important; }
+#nc-root [class*="-ViewControlsButton"] svg { color: inherit !important; }
+#nc-root [class*="-ViewControlsButton"]:hover { color: var(--nk-or) !important; }
+
+#nc-root [class*="-CollectionTopContainer"] {
+  background: var(--nk-carte) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--nk-ombre) !important;
+  border: 1px solid var(--nk-bord);
+}
+#nc-root [class*="-CollectionTopHeading"] {
+  font-family: var(--nk-police-titre) !important;
+  font-weight: 700 !important;
+  font-size: 26px !important;
+  color: var(--nk-texte) !important;
+}
+#nc-root [class*="-ListCard"]:not([class*="-ListCardLink"]):not([class*="-ListCardTitle"]) {
+  background: var(--nk-carte) !important;
+  border-radius: var(--nk-rayon) !important;
+  border: 1px solid var(--nk-bord) !important;
+  box-shadow: var(--nk-ombre) !important;
+  margin-bottom: 12px !important;
+  position: relative;
+  overflow: hidden;
+}
+#nc-root [class*="-ListCard"]:not([class*="-ListCardLink"]):not([class*="-ListCardTitle"])::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--nk-or);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform var(--nk-transition);
+}
+#nc-root [class*="-ListCard"]:not([class*="-ListCardLink"]):not([class*="-ListCardTitle"]):hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nk-ombre-forte) !important;
+  border-color: rgba(216, 165, 58, 0.5) !important;
+}
+#nc-root [class*="-ListCard"]:not([class*="-ListCardLink"]):not([class*="-ListCardTitle"]):hover::before {
+  transform: scaleY(1);
+}
+#nc-root [class*="-ListCardTitle"] {
+  font-family: var(--nk-police-titre) !important;
+  font-weight: 600 !important;
+  font-size: 17px !important;
+  color: var(--nk-texte) !important;
+}
+
+/* ---------- Éditeur ---------- */
+#nc-root [class*="-EditorContainer"] { background: var(--nk-fond) !important; }
+
+#nc-root [class*="-ToolbarContainer"] {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--nk-bord) !important;
+  box-shadow: 0 6px 20px rgba(20, 16, 8, 0.05) !important;
+}
+#nc-root [class*="-BackArrow"] { color: var(--nk-or) !important; }
+#nc-root [class*="-BackCollection"] { color: var(--nk-texte-2) !important; }
+#nc-root [class*="-ToolbarSectionBackLink"]:hover [class*="-BackArrow"] { transform: translateX(-3px); }
+#nc-root [class*="-BackArrow"] { transition: transform var(--nk-transition); }
+
+/* Boutons principaux (Publier, etc.) */
+#nc-root [class*="-ToolbarButton"],
+#nc-root [class*="-PublishButton"],
+#nc-root [class*="-ToolbarDropdown"] > button {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  padding: 0 22px !important;
+}
+#nc-root [class*="-ToolbarButton"]:not([class*="-PublishedButton"]):not([class*="-DeleteButton"]),
+#nc-root [class*="-PublishButton"] {
+  background: var(--nk-noir) !important;
+  color: var(--nk-or) !important;
+  box-shadow: 0 8px 20px rgba(11, 11, 12, 0.18);
+}
+#nc-root [class*="-ToolbarButton"]:not([class*="-PublishedButton"]):not([class*="-DeleteButton"]):hover,
+#nc-root [class*="-PublishButton"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(11, 11, 12, 0.24);
+}
+#nc-root [class*="-PublishedButton"] {
+  background: var(--nk-or-clair) !important;
+  color: #7a5a17 !important;
+}
+/* Bouton d'aperçu inutile (aperçu désactivé) */
+#nc-root [class*="-RefreshPreviewButton"],
+#nc-root [class*="-PreviewButtonContainer"] { display: none !important; }
+
+/* Panneau de saisie centré, confortable */
+#nc-root [class*="-ControlPaneContainer"] {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px 24px 80px !important;
+}
+
+/* Étiquettes de champs */
+#nc-root [class*="-FieldLabel"] {
+  background: transparent !important;
+  color: var(--nk-texte-2) !important;
+  border: none !important;
+  padding: 0 2px 6px !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+}
+#nc-root [class*="-ControlContainer"]:focus-within > [class*="-FieldLabel"],
+#nc-root [class*="-ControlContainer"]:focus-within > div > [class*="-FieldLabel"] {
+  color: var(--nk-or-fonce) !important;
+}
+
+/* Champs de saisie */
+#nc-root [class*="-ControlContainer"] input[type="text"],
+#nc-root [class*="-ControlContainer"] input:not([type]),
+#nc-root [class*="-ControlContainer"] textarea,
+#nc-root [class*="-TextControl"] {
+  background: var(--nk-carte) !important;
+  border: 1px solid var(--nk-bord) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  font-size: 15px !important;
+  color: var(--nk-texte) !important;
+  line-height: 1.55 !important;
+  box-shadow: 0 1px 2px rgba(20, 16, 8, 0.03);
+}
+#nc-root [class*="-ControlContainer"] input:hover,
+#nc-root [class*="-ControlContainer"] textarea:hover {
+  border-color: #d5cbb8 !important;
+}
+#nc-root [class*="-ControlContainer"] input:focus,
+#nc-root [class*="-ControlContainer"] textarea:focus {
+  border-color: var(--nk-or) !important;
+  box-shadow: 0 0 0 4px rgba(216, 165, 58, 0.16) !important;
+  outline: none !important;
+}
+
+/* Sections repliables (objets et listes) */
+#nc-root [class*="-TopBarContainer"] {
+  background: var(--nk-carte) !important;
+  border: 1px solid var(--nk-bord) !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  box-shadow: var(--nk-ombre);
+}
+#nc-root [class*="-TopBarContainer"]:hover {
+  border-color: rgba(216, 165, 58, 0.55) !important;
+  box-shadow: var(--nk-ombre-forte);
+}
+#nc-root [class*="-ExpandButton"] {
+  font-family: var(--nk-police-titre) !important;
+  font-weight: 600 !important;
+  color: var(--nk-texte) !important;
+}
+#nc-root [class*="-ExpandButton"] svg {
+  color: var(--nk-or) !important;
+  transition: transform var(--nk-transition);
+}
+#nc-root [class*="-ListItem"] {
+  border-radius: 12px !important;
+}
+
+/* Bouton « Ajouter » */
+#nc-root [class*="-AddButton"] {
+  background: var(--nk-noir) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  padding: 6px 14px !important;
+  font-weight: 600 !important;
+}
+#nc-root [class*="-AddButton"]:hover {
+  background: var(--nk-or) !important;
+  color: var(--nk-noir) !important;
+}
+#nc-root [class*="-AddButton"] svg { color: inherit !important; }
+
+/* Boutons des images (choisir, remplacer, supprimer) */
+#nc-root [class*="-FileWidgetButton"] {
+  background: var(--nk-fond) !important;
+  color: var(--nk-texte) !important;
+  border: 1px solid var(--nk-bord) !important;
+  border-radius: 999px !important;
+  padding: 7px 14px !important;
+  font-weight: 500 !important;
+}
+#nc-root [class*="-FileWidgetButton"]:hover {
+  background: var(--nk-noir) !important;
+  color: var(--nk-or) !important;
+  border-color: var(--nk-noir) !important;
+}
+#nc-root [class*="-FileWidgetButtonRemove"] {
+  background: #fdf0ee !important;
+  color: #b42318 !important;
+  border-color: #f6d4cf !important;
+}
+#nc-root [class*="-FileWidgetButtonRemove"]:hover {
+  background: #b42318 !important;
+  color: #fff !important;
+  border-color: #b42318 !important;
+}
+
+/* Images */
+#nc-root [class*="-ControlContainer"] img {
+  border-radius: 12px !important;
+  box-shadow: var(--nk-ombre);
+}
+
+/* Notifications */
+#nc-root .Toastify__toast {
+  border-radius: 14px !important;
+  font-family: var(--nk-police) !important;
+  box-shadow: var(--nk-ombre-forte) !important;
+}
+#nc-root .Toastify__toast--success { background: var(--nk-noir) !important; color: var(--nk-or) !important; }
+
+/* Mobile */
+@media (max-width: 799px) {
+  #nc-root [class*="-ControlPaneContainer"] { padding: 18px 12px 60px !important; width: 100% !important; max-width: 100% !important; }
+  #nc-root [class*="-EditorContainer"],
+  #nc-root [class*="-Editor "],
+  #nc-root [class*="-ToolbarContainer"] { min-width: 0 !important; width: 100% !important; }
+  #nc-root [class*="-EditorContainer"] [class*="-ViewControls"] { display: none !important; }
+  #nc-root [class*="-ToolbarSectionBackLink"] { padding: 0 12px !important; }
+  #nc-root [class*="-ToolbarSectionMain"] { padding: 0 8px !important; }
+  #nc-root [class*="-ToolbarSectionMeta"] { display: none !important; }
+  #nc-root [class*="-AppHeaderContent"]::before { display: none; }
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  #nc-root *,
+  #nc-root *::before,
+  #nc-root *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Menus déroulants (ex. « Publier maintenant ») */
+#nc-root [role="menu"] {
+  border-radius: 12px !important;
+  border: 1px solid var(--nk-bord) !important;
+  box-shadow: var(--nk-ombre-forte) !important;
+  overflow: hidden;
+  animation: nk-apparition 180ms ease-out both;
+}
+#nc-root [role="menuitem"] {
+  font-weight: 500 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+#nc-root [role="menuitem"]:hover,
+#nc-root [role="menuitem"]:focus {
+  background: var(--nk-or-clair) !important;
+  color: var(--nk-texte) !important;
+}
+#nc-root [role="menuitem"] svg { color: var(--nk-or-fonce) !important; }

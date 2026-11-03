@@ -1,47 +1,36 @@
 import Link from "next/link";
-import { photo } from "@/lib/media";
+import contenu from "@/content/pages/approche.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/approche.json
+const TXT = contenu.ApprocheHero;
 
 export function ApprocheHero() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src={photo(1031, 1974, 1175)}
+        src={TXT.image_01}
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
 
       <div className="relative mx-auto flex min-h-[78vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 pt-40 lg:px-8 lg:pb-24">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white sm:text-xs">
-          Notre approche
-        </p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white sm:text-xs">{TXT.texte_01}</p>
 
-        <h1 className="mt-5 max-w-4xl font-display text-[30px] font-bold leading-[1.15] text-white sm:text-[38px] lg:text-[52px]">
-          Nous ne commençons pas par produire. Nous commençons par comprendre
-          ce qu&apos;il faut réellement construire.
-        </h1>
+        <h1 className="mt-5 max-w-4xl font-display text-[30px] font-bold leading-[1.15] text-white sm:text-[38px] lg:text-[52px]">{TXT.texte_02}</h1>
 
-        <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
-          Un logo, une vidéo, un support ou une solution d&apos;intelligence
-          artificielle n&apos;a de valeur que s&apos;il répond au bon problème.
-          NYAKA part de votre situation, clarifie l&apos;enjeu, puis construit
-          la réponse adaptée.
-        </p>
+        <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Link
             href="/demarrer-un-projet"
             className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:text-[15px]"
-          >
-            Parler de votre projet
-          </Link>
+          >{TXT.texte_04}</Link>
 
           <Link
             href="/solutions"
             className="rounded-lg border border-white px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
-          >
-            Découvrir nos solutions
-          </Link>
+          >{TXT.texte_05}</Link>
         </div>
       </div>
     </section>

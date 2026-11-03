@@ -1,0 +1,49 @@
+{
+  "ApprocheBenefices": {
+    "texte_01": "Ce que cette approche apporte",
+    "texte_02": "Une réponse plus juste, pas une réponse plus compliquée"
+  },
+  "ApprocheExemple": {
+    "texte_01": "Exemple concret",
+    "texte_02": "Ce que l'approche change dans un projet",
+    "texte_03": "Demande initiale : « Nous voulons une vidéo publicitaire. »",
+    "texte_04": "Autre exemple : un client demande une solution IA ; NYAKA commence par identifier le cas d'usage, les utilisateurs, les données disponibles et la valeur recherchée avant de définir la technologie."
+  },
+  "ApprocheFinalCta": {
+    "texte_01": "Vous avez déjà une idée de ce que vous voulez construire ?",
+    "texte_02": "Présentez-nous votre besoin. Nous partirons de votre idée, puis nous clarifierons avec vous la réponse la plus cohérente.",
+    "texte_03": "Démarrer un projet",
+    "texte_04": "Voir nos réalisations"
+  },
+  "ApprocheFramework": {
+    "texte_01": "Le Framework NYAKA",
+    "texte_02": "Six phases, du besoin initial à l'évolution",
+    "texte_03": "Le Framework décrit la manière dont NYAKA accompagne un projet. Un parcours continu, du cadrage jusqu'à l'évolution."
+  },
+  "ApprocheHero": {
+    "image_01": "/media/1031.jpg",
+    "texte_01": "Notre approche",
+    "texte_02": "Nous ne commençons pas par produire. Nous commençons par comprendre ce qu'il faut réellement construire.",
+    "texte_03": "Un logo, une vidéo, un support ou une solution d'intelligence artificielle n'a de valeur que s'il répond au bon problème. NYAKA part de votre situation, clarifie l'enjeu, puis construit la réponse adaptée.",
+    "texte_04": "Parler de votre projet",
+    "texte_05": "Découvrir nos solutions"
+  },
+  "ApprocheModele": {
+    "texte_01": "Le Modèle NYAKA",
+    "texte_02": "Cinq dimensions à faire évoluer ensemble",
+    "texte_03": "NYAKA lit une organisation comme un système. Une solution devient cohérente lorsqu'elle soutient plusieurs dimensions sans en fragiliser une autre."
+  },
+  "ApprochePrincipe": {
+    "texte_01": "Le principe",
+    "texte_02": "Votre demande est le point de départ",
+    "texte_03": "Vous pouvez venir chez NYAKA avec une demande précise : créer un logo, concevoir un catalogue, produire une vidéo ou intégrer une solution d'intelligence artificielle. Nous ne compliquons pas cette demande. Nous vérifions simplement qu'elle répond bien au résultat recherché.",
+    "texte_04": "Le bon livrable n'est pas toujours la première solution imaginée.",
+    "texte_05": "Notre rôle consiste à relier le besoin visible à la réalité de l'organisation : son identité, sa direction, la valeur qu'elle veut créer, l'expérience qu'elle propose et les capacités dont elle dispose."
+  },
+  "ApprocheStickyNav": {
+    "libelle_01": "Principe",
+    "libelle_02": "Modèle",
+    "libelle_03": "Framework",
+    "libelle_04": "Exemple"
+  }
+}

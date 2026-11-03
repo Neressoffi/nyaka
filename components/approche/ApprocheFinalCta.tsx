@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import contenu from "@/content/pages/approche.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/approche.json
+const TXT = contenu.ApprocheFinalCta;
 
 export function ApprocheFinalCta() {
   return (
@@ -9,29 +13,20 @@ export function ApprocheFinalCta() {
       <div className="absolute left-1/2 top-1/2 h-px w-[160%] -translate-x-1/2 -rotate-[8deg] bg-accent/70" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
-          Vous avez déjà une idée de ce que vous voulez construire ?
-        </h2>
-        <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
-          Présentez-nous votre besoin. Nous partirons de votre idée, puis nous
-          clarifierons avec vous la réponse la plus cohérente.
-        </p>
+        <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_01}</h2>
+        <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">{TXT.texte_02}</p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/demarrer-un-projet"
             className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-85 sm:text-[15px]"
-          >
-            Démarrer un projet
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          >{TXT.texte_03}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
 
           <Link
             href="/realisations"
             className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
-          >
-            Voir nos réalisations
-          </Link>
+          >{TXT.texte_04}</Link>
         </div>
       </div>
     </section>

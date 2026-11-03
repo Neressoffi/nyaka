@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { NyakaLogo } from "@/components/NyakaLogo";
+import contenu from "@/content/pages/site.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/site.json
+const TXT = contenu.Footer;
 
 const FOOTER_COLUMNS: {
   title: string;
@@ -8,31 +12,31 @@ const FOOTER_COLUMNS: {
   {
     title: "NYAKA",
     links: [
-      { label: "À propos", href: "/a-propos" },
-      { label: "Notre approche", href: "/notre-approche" },
-      { label: "Réalisations", href: "/realisations" },
-      { label: "Démarrer un projet", href: "/demarrer-un-projet" },
+      { label: TXT.libelle_01, href: "/a-propos" },
+      { label: TXT.libelle_02, href: "/notre-approche" },
+      { label: TXT.libelle_03, href: "/realisations" },
+      { label: TXT.libelle_04, href: "/demarrer-un-projet" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Branding", href: "/solutions#branding" },
-      { label: "Design", href: "/solutions#design" },
-      { label: "Vidéo & campagnes", href: "/solutions#video" },
-      { label: "IA & données", href: "/solutions#ia-data" },
+      { label: TXT.libelle_05, href: "/solutions#branding" },
+      { label: TXT.libelle_06, href: "/solutions#design" },
+      { label: TXT.libelle_07, href: "/solutions#video" },
+      { label: TXT.libelle_08, href: "/solutions#ia-data" },
     ],
   },
   {
     title: "Informations",
-    links: [{ label: "FAQ", href: "/#faq" }],
+    links: [{ label: TXT.libelle_09, href: "/#faq" }],
   },
   {
     title: "Coordonnées",
     links: [
-      { label: "LinkedIn", href: "#" },
-      { label: "TikTok", href: "#" },
-      { label: "WhatsApp", href: "https://wa.me/" },
+      { label: TXT.libelle_10, href: "#" },
+      { label: TXT.libelle_11, href: "#" },
+      { label: TXT.libelle_12, href: "https://wa.me/" },
     ],
   },
 ];
@@ -44,11 +48,7 @@ export function Footer() {
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           <div className="max-w-xs">
             <NyakaLogo href="/" size="md" />
-            <p className="mt-4 text-sm leading-relaxed text-foreground-3">
-              NYAKA accompagne les organisations dans la construction et
-              l&apos;évolution de leur marque à travers le branding, le design,
-              la vidéo, l&apos;intelligence artificielle et les données.
-            </p>
+            <p className="mt-4 text-sm leading-relaxed text-foreground-3">{TXT.texte_01}</p>
            
           </div>
 
@@ -77,9 +77,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-6">
-          <p className="text-xs text-foreground-3">
-            © 2026 NYAKA — L&apos;empreinte de votre marque.
-          </p>
+          <p className="text-xs text-foreground-3">{TXT.texte_02}</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,41 @@
+{
+  "Page_kawa_coffee_shop": {
+    "texte_01": "Retour aux réalisations",
+    "texte_02": "Étude de cas",
+    "texte_03": "Votre projet peut être le prochain.",
+    "texte_04": "Présentez-nous votre besoin, votre idée ou la transformation que vous préparez. Nous partirons de votre situation pour construire la réponse adaptée.",
+    "texte_05": "Démarrer un projet",
+    "texte_06": "Voir toutes les réalisations"
+  },
+  "RealisationsFeatured": {
+    "texte_01": "Projet à la une",
+    "texte_02": "Secteur : ",
+    "texte_03": "Localisation : ",
+    "texte_04": "Situation",
+    "texte_05": "Enjeu",
+    "texte_06": "Intervention NYAKA",
+    "texte_07": "Résultat",
+    "texte_08": "Voir l'étude de cas complète",
+    "texte_09": "Voir tous les projets"
+  },
+  "RealisationsFinalCta": {
+    "texte_01": "Votre projet peut être le prochain.",
+    "texte_02": "Présentez-nous votre besoin, votre idée ou la transformation que vous préparez. Nous partirons de votre situation pour construire la réponse adaptée.",
+    "texte_03": "Démarrer un projet",
+    "texte_04": "Découvrir nos solutions"
+  },
+  "RealisationsGrid": {
+    "texte_01": "Interventions :",
+    "texte_02": "Autres réalisations",
+    "texte_03": "Sélection de projets",
+    "texte_04": "Des cartes courtes pour montrer la diversité des situations et des expertises, sans répéter le contenu de la page Solutions."
+  },
+  "RealisationsHero": {
+    "image_01": "/media/1015.jpg",
+    "texte_01": "Réalisations",
+    "texte_02": "Des projets pensés pour résoudre un problème, pas simplement pour remplir un portfolio.",
+    "texte_03": "Découvrez comment NYAKA transforme un besoin initial en identité, support, contenu ou solution cohérente avec la réalité de l'organisation.",
+    "texte_04": "Découvrir le projet KAWA",
+    "texte_05": "Parler de votre projet"
+  }
+}

@@ -2,14 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import contenu from "@/content/pages/apropos.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/apropos.json
+const TXT = contenu.AproposStickyNav;
 
 const NAV_ITEMS = [
-  { id: "origine", label: "Origine" },
-  { id: "empreinte", label: "Empreinte" },
-  { id: "principes", label: "Principes" },
-  { id: "equipe", label: "Équipe" },
-  { id: "direction", label: "Direction" },
-] as const;
+  { id: "origine", label: TXT.libelle_01 },
+  { id: "empreinte", label: TXT.libelle_02 },
+  { id: "principes", label: TXT.libelle_03 },
+  { id: "equipe", label: TXT.libelle_04 },
+  { id: "direction", label: TXT.libelle_05 },
+];
 
 export function AproposStickyNav() {
   const [activeId, setActiveId] = useState<string>(NAV_ITEMS[0].id);

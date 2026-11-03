@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { solutionsOverview } from "@/lib/solutions-data";
+import contenu from "@/content/pages/solutions.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/solutions.json
+const TXT = contenu.SolutionsOverview;
 
 export function SolutionsOverview() {
   return (
@@ -10,16 +14,9 @@ export function SolutionsOverview() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-            Vue d&apos;ensemble
-          </p>
-          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Quatre pôles. Une réponse construite autour de votre besoin.
-          </h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-            Identifiez rapidement l&apos;expertise qui correspond à votre
-            situation. Un même projet peut ensuite mobiliser plusieurs pôles.
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -41,9 +38,7 @@ export function SolutionsOverview() {
                 </p>
               </div>
 
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]">
-                Voir ce pôle
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]">{TXT.texte_04}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
           ))}

@@ -1,16 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
+import contenu from "@/content/pages/accueil.json";
 
-const PHRASES = [
-  "Une identité qui marque",
-  "Une communication claire",
-  "Des contenus qui engagent",
-  "Une présence digitale cohérente",
-  "Une campagne créative",
-  "Une solution data & IA",
-  "Un repositionnement de marque",
-  "Une expérience digitale",
-];
+// Séquence dynamique gérée depuis l'administration : content/pages/accueil.json
+const PHRASES: string[] = contenu.hero.sequence_dynamique;
 
 const LINE_HEIGHT = 60;
 const VISIBLE_HEIGHT = 420;
@@ -66,7 +59,7 @@ export function TextRoulette() {
 
     <div className="hidden items-center gap-6 lg:flex" aria-hidden>
 
-      <div className="h-0 w-0 border-y-[14px] border-l-[22px] border-y-transparent border-l-[#323232]" />
+      <div className="h-0 w-0 border-y-[14px] border-l-[22px] border-y-transparent border-l-[#D8A53A]" />
 
       <div className="h-[420px] overflow-hidden">
 

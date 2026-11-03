@@ -1,4 +1,8 @@
 import { exampleRows } from "@/lib/approche-data";
+import contenu from "@/content/pages/approche.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/approche.json
+const TXT = contenu.ApprocheExemple;
 
 export function ApprocheExemple() {
   return (
@@ -8,15 +12,9 @@ export function ApprocheExemple() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
-            Exemple concret
-          </p>
-          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            Ce que l&apos;approche change dans un projet
-          </h2>
-          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
-            Demande initiale : « Nous voulons une vidéo publicitaire. »
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">{TXT.texte_01}</p>
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
         </div>
 
         <div className="mt-10 overflow-hidden rounded-2lg border border-white/10">
@@ -37,11 +35,7 @@ export function ApprocheExemple() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/80 sm:text-[15px]">
-          Autre exemple : un client demande une solution IA ; NYAKA commence
-          par identifier le cas d&apos;usage, les utilisateurs, les données
-          disponibles et la valeur recherchée avant de définir la technologie.
-        </p>
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/80 sm:text-[15px]">{TXT.texte_04}</p>
       </div>
     </section>
   );

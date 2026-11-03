@@ -1,0 +1,36 @@
+{
+  "SituationFinalCta": {
+    "texte_01": "Vous vous reconnaissez dans l'une de ces situations ?",
+    "texte_02": "Présentez-nous votre projet, même si votre besoin n'est pas encore totalement défini. Nous commencerons par clarifier ce qui mérite réellement d'être construit.",
+    "texte_03": "Démarrer un projet",
+    "texte_04": "Découvrir nos solutions"
+  },
+  "SituationHero": {
+    "image_01": "/media/1011.jpg",
+    "texte_01": "Votre situation",
+    "texte_02": "À chaque étape importante, votre organisation a besoin d'une réponse différente.",
+    "texte_03": "Vous pouvez venir avec une idée précise ou simplement avec une situation à résoudre. NYAKA commence par comprendre ce que votre organisation traverse afin de construire la réponse adaptée.",
+    "texte_04": "Identifier votre situation",
+    "texte_05": "Parler de votre projet"
+  },
+  "SituationOverview": {
+    "texte_01": "Vue d'ensemble",
+    "texte_02": "Commencez par vous reconnaître.",
+    "texte_03": "Cinq situations concrètes pour identifier le moment que traverse votre organisation — avant de parler d'approche ou de solutions.",
+    "texte_04": "Voir cette situation"
+  },
+  "SituationSection": {
+    "texte_01": " · Votre situation",
+    "texte_02": "Vous vous reconnaissez si…",
+    "texte_03": "Comment NYAKA peut intervenir",
+    "texte_04": "Pôles susceptibles d'être mobilisés",
+    "texte_05": "Situation"
+  },
+  "SituationTransition": {
+    "texte_01": "Transition",
+    "texte_02": "Vous n'avez pas besoin d'entrer dans une seule case",
+    "texte_03": "Une organisation peut lancer, professionnaliser, communiquer et transformer en même temps.",
+    "texte_04": "Les situations présentées servent à vous aider à vous reconnaître. Elles ne sont pas des offres fermées. Après compréhension du projet, NYAKA peut combiner plusieurs pôles ou limiter l'intervention à un besoin précis.",
+    "texte_05": "Le principe reste simple : vous venez avec votre réalité ; nous cherchons la réponse cohérente."
+  }
+}

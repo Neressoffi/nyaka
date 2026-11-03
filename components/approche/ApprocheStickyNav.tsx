@@ -2,13 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import contenu from "@/content/pages/approche.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/approche.json
+const TXT = contenu.ApprocheStickyNav;
 
 const NAV_ITEMS = [
-  { id: "principe", label: "Principe" },
-  { id: "modele", label: "Modèle" },
-  { id: "framework", label: "Framework" },
-  { id: "exemple", label: "Exemple" },
-] as const;
+  { id: "principe", label: TXT.libelle_01 },
+  { id: "modele", label: TXT.libelle_02 },
+  { id: "framework", label: TXT.libelle_03 },
+  { id: "exemple", label: TXT.libelle_04 },
+];
 
 export function ApprocheStickyNav() {
   const [activeId, setActiveId] = useState<string>(NAV_ITEMS[0].id);

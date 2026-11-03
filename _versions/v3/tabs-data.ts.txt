@@ -1,0 +1,142 @@
+import { photo } from "./media";
+
+export type AccordionItem = {
+  icon: string;
+  title: string;
+  description: string;
+  image: string;
+};
+
+export type TabContent = {
+  id: string;
+  label: string;
+  shortLabel: string;
+  panelTitle: string;
+  panelDescription: string;
+  ctaLabel: string;
+  ctaHref: string;
+  items: AccordionItem[];
+};
+
+export const tabs: TabContent[] = [
+  {
+    id: "branding",
+    label: "Branding",
+    shortLabel: "Branding",
+    panelTitle: "Une identité qui vous distingue.",
+    panelDescription:
+      "Nous créons et faisons évoluer des identités de marque fortes, reconnaissables et cohérentes.",
+    ctaLabel: "Explorer le branding",
+    ctaHref: "/solutions#branding",
+    items: [
+      {
+        icon: "image",
+        title: "Positionnement",
+        description: "Définir ce qui vous rend unique.",
+        image: photo(1025, 1200, 900),
+      },
+      {
+        icon: "layout",
+        title: "Identité visuelle",
+        description: "Créer un univers reconnaissable.",
+        image: photo(1065, 1200, 900),
+      },
+      {
+        icon: "box",
+        title: "Direction artistique",
+        description: "Assurer la cohérence de votre image.",
+        image: photo(1055, 1200, 900),
+      },
+    ],
+  },
+  {
+    id: "design",
+    label: "Design",
+    shortLabel: "Design",
+    panelTitle: "Des supports qui valorisent vos idées.",
+    panelDescription:
+      "Nous concevons des supports visuels professionnels pour présenter vos offres et donner de l'impact à vos messages.",
+    ctaLabel: "Explorer le design",
+    ctaHref: "/solutions#design",
+    items: [
+      {
+        icon: "layout",
+        title: "Design graphique",
+        description: "Flyers, affiches et créations visuelles.",
+        image: photo(1065, 1200, 900),
+      },
+      {
+        icon: "image",
+        title: "Édition & print",
+        description: "Brochures, catalogues et menus.",
+        image: photo(1025, 1200, 900),
+      },
+      {
+        icon: "box",
+        title: "Supports digitaux",
+        description: "Présentations et expériences visuelles.",
+        image: photo(1055, 1200, 900),
+      },
+    ],
+  },
+  {
+    id: "video",
+    label: "Vidéo & campagnes",
+    shortLabel: "Vidéo & campagnes",
+    panelTitle: "Des contenus qui captent l'attention.",
+    panelDescription:
+      "Nous donnons vie à vos messages avec des vidéos et des campagnes créatives pensées pour votre public.",
+    ctaLabel: "Découvrir nos productions",
+    ctaHref: "/solutions#video",
+    items: [
+      {
+        icon: "video",
+        title: "Production vidéo",
+        description: "Spots, teasers et vidéos publicitaires.",
+        image: photo(1035, 1200, 900),
+      },
+      {
+        icon: "box",
+        title: "Concept créatif",
+        description: "Scénarios, messages et direction de campagne.",
+        image: photo(1045, 1200, 900),
+      },
+      {
+        icon: "image",
+        title: "Montage & déclinaisons",
+        description: "Des contenus adaptés à chaque canal.",
+        image: photo(1025, 1200, 900),
+      },
+    ],
+  },
+  {
+    id: "ia-data",
+    label: "IA & Data",
+    shortLabel: "IA & Data",
+    panelTitle: "Des solutions intelligentes pour vos activités.",
+    panelDescription:
+      "Nous concevons des solutions d'IA, de collecte de données et d'automatisation adaptées à vos besoins.",
+    ctaLabel: "Explorer nos solutions IA",
+    ctaHref: "/solutions#ia-data",
+    items: [
+      {
+        icon: "audio",
+        title: "Assistants IA",
+        description: "Chatbots et assistants spécialisés.",
+        image: photo(1055, 1200, 900),
+      },
+      {
+        icon: "layout",
+        title: "Automatisation",
+        description: "Simplifier les tâches et les processus.",
+        image: photo(1065, 1200, 900),
+      },
+      {
+        icon: "box",
+        title: "Data & analyse",
+        description: "Collecter, structurer et exploiter les données.",
+        image: photo(1045, 1200, 900),
+      },
+    ],
+  },
+];

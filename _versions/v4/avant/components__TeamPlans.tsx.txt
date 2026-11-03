@@ -1,0 +1,81 @@
+import Link from "next/link";
+import {
+  GitBranch,
+  Layers,
+  Scale,
+  Sparkles,
+} from "lucide-react";
+
+const DIFFERENCES = [
+  {
+    icon: Scale,
+    title: "Comprendre avant de créer",
+    text: "Nous identifions vos besoins et vos objectifs avant de proposer une solution.",
+  },
+  {
+    icon: Layers,
+    title: "Des expertises complémentaires",
+    text: "Nos compétences se combinent pour répondre aux exigences de votre projet.",
+  },
+  {
+    icon: GitBranch,
+    title: "Une approche sur mesure",
+    text: "Chaque solution est adaptée à vos priorités, vos contraintes et votre ambition.",
+  },
+  {
+    icon: Sparkles,
+    title: "Penser au-delà du présent",
+    text: "Nous concevons des solutions capables d’accompagner votre évolution.",
+  },
+];
+
+export function TeamPlans() {
+  return (
+    <section className="bg-surface-0 px-4 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-screen-2xl">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
+          Pourquoi NYAKA ?
+        </p>
+        <h2 className="mt-3 max-w-2xl font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
+          Chaque projet mérite une réponse juste.
+        </h2>
+
+        <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {DIFFERENCES.map((item) => (
+            <div key={item.title}>
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-2">
+                <item.icon className="h-5 w-5 text-white" />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-bold text-white sm:text-xl">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-foreground-2 sm:text-[15px]">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 border-t border-white/10 pt-10">
+          <p className="font-display text-xl font-bold text-white sm:text-2xl lg:text-[28px]">
+            NYAKA — L&apos;empreinte de votre marque.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href="/notre-approche"
+              className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:text-[15px]"
+            >
+              Découvrir notre approche
+            </Link>
+            <Link
+              href="/demarrer-un-projet"
+              className="rounded-lg border border-white/30 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
+            >
+              Parler de votre projet
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

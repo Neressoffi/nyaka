@@ -1,22 +1,18 @@
 import Link from "next/link";
 import { clientReferences } from "@/lib/apropos-data";
+import contenu from "@/content/pages/apropos.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/apropos.json
+const TXT = contenu.AproposReferences;
 
 export function AproposReferences() {
   return (
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-            Preuves et références
-          </p>
-          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
-            La meilleure manière de comprendre NYAKA reste de voir ce que nous
-            construisons
-          </h2>
-          <p className="mt-5 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
-            Plutôt que d&apos;allonger cette page avec des promesses, NYAKA
-            renvoie vers ses réalisations.
-          </p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_02}</h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">{TXT.texte_03}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">

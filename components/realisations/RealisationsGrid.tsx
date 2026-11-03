@@ -9,6 +9,10 @@ import {
   type ProjectCard,
   type ProjectPole,
 } from "@/lib/realisations-data";
+import contenu from "@/content/pages/realisations.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/realisations.json
+const TXT = contenu.RealisationsGrid;
 
 function ProjectCardItem({ project }: { project: ProjectCard }) {
   const content = (
@@ -32,7 +36,7 @@ function ProjectCardItem({ project }: { project: ProjectCard }) {
           {project.situation}
         </p>
         <p className="mt-4 text-sm leading-relaxed text-white/75 sm:text-[15px]">
-          <span className="font-medium text-white">Interventions :</span>{" "}
+          <span className="font-medium text-white">{TXT.texte_01}</span>{" "}
           {project.interventions}
         </p>
 
@@ -76,16 +80,9 @@ export function RealisationsGrid() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
-              Autres réalisations
-            </p>
-            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
-              Sélection de projets
-            </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
-              Des cartes courtes pour montrer la diversité des situations et
-              des expertises, sans répéter le contenu de la page Solutions.
-            </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">{TXT.texte_02}</p>
+            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_03}</h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">{TXT.texte_04}</p>
           </div>
 
           <div className="flex flex-wrap gap-2">

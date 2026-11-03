@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { featuredProject } from "@/lib/realisations-data";
+import contenu from "@/content/pages/realisations.json";
+
+// Textes gérés depuis l'administration (Decap CMS) : content/pages/realisations.json
+const TXT = contenu.RealisationsFeatured;
 
 export function RealisationsFeatured() {
   return (
@@ -9,9 +13,7 @@ export function RealisationsFeatured() {
       className="scroll-mt-28 bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-screen-2xl">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
-          Projet à la une
-        </p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_01}</p>
 
         <div className="mt-6 grid grid-cols-1 gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:gap-14">
           <div className="relative min-h-[420px] overflow-hidden rounded-2lg lg:min-h-[640px]">
@@ -38,35 +40,27 @@ export function RealisationsFeatured() {
             <p className="mt-4 text-[15px] font-medium leading-relaxed text-marketing-foreground-1 sm:text-base lg:text-[17px]">
               {featuredProject.tagline}
             </p>
-            <p className="mt-3 text-[13px] leading-relaxed text-marketing-foreground-2 sm:text-sm">
-              Secteur : {featuredProject.sector}
-              <span className="mx-2 text-marketing-foreground-2/50">|</span>
-              Localisation : {featuredProject.location}
+            <p className="mt-3 text-[13px] leading-relaxed text-marketing-foreground-2 sm:text-sm">{TXT.texte_02}{featuredProject.sector}
+              <span className="mx-2 text-marketing-foreground-2/50">|</span>{TXT.texte_03}{featuredProject.location}
             </p>
 
             <div className="mt-8 space-y-6">
               <div>
-                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">
-                  Situation
-                </h3>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_04}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-1 sm:text-[15px]">
                   {featuredProject.situation}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">
-                  Enjeu
-                </h3>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_05}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-1 sm:text-[15px]">
                   {featuredProject.challenge}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">
-                  Intervention NYAKA
-                </h3>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_06}</h3>
                 <ul className="mt-3 flex flex-col gap-2">
                   {featuredProject.interventions.map((item) => (
                     <li
@@ -81,9 +75,7 @@ export function RealisationsFeatured() {
               </div>
 
               <div>
-                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">
-                  Résultat
-                </h3>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">{TXT.texte_07}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-1 sm:text-[15px]">
                   {featuredProject.result}
                 </p>
@@ -109,17 +101,13 @@ export function RealisationsFeatured() {
               <Link
                 href={featuredProject.caseStudyHref}
                 className="group inline-flex items-center gap-2 rounded-lg bg-black px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:text-[15px]"
-              >
-                Voir l&apos;étude de cas complète
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              >{TXT.texte_08}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
               <Link
                 href="#projets"
                 className="rounded-lg border border-black/15 px-5 py-3 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5 sm:text-[15px]"
-              >
-                Voir tous les projets
-              </Link>
+              >{TXT.texte_09}</Link>
             </div>
           </div>
         </div>
