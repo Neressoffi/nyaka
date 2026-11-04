@@ -268,3 +268,15 @@ v13 — Coordonnées : e-mail, téléphone et WhatsApp   (04/11/2026)
     car les copies de sauvegarde .tsx du dossier _versions étaient vérifiées
     pendant la construction du site. tsconfig.json ignore maintenant le
     dossier _versions (copie d'avant : v13/avant/tsconfig.json).
+
+==============================================================================
+v14 — Page Réalisations : filtres remis à leur place d'avant   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Les filtres (Tous les projets · Branding & Design · Vidéos & campagnes ·
+      IA & Data) sont replacés sous l'image de fond, comme en v11.
+    - Rien d'autre n'a été changé (image, titre, introduction, coordonnées
+      du pied de page restent identiques).
+  FICHIERS MODIFIÉS
+    app/realisations/page.tsx, components/portfolio/PortfolioGallery.tsx
+  RESTAURER : copier les fichiers de « v14/avant » (les « _ » du nom = dossiers).

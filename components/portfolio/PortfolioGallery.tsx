@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Play } from "lucide-react";
 import type { PortfolioTexts, Projet, Video, VideosIntro } from "@/lib/portfolio";
@@ -24,15 +24,11 @@ export function PortfolioGallery({
   videosIntro,
   projets,
   videos,
-  imageFond,
-  entete,
 }: {
   texts: PortfolioTexts;
   videosIntro: VideosIntro;
   projets: Projet[];
   videos: Video[];
-  imageFond: string;
-  entete: ReactNode;
 }) {
   const [filtre, setFiltre] = useState<Filtre>("tous");
   const [video, setVideo] = useState<Video | null>(null);
@@ -77,20 +73,10 @@ export function PortfolioGallery({
 
   return (
     <>
-      {/* En-tête sur l'image de fond : titre, introduction et filtres */}
-      <section className="relative overflow-hidden">
-        <img
-          src={imageFond}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
-        <div className="relative mx-auto flex min-h-[78vh] w-full max-w-screen-xl flex-col justify-center px-4 pb-20 pt-32 lg:px-8 lg:pb-24 lg:pt-36">
-          {entete}
       <div
         role="tablist"
         aria-label="Filtrer les réalisations"
-        className="mt-8 flex max-w-full gap-2 overflow-x-auto pb-1 scrollbar-hidden"
+        className="mt-10 flex max-w-full gap-2 overflow-x-auto pb-1 scrollbar-hidden"
       >
         {FILTRES.map((f) => {
           const actif = filtre === f;
@@ -104,7 +90,7 @@ export function PortfolioGallery({
               className={`shrink-0 rounded-full border px-5 py-2.5 text-sm font-medium transition-colors duration-200 ${
                 actif
                   ? "border-white bg-white text-black"
-                  : "border-white/30 bg-black/30 text-white backdrop-blur-sm hover:border-white/60 hover:bg-black/45"
+                  : "border-white/15 text-white/75 hover:border-white/40 hover:text-white"
               }`}
             >
               {texts.filtres[f]}
@@ -112,11 +98,7 @@ export function PortfolioGallery({
           );
         })}
       </div>
-        </div>
-      </section>
 
-      <section className="bg-black px-4 pb-20 pt-2 lg:px-8 lg:pb-28 lg:pt-6">
-        <div className="mx-auto max-w-screen-xl">
       {filtre === "videos" && (
         <div className="mt-12 max-w-2xl">
           <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
@@ -146,8 +128,6 @@ export function PortfolioGallery({
           </ul>
         )}
       </div>
-        </div>
-      </section>
 
       <VideoModal video={video} onClose={() => setVideo(null)} />
     </>
