@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { NyakaLogo } from "@/components/NyakaLogo";
 import contenu from "@/content/pages/site.json";
 
@@ -7,7 +8,7 @@ const TXT = contenu.Footer;
 
 const FOOTER_COLUMNS: {
   title: string;
-  links: { label: string; href: string }[];
+  links: { label: ReactNode; href: string }[];
 }[] = [
   {
     title: "NYAKA",
@@ -34,9 +35,20 @@ const FOOTER_COLUMNS: {
   {
     title: "Coordonnées",
     links: [
+      {
+        // Retour à la ligne possible après « @ » sur petit écran
+        label: (
+          <>
+            {TXT.email.split("@")[0]}@<wbr />
+            {TXT.email.split("@")[1]}
+          </>
+        ),
+        href: `mailto:${TXT.email}`,
+      },
+      { label: TXT.telephone, href: `tel:${TXT.telephone.replace(/[^+\d]/g, "")}` },
       { label: TXT.libelle_10, href: "#" },
       { label: TXT.libelle_11, href: "#" },
-      { label: TXT.libelle_12, href: "https://wa.me/" },
+      { label: TXT.libelle_12, href: TXT.whatsapp_lien },
     ],
   },
 ];
@@ -58,10 +70,10 @@ export function Footer() {
                 <h3 className="text-sm font-semibold text-white">{column.title}</h3>
                 <ul className="mt-4 flex flex-col gap-2.5">
                   {column.links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.href + String(link.label)}>
                       <Link
                         href={link.href}
-                        className="inline-flex items-center gap-1.5 text-sm text-foreground-3 transition-colors duration-100 hover:text-white"
+                        className="inline-flex max-w-full items-center gap-1.5 text-sm text-foreground-3 transition-colors duration-100 hover:text-white"
                         {...(link.href.startsWith("http")
                           ? { target: "_blank", rel: "noopener noreferrer" }
                           : {})}

@@ -1677,6 +1677,15 @@ collections:
       - label: 'Libellé : WhatsApp'
         name: libelle_12
         widget: string
+      - label: E-mail de contact
+        name: email
+        widget: string
+      - label: Téléphone de contact
+        name: telephone
+        widget: string
+      - label: Lien WhatsApp (https://wa.me/ suivi du numéro sans + ni espaces)
+        name: whatsapp_lien
+        widget: string
       - label: NYAKA accompagne les organisations dans la construction e…
         name: texte_01
         widget: text

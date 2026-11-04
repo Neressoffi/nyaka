@@ -30,7 +30,7 @@ export default function DemarrerUnProjetPage() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="mailto:contact@nyaka.example"
+              href="mailto:contact@nyakaagency.com"
               className="group inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:text-[15px]"
             >{TXT.texte_04}<ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>

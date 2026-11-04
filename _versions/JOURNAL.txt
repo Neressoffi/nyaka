@@ -246,3 +246,21 @@ v12 — Page Réalisations : filtres placés sur l'image de fond   (04/11/2026)
   FICHIERS MODIFIÉS
     app/realisations/page.tsx, components/portfolio/PortfolioGallery.tsx
   RESTAURER : copier les fichiers de « v12/avant » (les « _ » du nom = dossiers).
+
+==============================================================================
+v13 — Coordonnées : e-mail, téléphone et WhatsApp   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Pied de page, colonne « Coordonnées » : ajout de
+      contact@nyakaagency.com (ouvre l'e-mail) et +7 915 213-58-53 (appel).
+    - Boutons WhatsApp (pied de page + « Échanger sur WhatsApp » de
+      l'accueil) : ouvrent une conversation avec le +7 915 213-58-53.
+    - Page « Démarrer un projet » : le bouton e-mail utilise
+      contact@nyakaagency.com (au lieu de l'adresse fictive).
+    - Administration : e-mail, téléphone et lien WhatsApp modifiables
+      (Pied de page).
+  FICHIERS MODIFIÉS
+    content/pages/site.json, components/Footer.tsx,
+    app/demarrer-un-projet/page.tsx, content/pages/accueil.json,
+    public/admin/config.yml
+  RESTAURER : copier les fichiers de « v13/avant » (les « _ » du nom = dossiers).
