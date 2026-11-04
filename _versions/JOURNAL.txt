@@ -264,3 +264,7 @@ v13 — Coordonnées : e-mail, téléphone et WhatsApp   (04/11/2026)
     app/demarrer-un-projet/page.tsx, content/pages/accueil.json,
     public/admin/config.yml
   RESTAURER : copier les fichiers de « v13/avant » (les « _ » du nom = dossiers).
+  CORRECTIF (même jour) : la mise en ligne de v12 et v13 échouait sur Netlify,
+    car les copies de sauvegarde .tsx du dossier _versions étaient vérifiées
+    pendant la construction du site. tsconfig.json ignore maintenant le
+    dossier _versions (copie d'avant : v13/avant/tsconfig.json).
