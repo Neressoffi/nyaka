@@ -1,6 +1,6 @@
 import { solutionsOverview } from "@/lib/solutions-data";
 import { situationsOverview } from "@/lib/situation-data";
-import { featuredProject, projects } from "@/lib/realisations-data";
+import { projetsPublies, videosPubliees } from "@/lib/portfolio";
 import { creativeSuiteColumns } from "@/lib/menu-data";
 
 export type SearchItem = {
@@ -102,21 +102,21 @@ export const searchIndex: SearchItem[] = [
     category: "Situations",
     keywords: `${situation.title} ${situation.description}`,
   })),
-  {
-    id: "kawa",
-    title: featuredProject.name,
-    description: featuredProject.tagline,
-    href: featuredProject.caseStudyHref,
+  ...projetsPublies.map((projet) => ({
+    id: `projet-${projet.slug}`,
+    title: projet.titre,
+    description: projet.accroche,
+    href: `/realisations/${projet.slug}`,
     category: "Réalisations",
-    keywords: `kawa coffee shop menu ${featuredProject.sector}`,
-  },
-  ...projects.map((project) => ({
-    id: `project-${project.id}`,
-    title: project.name,
-    description: project.situation,
-    href: project.href ?? "/realisations",
+    keywords: `${projet.titre} ${projet.expertises}`,
+  })),
+  ...videosPubliees.map((video, i) => ({
+    id: `video-${i}`,
+    title: `${video.titre} — ${video.client}`,
+    description: video.description,
+    href: "/realisations?filtre=videos",
     category: "Réalisations",
-    keywords: `${project.name} ${project.sector} ${project.interventions}`,
+    keywords: `video ${video.titre} ${video.client}`,
   })),
   ...creativeSuiteColumns.flatMap((column) =>
     column.links.map((link) => ({

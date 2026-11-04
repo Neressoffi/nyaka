@@ -130,7 +130,7 @@
       "categorie": "Restauration / Coffee shop",
       "texte": "Une carte de menu repensée comme une expérience de marque.",
       "image": "/media/1060.jpg",
-      "lien": "/realisations/kawa-coffee-shop"
+      "lien": "/realisations/kawa-menu-experience"
     },
     "projets": [
       {
@@ -138,28 +138,28 @@
         "categorie": "Éducation / Orientation internationale",
         "texte": "Des contenus et des campagnes pour valoriser les opportunités de mobilité internationale.",
         "image": "/media/1015.jpg",
-        "lien": "/realisations#projets"
+        "lien": "/realisations/the-vision"
       },
       {
         "nom": "7G Services",
         "categorie": "Services financiers et assistance",
         "texte": "Des communications visuelles pour rendre les services financiers plus accessibles.",
         "image": "/media/1043.jpg",
-        "lien": "/realisations#projets"
+        "lien": "/realisations/7g-services-7g-pay"
       },
       {
         "nom": "BRIRENA HAIR",
         "categorie": "Beauté / Afro-luxury",
         "texte": "Une identité visuelle élégante pour une marque de beauté capillaire.",
         "image": "/media/1067.jpg",
-        "lien": "/realisations#projets"
+        "lien": "/realisations/brirena-hair"
       },
       {
         "nom": "Perfecta",
         "categorie": "Support commercial / Catalogue",
         "texte": "Des supports commerciaux conçus pour valoriser l'offre de l'entreprise.",
         "image": "/media/1062.jpg",
-        "lien": "/realisations#projets"
+        "lien": "/realisations/perfecta"
       }
     ],
     "bouton": {

@@ -173,3 +173,35 @@ v8 — Responsive mobile (3 novembre 2026)
     FinalCta.tsx, approche/ApprocheStickyNav.tsx, apropos/AproposStickyNav.tsx,
     situation/SituationStickyNav.tsx, solutions/SolutionsStickyNav.tsx
   RESTAURER : copier les fichiers de « v8/avant » (les « _ » du nom = dossiers).
+
+==============================================================================
+v9 — Cahier de corrections n°2 : Réalisations & Portfolio   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Nouvelle page Réalisations (design du modèle fourni : fond noir, grande
+      carte vedette puis grille de cartes arrondies), titre « Nos réalisations. »
+    - Filtres : Tous les projets · Branding & Design · Vidéos & campagnes ·
+      IA & Data (sans rechargement, filtre conservé au retour d'une fiche).
+    - 7 fiches en 5 temps (6 Branding & Design + Assistant IA NYAKA), chacune
+      avec sa propre adresse et ses métadonnées.
+    - Galerie vidéo avec lecteur intégré (horizontal et vertical, sans lecture
+      automatique avec le son).
+    - Visuels et vidéos PROVISOIRES (marqués « Visuel provisoire ») dans
+      public/media/realisations/ — à remplacer depuis l'administration.
+    - Administration : collection « 2. Réalisations (portfolio) »
+      (brouillon/publié, ordre, couvertures, galerie, textes alternatifs,
+      légendes, autorisation de publication).
+    - NEMESIS retiré ; l'ancienne adresse /realisations/kawa-coffee-shop
+      renvoie vers /realisations/kawa-menu-experience.
+    - Liens « réalisations » de la page d'accueil -> nouvelles fiches.
+
+  FICHIERS AJOUTÉS
+    lib/portfolio.ts, components/portfolio/PortfolioGallery.tsx,
+    components/portfolio/VideoModal.tsx, app/realisations/[slug]/page.tsx,
+    content/realisations/portfolio.json, public/media/realisations/ (images)
+  FICHIERS MODIFIÉS
+    app/realisations/page.tsx, app/realisations/kawa-coffee-shop/page.tsx,
+    lib/search-data.ts, content/pages/accueil.json, next.config.mjs,
+    public/admin/config.yml
+  RESTAURER : copier les fichiers de « v9/avant » (les « _ » du nom = dossiers)
+    puis supprimer les fichiers ajoutés ci-dessus.

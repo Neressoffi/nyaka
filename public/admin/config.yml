@@ -417,273 +417,239 @@ collections:
         summary: '{{fields.title}}'
       summary: '{{fields.label}}'
 - name: realisations
+  label: 2. Réalisations (portfolio)
+  format: json
   editor:
     preview: false
-  label: 2. Réalisations
-  format: json
   files:
-  - label: Projets, projet phare et étude de cas KAWA
-    name: projets
-    file: content/donnees/realisations-data.json
+  - label: Portfolio — projets, vidéos et textes de la page
+    name: portfolio
+    file: content/realisations/portfolio.json
     fields:
-    - label: Filtres des réalisations
-      name: projectFilters
-      widget: list
-      collapsed: true
-      fields:
-      - label: Identifiant (technique — ne pas modifier)
-        name: id
-        widget: string
-        hint: Sert aux liens internes (#ancre). À ne pas modifier.
-      - label: Libellé
-        name: label
-        widget: string
-      summary: '{{fields.label}}'
-    - label: Projet phare (page Réalisations)
-      name: featuredProject
+    - name: page
+      label: Textes de la page Réalisations
       widget: object
       collapsed: true
       fields:
-      - label: Nom
-        name: name
+      - name: titre
+        label: Titre
         widget: string
-      - label: Phrase d'accroche
-        name: tagline
-        widget: string
-      - label: Secteur / catégorie
-        name: sector
-        widget: string
-      - label: Lieu
-        name: location
-        widget: string
-      - label: Situation
-        name: situation
+      - name: introduction
+        label: Introduction
         widget: text
-      - label: Enjeu
-        name: challenge
-        widget: text
-      - label: Interventions
-        name: interventions
-        widget: list
-        field:
-          label: Élément
-          name: element
-          widget: text
-      - label: Livrables
-        name: deliverables
-        widget: list
-        field:
-          label: Élément
-          name: element
-          widget: string
-      - label: Résultat
-        name: result
-        widget: text
-      - label: Image
-        name: image
-        widget: image
-      - label: Galerie d'images
-        name: gallery
-        widget: list
-        field:
-          label: Image
-          name: element
-          widget: image
-      - label: Lien de l'étude de cas
-        name: caseStudyHref
-        widget: string
-    - label: Autres projets
-      name: projects
-      widget: list
-      collapsed: true
-      fields:
-      - label: Identifiant (technique — ne pas modifier)
-        name: id
-        widget: string
-        hint: Sert aux liens internes (#ancre). À ne pas modifier.
-      - label: Nom
-        name: name
-        widget: string
-      - label: Secteur / catégorie
-        name: sector
-        widget: string
-      - label: Situation
-        name: situation
-        widget: text
-      - label: Interventions
-        name: interventions
-        widget: string
-      - label: Pôles
-        name: poles
-        widget: select
-        multiple: true
-        options:
-        - branding
-        - design
-        - video
-        - ia-data
-      - label: Image
-        name: image
-        widget: image
-      - label: Note interne
-        name: note
-        widget: text
-      summary: '{{fields.name}}'
-    - label: Étude de cas KAWA
-      name: kawaCaseStudy
-      widget: object
-      collapsed: true
-      fields:
-      - label: Titre
-        name: title
-        widget: string
-      - label: Sous-titre
-        name: subtitle
-        widget: string
-      - label: Secteur / catégorie
-        name: sector
-        widget: string
-      - label: Lieu
-        name: location
-        widget: string
-      - label: Image d'en-tête
-        name: heroImage
-        widget: image
-      - label: Sections
-        name: sections
-        widget: list
-        collapsed: true
+      - name: filtres
+        label: Noms des filtres
+        widget: object
         fields:
-        - label: Identifiant (technique — ne pas modifier)
-          name: id
+        - name: tous
+          label: Tous
           widget: string
-          hint: Sert aux liens internes (#ancre). À ne pas modifier.
-        - label: Titre
-          name: title
+        - name: branding
+          label: Branding & Design
           widget: string
-        - label: Contenu
-          name: content
-          widget: text
-        - label: Image
-          name: image
+        - name: videos
+          label: Vidéos & campagnes
+          widget: string
+        - name: ia
+          label: IA & Data
+          widget: string
+      - name: etiquettes
+        label: Titres des parties des fiches
+        widget: object
+        fields:
+        - name: defi
+          label: Le défi
+          widget: string
+        - name: reponse
+          label: Notre réponse
+          widget: string
+        - name: realisations
+          label: Les réalisations
+          widget: string
+        - name: resultat
+          label: Le résultat
+          widget: string
+    - name: videos_intro
+      label: Introduction de la galerie vidéo
+      widget: object
+      collapsed: true
+      fields:
+      - name: titre
+        label: Titre
+        widget: string
+      - name: accroche
+        label: Accroche
+        widget: string
+      - name: description
+        label: Description
+        widget: text
+    - name: projets
+      label: Projets Branding & Design et IA (glisser pour réordonner)
+      widget: list
+      collapsed: true
+      summary: '{{fields.titre}} — {{fields.statut}}'
+      fields:
+      - name: titre
+        label: Titre du projet
+        widget: string
+      - name: slug
+        label: Adresse de la fiche (slug)
+        widget: string
+        hint: Ex. kawa-menu-experience → nyakaagency.com/realisations/kawa-menu-experience. Minuscules et tirets, sans accents.
+      - name: categorie
+        label: Catégorie
+        widget: select
+        options:
+        - label: Branding & Design
+          value: branding-design
+        - label: IA & Data
+          value: ia-data
+      - &id001
+        name: statut
+        label: Statut
+        widget: select
+        options:
+        - label: Publié (visible)
+          value: publie
+        - label: Brouillon (invisible)
+          value: brouillon
+        default: brouillon
+      - name: expertises
+        label: Expertises
+        widget: string
+        hint: Ex. Design éditorial · Expérience digitale
+      - name: accroche
+        label: Accroche
+        widget: string
+      - name: couverture
+        label: Couverture
+        widget: object
+        collapsed: false
+        fields:
+        - name: image
+          label: Visuel principal
           widget: image
-        summary: '{{fields.title}}'
-  - label: Textes des pages Réalisations
-    name: textes_realisations
-    file: content/pages/realisations.json
-    fields:
-    - label: Page étude de cas KAWA
-      name: Page_kawa_coffee_shop
-      widget: object
+          media_folder: /public/media/realisations
+          public_folder: /media/realisations
+        - name: alt
+          label: Texte alternatif (description de l'image)
+          widget: string
+      - name: defi
+        label: 02 · Le défi
+        widget: object
+        collapsed: false
+        fields:
+        - name: accroche
+          label: Accroche
+          widget: string
+        - name: texte
+          label: Texte (1 à 2 phrases maximum)
+          widget: text
+      - name: reponse
+        label: 03 · Notre réponse
+        widget: object
+        collapsed: false
+        fields:
+        - name: accroche
+          label: Accroche
+          widget: string
+        - name: texte
+          label: Texte (1 à 2 phrases maximum)
+          widget: text
+      - name: realisations
+        label: 04 · Les réalisations
+        widget: object
+        collapsed: false
+        fields:
+        - name: accroche
+          label: Accroche
+          widget: string
+        - name: texte
+          label: Texte (1 à 2 phrases maximum)
+          widget: text
+      - name: resultat
+        label: 05 · Le résultat
+        widget: object
+        collapsed: false
+        fields:
+        - name: accroche
+          label: Accroche
+          widget: string
+        - name: texte
+          label: Texte (1 à 2 phrases maximum)
+          widget: text
+      - name: galerie
+        label: Galerie (glisser pour réordonner)
+        widget: list
+        required: false
+        collapsed: true
+        summary: '{{fields.type}} — {{fields.legende}}'
+        fields:
+        - name: image
+          label: Image
+          widget: image
+          media_folder: /public/media/realisations
+          public_folder: /media/realisations
+        - name: type
+          label: Type de livrable
+          widget: string
+          hint: Ex. Catalogue, Logo, Photos en situation… Les images du même type sont regroupées.
+        - name: legende
+          label: Légende courte
+          widget: string
+          required: false
+        - name: alt
+          label: Texte alternatif
+          widget: string
+        - name: autorise
+          label: Autorisé à la publication
+          widget: boolean
+          default: true
+    - name: videos
+      label: Vidéos & campagnes (glisser pour réordonner)
+      widget: list
       collapsed: true
+      summary: '{{fields.client}} — {{fields.titre}} — {{fields.statut}}'
       fields:
-      - label: Retour aux réalisations
-        name: texte_01
+      - name: titre
+        label: Titre
         widget: string
-      - label: Étude de cas
-        name: texte_02
+      - name: client
+        label: Client
         widget: string
-      - label: Votre projet peut être le prochain.
-        name: texte_03
-        widget: string
-      - label: Présentez-nous votre besoin, votre idée ou la transformat…
-        name: texte_04
-        widget: text
-      - label: Démarrer un projet
-        name: texte_05
-        widget: string
-      - label: Voir toutes les réalisations
-        name: texte_06
-        widget: string
-    - label: Projet phare
-      name: RealisationsFeatured
-      widget: object
-      collapsed: true
-      fields:
-      - label: Projet à la une
-        name: texte_01
-        widget: string
-      - label: 'Secteur :'
-        name: texte_02
-        widget: string
-      - label: 'Localisation :'
-        name: texte_03
-        widget: string
-      - label: Situation
-        name: texte_04
-        widget: string
-      - label: Enjeu
-        name: texte_05
-        widget: string
-      - label: Intervention NYAKA
-        name: texte_06
-        widget: string
-      - label: Résultat
-        name: texte_07
-        widget: string
-      - label: Voir l'étude de cas complète
-        name: texte_08
-        widget: string
-      - label: Voir tous les projets
-        name: texte_09
-        widget: string
-    - label: Appel final
-      name: RealisationsFinalCta
-      widget: object
-      collapsed: true
-      fields:
-      - label: Votre projet peut être le prochain.
-        name: texte_01
-        widget: string
-      - label: Présentez-nous votre besoin, votre idée ou la transformat…
-        name: texte_02
-        widget: text
-      - label: Démarrer un projet
-        name: texte_03
-        widget: string
-      - label: Découvrir nos solutions
-        name: texte_04
-        widget: string
-    - label: Grille des projets
-      name: RealisationsGrid
-      widget: object
-      collapsed: true
-      fields:
-      - label: 'Interventions :'
-        name: texte_01
-        widget: string
-      - label: Autres réalisations
-        name: texte_02
-        widget: string
-      - label: Sélection de projets
-        name: texte_03
-        widget: string
-      - label: Des cartes courtes pour montrer la diversité des situatio…
-        name: texte_04
-        widget: text
-    - label: En-tête (Hero)
-      name: RealisationsHero
-      widget: object
-      collapsed: true
-      fields:
-      - label: Image
-        name: image_01
+      - *id001
+      - name: format
+        label: Format
+        widget: select
+        options:
+        - label: Horizontal (16:9)
+          value: horizontal
+        - label: Vertical (9:16)
+          value: vertical
+        default: horizontal
+      - name: miniature
+        label: Miniature (16:9)
         widget: image
-      - label: Réalisations
-        name: texte_01
+        media_folder: /public/media/realisations/VID
+        public_folder: /media/realisations/VID
+      - name: alt
+        label: Texte alternatif de la miniature
         widget: string
-      - label: Des projets pensés pour résoudre un problème, pas simplem…
-        name: texte_02
-        widget: string
-      - label: Découvrez comment NYAKA transforme un besoin initial en i…
-        name: texte_03
+        required: false
+      - name: video
+        label: Fichier vidéo (MP4)
+        widget: file
+        required: false
+        media_folder: /public/media/realisations/VID
+        public_folder: /media/realisations/VID
+        hint: Sans fichier, la vidéo reste invisible même si elle est publiée.
+      - name: description
+        label: Description courte (1 à 2 phrases)
         widget: text
-      - label: Découvrir le projet KAWA
-        name: texte_04
-        widget: string
-      - label: Parler de votre projet
-        name: texte_05
-        widget: string
+      - name: note
+        label: Note interne (non affichée)
+        widget: text
+        required: false
 - name: solutions
   editor:
     preview: false
@@ -1577,7 +1543,7 @@ collections:
       - label: Icône
         name: icon
         widget: select
-        options: &id001
+        options: &id002
         - image
         - video
         - audio
@@ -1614,7 +1580,7 @@ collections:
       - label: Icône
         name: icon
         widget: select
-        options: *id001
+        options: *id002
       - label: Liens
         name: links
         widget: list

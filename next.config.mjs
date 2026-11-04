@@ -8,6 +8,12 @@ const nextConfig = {
         destination: "/admin/index.html",
         permanent: false,
       },
+      // Ancienne étude de cas KAWA -> nouvelle fiche (cahier n°2)
+      {
+        source: "/realisations/kawa-coffee-shop",
+        destination: "/realisations/kawa-menu-experience",
+        permanent: true,
+      },
     ];
   },
 };
