@@ -233,3 +233,16 @@ v11 — Page Réalisations : titre et introduction remontés   (04/11/2026)
     app/realisations/page.tsx
   RESTAURER : copier « v11/avant/app_realisations_page.tsx » vers
     app/realisations/page.tsx.
+
+==============================================================================
+v12 — Page Réalisations : filtres placés sur l'image de fond   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Les filtres (Tous les projets · Branding & Design · Vidéos & campagnes ·
+      IA & Data) sont placés sur l'image de fond, sous l'introduction.
+    - Filtres non actifs : fond sombre semi-transparent et texte blanc pour
+      rester bien lisibles sur l'image.
+    - Rien d'autre n'a été changé.
+  FICHIERS MODIFIÉS
+    app/realisations/page.tsx, components/portfolio/PortfolioGallery.tsx
+  RESTAURER : copier les fichiers de « v12/avant » (les « _ » du nom = dossiers).

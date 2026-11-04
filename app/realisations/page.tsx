@@ -33,34 +33,23 @@ export default function RealisationsPage() {
       <TopBanner />
       <Header />
 
-      <section className="relative overflow-hidden">
-        <img
-          src={IMAGE_FOND}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
-        <div className="relative mx-auto flex min-h-[78vh] w-full max-w-screen-xl flex-col justify-center px-4 pb-20 pt-32 lg:px-8 lg:pb-24 lg:pt-36">
+      <PortfolioGallery
+        texts={portfolioPage}
+        videosIntro={videosIntro}
+        projets={projetsPublies}
+        videos={videosPubliees}
+        imageFond={IMAGE_FOND}
+        entete={
+          <>
           <h1 className="font-display text-[34px] font-bold leading-[1.1] text-white sm:text-[44px] lg:text-[56px]">
             {portfolioPage.titre}
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
             {portfolioPage.introduction}
           </p>
-        </div>
-      </section>
-
-      <section className="bg-black px-4 pb-20 pt-6 lg:px-8 lg:pb-28 lg:pt-10">
-        <div className="mx-auto max-w-screen-xl">
-
-          <PortfolioGallery
-            texts={portfolioPage}
-            videosIntro={videosIntro}
-            projets={projetsPublies}
-            videos={videosPubliees}
-          />
-        </div>
-      </section>
+          </>
+        }
+      />
 
       <RealisationsFinalCta />
       <Footer />
