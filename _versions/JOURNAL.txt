@@ -221,3 +221,15 @@ v10 — Page Réalisations : retour de l'image de fond d'origine   (04/11/2026)
     app/realisations/page.tsx
   RESTAURER : copier « v10/avant/app_realisations_page.tsx » vers
     app/realisations/page.tsx.
+
+==============================================================================
+v11 — Page Réalisations : titre et introduction remontés   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - « Nos réalisations. » et l'introduction sont remontés et centrés
+      verticalement sur l'image de fond (ordinateur et téléphone).
+    - Rien d'autre n'a été changé.
+  FICHIER MODIFIÉ
+    app/realisations/page.tsx
+  RESTAURER : copier « v11/avant/app_realisations_page.tsx » vers
+    app/realisations/page.tsx.
