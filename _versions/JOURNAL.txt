@@ -205,3 +205,19 @@ v9 — Cahier de corrections n°2 : Réalisations & Portfolio   (04/11/2026)
     public/admin/config.yml
   RESTAURER : copier les fichiers de « v9/avant » (les « _ » du nom = dossiers)
     puis supprimer les fichiers ajoutés ci-dessus.
+
+==============================================================================
+v10 — Page Réalisations : retour de l'image de fond d'origine   (04/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - L'image de fond de l'ancienne version (fjord, /media/1015.jpg) est remise
+      en haut de la page Réalisations.
+    - « Nos réalisations. » et « Des projets, des idées et des solutions qui
+      prennent vie. » sont placés sur cette image.
+    - Les filtres (Tous les projets · Branding & Design · Vidéos & campagnes ·
+      IA & Data) sont placés plus bas, sous l'image, avant la galerie.
+    - Rien d'autre n'a été changé.
+  FICHIER MODIFIÉ
+    app/realisations/page.tsx
+  RESTAURER : copier « v10/avant/app_realisations_page.tsx » vers
+    app/realisations/page.tsx.
