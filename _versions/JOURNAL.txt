@@ -344,3 +344,24 @@ v17 — Réalisations : vraies vidéos   (05/11/2026)
     content/realisations/portfolio.json ; public/media/realisations/VID
   RESTAURER : « v17/avant/content_realisations_portfolio.json » ->
     content/realisations/portfolio.json.
+
+==============================================================================
+v18 — Page Solutions : nouvelle maquette   (05/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement /solutions)
+    - Nouveau design selon la maquette fournie : fond beige clair, accent rose,
+      en-tête et pied de page propres à cette page (clairs).
+    - Sections : hero « Des idées à faire grandir. Des marques à faire
+      vivre. » + « Le studio en images » ; barre « Nos expertises » qui suit
+      la lecture ; Branding, Design, Vidéo & campagnes, IA & Data ;
+      « Une idée. Plusieurs chemins possibles. » (3 situations cliquables) ;
+      appel final « Un projet en tête ? Parlons-en. ».
+    - Images : vraies images des réalisations (BRIRENA, KAWA, THE VISION,
+      7G PAY, Perfecta).
+    - Les autres pages ne changent pas.
+  FICHIERS
+    app/solutions/page.tsx (modifié)
+    components/solutions/SolutionsMaquette.tsx (ajouté)
+    Les anciens composants components/solutions/*.tsx sont conservés.
+  RESTAURER : copier « v18/avant/app_solutions_page.tsx » vers
+    app/solutions/page.tsx.
