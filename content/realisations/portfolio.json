@@ -160,7 +160,7 @@
       "accroche": "Des messages clairs. Une communication qui marque.",
       "couverture": {
         "image": "/media/realisations/TV/TV_couverture.jpg",
-        "alt": "Visuels de communication THE VISION (visuel provisoire)"
+        "alt": "Trois visuels publicitaires THE VISION sur les études et l’immigration"
       },
       "defi": {
         "accroche": "Rendre les opportunités plus accessibles.",
@@ -181,30 +181,9 @@
       "galerie": [
         {
           "image": "/media/realisations/TV/TV_catalogue_couverture.jpg",
-          "type": "Catalogue",
-          "legende": "Couverture du catalogue.",
-          "alt": "Couverture du catalogue THE VISION (visuel provisoire)",
-          "autorise": true
-        },
-        {
-          "image": "/media/realisations/TV/TV_catalogue_extrait.jpg",
-          "type": "Catalogue",
-          "legende": "Un extrait intérieur.",
-          "alt": "Extrait intérieur du catalogue THE VISION (visuel provisoire)",
-          "autorise": true
-        },
-        {
-          "image": "/media/realisations/TV/TV_visuel_01.jpg",
-          "type": "Visuels publicitaires",
-          "legende": "Visuel publicitaire.",
-          "alt": "Visuel publicitaire THE VISION (visuel provisoire)",
-          "autorise": true
-        },
-        {
-          "image": "/media/realisations/TV/TV_visuel_02.jpg",
-          "type": "Réseaux sociaux",
-          "legende": "Publications pour les réseaux sociaux.",
-          "alt": "Publications THE VISION pour les réseaux sociaux (visuel provisoire)",
+          "type": "Brochures",
+          "legende": "Brochure « Programme Ambassadeur ».",
+          "alt": "Couverture de la brochure Programme Ambassadeur de THE VISION",
           "autorise": true
         }
       ]
@@ -218,7 +197,7 @@
       "accroche": "Une communication claire. Une identité qui inspire confiance.",
       "couverture": {
         "image": "/media/realisations/7G/7G_couverture.jpg",
-        "alt": "Visuels 7G Services et 7G PAY (visuel provisoire)"
+        "alt": "Visuels publicitaires 7G Services et 7G PAY"
       },
       "defi": {
         "accroche": "Rendre chaque service immédiatement compréhensible.",
@@ -240,29 +219,15 @@
         {
           "image": "/media/realisations/7G/7G_services_transferts.jpg",
           "type": "7G Services — Visuels",
-          "legende": "Transferts.",
-          "alt": "Visuel 7G Services sur les transferts (visuel provisoire)",
-          "autorise": true
-        },
-        {
-          "image": "/media/realisations/7G/7G_services_paiements.jpg",
-          "type": "7G Services — Visuels",
-          "legende": "Paiements.",
-          "alt": "Visuel 7G Services sur les paiements (visuel provisoire)",
+          "legende": "Visuel « Envoyez, recevez, souriez ».",
+          "alt": "Affiche 7G Services sur les transferts d’argent entre la Russie et l’Afrique",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_pay_logo.jpg",
           "type": "7G PAY — Logo",
           "legende": "Logo 7G PAY.",
-          "alt": "Logo de l’application 7G PAY (visuel provisoire)",
-          "autorise": true
-        },
-        {
-          "image": "/media/realisations/7G/7G_pay_promo.jpg",
-          "type": "7G PAY — Visuels promotionnels",
-          "legende": "Visuel promotionnel.",
-          "alt": "Visuel promotionnel 7G PAY avec smartphone (visuel provisoire)",
+          "alt": "Logo de l’application 7G PAY en forme de bouclier vert et or",
           "autorise": true
         }
       ]
@@ -276,7 +241,7 @@
       "accroche": "Une identité pensée pour se démarquer.",
       "couverture": {
         "image": "/media/realisations/BRI/BRI_couverture.jpg",
-        "alt": "Logo BRIRENA HAIR (visuel provisoire)"
+        "alt": "Coffret beige BRIRENA HAIR orné du logo cuivré, entouré d’accessoires capillaires"
       },
       "defi": {
         "accroche": "Donner une identité à la marque.",
@@ -298,22 +263,22 @@
         {
           "image": "/media/realisations/BRI/BRI_logo_variante.jpg",
           "type": "Logo",
-          "legende": "Déclinaison du logo.",
-          "alt": "Monogramme BRIRENA HAIR (visuel provisoire)",
+          "legende": "Logo principal et variantes.",
+          "alt": "Quatre versions du logo BRIRENA HAIR : horizontale, verticale, monogramme noir et monogramme blanc",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_palette.jpg",
           "type": "Palette & typographies",
-          "legende": "Palette et typographies.",
-          "alt": "Palette de couleurs et typographies BRIRENA HAIR (visuel provisoire)",
+          "legende": "Typographies et palette de couleurs.",
+          "alt": "Typographies Cormorant et Montserrat, palette chocolat, terracotta, beige et or de BRIRENA HAIR",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_application.jpg",
           "type": "Applications",
-          "legende": "Applications de l’identité.",
-          "alt": "Carte de visite et étiquette BRIRENA HAIR (visuel provisoire)",
+          "legende": "Sac, coffret, étiquette et autocollant.",
+          "alt": "Sac, coffret cadeau, étiquette et autocollant aux couleurs de BRIRENA HAIR",
           "autorise": true
         }
       ]

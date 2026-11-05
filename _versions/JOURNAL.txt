@@ -280,3 +280,26 @@ v14 — Page Réalisations : filtres remis à leur place d'avant   (04/11/2026)
   FICHIERS MODIFIÉS
     app/realisations/page.tsx, components/portfolio/PortfolioGallery.tsx
   RESTAURER : copier les fichiers de « v14/avant » (les « _ » du nom = dossiers).
+
+==============================================================================
+v15 — Réalisations : vraies images BRIRENA HAIR, THE VISION, 7G   (05/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - BRIRENA HAIR : couverture (coffret), logo et variantes, typographies et
+      palette, applications (sac, coffret, étiquette, autocollant).
+    - THE VISION : couverture (3 visuels publicitaires), brochure
+      « Programme Ambassadeur ».
+    - 7G Services & 7G PAY : couverture (visuels 7G Services + 7G PAY),
+      affiche 7G Services « Envoyez, recevez, souriez », logo 7G PAY.
+    - Les anciennes images provisoires de ces 3 fiches sont retirées du site.
+    - Les clients ont donné leur accord pour la diffusion (coordonnées
+      visibles sur les visuels).
+  FICHIERS MODIFIÉS
+    content/realisations/portfolio.json
+    public/media/realisations/BRI, TV et 7G (images remplacées)
+  FICHIERS PLUS UTILISÉS (peuvent être supprimés à la main)
+    TV/TV_catalogue_extrait.jpg, TV/TV_visuel_01.jpg, TV/TV_visuel_02.jpg,
+    7G/7G_services_paiements.jpg, 7G/7G_pay_promo.jpg
+  RESTAURER : copier « v15/avant/content_realisations_portfolio.json » vers
+    content/realisations/portfolio.json et les images de « v15/avant » dans
+    leur dossier (BRI_ -> BRI, TV_ -> TV, 7G_ -> 7G).
