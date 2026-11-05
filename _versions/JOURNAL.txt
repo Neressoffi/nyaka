@@ -303,3 +303,25 @@ v15 — Réalisations : vraies images BRIRENA HAIR, THE VISION, 7G   (05/11/2026
   RESTAURER : copier « v15/avant/content_realisations_portfolio.json » vers
     content/realisations/portfolio.json et les images de « v15/avant » dans
     leur dossier (BRI_ -> BRI, TV_ -> TV, 7G_ -> 7G).
+
+==============================================================================
+v16 — Réalisations : toutes les vraies images du dossier nyaka\images   (05/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Les 31 images du dossier « nyaka\images » sont placées dans leurs fiches
+      (le nom de chaque fichier correspond à sa légende) :
+        KAWA Menu Experience (5), KAWA Institutional Presentation (7),
+        THE VISION (5), 7G Services & 7G PAY (5), BRIRENA HAIR (4),
+        Perfecta (5).
+    - 7G : « Transferts » et « Paiements » remis dans le bon ordre ;
+      « Visuel promotionnel » 7G PAY ajouté. THE VISION : extrait intérieur,
+      visuel publicitaire et publications réseaux sociaux ajoutés.
+    - Plus aucune image provisoire dans ces 6 fiches.
+  RESTE PROVISOIRE (aucun fichier fourni) : Assistant IA NYAKA (3 images) et
+    les 4 vidéos.
+  FICHIERS MODIFIÉS
+    content/realisations/portfolio.json ; images de
+    public/media/realisations/KME, KIP, TV, 7G, BRI, PER
+  RESTAURER : les images d'origine restent dans « nyaka\images » ;
+    « v16/avant/content_realisations_portfolio.json » ->
+    content/realisations/portfolio.json (version v15).

@@ -30,7 +30,7 @@
       "accroche": "Quand le menu devient une expérience de marque.",
       "couverture": {
         "image": "/media/realisations/KME/KME_couverture.jpg",
-        "alt": "Menu KAWA présenté sur une table de coffee shop (visuel provisoire)"
+        "alt": "Menu KAWA tenu en main à une table du coffee shop"
       },
       "defi": {
         "accroche": "Repenser le menu. Préserver l’âme du lieu.",
@@ -53,28 +53,28 @@
           "image": "/media/realisations/KME/KME_photo_01.jpg",
           "type": "Photos en situation",
           "legende": "Le menu en main.",
-          "alt": "Menu KAWA tenu en main (visuel provisoire)",
+          "alt": "Cliente consultant le menu KAWA ouvert",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_photo_02.jpg",
           "type": "Photos en situation",
           "legende": "Le QR code en situation.",
-          "alt": "QR code du menu digital posé sur une table (visuel provisoire)",
+          "alt": "Menu KAWA tenu en main avec son QR code visible",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_page_01.jpg",
           "type": "Pages intérieures",
           "legende": "Deux pages intérieures.",
-          "alt": "Deux pages intérieures du menu KAWA (visuel provisoire)",
+          "alt": "Deux pages intérieures du menu KAWA au style vintage",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_capture_digitale.jpg",
           "type": "Menu digital",
           "legende": "Le menu sur smartphone.",
-          "alt": "Menu digital KAWA affiché sur un smartphone (visuel provisoire)",
+          "alt": "Menu digital KAWA affiché sur deux smartphones",
           "autorise": true
         }
       ]
@@ -88,7 +88,7 @@
       "accroche": "Présenter KAWA au-delà du coffee shop.",
       "couverture": {
         "image": "/media/realisations/KIP/KIP_couverture.jpg",
-        "alt": "Salle du coffee shop KAWA (visuel provisoire)"
+        "alt": "Dépliant institutionnel KAWA ouvert à côté d’un café"
       },
       "defi": {
         "accroche": "S’adresser à une clientèle professionnelle.",
@@ -111,42 +111,42 @@
           "image": "/media/realisations/KIP/KIP_photo_01.jpg",
           "type": "Shooting institutionnel",
           "legende": "Shooting institutionnel.",
-          "alt": "Thé servi sur une table (visuel provisoire)",
+          "alt": "Salle du coffee shop KAWA éclairée par des suspensions",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_02.jpg",
           "type": "Shooting institutionnel",
           "legende": "Shooting institutionnel.",
-          "alt": "Préparation culinaire (visuel provisoire)",
+          "alt": "Cliente lisant la carte KAWA en terrasse",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_03.jpg",
           "type": "Shooting institutionnel",
           "legende": "Shooting institutionnel.",
-          "alt": "Plat servi pour un déjeuner (visuel provisoire)",
+          "alt": "Jus d’orange servi sur une table KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_04.jpg",
           "type": "Shooting institutionnel",
           "legende": "Shooting institutionnel.",
-          "alt": "Café latte servi au comptoir (visuel provisoire)",
+          "alt": "Assiette servie par l’équipe KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_depliant_couverture.jpg",
           "type": "Dépliant",
           "legende": "Couverture du dépliant.",
-          "alt": "Couverture du dépliant des offres professionnelles KAWA (visuel provisoire)",
+          "alt": "Recto et verso du dépliant institutionnel KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_depliant_extrait.jpg",
           "type": "Dépliant",
           "legende": "Un extrait intérieur.",
-          "alt": "Extrait intérieur du dépliant KAWA (visuel provisoire)",
+          "alt": "Pages intérieures du dépliant KAWA présentant les solutions professionnelles",
           "autorise": true
         }
       ]
@@ -181,9 +181,30 @@
       "galerie": [
         {
           "image": "/media/realisations/TV/TV_catalogue_couverture.jpg",
-          "type": "Brochures",
-          "legende": "Brochure « Programme Ambassadeur ».",
+          "type": "Catalogue",
+          "legende": "Couverture du catalogue.",
           "alt": "Couverture de la brochure Programme Ambassadeur de THE VISION",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_catalogue_extrait.jpg",
+          "type": "Catalogue",
+          "legende": "Un extrait intérieur.",
+          "alt": "Pages intérieures de la brochure Programme Ambassadeur de THE VISION",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_visuel_01.jpg",
+          "type": "Visuels publicitaires",
+          "legende": "Visuel publicitaire.",
+          "alt": "Affiche THE VISION « Rentrées décalées 2027 »",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_visuel_02.jpg",
+          "type": "Réseaux sociaux",
+          "legende": "Publications pour les réseaux sociaux.",
+          "alt": "Publications THE VISION « Étudier en France » et « Enfin c’est vendredi »",
           "autorise": true
         }
       ]
@@ -219,8 +240,15 @@
         {
           "image": "/media/realisations/7G/7G_services_transferts.jpg",
           "type": "7G Services — Visuels",
-          "legende": "Visuel « Envoyez, recevez, souriez ».",
-          "alt": "Affiche 7G Services sur les transferts d’argent entre la Russie et l’Afrique",
+          "legende": "Transferts.",
+          "alt": "Affiche 7G Services « Your trusted partner for your money transfers »",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/7G/7G_services_paiements.jpg",
+          "type": "7G Services — Visuels",
+          "legende": "Paiements.",
+          "alt": "Affiche 7G Services « Envoyez, recevez, souriez »",
           "autorise": true
         },
         {
@@ -228,6 +256,13 @@
           "type": "7G PAY — Logo",
           "legende": "Logo 7G PAY.",
           "alt": "Logo de l’application 7G PAY en forme de bouclier vert et or",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/7G/7G_pay_promo.jpg",
+          "type": "7G PAY — Visuels promotionnels",
+          "legende": "Visuel promotionnel.",
+          "alt": "Visuel promotionnel 7G PAY présentant l’application sur smartphone",
           "autorise": true
         }
       ]
@@ -263,21 +298,21 @@
         {
           "image": "/media/realisations/BRI/BRI_logo_variante.jpg",
           "type": "Logo",
-          "legende": "Logo principal et variantes.",
+          "legende": "Déclinaison du logo.",
           "alt": "Quatre versions du logo BRIRENA HAIR : horizontale, verticale, monogramme noir et monogramme blanc",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_palette.jpg",
           "type": "Palette & typographies",
-          "legende": "Typographies et palette de couleurs.",
+          "legende": "Palette et typographies.",
           "alt": "Typographies Cormorant et Montserrat, palette chocolat, terracotta, beige et or de BRIRENA HAIR",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_application.jpg",
           "type": "Applications",
-          "legende": "Sac, coffret, étiquette et autocollant.",
+          "legende": "Applications de l’identité.",
           "alt": "Sac, coffret cadeau, étiquette et autocollant aux couleurs de BRIRENA HAIR",
           "autorise": true
         }
@@ -292,7 +327,7 @@
       "accroche": "Une nouvelle identité. Une image qui se distingue.",
       "couverture": {
         "image": "/media/realisations/PER/PER_couverture.jpg",
-        "alt": "Ancien et nouveau logo Perfecta (visuel provisoire)"
+        "alt": "Ancien et nouveau logo Perfecta imprimés sur des cartes"
       },
       "defi": {
         "accroche": "Faire évoluer l’image de Perfecta.",
@@ -315,28 +350,28 @@
           "image": "/media/realisations/PER/PER_logos.jpg",
           "type": "Logo",
           "legende": "Ancien et nouveau logo.",
-          "alt": "Comparaison de l’ancien et du nouveau logo Perfecta (visuel provisoire)",
+          "alt": "Comparaison de l’ancien logo Perfecta et du nouveau logo Institut Perfecta",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_catalogue_couverture.jpg",
           "type": "Catalogue",
           "legende": "Couverture du catalogue.",
-          "alt": "Couverture du catalogue des prestations Perfecta (visuel provisoire)",
+          "alt": "Couverture du catalogue des prix de l’Institut Perfecta",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_catalogue_extrait.jpg",
           "type": "Catalogue",
           "legende": "Un extrait intérieur.",
-          "alt": "Extrait du catalogue des prestations Perfecta (visuel provisoire)",
+          "alt": "Pages intérieures du catalogue Perfecta : gommages et hammam",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_visuel_01.jpg",
           "type": "Visuels publicitaires",
           "legende": "Visuel publicitaire.",
-          "alt": "Visuel publicitaire Perfecta (visuel provisoire)",
+          "alt": "Affiche « Promo by Perfecta » pour les fêtes de fin d’année",
           "autorise": true
         }
       ]
