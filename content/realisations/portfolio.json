@@ -429,20 +429,20 @@
       "video": "/media/realisations/VID/VID_THEVISION_01_video.mp4",
       "format": "horizontal",
       "description": "Vidéos de communication et publicités présentant différentes offres.",
-      "alt": "Miniature de la vidéo Vidéo de communication 01 — THE VISION (provisoire)",
+      "alt": "Miniature de la vidéo THE VISION : étudiants en préparation d’examen",
       "statut": "publie",
-      "note": "Vidéo et miniature provisoires : à remplacer par le fichier définitif."
+      "note": ""
     },
     {
       "titre": "Vidéo publicitaire 02",
       "client": "THE VISION",
       "miniature": "/media/realisations/VID/VID_THEVISION_02_miniature.jpg",
       "video": "/media/realisations/VID/VID_THEVISION_02_video.mp4",
-      "format": "horizontal",
+      "format": "vertical",
       "description": "Vidéos de communication et publicités présentant différentes offres.",
-      "alt": "Miniature de la vidéo Vidéo publicitaire 02 — THE VISION (provisoire)",
+      "alt": "Miniature de la vidéo THE VISION sur les frais d’études en France",
       "statut": "publie",
-      "note": "Vidéo et miniature provisoires : à remplacer par le fichier définitif."
+      "note": ""
     },
     {
       "titre": "Vidéo publicitaire",
@@ -452,19 +452,19 @@
       "format": "vertical",
       "description": "Production audiovisuelle réalisée pour accompagner la communication de la marque.",
       "alt": "Miniature de la vidéo Vidéo publicitaire — BRIRENA HAIR (provisoire)",
-      "statut": "publie",
-      "note": "Vidéo et miniature provisoires : à remplacer par le fichier définitif."
+      "statut": "brouillon",
+      "note": "En attente de la vraie vidéo : invisible sur le site tant qu’elle est en brouillon."
     },
     {
       "titre": "Vidéo publicitaire",
       "client": "Perfecta",
       "miniature": "/media/realisations/VID/VID_PERFECTA_01_miniature.jpg",
       "video": "/media/realisations/VID/VID_PERFECTA_01_video.mp4",
-      "format": "horizontal",
+      "format": "vertical",
       "description": "Production conçue pour valoriser la communication de Perfecta.",
-      "alt": "Miniature de la vidéo Vidéo publicitaire — Perfecta (provisoire)",
+      "alt": "Miniature de la vidéo Perfecta : présentation du centre de formation",
       "statut": "publie",
-      "note": "Vidéo et miniature provisoires : à remplacer par le fichier définitif."
+      "note": ""
     }
   ]
 }

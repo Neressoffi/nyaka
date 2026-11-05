@@ -325,3 +325,22 @@ v16 — Réalisations : toutes les vraies images du dossier nyaka\images   (05/1
   RESTAURER : les images d'origine restent dans « nyaka\images » ;
     « v16/avant/content_realisations_portfolio.json » ->
     content/realisations/portfolio.json (version v15).
+
+==============================================================================
+v17 — Réalisations : vraies vidéos   (05/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Vidéos du dossier « nyaka\videos » réduites (Clipchamp 480p puis
+      compression pour le web) et placées dans « Vidéos & campagnes » :
+        IMG_7207 -> THE VISION, Vidéo de communication 01 (horizontale, 4,6 Mo)
+        IMG_7206 -> THE VISION, Vidéo publicitaire 02 (verticale, 14 Mo)
+        Img3     -> Perfecta, Vidéo publicitaire (verticale, 11 Mo)
+      avec une miniature tirée de chaque vidéo.
+    - La vidéo provisoire BRIRENA HAIR passe en brouillon (invisible) en
+      attendant la vraie vidéo.
+    - Clipchamp (gratuit, Microsoft) a été installé sur l'ordinateur pour
+      réduire les vidéos ; les fichiers réduits sont dans Téléchargements.
+  FICHIERS MODIFIÉS
+    content/realisations/portfolio.json ; public/media/realisations/VID
+  RESTAURER : « v17/avant/content_realisations_portfolio.json » ->
+    content/realisations/portfolio.json.
