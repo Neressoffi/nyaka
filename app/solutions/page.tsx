@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SolutionsMaquette } from "@/components/solutions/SolutionsMaquette";
 
-// Page Solutions — maquette v2 adaptée au thème du site (v19).
+// Page Solutions — maquette v2 adaptée au thème du site (v23).
 export const metadata: Metadata = {
   title: "Solutions : branding, design, vidéo, IA & data | NYAKA",
   description:
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <main className="bg-black">
+    <main className="bg-[#e9e4db]">
       <TopBanner />
-      <Header />
+      <Header clair />
       <SolutionsMaquette />
       <Footer />
     </main>

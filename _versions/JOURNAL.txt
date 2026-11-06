@@ -424,3 +424,14 @@ v22 — À propos : correction des cartes « Qui nous accompagnons »   (06/11/2
     change bien au clic.
   FICHIER : components/apropos/AproposV2.tsx
   RESTAURER : copier « v22/avant/components_apropos_AproposV2.tsx.txt ».
+
+==============================================================================
+v23 — Page Solutions : mêmes couleurs que la page À propos   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement les couleurs de la page Solutions)
+    - Fonds beige doux (#e9e4db / #efebe4 en alternance), cartes #f6f3ee,
+      texte noir doux, accent jaune or (#D8A53A) au lieu du rose.
+    - Bloc « Un projet en tête ? Parlons-en. » sombre (#211e1d).
+    - En-tête clair (comme À propos). Textes, images et mise en page inchangés.
+  FICHIERS : app/solutions/page.tsx, components/solutions/SolutionsMaquette.tsx
+  RESTAURER : copier les fichiers de « v23/avant » (retirer « .txt »).

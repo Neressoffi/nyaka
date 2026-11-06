@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
-// Page Solutions — maquette « Version 2 » adaptée au thème sombre du site
-// (fond noir, accent du site, polices du site). En-tête et pied de page : ceux du site.
+// Page Solutions — mêmes couleurs que la page À propos (beige doux, accent jaune or).
+// En-tête et pied de page : ceux du site.
 
-const ROSE = "var(--accent)";
+const ROSE = "#D8A53A";
 const M = "/media/realisations";
 
 
@@ -46,7 +46,7 @@ function Eyebrow({ children, dot = true, light = false }: { children: React.Reac
   return (
     <p
       className={`flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-[11px] ${
-        light ? "text-white/70" : "text-white/60"
+        light ? "text-white/70" : "text-[#6b6964]"
       }`}
     >
       {dot && <span className="h-1.5 w-1.5 rounded-full" style={{ background: ROSE }} />}
@@ -61,8 +61,8 @@ function Chips({ items, soft = false }: { items: string[]; soft?: boolean }) {
       {items.map((c) => (
         <li
           key={c}
-          className={`rounded-md border px-3 py-1.5 text-[12px] text-white/80 ${
-            soft ? "border-transparent bg-white/10" : "border-white/15"
+          className={`rounded-md border px-3 py-1.5 text-[12px] text-[#3b3834] ${
+            soft ? "border-transparent bg-[#e2dcd1]" : "border-[#dedad4] bg-[#f6f3ee]"
           }`}
         >
           {c}
@@ -76,7 +76,7 @@ function LienFleche({ href, children }: { href: string; children: React.ReactNod
   return (
     <Link
       href={href}
-      className="group mt-7 inline-flex items-center gap-2 border-b border-white pb-1.5 text-[13px] font-semibold text-white"
+      className="group mt-7 inline-flex items-center gap-2 border-b border-[#1f1d1b] pb-1.5 text-[13px] font-semibold text-[#1f1d1b]"
     >
       {children}
       <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -86,15 +86,15 @@ function LienFleche({ href, children }: { href: string; children: React.ReactNod
 
 function Carte({ src, alt, etiquette, className = "" }: { src: string; alt: string; etiquette?: string; className?: string }) {
   return (
-    <figure className={`overflow-hidden rounded-2xl border border-white/10 bg-[#111] ${className}`}>
+    <figure className={`overflow-hidden rounded-2xl border border-[#dedad4] bg-[#f6f3ee] ${className}`}>
       <div className="h-10 px-4 pt-4 sm:h-12">
         {etiquette && (
-          <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/70">
+          <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#4a4641]">
             {etiquette}
           </span>
         )}
       </div>
-      <div className="bg-white/[0.06]">
+      <div className="bg-[#e2dcd1]">
         <img src={src} alt={alt} loading="lazy" decoding="async" className="block h-auto w-full" />
       </div>
       <div className="h-10 sm:h-12" />
@@ -124,18 +124,18 @@ function Expertise({
   inverse?: boolean;
 }) {
   return (
-    <section id={id} className="scroll-mt-32 border-t border-white/10 px-4 py-20 lg:px-8 lg:py-28">
+    <section id={id} className={`scroll-mt-32 border-t border-[#ddd7cc] ${inverse ? "bg-[#efebe4]" : ""} px-4 py-20 lg:px-8 lg:py-28`}>
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <div className={`order-2 lg:col-span-7 ${inverse ? "lg:order-2" : "lg:order-1"}`}>{visuel}</div>
         <div className={`order-1 lg:col-span-5 ${inverse ? "lg:order-1 lg:pr-8" : "lg:order-2 lg:pl-8"}`}>
           <Eyebrow dot={false}>{numero}</Eyebrow>
-          <h2 className="font-display mt-4 text-[44px] font-bold leading-[1.02] tracking-[-0.04em] text-white sm:text-[56px]">
+          <h2 className="font-display mt-4 text-[44px] font-bold leading-[1.02] tracking-[-0.04em] text-[#1f1d1b] sm:text-[56px]">
             {titre}
           </h2>
-          <p className="mt-3 text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-white/70 sm:text-[28px]">
+          <p className="mt-3 text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-[#4a4641] sm:text-[28px]">
             {sousTitre}
           </p>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/60">{texte}</p>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-[#6b6964]">{texte}</p>
           <Chips items={chips} />
           <LienFleche href={lien.href}>{lien.label}</LienFleche>
         </div>
@@ -165,8 +165,8 @@ export function SolutionsMaquette() {
   const c = CHEMINS[chemin];
 
   return (
-    <div className="bg-black text-white">
-      <div className="bg-black pt-24 lg:pt-28">
+    <div className="bg-[#e9e4db] text-[#1f1d1b]">
+      <div className="bg-[#e9e4db] pt-24 lg:pt-28">
         {/* Hero */}
         <section className="px-4 pb-20 pt-14 lg:px-8 lg:pb-28 lg:pt-20">
           <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-14">
@@ -179,40 +179,40 @@ export function SolutionsMaquette() {
                 Des marques à <br className="hidden sm:block" />
                 faire vivre.
               </h1>
-              <p className="mt-7 max-w-md text-[15px] leading-relaxed text-white/70 sm:text-base">
+              <p className="mt-7 max-w-md text-[15px] leading-relaxed text-[#4a4641] sm:text-base">
                 Branding, design, vidéo et intelligence artificielle : des expertises qui se complètent pour donner la bonne forme à votre projet.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#expertises"
-                  className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-[13px] font-semibold text-black transition-opacity hover:opacity-85"
+                  className="inline-flex items-center gap-2 rounded-lg bg-[#161616] px-5 py-3 text-[13px] font-semibold text-white transition-opacity hover:opacity-85"
                 >
                   Explorer les expertises <ArrowDown className="h-3.5 w-3.5" />
                 </a>
                 <Link
                   href="/realisations"
-                  className="inline-flex items-center gap-1.5 rounded-lg border border-white/25 px-5 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-white/10"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-[#cfc8bc] px-5 py-3 text-[13px] font-semibold text-[#1f1d1b] transition-colors hover:border-[#1f1d1b]"
                 >
                   Voir nos réalisations <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
-              <p className="mt-8 text-[11px] text-white/45">NYAKA — L&apos;empreinte de votre marque.</p>
+              <p className="mt-8 text-[11px] text-[#8a847c]">NYAKA — L&apos;empreinte de votre marque.</p>
             </div>
 
-            <div className="rounded-3xl bg-white/[0.04] p-5 sm:p-7">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">Le studio en images</p>
+            <div className="rounded-3xl bg-[#e2dcd1] p-5 sm:p-7">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#3b3834]">Le studio en images</p>
               <div className="relative mt-4 pb-[34%]">
-                <div className="overflow-hidden rounded-xl bg-[#1a1a1a] p-2 sm:ml-[6%]">
+                <div className="overflow-hidden rounded-xl bg-[#f6f3ee] p-2 sm:ml-[6%]">
                   <img
                     src={`${M}/KME/KME_page_01.jpg`}
                     alt="Deux pages intérieures du menu KAWA"
                     className="block aspect-[4/3] w-full rounded-lg object-cover"
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 w-[47%] -rotate-1 overflow-hidden rounded-xl bg-[#1a1a1a] p-2 shadow-2xl">
+                <div className="absolute bottom-0 left-0 w-[47%] -rotate-1 overflow-hidden rounded-xl bg-[#f6f3ee] p-2 shadow-2xl">
                   <img src={`${M}/BRI/BRI_application.jpg`} alt="Applications de l’identité BRIRENA HAIR" className="block aspect-[4/3] w-full rounded-lg object-cover" />
                 </div>
-                <div className="absolute bottom-[2%] right-0 w-[50%] rotate-1 overflow-hidden rounded-xl bg-[#1a1a1a] p-2 shadow-2xl">
+                <div className="absolute bottom-[2%] right-0 w-[50%] rotate-1 overflow-hidden rounded-xl bg-[#f6f3ee] p-2 shadow-2xl">
                   <img src={`${M}/TV/TV_visuel_02.jpg`} alt="Publications THE VISION pour les réseaux sociaux" className="block aspect-[4/3] w-full rounded-lg object-cover" />
                 </div>
               </div>
@@ -221,7 +221,7 @@ export function SolutionsMaquette() {
         </section>
 
         {/* Barre des expertises */}
-        <div id="expertises" className="sticky top-0 z-40 scroll-mt-0 border-y border-white/10 bg-black/85 backdrop-blur">
+        <div id="expertises" className="sticky top-0 z-40 scroll-mt-0 border-y border-[#dedad4] bg-[#e9e4db]/90 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 lg:px-8">
             <p className="hidden shrink-0 text-[12px] font-semibold sm:block">Nos expertises</p>
             <nav className="flex gap-1 overflow-x-auto scrollbar-hidden" aria-label="Nos expertises">
@@ -230,7 +230,7 @@ export function SolutionsMaquette() {
                   key={e.id}
                   href={`#${e.id}`}
                   className={`shrink-0 rounded-md px-3 py-2 text-[12px] transition-colors ${
-                    actif === e.id ? "bg-white font-semibold text-black" : "text-white/55 hover:bg-white/5 hover:text-white"
+                    actif === e.id ? "bg-[#f6f3ee] font-semibold text-[#1f1d1b] shadow-sm" : "text-[#8a847c] hover:text-[#1f1d1b]"
                   }`}
                 >
                   {e.label}
@@ -249,7 +249,7 @@ export function SolutionsMaquette() {
                 Chaque besoin appelle une réponse différente.
               </h2>
             </div>
-            <p className="text-[14px] leading-relaxed text-white/60 lg:col-span-4 lg:pl-6">
+            <p className="text-[14px] leading-relaxed text-[#6b6964] lg:col-span-4 lg:pl-6">
               Une marque à créer, une offre à présenter, une campagne à lancer ou un processus à simplifier : NYAKA mobilise les compétences adaptées.
             </p>
           </div>
@@ -297,7 +297,7 @@ export function SolutionsMaquette() {
           chips={["Vidéos publicitaires", "Teasers", "Concepts de campagne", "Montage & formats courts"]}
           lien={{ href: "/demarrer-un-projet", label: "Parler d’une campagne" }}
           visuel={
-            <div className="grid grid-cols-2 items-start gap-4 rounded-3xl bg-white/[0.04] p-4 sm:p-6">
+            <div className="grid grid-cols-2 items-start gap-4 rounded-3xl bg-[#e2dcd1] p-4 sm:p-6">
               <Carte etiquette="Exemple de campagne" src={`${M}/TV/TV_visuel_01.jpg`} alt="Affiche THE VISION « Rentrées décalées »" />
               <Carte etiquette="Exemple de campagne" className="mt-6" src={`${M}/7G/7G_pay_promo.jpg`} alt="Visuel promotionnel 7G PAY" />
             </div>
@@ -314,11 +314,11 @@ export function SolutionsMaquette() {
           chips={["Assistants IA", "Automatisation", "Collecte de données", "Analyse & reporting"]}
           lien={{ href: "/demarrer-un-projet", label: "Discuter d’un besoin IA" }}
           visuel={
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#111] p-6 sm:p-8">
-              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full border border-white/10" />
+            <div className="relative overflow-hidden rounded-3xl border border-[#dedad4] bg-[#f6f3ee] p-6 sm:p-8">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full border border-[#dedad4]" />
               <div className="flex items-start justify-between gap-4">
                 <p className="text-[13px] font-semibold">Un système conçu autour d’un usage</p>
-                <p className="shrink-0 text-[10px] text-white/45">Schéma illustratif</p>
+                <p className="shrink-0 text-[10px] text-[#8a847c]">Schéma illustratif</p>
               </div>
               <ol className="mt-14 grid gap-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center">
                 {[
@@ -327,15 +327,15 @@ export function SolutionsMaquette() {
                   { n: "3", t: "Usage", d: "Accompagner l’activité", rose: false },
                 ].map((s, i) => (
                   <li key={s.n} className="contents">
-                    <div className={`rounded-xl p-4 ${s.rose ? "bg-accent/10" : "bg-white/[0.05]"}`}>
+                    <div className={`rounded-xl p-4 ${s.rose ? "bg-[#D8A53A]/15" : "bg-[#e9e4db]"}`}>
                       <span
                         className="inline-flex h-6 w-6 items-center justify-center rounded text-[11px] font-bold"
-                        style={s.rose ? { background: "rgba(255,88,174,0.18)", color: ROSE } : { background: "rgba(255,255,255,0.1)" }}
+                        style={s.rose ? { background: "rgba(216,165,58,0.2)", color: ROSE } : { background: "#e2dcd1" }}
                       >
                         {s.n}
                       </span>
                       <p className="mt-3 text-[13px] font-bold">{s.t}</p>
-                      <p className="mt-0.5 text-[11px] text-white/50">{s.d}</p>
+                      <p className="mt-0.5 text-[11px] text-[#8a847c]">{s.d}</p>
                     </div>
                     {i < 2 && (
                       <span aria-hidden className="hidden text-center text-[12px] sm:block" style={{ color: ROSE }}>
@@ -347,7 +347,7 @@ export function SolutionsMaquette() {
               </ol>
               <ul className="mt-14 flex flex-wrap gap-2">
                 {["Processus", "Données", "Interactions", "Suivi"].map((x) => (
-                  <li key={x} className="rounded-full border border-white/10 px-3 py-1 text-[11px] text-white/50">
+                  <li key={x} className="rounded-full border border-[#dedad4] px-3 py-1 text-[11px] text-[#8a847c]">
                     {x}
                   </li>
                 ))}
@@ -357,7 +357,7 @@ export function SolutionsMaquette() {
         />
 
         {/* Le bon point de départ */}
-        <section className="border-t border-white/10 px-4 py-20 lg:px-8 lg:py-28">
+        <section className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <div className="grid items-end gap-6 lg:grid-cols-12">
               <div className="lg:col-span-8">
@@ -366,13 +366,13 @@ export function SolutionsMaquette() {
                   Une idée. Plusieurs chemins possibles.
                 </h2>
               </div>
-              <p className="text-[13px] leading-relaxed text-white/60 lg:col-span-4 lg:pl-10">
+              <p className="text-[13px] leading-relaxed text-[#6b6964] lg:col-span-4 lg:pl-10">
                 Choisissez votre situation. Découvrez comment nos pôles peuvent se compléter sans multiplier les prestations inutiles.
               </p>
             </div>
 
-            <div className="mt-10 grid overflow-hidden rounded-2xl border border-white/10 bg-[#111] md:grid-cols-[1fr_1.2fr]">
-              <div role="tablist" aria-label="Votre situation" className="border-b border-white/10 md:border-b-0 md:border-r">
+            <div className="mt-10 grid overflow-hidden rounded-2xl border border-[#dedad4] bg-[#f6f3ee] md:grid-cols-[1fr_1.2fr]">
+              <div role="tablist" aria-label="Votre situation" className="border-b border-[#dedad4] md:border-b-0 md:border-r">
                 {CHEMINS.map((ch, i) => (
                   <button
                     key={ch.choix}
@@ -380,19 +380,19 @@ export function SolutionsMaquette() {
                     role="tab"
                     aria-selected={chemin === i}
                     onClick={() => setChemin(i)}
-                    className={`flex w-full items-center justify-between border-b border-white/10 px-6 py-5 text-left text-[13px] font-semibold transition-colors last:border-b-0 md:last:border-b ${
-                      chemin === i ? "bg-accent/10" : "hover:bg-white/[0.04]"
+                    className={`flex w-full items-center justify-between border-b border-[#dedad4] px-6 py-5 text-left text-[13px] font-semibold transition-colors last:border-b-0 md:last:border-b ${
+                      chemin === i ? "bg-[#D8A53A]/15" : "hover:bg-[#e2dcd1]"
                     }`}
                   >
                     {ch.choix}
-                    <ArrowUpRight className="h-4 w-4 shrink-0" style={{ color: chemin === i ? ROSE : "#ffffff" }} />
+                    <ArrowUpRight className="h-4 w-4 shrink-0" style={{ color: chemin === i ? ROSE : "#1f1d1b" }} />
                   </button>
                 ))}
               </div>
               <div key={chemin} role="tabpanel" className="animate-[fadeIn_300ms_ease-out] p-6 sm:p-10">
                 <Eyebrow dot={false}>Une réponse adaptée</Eyebrow>
                 <h3 className="font-display mt-4 max-w-md text-[24px] font-bold leading-[1.15] tracking-[-0.03em] sm:text-[28px]">{c.titre}</h3>
-                <p className="mt-4 max-w-md text-[13px] leading-relaxed text-white/60">{c.texte}</p>
+                <p className="mt-4 max-w-md text-[13px] leading-relaxed text-[#6b6964]">{c.texte}</p>
                 <Chips items={c.poles} soft />
               </div>
             </div>
@@ -401,7 +401,7 @@ export function SolutionsMaquette() {
 
         {/* Appel final */}
         <section className="px-4 pb-24 lg:px-8">
-          <div className="mx-auto flex max-w-6xl flex-col gap-10 rounded-3xl border border-white/10 bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] px-7 py-12 text-white sm:px-14 sm:py-16 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mx-auto flex max-w-6xl flex-col gap-10 rounded-3xl bg-[#211e1d] px-7 py-12 text-white sm:px-14 sm:py-16 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <Eyebrow light>Parlons de votre projet</Eyebrow>
               <h2 className="font-display mt-5 text-[38px] font-bold leading-[1.02] tracking-[-0.04em] sm:text-[54px]">
