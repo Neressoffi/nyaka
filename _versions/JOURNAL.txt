@@ -413,3 +413,14 @@ v21 — Page À propos : fonds plus doux pour les yeux   (06/11/2026)
     - Section « Notre vision », jaune or, textes et mise en page inchangés.
   FICHIERS : app/a-propos/page.tsx, components/apropos/AproposV2.tsx
   RESTAURER : copier les fichiers de « v21/avant » (retirer « .txt »).
+
+==============================================================================
+v22 — À propos : correction des cartes « Qui nous accompagnons »   (06/11/2026)
+==============================================================================
+  PROBLÈME : au clic, les 3 cartes disparaissaient (l'animation d'apparition
+    était effacée quand la carte sélectionnée changeait).
+  CORRECTION : l'animation d'apparition est placée sur le conteneur des
+    cartes ; les cartes restent visibles et le texte « Notre accompagnement »
+    change bien au clic.
+  FICHIER : components/apropos/AproposV2.tsx
+  RESTAURER : copier « v22/avant/components_apropos_AproposV2.tsx.txt ».

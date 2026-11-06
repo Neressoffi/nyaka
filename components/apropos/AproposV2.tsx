@@ -230,7 +230,9 @@ export function AproposV2() {
             </p>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3">
+          {/* L'animation d'apparition est sur le conteneur : le className des cartes
+              change au clic et effacerait sinon la classe d'apparition. */}
+          <div className="ap-reveal grid gap-3 md:grid-cols-3">
             {PUBLICS.map((p, i) => {
               const actif = public_ === i;
               return (
@@ -239,7 +241,7 @@ export function AproposV2() {
                   type="button"
                   aria-pressed={actif}
                   onClick={() => setPublic(i)}
-                  className={`ap-reveal group relative flex flex-col overflow-hidden rounded-[20px] border bg-[#f6f3ee] p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#bbb6b0] hover:shadow-[0_20px_48px_rgba(33,29,25,0.07)] md:min-h-[430px] lg:p-7 ${
+                  className={`group relative flex flex-col overflow-hidden rounded-[20px] border bg-[#f6f3ee] p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#bbb6b0] hover:shadow-[0_20px_48px_rgba(33,29,25,0.07)] md:min-h-[430px] lg:p-7 ${
                     actif ? "-translate-y-1 border-[#bbb6b0] shadow-[0_20px_48px_rgba(33,29,25,0.07)]" : "border-[#dedad4]"
                   }`}
                 >
