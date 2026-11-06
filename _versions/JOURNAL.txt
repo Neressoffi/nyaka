@@ -402,3 +402,14 @@ v20 — Page À propos : zones de couleur du prototype, accent jaune or   (06/11
     components/Header.tsx, components/NyakaLogo.tsx, app/globals.css (modifiés)
     public/nyaka-logo-dark.png (ajouté)
   RESTAURER : copier les fichiers de « v20/avant » (retirer « .txt »).
+
+==============================================================================
+v21 — Page À propos : fonds plus doux pour les yeux   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement les couleurs de fond de la page À propos)
+    - Plus de blanc pur : sections blanches -> beige doux #efebe4.
+    - Beige principal #f5f3ef -> #e9e4db ; cartes #ffffff -> #f6f3ee.
+    - Texte noir pur -> noir doux #1f1d1b.
+    - Section « Notre vision », jaune or, textes et mise en page inchangés.
+  FICHIERS : app/a-propos/page.tsx, components/apropos/AproposV2.tsx
+  RESTAURER : copier les fichiers de « v21/avant » (retirer « .txt »).

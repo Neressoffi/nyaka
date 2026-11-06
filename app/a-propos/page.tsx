@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AproposV2 } from "@/components/apropos/AproposV2";
 
-// Page À propos V2 (v20) — textes du brief, zones de couleur du prototype.
+// Page À propos V2 (v21) — textes du brief, zones de couleur du prototype.
 export const metadata: Metadata = {
   title: "À propos — NYAKA | L'empreinte de votre marque.",
   description:
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AproposPage() {
   return (
-    <main className="bg-[#f5f3ef]">
+    <main className="bg-[#e9e4db]">
       <TopBanner />
       <Header clair />
       <AproposV2 />

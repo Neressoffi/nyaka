@@ -75,7 +75,7 @@ function IntroLigne({ gauche, droite }: { gauche: string; droite: string }) {
   );
 }
 
-const H2 = "font-display font-bold leading-[1.08] tracking-[-0.03em] text-[#161616] text-[34px] sm:text-[44px] lg:text-[56px]";
+const H2 = "font-display font-bold leading-[1.08] tracking-[-0.03em] text-[#1f1d1b] text-[34px] sm:text-[44px] lg:text-[56px]";
 const BTN = "inline-flex min-h-[48px] items-center gap-3 rounded-lg px-5 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 sm:text-[15px]";
 
 const DESSINS = [
@@ -115,7 +115,7 @@ export function AproposV2() {
   }, []);
 
   return (
-    <div className="bg-[#f5f3ef] text-[#161616]">
+    <div className="bg-[#e9e4db] text-[#1f1d1b]">
       <style dangerouslySetInnerHTML={{ __html: ANIM }} />
 
       {/* 01 · Hero */}
@@ -132,8 +132,8 @@ export function AproposV2() {
                 À propos
               </h1>
               <p className="mt-7 max-w-[650px] font-display text-[24px] font-medium leading-[1.3] tracking-[-0.02em] text-[#292929] sm:text-[30px] lg:text-[34px]">
-                Une agence de <strong className="font-bold text-[#161616]">communication créative</strong> et de{" "}
-                <strong className="font-bold text-[#161616]">solutions d’intelligence artificielle.</strong>
+                Une agence de <strong className="font-bold text-[#1f1d1b]">communication créative</strong> et de{" "}
+                <strong className="font-bold text-[#1f1d1b]">solutions d’intelligence artificielle.</strong>
               </p>
               <p className="mt-5 max-w-[510px] text-[15px] leading-[1.8] text-[#6b6964] sm:text-base">
                 Nous accompagnons les entrepreneurs, les porteurs de projets et les entreprises dans la création, la structuration et le développement de leur image, de leur communication et de leurs outils.
@@ -142,7 +142,7 @@ export function AproposV2() {
                 <a href="#vision" className={`${BTN} bg-[#161616] text-white hover:opacity-90`}>
                   Découvrir notre vision <ArrowDownRight className="h-4 w-4" />
                 </a>
-                <Link href="/realisations" className={`${BTN} border border-[#dedad4] text-[#161616] hover:border-[#161616]`}>
+                <Link href="/realisations" className={`${BTN} border border-[#dedad4] text-[#1f1d1b] hover:border-[#161616]`}>
                   Nos réalisations <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -157,7 +157,7 @@ export function AproposV2() {
               <div className="relative h-[440px] w-[510px] shrink-0 origin-center scale-[0.62] sm:scale-[0.85] lg:scale-100">
                 <div className="ap-rotate absolute left-1/2 top-1/2 h-[435px] w-[435px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#dedad4]" />
                 <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dedad4]" />
-                <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dedad4] bg-[#ebe7e0]" />
+                <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dedad4] bg-[#e2dcd1]" />
                 <svg className="absolute inset-0 h-full w-full" viewBox="0 0 510 440" aria-hidden="true">
                   <g fill="none" stroke="#cac4bc" strokeWidth="1.3"><path d="M128 92 L205 160" /><path d="M402 160 L326 190" /><path d="M163 358 L213 282" /></g>
                   <g fill="#D8A53A"><circle cx="205" cy="160" r="3" /><circle cx="326" cy="190" r="3" /><circle cx="213" cy="282" r="3" /></g>
@@ -173,7 +173,7 @@ export function AproposV2() {
                 ].map((n) => (
                   <div
                     key={n.t}
-                    className={`ap-float absolute ${n.c} flex items-center gap-2.5 rounded-[10px] border border-[#dedad4] bg-white px-4 py-3.5 text-[12px] font-bold tracking-[0.045em] shadow-2xl`}
+                    className={`ap-float absolute ${n.c} flex items-center gap-2.5 rounded-[10px] border border-[#dedad4] bg-[#f6f3ee] px-4 py-3.5 text-[12px] font-bold tracking-[0.045em] shadow-2xl`}
                     style={{ animationDelay: n.d }}
                   >
                     <span className="h-2 w-2 rounded-full bg-[#D8A53A]" />
@@ -198,7 +198,7 @@ export function AproposV2() {
       </section>
 
       {/* 02 · Ce qui nous anime */}
-      <section id="conviction" className="border-t border-[#eeeae3] bg-white px-4 py-20 lg:px-8 lg:py-28">
+      <section id="conviction" className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-screen-xl">
           <IntroLigne gauche="01 / Ce qui nous anime" droite="La conviction avant la forme" />
           <div className="grid items-end gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
@@ -239,7 +239,7 @@ export function AproposV2() {
                   type="button"
                   aria-pressed={actif}
                   onClick={() => setPublic(i)}
-                  className={`ap-reveal group relative flex flex-col overflow-hidden rounded-[20px] border bg-white p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#bbb6b0] hover:shadow-[0_20px_48px_rgba(33,29,25,0.07)] md:min-h-[430px] lg:p-7 ${
+                  className={`ap-reveal group relative flex flex-col overflow-hidden rounded-[20px] border bg-[#f6f3ee] p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#bbb6b0] hover:shadow-[0_20px_48px_rgba(33,29,25,0.07)] md:min-h-[430px] lg:p-7 ${
                     actif ? "-translate-y-1 border-[#bbb6b0] shadow-[0_20px_48px_rgba(33,29,25,0.07)]" : "border-[#dedad4]"
                   }`}
                 >
@@ -247,9 +247,9 @@ export function AproposV2() {
                   <span className="my-4 flex h-32 w-full items-center justify-center text-[#8a847c] sm:h-40" aria-hidden="true">
                     <span className="block h-full w-[80%] max-w-[220px]">{DESSINS[i]}</span>
                   </span>
-                  <span className="font-display text-[22px] font-bold leading-[1.15] tracking-[-0.02em] text-[#161616] lg:text-[26px]">{p.titre}</span>
+                  <span className="font-display text-[22px] font-bold leading-[1.15] tracking-[-0.02em] text-[#1f1d1b] lg:text-[26px]">{p.titre}</span>
                   <span className="mt-3 max-w-[300px] text-sm leading-[1.7] text-[#6b6964]">{p.texte}</span>
-                  <span className="mt-auto flex w-full items-center justify-between pt-6 text-[11px] font-bold uppercase tracking-[0.1em] text-[#161616]">
+                  <span className="mt-auto flex w-full items-center justify-between pt-6 text-[11px] font-bold uppercase tracking-[0.1em] text-[#1f1d1b]">
                     {p.bas}
                     <ArrowRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
@@ -260,12 +260,12 @@ export function AproposV2() {
           </div>
 
           <div
-            className="ap-reveal mt-4 flex flex-col gap-1.5 rounded-[14px] bg-[#eae6df] px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+            className="ap-reveal mt-4 flex flex-col gap-1.5 rounded-[14px] bg-[#e2dcd1] px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
             role="status"
             aria-live="polite"
           >
             <Eyebrow className="!text-[#8a847c]">Notre accompagnement</Eyebrow>
-            <strong className="text-sm font-semibold leading-relaxed text-[#161616] sm:text-base">{PUBLICS[public_].resultat}</strong>
+            <strong className="text-sm font-semibold leading-relaxed text-[#1f1d1b] sm:text-base">{PUBLICS[public_].resultat}</strong>
           </div>
         </div>
       </section>
@@ -318,7 +318,7 @@ export function AproposV2() {
       </section>
 
       {/* 05 · Notre manière de travailler */}
-      <section id="methode" className="scroll-mt-4 border-t border-[#eeeae3] bg-white px-4 py-20 lg:px-8 lg:py-32">
+      <section id="methode" className="scroll-mt-4 border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-screen-xl">
           <IntroLigne gauche="04 / Notre manière de travailler" droite="Une méthode simple et structurée" />
           <div className="ap-reveal mb-14 grid items-end gap-5 lg:mb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
@@ -334,7 +334,7 @@ export function AproposV2() {
             <span aria-hidden className="absolute bottom-0 left-[14px] top-0 w-px bg-[#dedad4] md:hidden" />
             {ETAPES.map((e, i) => (
               <li key={e.n} className="ap-reveal relative pl-12 md:border-t md:border-[#dedad4] md:pl-0 md:pt-12">
-                <span className="absolute left-0 top-1 flex h-[29px] w-[29px] items-center justify-center rounded-full border border-[#dedad4] bg-white text-[11px] font-bold text-[#6b6964] md:-top-[11px] md:h-auto md:w-auto md:rounded-none md:border-0 md:pr-4 md:text-[13px]">
+                <span className="absolute left-0 top-1 flex h-[29px] w-[29px] items-center justify-center rounded-full border border-[#dedad4] bg-[#efebe4] text-[11px] font-bold text-[#6b6964] md:-top-[11px] md:h-auto md:w-auto md:rounded-none md:border-0 md:pr-4 md:text-[13px]">
                   {e.n}
                 </span>
                 <div className="mb-3 flex h-12 items-center text-[#292929] sm:h-16 md:mb-5" aria-hidden>
@@ -365,7 +365,7 @@ export function AproposV2() {
             </p>
             <ul className="mt-8 flex flex-wrap gap-2">
               {["Stratégie", "Identité & design", "Vidéo & contenus", "IA & données"].map((t) => (
-                <li key={t} className="rounded-full bg-[#eae6df] px-3.5 py-2.5 text-xs font-medium text-[#292929]">
+                <li key={t} className="rounded-full bg-[#e2dcd1] px-3.5 py-2.5 text-xs font-medium text-[#292929]">
                   {t}
                 </li>
               ))}
@@ -391,7 +391,7 @@ export function AproposV2() {
             ].map((n) => (
               <span
                 key={n.t}
-                className={`ap-float absolute ${n.c} flex items-center gap-2 rounded-[11px] border border-[#dedad4] bg-white px-3 py-2.5 text-[10px] font-bold tracking-[0.02em] shadow-2xl sm:gap-2.5 sm:px-5 sm:py-4 sm:text-[13px]`}
+                className={`ap-float absolute ${n.c} flex items-center gap-2 rounded-[11px] border border-[#dedad4] bg-[#f6f3ee] px-3 py-2.5 text-[10px] font-bold tracking-[0.02em] shadow-2xl sm:gap-2.5 sm:px-5 sm:py-4 sm:text-[13px]`}
                 style={{ animationDelay: n.d, animationDuration: "7s" }}
               >
                 <i className="h-2 w-2 rounded-full bg-[#aea59a] sm:h-[9px] sm:w-[9px]" />
@@ -409,7 +409,7 @@ export function AproposV2() {
       </section>
 
       {/* 07 · Contact */}
-      <section id="contact" className="border-t border-[#eeeae3] bg-white px-4 py-20 lg:px-8 lg:py-28">
+      <section id="contact" className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-screen-xl items-end gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:gap-16">
           <div className="ap-reveal">
             <Eyebrow>Et maintenant&nbsp;?</Eyebrow>
@@ -427,7 +427,7 @@ export function AproposV2() {
                 href="https://wa.me/79152135853"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${BTN} border border-[#dedad4] text-[#161616] hover:border-[#161616]`}
+                className={`${BTN} border border-[#dedad4] text-[#1f1d1b] hover:border-[#161616]`}
               >
                 Échanger sur WhatsApp <ArrowUpRight className="h-4 w-4" />
               </a>
