@@ -88,8 +88,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-6">
+        <div className="mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-foreground-3">{TXT.texte_02}</p>
+          <Link href="/politique-de-confidentialite" className="text-xs text-foreground-3 underline-offset-2 hover:text-white hover:underline">
+            Politique de confidentialité
+          </Link>
         </div>
       </div>
     </footer>
