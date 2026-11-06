@@ -452,3 +452,4 @@ v24 — Page Solutions V5 « Premium Hybrid Tech »   (06/11/2026)
     L'ancien composant SolutionsMaquette.tsx est conservé.
   RESTAURER : copier « v24/avant/app_solutions_page.tsx.txt » vers
     app/solutions/page.tsx (retirer « .txt »).
+  NOTE : mise en ligne relancée (le premier envoi avait été ignoré par Netlify).
