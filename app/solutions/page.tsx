@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import { TopBanner } from "@/components/TopBanner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SolutionsMaquette } from "@/components/solutions/SolutionsMaquette";
+import { SolutionsV5 } from "@/components/solutions/SolutionsV5";
 
-// Page Solutions — maquette v2 adaptée au thème du site (v23).
+// Page Solutions V5 (v24) — prototype « Premium Hybrid Tech », en-tête et pied de page du site.
 export const metadata: Metadata = {
-  title: "Solutions : branding, design, vidéo, IA & data | NYAKA",
+  title: "Solutions — NYAKA | L'empreinte de votre marque",
   description:
-    "Branding, design, vidéo et intelligence artificielle : des expertises qui se complètent pour donner la bonne forme à votre projet.",
+    "NYAKA accompagne les marques et les entreprises avec ses expertises en branding, design, vidéo et campagnes, intelligence artificielle et data.",
 };
 
 export default function SolutionsPage() {
   return (
-    <main className="bg-[#e9e4db]">
+    <main className="bg-[#191716]">
       <TopBanner />
-      <Header clair />
-      <SolutionsMaquette />
+      <Header />
+      <SolutionsV5 />
       <Footer />
     </main>
   );

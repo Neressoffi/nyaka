@@ -435,3 +435,20 @@ v23 — Page Solutions : mêmes couleurs que la page À propos   (06/11/2026)
     - En-tête clair (comme À propos). Textes, images et mise en page inchangés.
   FICHIERS : app/solutions/page.tsx, components/solutions/SolutionsMaquette.tsx
   RESTAURER : copier les fichiers de « v23/avant » (retirer « .txt »).
+
+==============================================================================
+v24 — Page Solutions V5 « Premium Hybrid Tech »   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement /solutions)
+    - Nouvelle page selon le prototype NYAKA_Solutions_V5 : haut de page sombre
+      avec composition animée, bandeau défilant, 4 expertises (Branding,
+      Design, Vidéo & campagnes sombre, IA & Data) avec compositions
+      dessinées en code, 6 situations cliquables, bloc final.
+    - Aucune image de réalisation client sur cette page (consigne du prototype).
+    - Couleurs : fonds clairs adoucis (#e9e4db / #efebe4), jaune or du logo
+      (#D8A53A). En-tête et pied de page officiels du site.
+  FICHIERS
+    app/solutions/page.tsx (modifié) ; components/solutions/SolutionsV5.tsx (ajouté)
+    L'ancien composant SolutionsMaquette.tsx est conservé.
+  RESTAURER : copier « v24/avant/app_solutions_page.tsx.txt » vers
+    app/solutions/page.tsx (retirer « .txt »).
