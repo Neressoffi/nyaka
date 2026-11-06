@@ -1,0 +1,11 @@
+// Hébergement Cloudflare (Workers, fichiers statiques) — v26.
+// Construction : npm run build:cloudflare  ->  dossier « out »
+{
+  "name": "nyaka",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

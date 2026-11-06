@@ -469,3 +469,17 @@ v25 — Préparation de l'hébergement gratuit Cloudflare Pages   (06/11/2026)
     Dossier de sortie : out
   RESTAURER : copier « v25/avant/next.config.mjs.txt » vers next.config.mjs
     (retirer « .txt ») et supprimer public/_redirects.
+
+==============================================================================
+v26 — Cloudflare : réglages pour « Workers » (fichiers statiques)   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE (aucun changement visible sur le site)
+    - package.json : nouvelle commande « npm run build:cloudflare ».
+    - next.config.mjs : export en pages fixes aussi avec NEXT_EXPORT=1.
+    - wrangler.jsonc (ajouté) : publie le dossier « out » sur Cloudflare,
+      avec les redirections de public/_redirects et la page 404.
+  RÉGLAGES CLOUDFLARE
+    Build command  : npm run build:cloudflare
+    Deploy command : npx wrangler deploy
+  RESTAURER : copier les fichiers de « v26/avant » (retirer « .txt ») et
+    supprimer wrangler.jsonc.
