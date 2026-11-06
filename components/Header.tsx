@@ -176,7 +176,8 @@ function MegaMenu({
   );
 }
 
-export function Header() {
+// clair : variante pour une page sur fond clair (ex. À propos) — texte foncé.
+export function Header({ clair = false }: { clair?: boolean } = {}) {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -212,7 +213,11 @@ export function Header() {
     <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
 
     <header
-      className={`absolute inset-x-0 z-40 ${ANNOUNCEMENT ? "top-9" : "top-0"}`}
+      className={`absolute inset-x-0 z-40 ${ANNOUNCEMENT ? "top-9" : "top-0"} ${
+        clair
+          ? "header-clair text-foreground-0 [--foreground-0:#161616] [--foreground-1:rgba(22,22,22,0.9)] [--foreground-2:rgba(22,22,22,0.7)] [--foreground-3:rgba(22,22,22,0.5)] [--surface-1:#ffffff]"
+          : ""
+      }`}
     >
 
       <div className="mx-auto flex h-[72px] max-w-screen-2xl items-center justify-between px-4 lg:px-8">
@@ -229,7 +234,7 @@ export function Header() {
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          <NyakaLogo />
+          <NyakaLogo clair={clair} />
 
           <nav className="hidden items-center gap-6 lg:flex">
 
@@ -272,7 +277,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-base leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex lg:text-2xl lg:leading-none"
+            className={`hidden items-center gap-2 rounded-lg border ${clair ? "border-black/15 hover:border-black/30" : "border-white/15"} px-3.5 py-2 text-base leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex lg:text-2xl lg:leading-none`}
           >
             <Search className="h-5 w-5" />{TXT.texte_03}</button>
 
@@ -292,7 +297,7 @@ export function Header() {
 
           <Link
             href="/demarrer-un-projet"
-            className="rounded-lg bg-white max-lg:whitespace-nowrap px-3 py-2.5 text-sm font-medium leading-none text-black transition-opacity hover:opacity-90 sm:px-4 sm:py-2 sm:text-base lg:text-2xl lg:leading-none"
+            className={`rounded-lg ${clair ? "bg-[#161616] text-white" : "bg-white text-black"} max-lg:whitespace-nowrap px-3 py-2.5 text-sm font-medium leading-none transition-opacity hover:opacity-90 sm:px-4 sm:py-2 sm:text-base lg:text-2xl lg:leading-none`}
           >{TXT.texte_05}</Link>
         </div>
       </div>

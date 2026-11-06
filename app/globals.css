@@ -64,6 +64,18 @@ header nav span[data-state="open"] {
   color: #c9a227;
 }
 
+/* En-tête sur fond clair (page À propos) */
+header.header-clair nav span,
+header.header-clair nav a {
+  color: #161616;
+}
+
+header.header-clair nav span:hover,
+header.header-clair nav a:hover,
+header.header-clair nav span[data-state="open"] {
+  color: #c9a227;
+}
+
 /* Masque le badge « Powered by Netlify » ajouté automatiquement par Netlify */
 #nl-badge-frame {
   display: none !important;

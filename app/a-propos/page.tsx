@@ -2,38 +2,21 @@ import type { Metadata } from "next";
 import { TopBanner } from "@/components/TopBanner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { AproposHero } from "@/components/apropos/AproposHero";
-import { AproposStickyNav } from "@/components/apropos/AproposStickyNav";
-import { AproposOrigine } from "@/components/apropos/AproposOrigine";
-import { AproposEmpreinte } from "@/components/apropos/AproposEmpreinte";
-import { AproposPoles } from "@/components/apropos/AproposPoles";
-import { AproposPrincipes } from "@/components/apropos/AproposPrincipes";
-import { AproposEquipe } from "@/components/apropos/AproposEquipe";
-import { AproposDirection } from "@/components/apropos/AproposDirection";
-import { AproposReferences } from "@/components/apropos/AproposReferences";
-import { AproposFinalCta } from "@/components/apropos/AproposFinalCta";
+import { AproposV2 } from "@/components/apropos/AproposV2";
 
+// Page À propos V2 (v20) — textes du brief, zones de couleur du prototype.
 export const metadata: Metadata = {
-  title: "À propos de NYAKA | Branding, design, vidéo, IA et données",
+  title: "À propos — NYAKA | L'empreinte de votre marque.",
   description:
-    "Découvrez NYAKA, son approche, sa vision de la marque, ses principes de travail et l'équipe qui accompagne les organisations dans leurs projets de branding, design, vidéo, intelligence artificielle et données.",
+    "Découvrez NYAKA, agence de communication créative et de solutions d'intelligence artificielle : notre vision, nos publics et notre approche.",
 };
 
 export default function AproposPage() {
   return (
-    <main>
+    <main className="bg-[#f5f3ef]">
       <TopBanner />
-      <Header />
-      <AproposHero />
-      <AproposStickyNav />
-      <AproposOrigine />
-      <AproposEmpreinte />
-      <AproposPoles />
-      <AproposPrincipes />
-      <AproposEquipe />
-      <AproposDirection />
-      <AproposReferences />
-      <AproposFinalCta />
+      <Header clair />
+      <AproposV2 />
       <Footer />
     </main>
   );

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { TopBanner } from "@/components/TopBanner";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { SolutionsMaquette } from "@/components/solutions/SolutionsMaquette";
 
-// Page Solutions — nouvelle maquette (v18). Ancienne version : _versions/v18/avant.
+// Page Solutions — maquette v2 adaptée au thème du site (v19).
 export const metadata: Metadata = {
   title: "Solutions : branding, design, vidéo, IA & data | NYAKA",
   description:
@@ -9,5 +12,12 @@ export const metadata: Metadata = {
 };
 
 export default function SolutionsPage() {
-  return <SolutionsMaquette />;
+  return (
+    <main className="bg-black">
+      <TopBanner />
+      <Header />
+      <SolutionsMaquette />
+      <Footer />
+    </main>
+  );
 }

@@ -365,3 +365,40 @@ v18 — Page Solutions : nouvelle maquette   (05/11/2026)
     Les anciens composants components/solutions/*.tsx sont conservés.
   RESTAURER : copier « v18/avant/app_solutions_page.tsx » vers
     app/solutions/page.tsx.
+
+==============================================================================
+v19 — Page À propos V2 + page Solutions au thème du site   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - À propos : nouvelle page selon le brief « À propos V2 » (textes exacts,
+      cartes cliquables « Qui nous accompagnons », schémas animés sans photo,
+      bouton « Découvrir notre vision » vers #vision, WhatsApp), adaptée au
+      thème sombre du site avec l'en-tête et le pied de page du site.
+    - Solutions : même contenu que v18, adapté au thème sombre du site
+      (fond noir, accent du site) avec l'en-tête et le pied de page du site.
+    - La page « Notre approche » n'est pas modifiée.
+  FICHIERS
+    app/a-propos/page.tsx, app/solutions/page.tsx (modifiés)
+    components/apropos/AproposV2.tsx (ajouté)
+    components/solutions/SolutionsMaquette.tsx (modifié)
+    Les anciens composants À propos sont conservés.
+  RESTAURER : copier les fichiers de « v19/avant » (retirer « .txt » ; les
+    « _ » du nom = dossiers).
+
+==============================================================================
+v20 — Page À propos : zones de couleur du prototype, accent jaune or   (06/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement les couleurs de la page À propos)
+    - Fonds : beige clair (#f5f3ef) / blanc / section « Notre vision » sombre
+      (#211e1d), comme le prototype. Textes noirs et gris.
+    - Le rose du prototype (#e74a90) est remplacé par le jaune or du logo
+      (#D8A53A).
+    - En-tête : version claire sur cette page uniquement (texte foncé, logo
+      avec NYAKA en noir : public/nyaka-logo-dark.png). Les autres pages
+      gardent l'en-tête habituel.
+    - Textes, mise en page et animations inchangés.
+  FICHIERS
+    app/a-propos/page.tsx, components/apropos/AproposV2.tsx,
+    components/Header.tsx, components/NyakaLogo.tsx, app/globals.css (modifiés)
+    public/nyaka-logo-dark.png (ajouté)
+  RESTAURER : copier les fichiers de « v20/avant » (retirer « .txt »).

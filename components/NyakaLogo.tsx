@@ -4,12 +4,15 @@ type NyakaLogoProps = {
   href?: string;
   className?: string;
   size?: "sm" | "md";
+  /** Variante pour fond clair (texte NYAKA foncé). */
+  clair?: boolean;
 };
 
 export function NyakaLogo({
   href = "/",
   className = "",
   size = "sm",
+  clair = false,
 }: NyakaLogoProps) {
   const imgClass =
     size === "md"
@@ -18,7 +21,7 @@ export function NyakaLogo({
 
   const content = (
     <img
-      src="/nyaka-logo.png?v=4"
+      src={clair ? "/nyaka-logo-dark.png?v=1" : "/nyaka-logo.png?v=4"}
       alt="NYAKA"
       className={`${imgClass} object-contain object-left`}
     />
