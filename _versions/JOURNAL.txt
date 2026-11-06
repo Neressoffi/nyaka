@@ -453,3 +453,19 @@ v24 — Page Solutions V5 « Premium Hybrid Tech »   (06/11/2026)
   RESTAURER : copier « v24/avant/app_solutions_page.tsx.txt » vers
     app/solutions/page.tsx (retirer « .txt »).
   NOTE : mise en ligne relancée (le premier envoi avait été ignoré par Netlify).
+
+==============================================================================
+v25 — Préparation de l'hébergement gratuit Cloudflare Pages   (06/11/2026)
+==============================================================================
+  POURQUOI : les crédits gratuits Netlify (300/mois, 15 par mise en ligne)
+    sont épuisés ; les mises en ligne sont bloquées.
+  CE QUI CHANGE
+    - next.config.mjs : sur Cloudflare (CF_PAGES=1), le site est exporté en
+      pages fixes (dossier « out »). En local, rien ne change.
+    - public/_redirects (ajouté) : /admin et l'ancienne adresse KAWA.
+    - Aucun changement visible sur le site.
+  RÉGLAGES CLOUDFLARE PAGES
+    Commande de construction : npm run build
+    Dossier de sortie : out
+  RESTAURER : copier « v25/avant/next.config.mjs.txt » vers next.config.mjs
+    (retirer « .txt ») et supprimer public/_redirects.
