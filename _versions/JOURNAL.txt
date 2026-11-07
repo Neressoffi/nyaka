@@ -483,3 +483,19 @@ v26 — Cloudflare : réglages pour « Workers » (fichiers statiques)   (06/11/
     Deploy command : npx wrangler deploy
   RESTAURER : copier les fichiers de « v26/avant » (retirer « .txt ») et
     supprimer wrangler.jsonc.
+
+==============================================================================
+v27 — Fiche contact NFC : Nsame Nyaka Anne Arena   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (ajouts uniquement, rien d'autre ne change)
+    - Nouvelle page https://nyakaagency.com/anne-arena (logo, nom, fonction,
+      coordonnées, boutons Enregistrer le contact / Appeler / WhatsApp /
+      E-mail, lien discret vers le site). Fond blanc, accents jaune or.
+    - Fichier contact public/contacts/anne-arena.vcf (fichier fourni, octets
+      identiques : UTF-8, fins de ligne CRLF).
+    - public/_headers : le fichier est servi en « text/vcard; charset=utf-8 »,
+      téléchargé sous le nom anne-arena.vcf.
+    - QR code statique (SVG + PNG noir sur blanc) encodant exactement
+      https://nyakaagency.com/anne-arena : dossier « nyaka\Claude outputs\QR anne-arena ».
+  L'ADRESSE /anne-arena NE DOIT PLUS CHANGER (imprimée sur la carte NFC).
+  RESTAURER : supprimer app/anne-arena, public/contacts et public/_headers.

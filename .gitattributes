@@ -1,0 +1,2 @@
+# Fichier contact : garder les octets exacts (UTF-8 + fins de ligne CRLF)
+*.vcf -text
