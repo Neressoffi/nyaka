@@ -515,3 +515,14 @@ v28 — Page d'accueil V2 (maquette NYAKA_Accueil_V2_Interactif)   (07/11/2026)
       TeamPlans...) restent dans le projet mais ne sont plus affichés.
   RESTAURER : copier « v28/avant/page.tsx.txt » vers app/page.tsx (retirer
     « .txt ») et supprimer components/accueil.
+
+==============================================================================
+v29 — Accueil : logos « Ils nous font confiance » plus lisibles   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement le bloc « Ils nous font confiance »)
+    - Logos deux fois plus grands (78 px sur ordinateur, 60 px sur téléphone)
+      et plus foncés (gris anthracite au lieu de gris clair).
+    - Sur téléphone : logos sur 2 lignes (3 + 2), centrés.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v29/avant/AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).
