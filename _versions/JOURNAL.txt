@@ -499,3 +499,19 @@ v27 — Fiche contact NFC : Nsame Nyaka Anne Arena   (07/11/2026)
       https://nyakaagency.com/anne-arena : dossier « nyaka\Claude outputs\QR anne-arena ».
   L'ADRESSE /anne-arena NE DOIT PLUS CHANGER (imprimée sur la carte NFC).
   RESTAURER : supprimer app/anne-arena, public/contacts et public/_headers.
+
+==============================================================================
+v28 — Page d'accueil V2 (maquette NYAKA_Accueil_V2_Interactif)   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (page d'accueil uniquement)
+    - app/page.tsx : l'accueil affiche la nouvelle page V2 (en-tête officiel
+      en version claire sur bande claire, pied de page officiel).
+    - components/accueil/AccueilV2.tsx (ajouté) : sections de la maquette :
+      hero sombre avec carte animée (phrases du site : accueil.json →
+      sequence_dynamique), « Ils nous font confiance » (vrais logos en gris),
+      4 expertises à onglets, 5 réalisations (vraies images du site),
+      bloc À propos, FAQ (4 questions), appel final, couleurs de la maquette.
+    - Les anciens composants de l'accueil (Hero, TabsSection, ToolsCarousel,
+      TeamPlans...) restent dans le projet mais ne sont plus affichés.
+  RESTAURER : copier « v28/avant/page.tsx.txt » vers app/page.tsx (retirer
+    « .txt ») et supprimer components/accueil.
