@@ -151,7 +151,7 @@ export function AccueilV2() {
             </div>
           </div>
         </div>
-        <div className="container hero-baseline"><span>Faire défiler pour découvrir NYAKA ↓</span><span>01 — Accueil</span></div>
+        <div className="container hero-baseline"><span>Faire défiler pour découvrir NYAKA ↓</span></div>
       </section>
 
       <section className="trust" aria-label="Références clients">
