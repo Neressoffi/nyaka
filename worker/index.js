@@ -5,8 +5,11 @@
 // - Demandes de contact : base Cloudflare D1 (liaison « DB »), si elle est configurée.
 import CONNAISSANCES from "../content/assistant/connaissances.md";
 
-// Modèles gratuits sur l'offre Workers Free. Le second sert de secours.
-const MODELES = ["@cf/google/gemma-4-26b-a4b-it", "@cf/meta/llama-3.1-8b-instruct-fp8-fast"];
+// Modèles gratuits sur l'offre Workers Free : rapide d'abord, le second sert de secours.
+const MODELES = [
+  { id: "@cf/meta/llama-3.1-8b-instruct-fp8-fast", tokens: 450 },
+  { id: "@cf/google/gemma-4-26b-a4b-it", tokens: 1500 },
+];
 
 const LIMITES = {
   longueurMessage: 600,
@@ -14,7 +17,6 @@ const LIMITES = {
   historique: 12,
   fenetreMs: 60_000,
   requetesParFenetre: 12,
-  reponseTokens: 450,
 };
 
 const ORIGINES = [
@@ -119,9 +121,9 @@ function texteDeReponse(r) {
 }
 
 async function repondre(env, messages) {
-  for (const modele of MODELES) {
+  for (const { id: modele, tokens } of MODELES) {
     try {
-      const r = await env.AI.run(modele, { messages, max_tokens: LIMITES.reponseTokens, temperature: 0.4 });
+      const r = await env.AI.run(modele, { messages, max_tokens: tokens, temperature: 0.4 });
       const texte = texteDeReponse(r).trim();
       if (texte) return texte;
     } catch (e) {
