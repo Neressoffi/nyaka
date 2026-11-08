@@ -642,3 +642,30 @@ v38 — Réalisations : haut de page recomposé   (08/11/2026)
   FICHIER : app/realisations/page.tsx
   RESTAURER : copier « v38/avant/app_realisations_page.tsx.txt » vers
     app/realisations/page.tsx (retirer « .txt »).
+
+==============================================================================
+v39 — Assistant IA : gratuit (Cloudflare), en jaune or, demandes enregistrées   (08/11/2026)
+==============================================================================
+  POURQUOI : l'assistant appelait /api/chat, qui n'existait pas en ligne (site en
+    pages fixes) et utilisait Claude (payant). Il ne pouvait donc pas répondre.
+  CE QUI CHANGE
+    - worker/index.js (ajouté) : répond sur /api/chat avec l'IA gratuite de
+      Cloudflare (Workers AI, modèle Gemma 4, secours Llama 3.1), à partir de
+      content/assistant/connaissances.md. Aucune clé, aucun paiement.
+      Limite gratuite : 10 000 « neurones »/jour (environ 250 messages/jour).
+    - /api/demande : bouton « Laisser mes coordonnées » dans l'assistant
+      (nom, e-mail/WhatsApp, besoin, case d'accord) ; enregistré dans une base
+      Cloudflare D1 « nyaka-demandes » (à relier : voir wrangler.jsonc).
+    - wrangler.jsonc : le Worker passe uniquement par /api/* ; le reste du
+      site est servi comme avant. Liaison IA « AI ».
+    - Assistant aux couleurs du site : bulle, bandeau, messages, boutons en
+      jaune or #D8A53A. Numéro WhatsApp réel (+7 915 213-58-53) au lieu du
+      numéro fictif.
+    - Politique de confidentialité mise à jour (Cloudflare au lieu d'Anthropic
+      et Google Sheets).
+    - tsconfig.json : le dossier worker est exclu de la vérification Next.
+    - Les fichiers de l'ancienne version (app/api/chat/route.ts,
+      lib/assistant/config.ts, prompt.ts, sheets.ts) restent mais ne sont plus
+      utilisés en ligne.
+  RESTAURER : copier les fichiers de « v39/avant » (retirer « .txt ») et
+    supprimer le dossier worker.
