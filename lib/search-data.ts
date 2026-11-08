@@ -1,5 +1,4 @@
 import { solutionsOverview } from "@/lib/solutions-data";
-import { situationsOverview } from "@/lib/situation-data";
 import { projetsPublies, videosPubliees } from "@/lib/portfolio";
 import { creativeSuiteColumns } from "@/lib/menu-data";
 
@@ -36,23 +35,6 @@ export const searchIndex: SearchItem[] = [
     href: "/solutions",
     category: "Pages",
     keywords: "solutions poles expertises offres",
-  },
-  {
-    id: "votre-situation",
-    title: "Votre situation",
-    description:
-      "Lancement, professionnalisation, communication, repositionnement, transformation.",
-    href: "/votre-situation",
-    category: "Pages",
-    keywords: "situation besoin contexte projet",
-  },
-  {
-    id: "notre-approche",
-    title: "Notre approche",
-    description: "Modèle NYAKA, framework et manière de travailler.",
-    href: "/notre-approche",
-    category: "Pages",
-    keywords: "approche methode framework cadrer diagnostiquer",
   },
   {
     id: "realisations",
@@ -93,14 +75,6 @@ export const searchIndex: SearchItem[] = [
     href: `/solutions#${pole.id}`,
     category: "Solutions",
     keywords: `${pole.title} ${pole.description} pole`,
-  })),
-  ...situationsOverview.map((situation) => ({
-    id: `situation-${situation.id}`,
-    title: situation.title,
-    description: situation.description,
-    href: `/votre-situation#${situation.id}`,
-    category: "Situations",
-    keywords: `${situation.title} ${situation.description}`,
   })),
   ...projetsPublies.map((projet) => ({
     id: `projet-${projet.slug}`,

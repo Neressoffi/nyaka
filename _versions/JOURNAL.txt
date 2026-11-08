@@ -535,3 +535,34 @@ v30 — Accueil : mention « 01 — Accueil » retirée   (07/11/2026)
   FICHIER : components/accueil/AccueilV2.tsx
   RESTAURER : copier « v30/avant/AccueilV2.tsx.txt » vers
     components/accueil/AccueilV2.tsx (retirer « .txt »).
+
+==============================================================================
+v31 — Menu : « Votre situation » et « Notre approche » retirés, pages supprimées   (08/11/2026)
+==============================================================================
+  BRANCHE : feature/site_web (pas encore en ligne : à fusionner dans main
+    avec une Pull Request).
+  CE QUI CHANGE
+    - En-tête (ordinateur et téléphone) : « Votre situation » (menu déroulant)
+      et « Notre approche » retirés.
+    - Pied de page : lien « Notre approche » retiré.
+    - Recherche du site : ces 2 pages et les situations retirées des résultats.
+    - Pages supprimées : app/votre-situation et app/notre-approche
+      (les anciennes adresses affichent la page introuvable).
+    - Les textes de ces pages restent dans content/ (non affichés).
+  FICHIERS : components/Header.tsx, components/Footer.tsx,
+    lib/search-data.ts ; dossiers supprimés app/votre-situation,
+    app/notre-approche.
+  RESTAURER : copier les fichiers de « v31/avant » (les « _ » du nom =
+    dossiers, retirer « .txt »).
+
+==============================================================================
+v32 — Menu : Solutions, Réalisations et À propos placés à droite   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE (ordinateur uniquement)
+    - Le logo NYAKA reste seul à gauche ; Solutions, Réalisations et
+      À propos sont placés à droite, juste avant Rechercher et
+      Démarrer un projet. Textes, couleurs, tailles et menu déroulant
+      Solutions inchangés. Menu du téléphone inchangé.
+  FICHIER : components/Header.tsx
+  RESTAURER : copier « v32/avant/components_Header.tsx.txt » vers
+    components/Header.tsx (retirer « .txt »).

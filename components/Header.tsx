@@ -26,7 +26,6 @@ import {
 
 import {
   creativeSuiteColumns,
-  stockColumns,
   type MenuColumn,
 } from "@/lib/menu-data";
 import { SiteSearch } from "@/components/SiteSearch";
@@ -236,7 +235,11 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
 
           <NyakaLogo clair={clair} />
 
-          <nav className="hidden items-center gap-6 lg:flex">
+        </div>
+
+        <div className="flex items-center gap-1 max-lg:shrink-0 sm:gap-2">
+
+          <nav className="mr-4 hidden items-center gap-6 lg:flex">
 
             <MegaMenu
               label="Solutions"
@@ -246,19 +249,6 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
               onHide={hideMenu}
             >
               <ColumnsMenu columns={creativeSuiteColumns} />
-            </MegaMenu>
-            <MegaMenu
-              label="Votre situation"
-              width={720}
-              open={openMenu === "Votre situation"}
-              onShow={showMenu}
-              onHide={hideMenu}
-            >
-              <ColumnsMenu
-                columns={stockColumns}
-                footerLabel="Voir toutes les situations"
-                footerHref="/votre-situation"
-              />
             </MegaMenu>
             <Link
               href="/realisations"
@@ -270,9 +260,6 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
               className="text-2xl leading-none"
             >{TXT.texte_02}</Link>
           </nav>
-        </div>
-
-        <div className="flex items-center gap-1 max-lg:shrink-0 sm:gap-2">
 
           <button
             type="button"
@@ -291,11 +278,6 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
           </button>
 
           <Link
-            href="/notre-approche"
-            className="hidden rounded-lg px-4 max-lg:whitespace-nowrap py-2 text-base font-medium leading-none text-foreground-1 transition-colors hover:bg-white/10 sm:block lg:text-2xl lg:leading-none"
-          >{TXT.texte_04}</Link>
-
-          <Link
             href="/demarrer-un-projet"
             className={`rounded-lg ${clair ? "bg-[#161616] text-white" : "bg-white text-black"} max-lg:whitespace-nowrap px-3 py-2.5 text-sm font-medium leading-none transition-opacity hover:opacity-90 sm:px-4 sm:py-2 sm:text-base lg:text-2xl lg:leading-none`}
           >{TXT.texte_05}</Link>
@@ -306,8 +288,6 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
         <nav className="mx-4 mt-2 flex flex-col gap-1 rounded-2lg bg-surface-1 p-4 lg:hidden">
           {[
             { label: TXT.libelle_01, href: "/solutions" },
-            { label: TXT.libelle_02, href: "/votre-situation" },
-            { label: TXT.libelle_03, href: "/notre-approche" },
             { label: TXT.libelle_04, href: "#" },
             { label: TXT.libelle_05, href: "/realisations" },
             { label: TXT.libelle_06, href: "/a-propos" },
