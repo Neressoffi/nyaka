@@ -241,15 +241,10 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
 
           <nav className="mr-4 hidden items-center gap-6 lg:flex">
 
-            <MegaMenu
-              label="Solutions"
-              width={980}
-              open={openMenu === "Solutions"}
-              onShow={showMenu}
-              onHide={hideMenu}
-            >
-              <ColumnsMenu columns={creativeSuiteColumns} />
-            </MegaMenu>
+            <Link
+              href="/solutions"
+              className="text-2xl leading-none"
+            >Solutions</Link>
             <Link
               href="/realisations"
               className="hidden text-2xl leading-none xl:block"

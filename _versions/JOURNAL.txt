@@ -566,3 +566,15 @@ v32 — Menu : Solutions, Réalisations et À propos placés à droite   (08/11/
   FICHIER : components/Header.tsx
   RESTAURER : copier « v32/avant/components_Header.tsx.txt » vers
     components/Header.tsx (retirer « .txt »).
+
+==============================================================================
+v33 — Menu : « Solutions » devient un lien simple (plus de sous-menu)   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE (ordinateur uniquement)
+    - Un clic sur « Solutions » ouvre directement la page Solutions.
+    - Le sous-menu (Branding, Design, Vidéo & campagnes, IA & données) et la
+      petite flèche ne s'affichent plus, ni au clic ni au survol.
+    - Position, texte et couleurs inchangés. Menu du téléphone inchangé.
+  FICHIER : components/Header.tsx
+  RESTAURER : copier « v33/avant/components_Header.tsx.txt » vers
+    components/Header.tsx (retirer « .txt »).
