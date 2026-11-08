@@ -15,6 +15,8 @@ if exist .git\index.lock (
   goto fin
 )
 
+findstr /x /c:"publier-journal.txt" .git\info\exclude >nul 2>&1 || echo publier-journal.txt>> .git\info\exclude
+git rm --cached -q --ignore-unmatch publier-journal.txt >nul 2>&1
 echo 1/6 - Branche feature/site_web >> %LOG%
 git checkout feature/site_web >> %LOG% 2>&1 || goto erreur
 git add -A >> %LOG% 2>&1
