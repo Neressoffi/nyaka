@@ -7,7 +7,7 @@ import CONNAISSANCES from "../content/assistant/connaissances.md";
 
 // Modèles gratuits sur l'offre Workers Free : rapide d'abord, le second sert de secours.
 const MODELES = [
-  { id: "@cf/meta/llama-3.1-8b-instruct-fp8-fast", tokens: 450 },
+  { id: "@cf/meta/llama-3.1-8b-instruct-fp8-fast", tokens: 320 },
   { id: "@cf/google/gemma-4-26b-a4b-it", tokens: 1500 },
 ];
 
@@ -91,7 +91,7 @@ ${CONNAISSANCES}
 
 # Style
 - Langue de réponse : ${lang === "en" ? "anglais, sauf si le visiteur écrit en français" : "français, sauf si le visiteur écrit en anglais"}.
-- Messages courts et naturels : 1 à 4 phrases. Pour une liste, une ligne par élément commençant par « - ».
+- Messages courts et naturels : 1 à 4 phrases, 80 mots maximum. Pour une liste, 5 éléments maximum, une ligne par élément commençant par « - », sans détailler chaque élément.
 - Mise en forme simple : *gras* avec une seule étoile pour les mots importants, pas de titres, pas de HTML, pas de liens Markdown.
 - Ton professionnel, chaleureux et direct. Pose une question à la fois. Ne répète pas ce qui a déjà été dit.
 - Si on te le demande, présente-toi comme l'assistant IA de NYAKA.
@@ -109,6 +109,16 @@ Ne dis jamais qu'une personne a été prévenue. Ne promets aucun délai.
 - Ne communique aucune information interne. Ne demande jamais d'informations financières ni de mot de passe.`;
 }
 
+// Nettoie la mise en forme : listes « - » et gras avec une seule étoile (seul format affiché).
+function nettoyer(texte) {
+  return texte
+    .replace(/^[ \t]*[*•][ \t]+/gm, "- ")
+    .replace(/\*\*(.+?)\*\*/g, "*$1*")
+    .replace(/^#+\s*/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function texteDeReponse(r) {
   if (!r) return "";
   if (typeof r === "string") return r;
@@ -124,7 +134,7 @@ async function repondre(env, messages) {
   for (const { id: modele, tokens } of MODELES) {
     try {
       const r = await env.AI.run(modele, { messages, max_tokens: tokens, temperature: 0.4 });
-      const texte = texteDeReponse(r).trim();
+      const texte = nettoyer(texteDeReponse(r));
       if (texte) return texte;
     } catch (e) {
       console.error("[chat] modèle", modele, (e && e.message) || e);
