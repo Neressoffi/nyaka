@@ -45,8 +45,6 @@ const FOOTER_COLUMNS: {
         href: `mailto:${TXT.email}`,
       },
       { label: TXT.telephone, href: `tel:${TXT.telephone.replace(/[^+\d]/g, "")}` },
-      { label: TXT.libelle_10, href: "#" },
-      { label: TXT.libelle_11, href: "#" },
       { label: TXT.libelle_12, href: TXT.whatsapp_lien },
     ],
   },

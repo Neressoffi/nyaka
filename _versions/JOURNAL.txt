@@ -578,3 +578,43 @@ v33 — Menu : « Solutions » devient un lien simple (plus de sous-menu)   (08/
   FICHIER : components/Header.tsx
   RESTAURER : copier « v33/avant/components_Header.tsx.txt » vers
     components/Header.tsx (retirer « .txt »).
+
+==============================================================================
+v34 — Pied de page : LinkedIn et TikTok retirés   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE : dans la colonne « Coordonnées » du pied de page, les liens
+    LinkedIn et TikTok (qui ne menaient nulle part) sont retirés. E-mail,
+    téléphone et WhatsApp restent. Rien d'autre ne change.
+  FICHIER : components/Footer.tsx
+  RESTAURER : copier « v34/avant/components_Footer.tsx.txt » vers
+    components/Footer.tsx (retirer « .txt »).
+
+==============================================================================
+v35 — Accueil : petits traits dorés et « NYAKA / 2026 » retirés   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE (haut de la page d'accueil uniquement)
+    - Trait doré devant « NYAKA · L'empreinte de votre marque. » retiré.
+    - Trait doré sur la ligne « NYAKA / Créativité en mouvement » retiré.
+    - Mention « NYAKA / 2026 » en bas de la carte animée retirée.
+    - Rien d'autre ne change.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v35/avant/AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).
+
+==============================================================================
+v36 — Accueil : section « Votre situation / Notre réponse » ajoutée   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - Page d'accueil : la section de la page Solutions « Une idée. Plusieurs
+      chemins possibles. » (6 situations cliquables + « Une réponse adaptée »
+      + bouton « Parler de ce besoin ») est ajoutée juste après « Découvrir
+      NYAKA — La créativité au service de vos ambitions », avant la FAQ.
+      Mêmes textes, même design, même fonctionnement.
+    - La section reste aussi sur la page Solutions (inchangée à l'écran).
+  FICHIERS
+    components/accueil/AccueilSituations.tsx (ajouté)
+    components/accueil/AccueilV2.tsx (modifié : place la section)
+    components/solutions/SolutionsV5.tsx (modifié : partage ses textes et
+      son style avec l'accueil, rien ne change à l'écran)
+  RESTAURER : copier les fichiers de « v36/avant » (retirer « .txt ») et
+    supprimer components/accueil/AccueilSituations.tsx.
