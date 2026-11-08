@@ -14,7 +14,6 @@ const FOOTER_COLUMNS: {
     title: "NYAKA",
     links: [
       { label: TXT.libelle_01, href: "/a-propos" },
-      { label: TXT.libelle_02, href: "/notre-approche" },
       { label: TXT.libelle_03, href: "/realisations" },
       { label: TXT.libelle_04, href: "/demarrer-un-projet" },
     ],
