@@ -12,6 +12,94 @@ npm run dev     # lance le site sur http://localhost:3000
 npm run build   # build de production
 ```
 
+## Assistant IA (bulle de chat)
+
+Le site intègre un assistant IA (Claude, par Anthropic) sous forme de bulle de chat,
+visible sur toutes les pages. Il présente les services et réalisations de NYAKA, répond
+en français et en anglais, et peut transmettre une demande de contact à l'équipe via un
+Google Sheet.
+
+### Fichiers
+
+```
+content/assistant/connaissances.md   ← LA SOURCE DES RÉPONSES (à mettre à jour, aucune compétence technique requise)
+lib/assistant/prompt.ts              ← comportement du bot (ton, règles, quand transférer), relit connaissances.md à chaque requête
+lib/assistant/config.ts              ← variables de configuration (modèle, limites, CORS)
+lib/assistant/rate-limit.ts          ← limitation de débit best-effort par IP
+lib/assistant/sheets.ts              ← écriture d'une demande dans Google Sheets
+lib/assistant/i18n.ts                ← textes de l'interface FR/EN
+app/api/chat/route.ts                ← route API (devient une fonction Netlify automatiquement)
+components/ChatWidget.tsx            ← bulle de chat (front)
+app/politique-de-confidentialite/    ← page liée depuis le message d'accueil du widget
+```
+
+### 1. Variables d'environnement
+
+```bash
+cp .env.local.example .env.local   # puis remplir les valeurs (jamais commité)
+```
+
+- `ANTHROPIC_API_KEY` : clé API Anthropic (console.anthropic.com), **uniquement côté
+  serveur**, jamais dans le code front ni dans Git.
+- `CLAUDE_MODEL` (optionnel) : modèle utilisé, par défaut `claude-haiku-4-5-20251001`.
+- `SITE_ORIGIN` : domaine autorisé à appeler `/api/chat` (CORS). `localhost` est toujours
+  autorisé en développement.
+- `GOOGLE_SHEET_ID`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY` : voir ci-dessous.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` : numéro affiché dans le bouton "Continuer sur WhatsApp"
+  du widget (fictif par défaut — à remplacer par le vrai numéro NYAKA). Cette variable est
+  publique (visible côté navigateur), ce n'est qu'un numéro de téléphone, pas un secret.
+
+En production (Netlify), renseigner les mêmes variables dans *Site settings → Environment
+variables*.
+
+### 2. Google Sheets (enregistrement des demandes)
+
+1. Créer un projet sur [Google Cloud Console](https://console.cloud.google.com), activer
+   l'**API Google Sheets**.
+2. Créer un **compte de service**, générer une clé JSON.
+3. Créer un Google Sheet avec un onglet nommé `Demandes` et une ligne d'en-têtes, par
+   exemple : `Date | Source | Langue | Motif | Nom | Entreprise/projet | Besoin | Contact | Accord`.
+4. **Partager ce Sheet** (bouton Partager) avec l'adresse e-mail du compte de service
+   (`...@...iam.gserviceaccount.com`), en accès **Éditeur**.
+5. Remplir `GOOGLE_SHEET_ID` (dans l'URL du Sheet), `GOOGLE_SERVICE_ACCOUNT_EMAIL` et
+   `GOOGLE_PRIVATE_KEY` (champ `private_key` du JSON, avec ses `\n`) dans `.env.local` /
+   Netlify.
+
+Si ces variables sont absentes, l'assistant continue de fonctionner mais n'enregistre
+aucune demande (un avertissement est tracé dans les logs serveur).
+
+### 3. Tester en local
+
+```bash
+npm run dev
+```
+
+Ouvrir http://localhost:3000, cliquer sur la bulle en bas à droite. Idées de test :
+« Quels sont vos services ? », « Combien ça coûte un logo ? » (ne doit jamais donner de
+prix), « I'd like to start a project », changer de langue en cours de conversation.
+
+### 4. Sécurité et maîtrise des coûts
+
+- Clé Anthropic et identifiants Google Sheets uniquement en variables d'environnement
+  serveur.
+- CORS restreint à `SITE_ORIGIN` (+ localhost en dev).
+- Longueur de message, nombre de messages par session et `max_tokens` plafonnés
+  (`lib/assistant/config.ts`).
+- Limitation de débit par IP en mémoire (best-effort — une instance de fonction serverless
+  peut redémarrer et remettre le compteur à zéro ; pour une protection plus robuste contre
+  les abus, ajouter **Cloudflare Turnstile** devant le widget).
+- Réponses affichées en texte échappé par React (pas de `dangerouslySetInnerHTML`) : pas
+  d'injection HTML/XSS possible depuis une réponse du modèle.
+- Historique de conversation conservé uniquement dans le navigateur du visiteur
+  (`sessionStorage`), jamais sur le serveur.
+
+### 5. Limites connues de cette première version
+
+- Limitation de débit non partagée entre instances serverless (voir ci-dessus).
+- Pas de protection anti-robot (Turnstile) pour l'instant.
+- `content/assistant/connaissances.md` n'est pas encore relié à Decap CMS : modification
+  manuelle du fichier Markdown pour l'instant.
+
 ## Stack
 
 - **Next.js 14** (App Router) + **TypeScript**

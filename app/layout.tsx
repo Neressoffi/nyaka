@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ChatWidget } from "@/components/ChatWidget";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" forcedTheme="dark">
           {children}
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
