@@ -628,3 +628,17 @@ v37 — Réalisations : image de fond retirée   (08/11/2026)
   FICHIER : app/realisations/page.tsx
   RESTAURER : copier « v37/avant/app_realisations_page.tsx.txt » vers
     app/realisations/page.tsx (retirer « .txt »).
+
+==============================================================================
+v38 — Réalisations : haut de page recomposé   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE (haut de la page Réalisations)
+    - Le grand espace vide laissé par l'image retirée est supprimé.
+    - « Nos réalisations. », l'introduction et les filtres (Tous les projets ·
+      Branding & Design · Vidéos & campagnes · IA & Data) sont regroupés en
+      haut, alignés à gauche sur la même ligne que la galerie, juste avant
+      les projets. Titre un peu plus grand sur ordinateur, introduction en
+      gris clair. Textes, filtres et galerie inchangés.
+  FICHIER : app/realisations/page.tsx
+  RESTAURER : copier « v38/avant/app_realisations_page.tsx.txt » vers
+    app/realisations/page.tsx (retirer « .txt »).

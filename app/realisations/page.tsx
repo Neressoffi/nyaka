@@ -29,18 +29,18 @@ export default function RealisationsPage() {
       <TopBanner />
       <Header />
 
-      <section className="relative overflow-hidden">
-        <div className="relative mx-auto flex min-h-[78vh] w-full max-w-screen-xl flex-col justify-center px-4 pb-20 pt-32 lg:px-8 lg:pb-24 lg:pt-36">
-          <h1 className="font-display text-[34px] font-bold leading-[1.1] text-white sm:text-[44px] lg:text-[56px]">
+      <section className="px-4 pb-2 pt-32 lg:px-8 lg:pt-40">
+        <div className="mx-auto w-full max-w-screen-xl">
+          <h1 className="font-display text-[34px] font-bold leading-[1.1] text-white sm:text-[44px] lg:text-[64px]">
             {portfolioPage.titre}
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
             {portfolioPage.introduction}
           </p>
         </div>
       </section>
 
-      <section className="bg-black px-4 pb-20 pt-6 lg:px-8 lg:pb-28 lg:pt-10">
+      <section className="bg-black px-4 pb-20 lg:px-8 lg:pb-28">
         <div className="mx-auto max-w-screen-xl">
 
           <PortfolioGallery
