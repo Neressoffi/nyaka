@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité | NYAKA",
-  description: "Comment NYAKA traite les données échangées avec l'assistant IA du site.",
+  description: "Comment NYAKA traite les données échangées avec l’assistant IA du site.",
 };
 
 export default function PolitiqueDeConfidentialitePage() {
@@ -22,26 +22,26 @@ export default function PolitiqueDeConfidentialitePage() {
             Politique de confidentialité
           </h1>
           <p className="mt-4 text-sm text-white/60">
-            Cette page porte spécifiquement sur l'assistant IA du site. Elle sera complétée avec la politique de
+            Cette page porte spécifiquement sur l’assistant IA du site. Elle sera complétée avec la politique de
             confidentialité générale de NYAKA.
           </p>
 
           <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-white/85">
             <section>
-              <h2 className="font-display text-xl font-semibold text-white">L'assistant du site</h2>
+              <h2 className="font-display text-xl font-semibold text-white">L’assistant du site</h2>
               <p className="mt-2">
                 Le bouton de discussion présent sur le site vous met en relation avec un assistant basé sur
-                l'intelligence artificielle (modèle Claude, par Anthropic), et non avec une personne. Il répond à
-                partir d'une base de connaissances sur NYAKA et ne donne jamais de prix ferme.
+                l’intelligence artificielle (modèle Claude, par Anthropic), et non avec une personne. Il répond à
+                partir d’une base de connaissances sur NYAKA et ne donne jamais de prix ferme.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-xl font-semibold text-white">Ce qui est conservé</h2>
               <p className="mt-2">
-                L'historique de votre conversation est conservé uniquement dans votre navigateur (stockage de
-                session), le temps de votre visite : il est effacé automatiquement à la fermeture de l'onglet.
-                Il n'est pas stocké sur nos serveurs.
+                L’historique de votre conversation est conservé uniquement dans votre navigateur (stockage de
+                session), le temps de votre visite : il est effacé automatiquement à la fermeture de l’onglet.
+                Il n’est pas stocké sur nos serveurs.
               </p>
               <p className="mt-2">
                 Si vous choisissez de laisser vos coordonnées pour être recontacté·e, ces informations (nom,
@@ -54,7 +54,7 @@ export default function PolitiqueDeConfidentialitePage() {
               <h2 className="font-display text-xl font-semibold text-white">Avec qui vos messages sont partagés</h2>
               <p className="mt-2">
                 Le contenu de vos messages est transmis à Anthropic (fournisseur du modèle Claude) pour générer
-                les réponses. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l'équipe NYAKA
+                les réponses. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l’équipe NYAKA
                 autorisée.
               </p>
             </section>
@@ -62,8 +62,8 @@ export default function PolitiqueDeConfidentialitePage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-white">Vos droits</h2>
               <p className="mt-2">
-                Vous pouvez demander la suppression ou l'export des informations que vous avez laissées à
-                l'assistant en écrivant à{" "}
+                Vous pouvez demander la suppression ou l’export des informations que vous avez laissées à
+                l’assistant en écrivant à{" "}
                 <a href="mailto:contact@nyakaagency.com" className="underline hover:text-white">
                   contact@nyakaagency.com
                 </a>
@@ -72,9 +72,9 @@ export default function PolitiqueDeConfidentialitePage() {
             </section>
 
             <section>
-              <h2 className="font-display text-xl font-semibold text-white">Ce que l'assistant ne fait pas</h2>
+              <h2 className="font-display text-xl font-semibold text-white">Ce que l’assistant ne fait pas</h2>
               <p className="mt-2">
-                Il ne demande jamais d'informations financières, de mot de passe ou d'identifiant. Il ne propose
+                Il ne demande jamais d’informations financières, de mot de passe ou d’identifiant. Il ne propose
                 aucun paiement.
               </p>
             </section>
