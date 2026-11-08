@@ -618,3 +618,13 @@ v36 — Accueil : section « Votre situation / Notre réponse » ajoutée   (08/
       son style avec l'accueil, rien ne change à l'écran)
   RESTAURER : copier les fichiers de « v36/avant » (retirer « .txt ») et
     supprimer components/accueil/AccueilSituations.tsx.
+
+==============================================================================
+v37 — Réalisations : image de fond retirée   (08/11/2026)
+==============================================================================
+  CE QUI CHANGE : en haut de la page Réalisations, l'image de fond (fjord)
+    et son voile sombre sont retirés. Le titre « Nos réalisations. »,
+    l'introduction, les filtres et la galerie restent identiques, sur fond noir.
+  FICHIER : app/realisations/page.tsx
+  RESTAURER : copier « v37/avant/app_realisations_page.tsx.txt » vers
+    app/realisations/page.tsx (retirer « .txt »).
