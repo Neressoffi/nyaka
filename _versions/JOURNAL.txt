@@ -483,3 +483,55 @@ v26 — Cloudflare : réglages pour « Workers » (fichiers statiques)   (06/11/
     Deploy command : npx wrangler deploy
   RESTAURER : copier les fichiers de « v26/avant » (retirer « .txt ») et
     supprimer wrangler.jsonc.
+
+==============================================================================
+v27 — Fiche contact NFC : Nsame Nyaka Anne Arena   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (ajouts uniquement, rien d'autre ne change)
+    - Nouvelle page https://nyakaagency.com/anne-arena (logo, nom, fonction,
+      coordonnées, boutons Enregistrer le contact / Appeler / WhatsApp /
+      E-mail, lien discret vers le site). Fond blanc, accents jaune or.
+    - Fichier contact public/contacts/anne-arena.vcf (fichier fourni, octets
+      identiques : UTF-8, fins de ligne CRLF).
+    - public/_headers : le fichier est servi en « text/vcard; charset=utf-8 »,
+      téléchargé sous le nom anne-arena.vcf.
+    - QR code statique (SVG + PNG noir sur blanc) encodant exactement
+      https://nyakaagency.com/anne-arena : dossier « nyaka\Claude outputs\QR anne-arena ».
+  L'ADRESSE /anne-arena NE DOIT PLUS CHANGER (imprimée sur la carte NFC).
+  RESTAURER : supprimer app/anne-arena, public/contacts et public/_headers.
+
+==============================================================================
+v28 — Page d'accueil V2 (maquette NYAKA_Accueil_V2_Interactif)   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (page d'accueil uniquement)
+    - app/page.tsx : l'accueil affiche la nouvelle page V2 (en-tête officiel
+      en version claire sur bande claire, pied de page officiel).
+    - components/accueil/AccueilV2.tsx (ajouté) : sections de la maquette :
+      hero sombre avec carte animée (phrases du site : accueil.json →
+      sequence_dynamique), « Ils nous font confiance » (vrais logos en gris),
+      4 expertises à onglets, 5 réalisations (vraies images du site),
+      bloc À propos, FAQ (4 questions), appel final, couleurs de la maquette.
+    - Les anciens composants de l'accueil (Hero, TabsSection, ToolsCarousel,
+      TeamPlans...) restent dans le projet mais ne sont plus affichés.
+  RESTAURER : copier « v28/avant/page.tsx.txt » vers app/page.tsx (retirer
+    « .txt ») et supprimer components/accueil.
+
+==============================================================================
+v29 — Accueil : logos « Ils nous font confiance » plus lisibles   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement le bloc « Ils nous font confiance »)
+    - Logos deux fois plus grands (78 px sur ordinateur, 60 px sur téléphone)
+      et plus foncés (gris anthracite au lieu de gris clair).
+    - Sur téléphone : logos sur 2 lignes (3 + 2), centrés.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v29/avant/AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).
+
+==============================================================================
+v30 — Accueil : mention « 01 — Accueil » retirée   (07/11/2026)
+==============================================================================
+  CE QUI CHANGE : en bas du haut de page sombre, la mention « 01 — Accueil »
+    est retirée. « Faire défiler pour découvrir NYAKA ↓ » reste. Rien d'autre.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v30/avant/AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).

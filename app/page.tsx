@@ -1,28 +1,18 @@
 import { TopBanner } from "@/components/TopBanner";
 import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { HomeReferences } from "@/components/HomeReferences";
-import { TabsSection } from "@/components/TabsSection";
-import { ToolsCarousel } from "@/components/ToolsCarousel";
-import { HomeRealisations } from "@/components/HomeRealisations";
-import { TeamPlans } from "@/components/TeamPlans";
-import { Faq } from "@/components/Faq";
-import { FinalCta } from "@/components/FinalCta";
+import { AccueilV2 } from "@/components/accueil/AccueilV2";
 import { Footer } from "@/components/Footer";
 
+// Page d’accueil V2 (v28) — maquette NYAKA_Accueil_V2_Interactif.
+// En-tête officiel (version claire) sur bande claire, pied de page officiel.
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#f5f3ef]">
       <TopBanner />
-      <Header />
-      <Hero />
-      <HomeReferences />
-      <TabsSection />
-      <ToolsCarousel />
-      <HomeRealisations />
-      <TeamPlans />
-      <Faq />
-      <FinalCta />
+      <div className="acc2-head">
+        <Header clair />
+      </div>
+      <AccueilV2 />
       <Footer />
     </main>
   );
