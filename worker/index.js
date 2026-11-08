@@ -119,6 +119,14 @@ function nettoyer(texte) {
     .trim();
 }
 
+// Si la réponse a été coupée en plein milieu (limite de longueur), on s'arrête
+// à la dernière ligne ou phrase complète.
+function couperProprement(texte) {
+  if (/[.!?…»)]$/.test(texte)) return texte;
+  const fin = Math.max(texte.lastIndexOf("\n"), texte.lastIndexOf(". "), texte.lastIndexOf("? "));
+  return fin > 40 ? texte.slice(0, fin + 1).trim() : texte;
+}
+
 function texteDeReponse(r) {
   if (!r) return "";
   if (typeof r === "string") return r;
@@ -134,7 +142,7 @@ async function repondre(env, messages) {
   for (const { id: modele, tokens } of MODELES) {
     try {
       const r = await env.AI.run(modele, { messages, max_tokens: tokens, temperature: 0.4 });
-      const texte = nettoyer(texteDeReponse(r));
+      const texte = couperProprement(nettoyer(texteDeReponse(r)));
       if (texte) return texte;
     } catch (e) {
       console.error("[chat] modèle", modele, (e && e.message) || e);
