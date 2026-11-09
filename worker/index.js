@@ -1,17 +1,17 @@
-// Assistant IA NYAKA — Worker Cloudflare (v39, demandes vers Google Sheets : v42).
+// Assistant IA NYAKA — Worker Cloudflare (v39, demandes vers Google Sheets : v42,
+// bascule vers Claude Haiku : v43).
 // - Les pages du site sont servies telles quelles (dossier « out »).
 // - Seules les adresses /api/* passent par ce fichier (voir wrangler.jsonc, run_worker_first).
-// - IA gratuite : Cloudflare Workers AI (allocation gratuite quotidienne du compte).
+// - IA : Claude Haiku (API Anthropic), appelée directement en HTTP — plus robuste que les
+//   modèles gratuits Workers AI pour respecter les consignes (notamment : jamais de prix).
+//   Secret à définir dans Cloudflare (Worker nyaka > Settings > Variables and Secrets) :
+//   ANTHROPIC_API_KEY.
 // - Demandes de contact : Google Sheets (onglet « Demandes ») via un compte de service.
 //   Secrets à définir dans Cloudflare (Worker nyaka > Settings > Variables and Secrets) :
 //   GOOGLE_SHEET_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY.
 import CONNAISSANCES from "../content/assistant/connaissances.md";
 
-// Modèles gratuits sur l'offre Workers Free : rapide d'abord, le second sert de secours.
-const MODELES = [
-  { id: "@cf/meta/llama-3.1-8b-instruct-fp8-fast", tokens: 320 },
-  { id: "@cf/google/gemma-4-26b-a4b-it", tokens: 1500 },
-];
+const MODELE_CLAUDE = { id: "claude-haiku-4-5-20251001", tokens: 500 };
 
 const LIMITES = {
   longueurMessage: 600,
@@ -129,28 +129,39 @@ function couperProprement(texte) {
   return fin > 40 ? texte.slice(0, fin + 1).trim() : texte;
 }
 
-function texteDeReponse(r) {
-  if (!r) return "";
-  if (typeof r === "string") return r;
-  if (typeof r.response === "string") return r.response;
-  const c = r.choices?.[0]?.message?.content;
-  if (typeof c === "string") return c;
-  if (Array.isArray(c)) return c.map((p) => p?.text || "").join("");
-  if (typeof r.result?.response === "string") return r.result.response;
-  return "";
-}
-
-async function repondre(env, messages) {
-  for (const { id: modele, tokens } of MODELES) {
-    try {
-      const r = await env.AI.run(modele, { messages, max_tokens: tokens, temperature: 0.4 });
-      const texte = couperProprement(nettoyer(texteDeReponse(r)));
-      if (texte) return texte;
-    } catch (e) {
-      console.error("[chat] modèle", modele, (e && e.message) || e);
+async function repondre(env, systemPrompt, messages) {
+  try {
+    const r = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: MODELE_CLAUDE.id,
+        max_tokens: MODELE_CLAUDE.tokens,
+        system: systemPrompt,
+        messages,
+      }),
+    });
+    if (!r.ok) {
+      console.error("[chat] Anthropic", r.status, await r.text().catch(() => ""));
+      return "";
     }
+    const r2 = await r.json();
+    // Format de réponse Claude : { content: [{ type: "text", text: "..." }, ...] }
+    const texte = Array.isArray(r2.content)
+      ? r2.content
+          .filter((bloc) => bloc.type === "text")
+          .map((bloc) => bloc.text)
+          .join("\n")
+      : "";
+    return couperProprement(nettoyer(texte));
+  } catch (e) {
+    console.error("[chat] Anthropic", (e && e.message) || e);
+    return "";
   }
-  return "";
 }
 
 async function chat(request, env, origine) {
@@ -169,10 +180,11 @@ async function chat(request, env, origine) {
   if (historique.length >= LIMITES.messagesParSession) {
     return json({ reply: SECOURS[lang], error: "session_limit_reached" }, 200, origine);
   }
-  if (!env.AI) return json({ reply: SECOURS[lang] }, 200, origine);
+  if (!env.ANTHROPIC_API_KEY) return json({ reply: SECOURS[lang] }, 200, origine);
 
+  // Claude attend le prompt système à part (paramètre « system »), pas dans la liste
+  // des messages — contrairement au format utilisé par Workers AI.
   const messages = [
-    { role: "system", content: consignes(lang) },
     ...historique
       .slice(-LIMITES.historique)
       .filter((m) => m && typeof m.content === "string" && (m.role === "user" || m.role === "assistant"))
@@ -180,7 +192,7 @@ async function chat(request, env, origine) {
     { role: "user", content: message },
   ];
 
-  const reponse = await repondre(env, messages);
+  const reponse = await repondre(env, consignes(lang), messages);
   return json({ reply: reponse || SECOURS[lang], handedOff: false }, 200, origine);
 }
 

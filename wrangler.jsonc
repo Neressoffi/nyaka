@@ -1,12 +1,12 @@
-// Hébergement Cloudflare (Workers, fichiers statiques) — v26, assistant IA gratuit — v39.
+// Hébergement Cloudflare (Workers, fichiers statiques) — v26, assistant IA — v39,
+// bascule vers Claude Haiku — v43.
 // Construction : npm run build:cloudflare  ->  dossier « out »
-// /api/* passe par worker/index.js (IA Cloudflare Workers AI + demandes de contact D1).
+// /api/* passe par worker/index.js (IA Claude Haiku + demandes de contact Google Sheets).
 {
   "name": "nyaka",
   "compatibility_date": "2026-11-01",
   "main": "./worker/index.js",
   "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
-  "ai": { "binding": "AI" },
   "assets": {
     "directory": "./out",
     "binding": "ASSETS",
