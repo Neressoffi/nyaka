@@ -1507,13 +1507,13 @@ collections:
       widget: object
       collapsed: true
       fields:
-      - label: Démarrer un projet
+      - label: Surtitre (Parlons de votre projet)
         name: texte_01
         widget: string
-      - label: Présentez-nous votre projet, même s'il n'est pas encore t…
+      - label: Grand titre (Chaque projet commence par un échange.)
         name: texte_02
         widget: string
-      - label: Un premier échange sert à comprendre votre situation, cla…
+      - label: Paragraphe
         name: texte_03
         widget: text
       - label: Nous écrire
@@ -1521,6 +1521,9 @@ collections:
         widget: string
       - label: Découvrir nos solutions
         name: texte_05
+        widget: string
+      - label: Lien WhatsApp discret (texte)
+        name: texte_06
         widget: string
 - name: site
   editor:

@@ -46,8 +46,8 @@ export default function PolitiqueDeConfidentialitePage() {
               <p className="mt-2">
                 Si vous choisissez de laisser vos coordonnées pour être recontacté·e (bouton « Laisser mes
                 coordonnées »), ces informations (nom, moyen de contact, besoin exprimé) sont enregistrées dans
-                une base de données interne à NYAKA hébergée par Cloudflare, uniquement après votre accord
-                explicite (case à cocher).
+                un tableau de suivi interne à NYAKA (Google Sheets), uniquement après votre accord explicite
+                (case à cocher).
               </p>
             </section>
 
@@ -55,7 +55,8 @@ export default function PolitiqueDeConfidentialitePage() {
               <h2 className="font-display text-xl font-semibold text-white">Avec qui vos messages sont partagés</h2>
               <p className="mt-2">
                 Le contenu de vos messages est transmis à Cloudflare (hébergeur du site et des modèles d’IA) pour
-                générer les réponses. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l’équipe NYAKA
+                générer les réponses. Les coordonnées que vous choisissez de laisser sont transmises à Google
+                (Google Sheets) pour être enregistrées dans le tableau de suivi de NYAKA. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l’équipe NYAKA
                 autorisée.
               </p>
             </section>

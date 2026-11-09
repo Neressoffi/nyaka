@@ -1,0 +1,2 @@
+/admin /admin/index.html 302
+/realisations/kawa-coffee-shop /realisations/kawa-menu-experience 301

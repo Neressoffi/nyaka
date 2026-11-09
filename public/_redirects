@@ -1,2 +1,6 @@
 /admin /admin/index.html 302
 /realisations/kawa-coffee-shop /realisations/kawa-menu-experience 301
+/notre-approche /a-propos#methode 301
+/notre-approche/ /a-propos#methode 301
+/votre-situation /solutions#votre-situation 301
+/votre-situation/ /solutions#votre-situation 301

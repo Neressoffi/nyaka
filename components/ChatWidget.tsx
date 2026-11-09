@@ -7,6 +7,12 @@ import { STRINGS, detectDefaultLang, type Lang } from "@/lib/assistant/i18n";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
+// Événement utilisé par les boutons du site pour ouvrir l'assistant sur la page en cours.
+const EVENEMENT_OUVRIR = "nyaka:ouvrir-assistant";
+export function ouvrirAssistant() {
+  window.dispatchEvent(new Event(EVENEMENT_OUVRIR));
+}
+
 const SESSION_ID_KEY = "nyaka_chat_session_id";
 const HISTORY_KEY = "nyaka_chat_history";
 const LANG_KEY = "nyaka_chat_lang";
@@ -57,6 +63,7 @@ export function ChatWidget() {
   const [leadError, setLeadError] = useState(false);
   const sessionIdRef = useRef<string>("");
   const scrollRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const t = STRINGS[lang];
 
@@ -86,9 +93,48 @@ export function ChatWidget() {
     }
   }, [messages, open, loading]);
 
+  // Focus utile : champ de saisie sur ordinateur ; sur téléphone, le panneau lui-même
+  // (évite d'ouvrir le clavier d'office).
   useEffect(() => {
-    if (open) inputRef.current?.focus();
+    if (!open) return;
+    if (window.innerWidth >= 640) inputRef.current?.focus();
+    else panelRef.current?.focus();
   }, [open]);
+
+  // Téléphone : le panneau suit la hauteur réellement visible (clavier ouvert compris).
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!open || !vv) return;
+    const ajuster = () => {
+      const el = panelRef.current;
+      if (!el) return;
+      if (window.innerWidth < 640) {
+        el.style.height = `${vv.height}px`;
+        el.style.top = `${vv.offsetTop}px`;
+        el.style.bottom = "auto";
+      } else {
+        el.style.height = "";
+        el.style.top = "";
+        el.style.bottom = "";
+      }
+    };
+    ajuster();
+    vv.addEventListener("resize", ajuster);
+    vv.addEventListener("scroll", ajuster);
+    return () => {
+      vv.removeEventListener("resize", ajuster);
+      vv.removeEventListener("scroll", ajuster);
+    };
+  }, [open]);
+
+  // Ouverture depuis les boutons du site (ex. « Nous écrire ») : voir ouvrirAssistant().
+  useEffect(() => {
+    function onOuvrir() {
+      setOpen(true);
+    }
+    window.addEventListener(EVENEMENT_OUVRIR, onOuvrir);
+    return () => window.removeEventListener(EVENEMENT_OUVRIR, onOuvrir);
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -169,22 +215,26 @@ export function ChatWidget() {
 
   return (
     <>
+      {!open && (
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-label={open ? t.close : t.bubbleLabel}
-        aria-expanded={open}
+        onClick={() => setOpen(true)}
+        aria-label={t.bubbleLabel}
+        aria-expanded={false}
         className="fixed bottom-5 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#D8A53A] text-[#161616] shadow-lg shadow-black/30 transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-surface-0 sm:bottom-6 sm:right-6"
       >
-        {open ? <X className="h-6 w-6" aria-hidden /> : <MessageCircle className="h-6 w-6" aria-hidden />}
+        <MessageCircle className="h-6 w-6" aria-hidden />
       </button>
+      )}
 
       {open && (
         <div
+          ref={panelRef}
+          tabIndex={-1}
           role="dialog"
           aria-modal="true"
           aria-label={t.title}
-          className="fixed bottom-24 right-5 z-[60] flex h-[min(600px,calc(100vh-7rem))] w-[min(380px,calc(100vw-2.5rem))] flex-col overflow-hidden rounded-2lg border border-white/10 bg-surface-1 shadow-2xl sm:bottom-28 sm:right-6"
+          className="fixed inset-x-0 bottom-0 z-[60] flex h-[100dvh] max-h-[100dvh] w-full flex-col overflow-hidden bg-surface-1 shadow-2xl outline-none sm:inset-x-auto sm:bottom-6 sm:right-6 sm:h-[min(620px,calc(100dvh-3rem))] sm:w-[380px] sm:rounded-2lg sm:border sm:border-white/10"
         >
           <header className="flex items-center justify-between gap-3 border-b-2 border-[#D8A53A] bg-[#161616] px-4 py-3">
             <div>
@@ -328,12 +378,6 @@ export function ChatWidget() {
               >
                 {t.whatsappCta}
               </a>
-              <Link
-                href="/demarrer-un-projet"
-                className="flex-1 rounded-lg border border-[#D8A53A]/40 px-2 py-1.5 text-center text-xs text-foreground-2 transition-colors hover:border-[#D8A53A] hover:text-foreground-0"
-              >
-                {t.contactCta}
-              </Link>
             </div>
           </div>
 

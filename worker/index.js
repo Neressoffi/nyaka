@@ -1,8 +1,10 @@
-// Assistant IA NYAKA — Worker Cloudflare (v39).
+// Assistant IA NYAKA — Worker Cloudflare (v39, demandes vers Google Sheets : v42).
 // - Les pages du site sont servies telles quelles (dossier « out »).
 // - Seules les adresses /api/* passent par ce fichier (voir wrangler.jsonc, run_worker_first).
 // - IA gratuite : Cloudflare Workers AI (allocation gratuite quotidienne du compte).
-// - Demandes de contact : base Cloudflare D1 (liaison « DB »), si elle est configurée.
+// - Demandes de contact : Google Sheets (onglet « Demandes ») via un compte de service.
+//   Secrets à définir dans Cloudflare (Worker nyaka > Settings > Variables and Secrets) :
+//   GOOGLE_SHEET_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY.
 import CONNAISSANCES from "../content/assistant/connaissances.md";
 
 // Modèles gratuits sur l'offre Workers Free : rapide d'abord, le second sert de secours.
@@ -182,6 +184,71 @@ async function chat(request, env, origine) {
   return json({ reply: reponse || SECOURS[lang], handedOff: false }, 200, origine);
 }
 
+// ---------- Google Sheets (compte de service, signature RS256 via WebCrypto) ----------
+let jetonEnCache = null;
+
+function base64url(octets) {
+  let s = "";
+  const b = new Uint8Array(octets);
+  for (let i = 0; i < b.length; i++) s += String.fromCharCode(b[i]);
+  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+async function jetonGoogle(env) {
+  const maintenant = Math.floor(Date.now() / 1000);
+  if (jetonEnCache && jetonEnCache.expire > maintenant + 60) return jetonEnCache.valeur;
+
+  const pem = String(env.GOOGLE_PRIVATE_KEY).replace(/\\n/g, "\n");
+  const corpsCle = pem.replace(/-----[^-]+-----/g, "").replace(/\s+/g, "");
+  const der = Uint8Array.from(atob(corpsCle), (c) => c.charCodeAt(0));
+  const cle = await crypto.subtle.importKey(
+    "pkcs8",
+    der,
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false,
+    ["sign"]
+  );
+  const enc = new TextEncoder();
+  const entete = base64url(enc.encode(JSON.stringify({ alg: "RS256", typ: "JWT" })));
+  const contenu = base64url(
+    enc.encode(
+      JSON.stringify({
+        iss: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        scope: "https://www.googleapis.com/auth/spreadsheets",
+        aud: "https://oauth2.googleapis.com/token",
+        iat: maintenant,
+        exp: maintenant + 3600,
+      })
+    )
+  );
+  const signature = base64url(
+    await crypto.subtle.sign("RSASSA-PKCS1-v1_5", cle, enc.encode(`${entete}.${contenu}`))
+  );
+  const r = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${entete}.${contenu}.${signature}`,
+  });
+  if (!r.ok) throw new Error(`jeton Google refusé (${r.status})`);
+  const j = await r.json();
+  jetonEnCache = { valeur: j.access_token, expire: maintenant + (j.expires_in || 3600) };
+  return j.access_token;
+}
+
+async function ajouterLigneSheets(env, ligne) {
+  const jeton = await jetonGoogle(env);
+  const plage = encodeURIComponent("Demandes!A:I");
+  const r = await fetch(
+    `https://sheets.googleapis.com/v4/spreadsheets/${env.GOOGLE_SHEET_ID}/values/${plage}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${jeton}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ values: [ligne] }),
+    }
+  );
+  if (!r.ok) throw new Error(`Google Sheets a refusé l'ajout (${r.status})`);
+}
+
 async function demande(request, env, origine) {
   let d;
   try {
@@ -189,7 +256,8 @@ async function demande(request, env, origine) {
   } catch {
     return json({ ok: false, error: "invalid_body" }, 400, origine);
   }
-  const champ = (v, max) => String(v || "").trim().slice(0, max);
+  // Une formule ne doit jamais être interprétée par le tableur.
+  const champ = (v, max) => String(v || "").trim().slice(0, max).replace(/^[=+\-@]/, "'$&");
   const nom = champ(d.nom, 120);
   const contact = champ(d.contact, 160);
   const besoin = champ(d.besoin, 1500);
@@ -197,16 +265,24 @@ async function demande(request, env, origine) {
   if (!contact || !besoin || d.accord !== true) {
     return json({ ok: false, error: "champs_manquants" }, 400, origine);
   }
-  if (!env.DB) return json({ ok: false, error: "base_non_configuree" }, 503, origine);
+  if (!env.GOOGLE_SHEET_ID || !env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !env.GOOGLE_PRIVATE_KEY) {
+    console.warn("[demande] Google Sheets non configuré : demande non enregistrée.");
+    return json({ ok: false, error: "sheets_non_configure" }, 503, origine);
+  }
   try {
-    await env.DB.prepare(
-      "CREATE TABLE IF NOT EXISTS demandes (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT NOT NULL, nom TEXT, contact TEXT NOT NULL, besoin TEXT NOT NULL, langue TEXT, page TEXT, statut TEXT DEFAULT 'nouvelle')"
-    ).run();
-    await env.DB.prepare(
-      "INSERT INTO demandes (date, nom, contact, besoin, langue, page) VALUES (?, ?, ?, ?, ?, ?)"
-    )
-      .bind(new Date().toISOString(), nom, contact, besoin, langue, champ(d.page, 200))
-      .run();
+    // Mêmes colonnes que le tableur prévu : date, source, langue, motif, nom,
+    // structure / projet, besoin, contact, accord.
+    await ajouterLigneSheets(env, [
+      new Date().toISOString(),
+      `site web ${champ(d.page, 200)}`.trim(),
+      langue,
+      "projet",
+      nom,
+      "",
+      besoin,
+      contact,
+      "oui",
+    ]);
     return json({ ok: true }, 200, origine);
   } catch (e) {
     console.error("[demande]", (e && e.message) || e);

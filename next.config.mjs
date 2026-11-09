@@ -26,6 +26,9 @@ const nextConfig = surCloudflare
             destination: "/realisations/kawa-menu-experience",
             permanent: true,
           },
+          // Pages intégrées ailleurs (cahier n°4)
+          { source: "/notre-approche", destination: "/a-propos#methode", permanent: true },
+          { source: "/votre-situation", destination: "/solutions#votre-situation", permanent: true },
         ];
       },
     };

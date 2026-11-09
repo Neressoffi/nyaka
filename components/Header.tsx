@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import * as Popover from "@radix-ui/react-popover";
 
@@ -176,7 +177,16 @@ function MegaMenu({
 }
 
 // clair : variante pour une page sur fond clair (ex. À propos) — texte foncé.
+// Menu principal (cahier n°4) : Solutions, Réalisations, À propos — même composant partout.
+const LIENS = [
+  { label: "Solutions", href: "/solutions" },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "À propos", href: "/a-propos" },
+];
+
 export function Header({ clair = false }: { clair?: boolean } = {}) {
+  const pathname = usePathname() || "/";
+  const estActif = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -239,21 +249,18 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
 
         <div className="flex items-center gap-1 max-lg:shrink-0 sm:gap-2">
 
-          <nav className="mr-4 hidden items-center gap-6 lg:flex">
-
-            <Link
-              href="/solutions"
-              className="text-2xl leading-none"
-            >Solutions</Link>
-            <Link
-              href="/realisations"
-              className="hidden text-2xl leading-none xl:block"
-            >{TXT.texte_01}</Link>
-
-            <Link
-              href="/a-propos"
-              className="text-2xl leading-none"
-            >{TXT.texte_02}</Link>
+          <nav className="mr-4 hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
+            {LIENS.map((l) => {
+              const actif = estActif(l.href);
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  aria-current={actif ? "page" : undefined}
+                  className={`text-2xl leading-none transition-colors hover:text-[#D8A53A] ${actif ? "text-[#D8A53A]" : ""}`}
+                >{l.label}</Link>
+              );
+            })}
           </nav>
 
           <button
@@ -281,16 +288,12 @@ export function Header({ clair = false }: { clair?: boolean } = {}) {
 
       {mobileOpen && (
         <nav className="mx-4 mt-2 flex flex-col gap-1 rounded-2lg bg-surface-1 p-4 lg:hidden">
-          {[
-            { label: TXT.libelle_01, href: "/solutions" },
-            { label: TXT.libelle_04, href: "#" },
-            { label: TXT.libelle_05, href: "/realisations" },
-            { label: TXT.libelle_06, href: "/a-propos" },
-          ].map((item) => (
+          {LIENS.map((item) => (
             <Link
-              key={item.label}
+              key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-3 text-base text-foreground-1 transition-colors hover:bg-white/5 hover:text-accent"
+              aria-current={estActif(item.href) ? "page" : undefined}
+              className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-white/5 hover:text-[#D8A53A] ${estActif(item.href) ? "text-[#D8A53A]" : "text-foreground-1"}`}
               onClick={() => setMobileOpen(false)}
             >
               {item.label}

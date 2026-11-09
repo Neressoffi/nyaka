@@ -695,3 +695,37 @@ v41 — Accueil : « Votre situation / Notre réponse » placée avant « Nos r�
   FICHIER : components/accueil/AccueilV2.tsx
   RESTAURER : copier « v41/avant/components_accueil_AccueilV2.tsx.txt » vers
     components/accueil/AccueilV2.tsx (retirer « .txt »).
+
+==============================================================================
+v42 — Cahier de cadrage n°4 : LOT 1 (corrections bloquantes)   (09/11/2026)
+==============================================================================
+  EN-TÊTE (même composant sur toutes les pages)
+    - Menu : Solutions, Réalisations, À propos ; la rubrique consultée est en
+      jaune or. « Réalisations » visible sur tous les ordinateurs (il était
+      caché entre 1024 et 1279 px). Lien mort « Ressources » retiré du menu
+      mobile. Recherche testée : elle fonctionne, elle est conservée.
+  PIED DE PAGE
+    - Informations : FAQ + Politique de confidentialité. Lien « IA & données »
+      corrigé (/solutions#ia). E-mail (mailto), téléphone (tel), WhatsApp.
+      LinkedIn / TikTok restent masqués.
+  ANCIENNES ADRESSES (public/_redirects + next.config.mjs)
+    - /notre-approche -> /a-propos#methode ; /votre-situation ->
+      /solutions#votre-situation (301).
+  PAGE « DÉMARRER UN PROJET »
+    - Nouveaux textes (« Chaque projet commence par un échange. »), phrase sur
+      le formulaire retirée, « Nous écrire » ouvre l'assistant sur la page
+      (components/BoutonNousEcrire.tsx), « Découvrir nos solutions », lien
+      WhatsApp discret, fond graphique sombre sans photo.
+  ASSISTANT
+    - Une seule croix (la bulle se masque quand le panneau est ouvert).
+    - Bouton « Démarrer un projet » retiré du chat.
+    - Téléphone : plein écran, suit la hauteur visible (clavier ouvert).
+    - Ouverture depuis le site : événement « nyaka:ouvrir-assistant ».
+    - Demandes « Laisser mes coordonnées » -> Google Sheets (onglet
+      « Demandes », mêmes colonnes que prévu). Secrets à définir dans
+      Cloudflare : GOOGLE_SHEET_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      GOOGLE_PRIVATE_KEY. Tant qu'ils manquent, le chat propose WhatsApp /
+      e-mail.
+    - Politique de confidentialité : Google Sheets mentionné.
+  RESTAURER : copier les fichiers de « v42/avant » (les « _ » du nom =
+    dossiers, retirer « .txt ») et supprimer components/BoutonNousEcrire.tsx.
