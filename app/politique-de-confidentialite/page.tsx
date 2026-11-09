@@ -31,7 +31,7 @@ export default function PolitiqueDeConfidentialitePage() {
               <h2 className="font-display text-xl font-semibold text-white">L’assistant du site</h2>
               <p className="mt-2">
                 Le bouton de discussion présent sur le site vous met en relation avec un assistant basé sur
-                l’intelligence artificielle (modèles d’IA exécutés par Cloudflare, hébergeur du site), et non avec une personne. Il répond à
+                l’intelligence artificielle (modèle Claude, par Anthropic), et non avec une personne. Il répond à
                 partir d’une base de connaissances sur NYAKA et ne donne jamais de prix ferme.
               </p>
             </section>
@@ -44,19 +44,17 @@ export default function PolitiqueDeConfidentialitePage() {
                 Il n’est pas stocké sur nos serveurs.
               </p>
               <p className="mt-2">
-                Si vous choisissez de laisser vos coordonnées pour être recontacté·e (bouton « Laisser mes
-                coordonnées »), ces informations (nom, moyen de contact, besoin exprimé) sont enregistrées dans
-                un tableau de suivi interne à NYAKA (Google Sheets), uniquement après votre accord explicite
-                (case à cocher).
+                Si vous choisissez de laisser vos coordonnées pour être recontacté·e, ces informations (nom,
+                activité ou projet, besoin exprimé, moyen de contact) sont enregistrées dans un fichier de suivi
+                interne à NYAKA, uniquement après votre accord explicite donné pendant la conversation.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-xl font-semibold text-white">Avec qui vos messages sont partagés</h2>
               <p className="mt-2">
-                Le contenu de vos messages est transmis à Cloudflare (hébergeur du site et des modèles d’IA) pour
-                générer les réponses. Les coordonnées que vous choisissez de laisser sont transmises à Google
-                (Google Sheets) pour être enregistrées dans le tableau de suivi de NYAKA. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l’équipe NYAKA
+                Le contenu de vos messages est transmis à Anthropic (fournisseur du modèle Claude) pour générer
+                les réponses. Vos coordonnées, si vous les laissez, sont accessibles uniquement à l’équipe NYAKA
                 autorisée.
               </p>
             </section>

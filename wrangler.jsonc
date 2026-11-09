@@ -1,17 +1,11 @@
-// Hébergement Cloudflare (Workers, fichiers statiques) — v26, assistant IA gratuit — v39.
+// Hébergement Cloudflare (Workers, fichiers statiques) — v26.
 // Construction : npm run build:cloudflare  ->  dossier « out »
-// /api/* passe par worker/index.js (IA Cloudflare Workers AI + demandes de contact D1).
 {
   "name": "nyaka",
   "compatibility_date": "2026-11-01",
-  "main": "./worker/index.js",
-  "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
-  "ai": { "binding": "AI" },
   "assets": {
     "directory": "./out",
-    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page",
-    "run_worker_first": ["/api/*"]
+    "not_found_handling": "404-page"
   }
 }

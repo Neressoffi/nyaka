@@ -739,3 +739,19 @@ v43 — Démarrer un projet : lien WhatsApp retiré   (09/11/2026)
   FICHIER : app/demarrer-un-projet/page.tsx
   RESTAURER : copier « v43/avant/app_demarrer-un-projet_page.tsx.txt » vers
     app/demarrer-un-projet/page.tsx (retirer « .txt »).
+
+==============================================================================
+v44 — Assistant IA : toutes mes modifications annulées (retour à l'original)   (09/11/2026)
+==============================================================================
+  DEMANDE : l'assistant est repris par la personne qui travaille dessus.
+  REMIS À L'IDENTIQUE (version de l'ingénieur IA, avant v39) :
+    components/ChatWidget.tsx, lib/assistant/i18n.ts,
+    app/politique-de-confidentialite/page.tsx, wrangler.jsonc, tsconfig.json.
+  SUPPRIMÉ : dossier worker (IA Cloudflare + Google Sheets que j'avais ajoutés).
+  CONSERVÉ (partie site, cahier n°4) : bouton « Nous écrire » de la page
+    Démarrer un projet. Il ouvre l'assistant en cliquant sur sa bulle, sans
+    toucher à son code ; s'il est absent, il ouvre WhatsApp.
+  NOTE POUR L'INGÉNIEUR IA : /api/chat n'existe pas sur l'hébergement
+    actuel (pages fixes Cloudflare) ; l'assistant d'origine affichera donc
+    son message d'erreur tant qu'un hébergement serveur n'est pas prévu.
+  RESTAURER MES MODIFICATIONS : fichiers de « v44/avant » (retirer « .txt »).
