@@ -182,8 +182,9 @@ export function ChatWidget() {
   }
 
   function openLead() {
-    const dernier = [...messages].reverse().find((m) => m.role === "user");
-    setLead((l) => ({ ...l, besoin: l.besoin || dernier?.content || "" }));
+    // Le champ reste vide (pas de pre-remplissage avec le dernier message du chat,
+    // qui peut etre une simple question et preter a confusion) : le visiteur decrit
+    // son besoin ou ajoute un commentaire librement.
     setLeadError(false);
     setLeadOpen(true);
   }
