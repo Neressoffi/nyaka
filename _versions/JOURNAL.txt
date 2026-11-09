@@ -799,3 +799,12 @@ v47 — Réalisations : style A « Espresso + ivoire » (comme l'Accueil)   (09/
     - Projets, textes, filtres et liens inchangés.
   FICHIERS : app/realisations/page.tsx, components/portfolio/PortfolioGallery.tsx
   RESTAURER : copier les fichiers de « v47/avant » (retirer « .txt »).
+
+==============================================================================
+v48 — Réalisations : surtitre « Portfolio NYAKA » retiré   (10/11/2026)
+==============================================================================
+  CE QUI CHANGE : le petit surtitre doré « Portfolio NYAKA » et son tiret,
+    au-dessus de « Nos réalisations. », sont retirés. Rien d'autre ne change.
+  FICHIER : app/realisations/page.tsx
+  RESTAURER : copier « v48/avant/app_realisations_page.tsx.txt » vers
+    app/realisations/page.tsx (retirer « .txt »).

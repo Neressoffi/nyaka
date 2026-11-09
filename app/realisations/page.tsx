@@ -32,10 +32,7 @@ export default function RealisationsPage() {
       {/* Style A (v47) : haut de page espresso comme l'Accueil, galerie sur fond ivoire */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#181615] via-[#2b211d] to-[#171515] px-4 pb-14 pt-32 lg:px-8 lg:pb-20 lg:pt-40">
         <div className="mx-auto w-full max-w-screen-xl">
-          <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#D8A53A]">
-            <span className="h-px w-7 bg-[#D8A53A]" aria-hidden /> Portfolio NYAKA
-          </p>
-          <h1 className="mt-5 text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-[52px] lg:text-[72px]">
+          <h1 className="text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-[52px] lg:text-[72px]">
             {portfolioPage.titre}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#bfb6aa] sm:text-lg">
