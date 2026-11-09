@@ -119,11 +119,11 @@ export function AproposV2() {
       <style dangerouslySetInnerHTML={{ __html: ANIM }} />
 
       {/* 01 · Hero */}
-      <section id="intro" className="overflow-hidden px-4 pb-14 pt-32 lg:px-8 lg:pb-16 lg:pt-40">
+      <section id="intro" className="overflow-hidden bg-[#191716] px-4 pb-14 pt-32 text-white lg:px-8 lg:pb-16 lg:pt-40">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 flex items-center justify-between gap-5 lg:mb-11">
-            <Eyebrow>Notre identité / L’agence</Eyebrow>
-            <Tiny className="hidden sm:inline">NYAKA — L’empreinte de votre marque.</Tiny>
+            <Eyebrow className="!text-[#D8A53A]">Notre identité / L’agence</Eyebrow>
+            <Tiny className="hidden !text-[#a59c90] sm:inline">NYAKA — L’empreinte de votre marque.</Tiny>
           </div>
 
           <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8 [&>*]:min-w-0">
@@ -131,18 +131,18 @@ export function AproposV2() {
               <h1 className="font-display text-[64px] font-bold leading-[0.98] tracking-[-0.05em] sm:text-[88px] lg:text-[108px]">
                 À propos
               </h1>
-              <p className="mt-7 max-w-[650px] font-display text-[24px] font-medium leading-[1.3] tracking-[-0.02em] text-[#292929] sm:text-[30px] lg:text-[34px]">
-                Une agence de <strong className="font-bold text-[#1f1d1b]">communication créative</strong> et de{" "}
-                <strong className="font-bold text-[#1f1d1b]">solutions d’intelligence artificielle.</strong>
+              <p className="mt-7 max-w-[650px] font-display text-[24px] font-medium leading-[1.3] tracking-[-0.02em] text-[#e9e1d6] sm:text-[30px] lg:text-[34px]">
+                Une agence de <strong className="font-bold text-white">communication créative</strong> et de{" "}
+                <strong className="font-bold text-[#D8A53A]">solutions d’intelligence artificielle.</strong>
               </p>
-              <p className="mt-5 max-w-[510px] text-[15px] leading-[1.8] text-[#6b6964] sm:text-base">
+              <p className="mt-5 max-w-[510px] text-[15px] leading-[1.8] text-[#bfb6aa] sm:text-base">
                 Nous accompagnons les entrepreneurs, les porteurs de projets et les entreprises dans la création, la structuration et le développement de leur image, de leur communication et de leurs outils.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#vision" className={`${BTN} bg-[#161616] text-white hover:opacity-90`}>
+                <a href="#vision" className={`${BTN} bg-[#f6f3ef] text-[#181716] hover:opacity-90`}>
                   Découvrir notre vision <ArrowDownRight className="h-4 w-4" />
                 </a>
-                <Link href="/realisations" className={`${BTN} border border-[#dedad4] text-[#1f1d1b] hover:border-[#161616]`}>
+                <Link href="/realisations" className={`${BTN} border border-[#776a5f] text-white hover:border-[#D8A53A] hover:text-[#D8A53A]`}>
                   Nos réalisations <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -155,16 +155,16 @@ export function AproposV2() {
               role="img"
             >
               <div className="relative h-[440px] w-[510px] shrink-0 origin-center scale-[0.62] sm:scale-[0.85] lg:scale-100">
-                <div className="ap-rotate absolute left-1/2 top-1/2 h-[435px] w-[435px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#dedad4]" />
-                <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dedad4]" />
-                <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#dedad4] bg-[#e2dcd1]" />
+                <div className="ap-rotate absolute left-1/2 top-1/2 h-[435px] w-[435px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#5a5048]" />
+                <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#48413b]" />
+                <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D8A53A]/40 bg-[#282321]" />
                 <svg className="absolute inset-0 h-full w-full" viewBox="0 0 510 440" aria-hidden="true">
-                  <g fill="none" stroke="#cac4bc" strokeWidth="1.3"><path d="M128 92 L205 160" /><path d="M402 160 L326 190" /><path d="M163 358 L213 282" /></g>
+                  <g fill="none" stroke="#6b6158" strokeWidth="1.3"><path d="M128 92 L205 160" /><path d="M402 160 L326 190" /><path d="M163 358 L213 282" /></g>
                   <g fill="#D8A53A"><circle cx="205" cy="160" r="3" /><circle cx="326" cy="190" r="3" /><circle cx="213" cy="282" r="3" /></g>
                 </svg>
                 <div className="absolute left-1/2 top-1/2 w-[170px] -translate-x-1/2 -translate-y-1/2 text-center">
-                  <strong className="block font-display text-[26px] leading-tight tracking-[-0.03em]">Une vision<br />commune</strong>
-                  <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.17em] text-[#8a847c]">Créativité × Clarté</span>
+                  <strong className="block font-display text-[26px] leading-tight tracking-[-0.03em] text-white">Une vision<br />commune</strong>
+                  <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.17em] text-[#D8A53A]">Créativité × Clarté</span>
                 </div>
                 {[
                   { t: "STRATÉGIE", c: "left-[6%] top-[12%]", d: "0s" },
@@ -173,26 +173,26 @@ export function AproposV2() {
                 ].map((n) => (
                   <div
                     key={n.t}
-                    className={`ap-float absolute ${n.c} flex items-center gap-2.5 rounded-[10px] border border-[#dedad4] bg-[#f6f3ee] px-4 py-3.5 text-[12px] font-bold tracking-[0.045em] shadow-2xl`}
+                    className={`ap-float absolute ${n.c} flex items-center gap-2.5 rounded-[10px] border border-[#48413b] bg-[#282321] px-4 py-3.5 text-[12px] font-bold tracking-[0.045em] text-white shadow-2xl`}
                     style={{ animationDelay: n.d }}
                   >
                     <span className="h-2 w-2 rounded-full bg-[#D8A53A]" />
                     {n.t}
                   </div>
                 ))}
-                <span className="absolute bottom-2 right-0 text-[10px] uppercase tracking-[0.16em] text-[#8a847c]">
+                <span className="absolute bottom-2 right-0 text-[10px] uppercase tracking-[0.16em] text-[#a59c90]">
                   Des expertises qui se rencontrent
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 h-px bg-[#dedad4] lg:mt-12" />
+          <div className="mt-10 h-px bg-[#3a332e] lg:mt-12" />
           <div className="flex items-center justify-between gap-5 pt-5">
-            <span className="flex items-center gap-2 text-[11px] font-semibold text-[#8a847c]">
+            <span className="flex items-center gap-2 text-[11px] font-semibold text-[#a59c90]">
               <ArrowDown className="ap-bob h-4 w-4" /> Faire défiler pour découvrir NYAKA
             </span>
-            <Tiny className="hidden sm:inline">01 — Notre identité</Tiny>
+            <Tiny className="hidden !text-[#a59c90] sm:inline">01 — Notre identité</Tiny>
           </div>
         </div>
       </section>

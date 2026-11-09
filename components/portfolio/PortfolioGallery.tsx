@@ -89,8 +89,8 @@ export function PortfolioGallery({
               onClick={() => choisir(f)}
               className={`shrink-0 rounded-full border px-5 py-2.5 text-sm font-medium transition-colors duration-200 ${
                 actif
-                  ? "border-white bg-white text-black"
-                  : "border-white/15 text-white/75 hover:border-white/40 hover:text-white"
+                  ? "border-[#191817] bg-[#191817] text-white"
+                  : "border-[#d9d3c9] text-[#4a4540] hover:border-[#968779] hover:text-[#191817]"
               }`}
             >
               {texts.filtres[f]}
@@ -101,11 +101,11 @@ export function PortfolioGallery({
 
       {filtre === "videos" && (
         <div className="mt-12 max-w-2xl">
-          <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="font-display text-2xl font-bold text-[#191817] sm:text-3xl">
             {videosIntro.titre}
           </h2>
-          <p className="mt-3 text-lg text-white">{videosIntro.accroche}</p>
-          <p className="mt-2 text-[15px] leading-relaxed text-white/60">
+          <p className="mt-3 text-lg text-[#191817]">{videosIntro.accroche}</p>
+          <p className="mt-2 text-[15px] leading-relaxed text-[#6d6861]">
             {videosIntro.description}
           </p>
         </div>
@@ -113,7 +113,7 @@ export function PortfolioGallery({
 
       <div key={filtre} className="animate-[fadeIn_400ms_ease-out]">
         {vedette && (
-          <div className="mt-10 border-b border-white/10 pb-10">
+          <div className="mt-10 border-b border-[#dedad3] pb-10">
             <Carte item={vedette} vedette onVideo={setVideo} />
           </div>
         )}
@@ -156,7 +156,7 @@ function Carte({
 
   const visuel = (
     <div
-      className={`relative overflow-hidden rounded-[20px] bg-white/5 sm:rounded-[24px] ${
+      className={`relative overflow-hidden rounded-[20px] bg-[#e7e0d7] sm:rounded-[24px] ${
         vedette ? "aspect-[16/9]" : item.kind === "video" ? "aspect-[16/9]" : "aspect-[4/3]"
       }`}
     >
@@ -181,19 +181,19 @@ function Carte({
     <div className={vedette ? "mt-5" : "mt-4"}>
       <div className="flex items-start justify-between gap-3">
         <h3
-          className={`font-display font-bold leading-tight text-white ${
+          className={`font-display font-bold leading-tight text-[#191817] ${
             vedette ? "text-2xl sm:text-3xl lg:text-4xl" : "text-lg sm:text-xl lg:text-2xl"
           }`}
         >
           {titre}
         </h3>
         {vedette && (
-          <ArrowUpRight className="mt-1 h-6 w-6 shrink-0 text-white/50 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
+          <ArrowUpRight className="mt-1 h-6 w-6 shrink-0 text-[#a39a8f] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#D8A53A]" />
         )}
       </div>
-      <p className="mt-1.5 text-sm leading-snug text-white/55 sm:text-[15px]">{meta}</p>
+      <p className="mt-1.5 text-sm leading-snug text-[#6d6861] sm:text-[15px]">{meta}</p>
       {vedette && (
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-white sm:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#3a3530] sm:text-lg">
           {accroche}
         </p>
       )}

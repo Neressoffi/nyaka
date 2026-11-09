@@ -5,13 +5,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BoutonNousEcrire } from "@/components/BoutonNousEcrire";
 import contenu from "@/content/pages/demarrer.json";
-import site from "@/content/pages/site.json";
 
 // Textes gérés depuis l'administration (Decap CMS) : content/pages/demarrer.json
 // v42 (cahier de cadrage n°4) : « Nous écrire » ouvre l'assistant, plus de mention
-// de formulaire, fond graphique sombre (sans photo), WhatsApp en canal discret.
+// de formulaire, fond graphique sombre (sans photo). v43 : lien WhatsApp retiré.
 const TXT = contenu.Page_demarrer_un_projet;
-const WHATSAPP = site.Footer.whatsapp_lien || "https://wa.me/79152135853";
 
 export const metadata: Metadata = {
   title: "Démarrer un projet | NYAKA",
@@ -46,13 +44,6 @@ export default function DemarrerUnProjetPage() {
               className="rounded-lg border border-[#776a5f] px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-[#D8A53A] hover:text-[#D8A53A] sm:text-[15px]"
             >{TXT.texte_05}</Link>
           </div>
-
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 w-fit text-sm text-[#bfb6aa] underline decoration-[#D8A53A]/50 underline-offset-4 transition-colors hover:text-white hover:decoration-[#D8A53A]"
-          >{TXT.texte_06}</a>
         </div>
       </section>
 
