@@ -755,3 +755,17 @@ v44 — Assistant IA : toutes mes modifications annulées (retour à l'original)
     actuel (pages fixes Cloudflare) ; l'assistant d'origine affichera donc
     son message d'erreur tant qu'un hébergement serveur n'est pas prévu.
   RESTAURER MES MODIFICATIONS : fichiers de « v44/avant » (retirer « .txt »).
+
+==============================================================================
+v45 — À propos : haut de page sur fond noir (comme Solutions)   (09/11/2026)
+==============================================================================
+  CE QUI CHANGE (première section de À propos uniquement)
+    - Fond noir #191716 comme la page Solutions ; menu en version sombre
+      (logo clair, liens blancs) comme sur Solutions.
+    - Titres en blanc, « solutions d'intelligence artificielle » et surtitre
+      en jaune or, paragraphe en gris clair ; boutons adaptés au fond noir.
+    - Schéma « Une vision commune » adapté (cercles, cartes et textes
+      lisibles sur le noir). Ligne « Faire défiler… / 01 — Notre identité »
+      conservée. Textes, liens et sections suivantes inchangés.
+  FICHIERS : components/apropos/AproposV2.tsx, app/a-propos/page.tsx
+  RESTAURER : copier les fichiers de « v45/avant » (retirer « .txt »).

@@ -15,7 +15,7 @@ export default function AproposPage() {
   return (
     <main className="bg-[#e9e4db]">
       <TopBanner />
-      <Header clair />
+      <Header />
       <AproposV2 />
       <Footer />
     </main>
