@@ -683,3 +683,15 @@ v40 — Réalisations : bloc « Votre projet peut être le prochain. » aux coul
   FICHIER : components/realisations/RealisationsFinalCta.tsx
   RESTAURER : copier « v40/avant/components_realisations_RealisationsFinalCta.tsx.txt »
     vers components/realisations/RealisationsFinalCta.tsx (retirer « .txt »).
+
+==============================================================================
+v41 — Accueil : « Votre situation / Notre réponse » placée avant « Nos réalisations »   (09/11/2026)
+==============================================================================
+  CE QUI CHANGE : seul l'ordre des sections de l'accueil change.
+    Nouvel ordre : haut de page > Ils nous font confiance > Quatre expertises >
+    Votre situation / Notre réponse > Nos réalisations > Découvrir NYAKA >
+    FAQ > Un projet en tête ?
+    La section elle-même et la page Solutions ne changent pas.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v41/avant/components_accueil_AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).

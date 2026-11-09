@@ -200,6 +200,11 @@ export function AccueilV2() {
         </div>
       </section>
 
+    </div>
+
+    <AccueilSituations />
+
+    <div className="acc2">
       <section className="work" id="realisations" aria-labelledby="work-title">
         <div className="container">
           <div className="work-top reveal">
@@ -230,11 +235,6 @@ export function AccueilV2() {
           </div>
         </div>
       </section>
-    </div>
-
-    <AccueilSituations />
-
-    <div className="acc2">
       <section className="faq" id="faq" aria-labelledby="faq-title">
         <div className="container faq-layout">
           <div className="faq-header reveal"><div className="eyebrow">Quelques réponses</div><h2 id="faq-title">Réponses à vos questions.</h2><p>L’essentiel pour démarrer votre collaboration avec NYAKA.</p></div>
