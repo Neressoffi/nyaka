@@ -1,11 +1,26 @@
-// Hébergement Cloudflare (Workers, fichiers statiques) — v26.
+// Hébergement Cloudflare (Workers, fichiers statiques) — v26, assistant IA — v39,
+// bascule vers Claude Haiku — v43.
 // Construction : npm run build:cloudflare  ->  dossier « out »
+// /api/* passe par worker/index.js (IA Claude Haiku + demandes de contact Google Sheets).
 {
   "name": "nyaka",
   "compatibility_date": "2026-11-01",
+  "main": "./worker/index.js",
+  "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
   "assets": {
     "directory": "./out",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // Active les logs du Worker (console.log/console.error visibles dans Observabilite >
+  // Logs). Indispensable pour diagnostiquer les erreurs de l'assistant (ex. appel a
+  // Claude qui echoue). Sans ce bloc, un reglage fait seulement dans le dashboard est
+  // ecrase a chaque nouveau deploiement.
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
   }
 }

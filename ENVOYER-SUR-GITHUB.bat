@@ -27,7 +27,8 @@ git commit -m "Mise a jour du site NYAKA - %DATE% %TIME%" >> envoi-github-journa
 echo  3/4 - Liaison au depot GitHub nyaka...
 git remote set-url origin https://github.com/Neressoffi/nyaka.git >> envoi-github-journal.txt 2>&1
 echo  4/4 - Envoi sur GitHub (une fenetre de connexion GitHub peut s'ouvrir : acceptez-la)...
-git push -u origin main --force >> envoi-github-journal.txt 2>&1
+git pull origin main >> envoi-github-journal.txt 2>&1
+git push -u origin main >> envoi-github-journal.txt 2>&1
 if errorlevel 1 (
   echo.
   echo  [ERREUR] L'envoi a echoue. Le detail est dans envoi-github-journal.txt

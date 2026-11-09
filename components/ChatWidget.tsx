@@ -7,13 +7,18 @@ import { STRINGS, detectDefaultLang, type Lang } from "@/lib/assistant/i18n";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
+// Événement utilisé par les boutons du site pour ouvrir l'assistant sur la page en cours.
+const EVENEMENT_OUVRIR = "nyaka:ouvrir-assistant";
+export function ouvrirAssistant() {
+  window.dispatchEvent(new Event(EVENEMENT_OUVRIR));
+}
+
 const SESSION_ID_KEY = "nyaka_chat_session_id";
 const HISTORY_KEY = "nyaka_chat_history";
 const LANG_KEY = "nyaka_chat_lang";
-// Numéro fictif en attendant le numéro WhatsApp définitif de NYAKA.
-// Modifiable via la variable d'environnement NEXT_PUBLIC_WHATSAPP_NUMBER (publique,
-// visible côté navigateur — ce n'est qu'un numéro de téléphone, pas un secret).
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "000000000000";
+// Numéro WhatsApp de NYAKA (même que le pied de page). Modifiable via la variable
+// NEXT_PUBLIC_WHATSAPP_NUMBER (publique : ce n'est qu'un numéro de téléphone).
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "79152135853";
 
 function readSessionStorage<T>(key: string): T | null {
   try {
@@ -52,8 +57,13 @@ export function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const [handedOff, setHandedOff] = useState(false);
   const [sessionLimitReached, setSessionLimitReached] = useState(false);
+  const [leadOpen, setLeadOpen] = useState(false);
+  const [lead, setLead] = useState({ nom: "", contact: "", besoin: "", accord: false });
+  const [leadSending, setLeadSending] = useState(false);
+  const [leadError, setLeadError] = useState(false);
   const sessionIdRef = useRef<string>("");
   const scrollRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const t = STRINGS[lang];
 
@@ -83,9 +93,48 @@ export function ChatWidget() {
     }
   }, [messages, open, loading]);
 
+  // Focus utile : champ de saisie sur ordinateur ; sur téléphone, le panneau lui-même
+  // (évite d'ouvrir le clavier d'office).
   useEffect(() => {
-    if (open) inputRef.current?.focus();
+    if (!open) return;
+    if (window.innerWidth >= 640) inputRef.current?.focus();
+    else panelRef.current?.focus();
   }, [open]);
+
+  // Téléphone : le panneau suit la hauteur réellement visible (clavier ouvert compris).
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!open || !vv) return;
+    const ajuster = () => {
+      const el = panelRef.current;
+      if (!el) return;
+      if (window.innerWidth < 640) {
+        el.style.height = `${vv.height}px`;
+        el.style.top = `${vv.offsetTop}px`;
+        el.style.bottom = "auto";
+      } else {
+        el.style.height = "";
+        el.style.top = "";
+        el.style.bottom = "";
+      }
+    };
+    ajuster();
+    vv.addEventListener("resize", ajuster);
+    vv.addEventListener("scroll", ajuster);
+    return () => {
+      vv.removeEventListener("resize", ajuster);
+      vv.removeEventListener("scroll", ajuster);
+    };
+  }, [open]);
+
+  // Ouverture depuis les boutons du site (ex. « Nous écrire ») : voir ouvrirAssistant().
+  useEffect(() => {
+    function onOuvrir() {
+      setOpen(true);
+    }
+    window.addEventListener(EVENEMENT_OUVRIR, onOuvrir);
+    return () => window.removeEventListener(EVENEMENT_OUVRIR, onOuvrir);
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -132,35 +181,71 @@ export function ChatWidget() {
     }
   }
 
+  function openLead() {
+    const dernier = [...messages].reverse().find((m) => m.role === "user");
+    setLead((l) => ({ ...l, besoin: l.besoin || dernier?.content || "" }));
+    setLeadError(false);
+    setLeadOpen(true);
+  }
+
+  async function sendLead(e: React.FormEvent) {
+    e.preventDefault();
+    if (!lead.contact.trim() || !lead.besoin.trim() || !lead.accord || leadSending) return;
+    setLeadSending(true);
+    setLeadError(false);
+    try {
+      const res = await fetch("/api/demande", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...lead, langue: lang, page: window.location.pathname }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        setHandedOff(true);
+        setLeadOpen(false);
+      } else {
+        setLeadError(true);
+      }
+    } catch {
+      setLeadError(true);
+    } finally {
+      setLeadSending(false);
+    }
+  }
+
   return (
     <>
+      {!open && (
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-label={open ? t.close : t.bubbleLabel}
-        aria-expanded={open}
-        className="fixed bottom-5 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-lg transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-surface-0 sm:bottom-6 sm:right-6"
+        onClick={() => setOpen(true)}
+        aria-label={t.bubbleLabel}
+        aria-expanded={false}
+        className="fixed bottom-5 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#D8A53A] text-[#161616] shadow-lg shadow-black/30 transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-surface-0 sm:bottom-6 sm:right-6"
       >
-        {open ? <X className="h-6 w-6" aria-hidden /> : <MessageCircle className="h-6 w-6" aria-hidden />}
+        <MessageCircle className="h-6 w-6" aria-hidden />
       </button>
+      )}
 
       {open && (
         <div
+          ref={panelRef}
+          tabIndex={-1}
           role="dialog"
           aria-modal="true"
           aria-label={t.title}
-          className="fixed bottom-24 right-5 z-[60] flex h-[min(600px,calc(100vh-7rem))] w-[min(380px,calc(100vw-2.5rem))] flex-col overflow-hidden rounded-2lg border border-white/10 bg-surface-1 shadow-2xl sm:bottom-28 sm:right-6"
+          className="fixed inset-x-0 bottom-0 z-[60] flex h-[100dvh] max-h-[100dvh] w-full flex-col overflow-hidden bg-surface-1 shadow-2xl outline-none sm:inset-x-auto sm:bottom-6 sm:right-6 sm:h-[min(620px,calc(100dvh-3rem))] sm:w-[380px] sm:rounded-2lg sm:border sm:border-white/10"
         >
-          <header className="flex items-center justify-between gap-3 border-b border-white/10 bg-surface-2 px-4 py-3">
+          <header className="flex items-center justify-between gap-3 border-b-2 border-[#D8A53A] bg-[#161616] px-4 py-3">
             <div>
-              <p className="text-sm font-semibold text-foreground-0">{t.title}</p>
-              <p className="text-xs text-foreground-3">{t.subtitle}</p>
+              <p className="text-sm font-semibold text-white">{t.title}</p>
+              <p className="text-xs text-[#D8A53A]">{t.subtitle}</p>
             </div>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-                className="rounded-full border border-white/15 px-2.5 py-1 text-xs text-foreground-2 transition-colors hover:text-foreground-0"
+                className="rounded-full border border-[#D8A53A]/50 px-2.5 py-1 text-xs text-[#D8A53A] transition-colors hover:bg-[#D8A53A] hover:text-[#161616]"
               >
                 {t.langToggle}
               </button>
@@ -190,7 +275,7 @@ export function ChatWidget() {
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
                   className={`max-w-[85%] whitespace-pre-wrap rounded-2lg px-3 py-2.5 text-sm leading-relaxed ${
-                    m.role === "user" ? "bg-accent text-white" : "bg-surface-2 text-foreground-1"
+                    m.role === "user" ? "bg-[#D8A53A] text-[#161616]" : "bg-surface-2 text-foreground-1"
                   }`}
                 >
                   {renderFormatted(m.content)}
@@ -200,7 +285,7 @@ export function ChatWidget() {
 
             {loading && (
               <div className="flex items-center gap-2 text-xs text-foreground-3">
-                <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />
+                <Loader2 className="h-3.5 w-3.5 animate-spin text-[#D8A53A]" aria-hidden />
                 {t.typing}
               </div>
             )}
@@ -214,22 +299,85 @@ export function ChatWidget() {
             )}
           </div>
 
+          {leadOpen && !handedOff && (
+            <form onSubmit={sendLead} className="space-y-2 border-t border-white/10 bg-[#161616] px-4 py-3">
+              <p className="text-xs font-semibold text-[#D8A53A]">{t.leadTitle}</p>
+              <input
+                type="text"
+                value={lead.nom}
+                onChange={(e) => setLead({ ...lead, nom: e.target.value.slice(0, 120) })}
+                placeholder={t.leadName}
+                aria-label={t.leadName}
+                className="w-full rounded-lg bg-surface-2 px-3 py-2 text-sm text-foreground-0 placeholder:text-foreground-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8A53A]"
+              />
+              <input
+                type="text"
+                required
+                value={lead.contact}
+                onChange={(e) => setLead({ ...lead, contact: e.target.value.slice(0, 160) })}
+                placeholder={t.leadContact}
+                aria-label={t.leadContact}
+                className="w-full rounded-lg bg-surface-2 px-3 py-2 text-sm text-foreground-0 placeholder:text-foreground-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8A53A]"
+              />
+              <textarea
+                required
+                rows={2}
+                value={lead.besoin}
+                onChange={(e) => setLead({ ...lead, besoin: e.target.value.slice(0, 1500) })}
+                placeholder={t.leadNeed}
+                aria-label={t.leadNeed}
+                className="w-full resize-none rounded-lg bg-surface-2 px-3 py-2 text-sm text-foreground-0 placeholder:text-foreground-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8A53A]"
+              />
+              <label className="flex items-start gap-2 text-xs text-foreground-2">
+                <input
+                  type="checkbox"
+                  required
+                  checked={lead.accord}
+                  onChange={(e) => setLead({ ...lead, accord: e.target.checked })}
+                  className="mt-0.5 accent-[#D8A53A]"
+                />
+                <span>{t.leadConsent}</span>
+              </label>
+              {leadError && <p className="text-xs text-red-300">{t.leadError}</p>}
+              <div className="flex gap-2">
+                <button
+                  type="submit"
+                  disabled={leadSending || !lead.contact.trim() || !lead.besoin.trim() || !lead.accord}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#D8A53A] px-3 py-2 text-xs font-semibold text-[#161616] transition-opacity hover:opacity-90 disabled:opacity-40"
+                >
+                  {leadSending && <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />}
+                  {t.leadSubmit}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLeadOpen(false)}
+                  className="rounded-lg border border-white/15 px-3 py-2 text-xs text-foreground-2 transition-colors hover:text-foreground-0"
+                >
+                  {t.leadCancel}
+                </button>
+              </div>
+            </form>
+          )}
+
           <div className="border-t border-white/10 px-4 py-2">
+            {!handedOff && !leadOpen && (
+              <button
+                type="button"
+                onClick={openLead}
+                className="mb-2 w-full rounded-lg bg-[#D8A53A] px-2 py-2 text-center text-xs font-semibold text-[#161616] transition-opacity hover:opacity-90"
+              >
+                {t.leadCta}
+              </button>
+            )}
             <div className="flex gap-2">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 rounded-lg border border-white/15 px-2 py-1.5 text-center text-xs text-foreground-2 transition-colors hover:text-foreground-0"
+                className="flex-1 rounded-lg border border-[#D8A53A]/40 px-2 py-1.5 text-center text-xs text-foreground-2 transition-colors hover:border-[#D8A53A] hover:text-foreground-0"
               >
                 {t.whatsappCta}
               </a>
-              <Link
-                href="/demarrer-un-projet"
-                className="flex-1 rounded-lg border border-white/15 px-2 py-1.5 text-center text-xs text-foreground-2 transition-colors hover:text-foreground-0"
-              >
-                {t.contactCta}
-              </Link>
             </div>
           </div>
 
@@ -248,13 +396,13 @@ export function ChatWidget() {
               placeholder={t.placeholder}
               aria-label={t.placeholder}
               disabled={sessionLimitReached}
-              className="flex-1 rounded-full bg-surface-2 px-4 py-2 text-sm text-foreground-0 placeholder:text-foreground-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:opacity-50"
+              className="flex-1 rounded-full bg-surface-2 px-4 py-2 text-sm text-foreground-0 placeholder:text-foreground-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8A53A] disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={loading || !input.trim() || sessionLimitReached}
               aria-label={t.send}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white transition-opacity hover:opacity-90 disabled:opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D8A53A] text-[#161616] transition-opacity hover:opacity-90 disabled:opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <Send className="h-4 w-4" aria-hidden />
             </button>

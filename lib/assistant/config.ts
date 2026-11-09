@@ -7,7 +7,7 @@ export const config = {
 
   // Autorise des appels à /api/chat uniquement depuis ces origines. En développement,
   // localhost est toujours autorisé.
-  allowedOrigin: process.env.SITE_ORIGIN || "https://www.nyakaagency.com",
+  allowedOrigin: process.env.SITE_ORIGIN || "https://nyakaagency.com",
 
   limits: {
     maxMessageLength: 600, // caractères, par message visiteur
