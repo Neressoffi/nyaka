@@ -669,3 +669,17 @@ v39 — Assistant IA : gratuit (Cloudflare), en jaune or, demandes enregistrées
       utilisés en ligne.
   RESTAURER : copier les fichiers de « v39/avant » (retirer « .txt ») et
     supprimer le dossier worker.
+
+==============================================================================
+v40 — Réalisations : bloc « Votre projet peut être le prochain. » aux couleurs du site   (09/11/2026)
+==============================================================================
+  CE QUI CHANGE (couleurs uniquement)
+    - Ancien dégradé violet / rose / orange et ligne en biais retirés.
+    - Fond brun-noir (#2b2220 vers #171717) avec un cercle doré en décor,
+      petite ligne jaune or au-dessus du titre (comme l'accueil).
+    - Bouton « Démarrer un projet » clair ; « Découvrir nos solutions » avec
+      contour discret qui passe en jaune or au survol.
+    - Textes, liens et mise en page inchangés.
+  FICHIER : components/realisations/RealisationsFinalCta.tsx
+  RESTAURER : copier « v40/avant/components_realisations_RealisationsFinalCta.tsx.txt »
+    vers components/realisations/RealisationsFinalCta.tsx (retirer « .txt »).
