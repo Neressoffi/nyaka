@@ -729,3 +729,13 @@ v42 — Cahier de cadrage n°4 : LOT 1 (corrections bloquantes)   (09/11/2026)
     - Politique de confidentialité : Google Sheets mentionné.
   RESTAURER : copier les fichiers de « v42/avant » (les « _ » du nom =
     dossiers, retirer « .txt ») et supprimer components/BoutonNousEcrire.tsx.
+
+==============================================================================
+v43 — Démarrer un projet : lien WhatsApp retiré   (09/11/2026)
+==============================================================================
+  CE QUI CHANGE : la phrase « Vous préférez un échange direct ? Contactez-nous
+    sur WhatsApp » est retirée de la page. Rien d'autre ne change (WhatsApp
+    reste dans le pied de page et dans l'assistant).
+  FICHIER : app/demarrer-un-projet/page.tsx
+  RESTAURER : copier « v43/avant/app_demarrer-un-projet_page.tsx.txt » vers
+    app/demarrer-un-projet/page.tsx (retirer « .txt »).
