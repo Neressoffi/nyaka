@@ -14,7 +14,6 @@ export function ouvrirAssistant() {
 }
 
 const SESSION_ID_KEY = "nyaka_chat_session_id";
-const HISTORY_KEY = "nyaka_chat_history";
 const LANG_KEY = "nyaka_chat_lang";
 // Numéro WhatsApp de NYAKA (même que le pied de page). Modifiable via la variable
 // NEXT_PUBLIC_WHATSAPP_NUMBER (publique : ce n'est qu'un numéro de téléphone).
@@ -76,16 +75,14 @@ export function ChatWidget() {
     writeSessionStorage(SESSION_ID_KEY, sessionIdRef.current);
 
     setLang(readSessionStorage<Lang>(LANG_KEY) || detectDefaultLang());
-    setMessages(readSessionStorage<ChatMessage[]>(HISTORY_KEY) || []);
+    // L'historique n'est volontairement pas relu depuis le stockage : une actualisation
+    // de la page doit repartir d'une conversation vide (seuls l'identifiant de session
+    // et la langue choisie survivent à un rafraichissement).
   }, []);
 
   useEffect(() => {
     writeSessionStorage(LANG_KEY, lang);
   }, [lang]);
-
-  useEffect(() => {
-    if (messages.length > 0) writeSessionStorage(HISTORY_KEY, messages);
-  }, [messages]);
 
   useEffect(() => {
     if (open) {
