@@ -4,15 +4,22 @@ import contenu from "@/content/pages/realisations.json";
 
 // Textes gérés depuis l'administration (Decap CMS) : content/pages/realisations.json
 const TXT = contenu.RealisationsFinalCta;
+// v64 : dernier mot du titre en or (comme l'accueil)
+const TITRE = String(TXT.texte_01).trim();
+const titreDebut = TITRE.slice(0, TITRE.lastIndexOf(" ") + 1);
+const titreFin = TITRE.slice(TITRE.lastIndexOf(" ") + 1);
 
 export function RealisationsFinalCta() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#2b2220] to-[#171717] px-4 py-24 lg:px-8 lg:py-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(130deg,#181615,#2b211d_67%,#171515)] px-4 py-24 lg:px-8 lg:py-32">
       {/* Couleurs actuelles du site (v40) : fond brun-noir, décor et accents jaune or */}
       <div className="pointer-events-none absolute -right-24 -top-56 h-[680px] w-[680px] rounded-full border border-[#D8A53A]/30 shadow-[0_0_0_70px_rgba(216,165,58,0.03),0_0_0_150px_rgba(216,165,58,0.03)]" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_01}</h2>
+        <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
+          {titreDebut}
+          <span className="text-[#D8A53A]">{titreFin}</span>
+        </h2>
         <p className="mt-5 text-[15px] leading-relaxed text-[#d1c7bd] sm:text-base lg:text-[17px]">{TXT.texte_02}</p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

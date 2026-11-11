@@ -191,7 +191,7 @@ function Carte({
           <ArrowUpRight className="mt-1 h-6 w-6 shrink-0 text-[#a39a8f] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#D8A53A]" />
         )}
       </div>
-      <p className="mt-1.5 text-sm leading-snug text-[#6d6861] sm:text-[15px]">{meta}</p>
+      <p className="mt-1.5 text-sm leading-snug text-[#9a7426] sm:text-[15px]">{meta}</p>
       {vedette && (
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#3a3530] sm:text-lg">
           {accroche}

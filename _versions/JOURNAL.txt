@@ -1033,3 +1033,15 @@ v63 — À propos : couleurs harmonisées comme l'accueil (prototype A)   (11/11
   FICHIER : components/apropos/AproposV2.tsx
   RESTAURER : copier « v63/avant/components_apropos_AproposV2.tsx.txt » vers
     components/apropos/AproposV2.tsx (retirer « .txt »).
+
+==============================================================================
+v64 — Réalisations : couleurs harmonisées comme l'accueil (prototype A)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (page Réalisations, couleurs uniquement)
+    - Ligne des expertises sous chaque projet et chaque vidéo en or foncé #9a7426.
+    - Bloc final « Votre projet peut être le prochain. » : dégradé sombre de
+      l'accueil, « prochain. » en or #D8A53A.
+    - Haut de page, filtres, images, textes et boutons inchangés.
+  FICHIERS : components/portfolio/PortfolioGallery.tsx,
+    components/realisations/RealisationsFinalCta.tsx
+  RESTAURER : copier les fichiers de « v64/avant » (retirer « .txt »).
