@@ -123,7 +123,7 @@ export function AproposV2() {
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 flex items-center justify-between gap-5 lg:mb-11">
             <Eyebrow className="!text-[#D8A53A]">Notre identité / L’agence</Eyebrow>
-            <Tiny className="hidden !text-[#a59c90] sm:inline">NYAKA — L’empreinte de votre marque.</Tiny>
+            <Tiny className="hidden !text-[#a59c90] sm:inline">NYAKA · L’empreinte de votre marque.</Tiny>
           </div>
 
           <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8 [&>*]:min-w-0">

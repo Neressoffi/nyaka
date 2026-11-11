@@ -922,3 +922,13 @@ v56 — Réalisations : nouvelle couverture de la vidéo Perfecta   (11/11/2026)
     public/media/realisations/VID/VID_PERFECTA_02_miniature.jpg (ajouté)
   RESTAURER : copier « v56/avant/content_realisations_portfolio.json.txt »
     vers content/realisations/portfolio.json (retirer « .txt »).
+
+==============================================================================
+v57 — À propos : tiret retiré dans « NYAKA · L'empreinte de votre marque. »   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE : en haut de la page À propos, « NYAKA — L'empreinte de votre
+    marque. » devient « NYAKA · L'empreinte de votre marque. » (même écriture
+    que sur l'accueil). Rien d'autre ne change.
+  FICHIER : components/apropos/AproposV2.tsx
+  RESTAURER : copier « v57/avant/components_apropos_AproposV2.tsx.txt » vers
+    components/apropos/AproposV2.tsx (retirer « .txt »).
