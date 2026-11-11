@@ -873,3 +873,14 @@ v52 — Petits traits décoratifs retirés   (11/11/2026)
     components/realisations/RealisationsFinalCta.tsx
   RESTAURER : copier les fichiers de « v52/avant » (retirer « .txt » ; les
     « _ » du nom = dossiers).
+
+==============================================================================
+v53 — Réalisations : vidéo « Vidéo de communication 01 » (THE VISION) retirée   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE : cette vidéo passe en brouillon et n'apparaît plus dans
+    « Vidéos & campagnes ». Le fichier vidéo reste dans le projet. Les autres
+    vidéos et les projets ne changent pas.
+  FICHIER : content/realisations/portfolio.json
+  RESTAURER : copier « v53/avant/content_realisations_portfolio.json.txt »
+    vers content/realisations/portfolio.json (retirer « .txt »), ou remettre
+    son statut sur « publié » dans l'administration.
