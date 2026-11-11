@@ -30,7 +30,7 @@ export function NyakaLogo({
   if (!href) return content;
 
   return (
-    <Link href={href} aria-label="NYAKA — accueil" className="inline-flex shrink-0">
+    <Link href={href} aria-label="NYAKA · accueil" className="inline-flex shrink-0">
       {content}
     </Link>
   );

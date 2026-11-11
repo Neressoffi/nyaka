@@ -205,7 +205,7 @@ function Carte({
       <button
         type="button"
         onClick={() => onVideo(item.video)}
-        aria-label={`Lire la vidéo « ${item.video.titre} » — ${item.video.client}`}
+        aria-label={`Lire la vidéo « ${item.video.titre} » · ${item.video.client}`}
         className="group block w-full text-left"
       >
         {visuel}

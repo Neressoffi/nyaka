@@ -86,7 +86,7 @@ export const searchIndex: SearchItem[] = [
   })),
   ...videosPubliees.map((video, i) => ({
     id: `video-${i}`,
-    title: `${video.titre} — ${video.client}`,
+    title: `${video.titre} · ${video.client}`,
     description: video.description,
     href: "/realisations?filtre=videos",
     category: "Réalisations",

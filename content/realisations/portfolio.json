@@ -239,28 +239,28 @@
       "galerie": [
         {
           "image": "/media/realisations/7G/7G_services_transferts.jpg",
-          "type": "7G Services — Visuels",
+          "type": "7G Services · Visuels",
           "legende": "Transferts.",
           "alt": "Affiche 7G Services « Your trusted partner for your money transfers »",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_services_paiements.jpg",
-          "type": "7G Services — Visuels",
+          "type": "7G Services · Visuels",
           "legende": "Paiements.",
           "alt": "Affiche 7G Services « Envoyez, recevez, souriez »",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_pay_logo.jpg",
-          "type": "7G PAY — Logo",
+          "type": "7G PAY · Logo",
           "legende": "Logo 7G PAY.",
           "alt": "Logo de l’application 7G PAY en forme de bouclier vert et or",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_pay_promo.jpg",
-          "type": "7G PAY — Visuels promotionnels",
+          "type": "7G PAY · Visuels promotionnels",
           "legende": "Visuel promotionnel.",
           "alt": "Visuel promotionnel 7G PAY présentant l’application sur smartphone",
           "autorise": true

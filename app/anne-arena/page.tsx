@@ -7,7 +7,7 @@ import { Mail, MessageCircle, Phone, UserPlus } from "lucide-react";
 // public/contacts/anne-arena.vcf (servi en text/vcard via public/_headers).
 
 export const metadata: Metadata = {
-  title: "Nsame Nyaka Anne Arena — Co-founder | NYAKA",
+  title: "Nsame Nyaka Anne Arena · Co-founder | NYAKA",
   description: "Coordonnées de Nsame Nyaka Anne Arena, Co-founder de NYAKA.",
 };
 
@@ -32,7 +32,7 @@ export default function AnneArenaPage() {
             Nsame Nyaka Anne Arena
           </h1>
           <p className="mt-1.5 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ color: GOLD }}>
-            Co-founder — NYAKA
+            Co-founder · NYAKA
           </p>
 
           <dl className="mt-7 space-y-3 text-left text-[14px]">

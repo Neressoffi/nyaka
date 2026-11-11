@@ -1,0 +1,40 @@
+{
+  "Header": {
+    "texte_01": "Réalisations",
+    "texte_02": "À propos",
+    "texte_03": "Rechercher",
+    "texte_04": "Notre approche",
+    "texte_05": "Démarrer un projet",
+    "libelle_01": "Solutions",
+    "libelle_02": "Votre situation",
+    "libelle_03": "Notre approche",
+    "libelle_04": "Ressources",
+    "libelle_05": "Réalisations",
+    "libelle_06": "À propos"
+  },
+  "Footer": {
+    "libelle_01": "À propos",
+    "libelle_02": "Notre approche",
+    "libelle_03": "Réalisations",
+    "libelle_04": "Démarrer un projet",
+    "libelle_05": "Branding",
+    "libelle_06": "Design",
+    "libelle_07": "Vidéo & campagnes",
+    "libelle_08": "IA & données",
+    "libelle_09": "FAQ",
+    "libelle_10": "LinkedIn",
+    "libelle_11": "TikTok",
+    "libelle_12": "WhatsApp",
+    "email": "contact@nyakaagency.com",
+    "telephone": "+7 915 213-58-53",
+    "whatsapp_lien": "https://wa.me/79152135853",
+    "texte_01": "NYAKA accompagne les organisations dans la construction et l'évolution de leur marque à travers le branding, le design, la vidéo, l'intelligence artificielle et les données.",
+    "texte_02": "© 2026 NYAKA — L'empreinte de votre marque."
+  },
+  "SiteSearch": {
+    "texte_01": "Essayez « branding », « KAWA », « vous lancez » ou « IA ».",
+    "texte_02": "Aucun résultat pour « ",
+    "texte_03": "↑↓ naviguer · Entrée ouvrir · Esc fermer",
+    "texte_04": "Ctrl / ⌘ K"
+  }
+}

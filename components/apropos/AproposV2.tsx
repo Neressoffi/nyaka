@@ -192,7 +192,7 @@ export function AproposV2() {
             <span className="flex items-center gap-2 text-[11px] font-semibold text-[#a59c90]">
               <ArrowDown className="ap-bob h-4 w-4" /> Faire défiler pour découvrir NYAKA
             </span>
-            <Tiny className="hidden !text-[#a59c90] sm:inline">01 — Notre identité</Tiny>
+            <Tiny className="hidden !text-[#a59c90] sm:inline">01 · Notre identité</Tiny>
           </div>
         </div>
       </section>

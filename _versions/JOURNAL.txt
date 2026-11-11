@@ -943,3 +943,24 @@ v58 — Réalisations : titre et introduction aux couleurs or (prototype 2)   (1
   FICHIER : app/realisations/page.tsx
   RESTAURER : copier « v58/avant/app_realisations_page.tsx.txt » vers
     app/realisations/page.tsx (retirer « .txt »).
+
+==============================================================================
+v59 — Tirets longs « — » retirés sur tout le site   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE : chaque « — » affiché sur le site est remplacé par un petit
+    point « · » (comme sur l'accueil), pour que les mots ne se collent pas :
+    - Pied de page (toutes les pages) : « © 2026 NYAKA · L'empreinte de votre marque. »
+    - À propos : « 01 · Notre identité ».
+    - Titres d'onglet du navigateur : Solutions et À propos.
+    - Fiche 7G Services & 7G PAY : « 7G Services · Visuels », « 7G PAY · Logo »,
+      « 7G PAY · Visuels promotionnels ».
+    - Recherche du site (résultats vidéos) et textes lus par les lecteurs
+      d'écran (logo, vidéos).
+    - Page /anne-arena : « Co-founder · NYAKA ».
+  FICHIERS : content/pages/site.json, components/apropos/AproposV2.tsx,
+    app/solutions/page.tsx, app/a-propos/page.tsx,
+    content/realisations/portfolio.json, lib/search-data.ts,
+    components/portfolio/PortfolioGallery.tsx, components/NyakaLogo.tsx,
+    app/anne-arena/page.tsx
+  RESTAURER : copier les fichiers de « v59/avant » (retirer « .txt » ; les
+    « _ » du nom = dossiers).
