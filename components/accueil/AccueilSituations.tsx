@@ -5,6 +5,12 @@ import { CSS as SV5_CSS, SITUATIONS } from "@/components/solutions/SolutionsV5";
 
 // Section « Votre situation / Notre réponse » de la page Solutions (V5),
 // reprise à l’identique sur la page d’accueil (v36) : mêmes textes, même design.
+// Couleurs propres à l'accueil (v62) : ors du site, mot doré dans le titre.
+// La page Solutions garde ses couleurs (classe sv5-accueil uniquement ici).
+const ACCUEIL_CSS =
+  ".sv5.sv5-accueil .eyebrow{color:#9a7426}.sv5.sv5-accueil .situ-num{color:#9a7426}.sv5.sv5-accueil .situ-glyph{color:#D8A53A}" +
+  ".sv5.sv5-accueil .detail-kicker{color:#D8A53A}.sv5.sv5-accueil .detail-index{color:#e8c477}.sv5.sv5-accueil .mot-or{color:#9a7426}";
+
 export function AccueilSituations() {
   const [choix, setChoix] = useState(0);
   const s = SITUATIONS[choix];
@@ -26,12 +32,12 @@ export function AccueilSituations() {
   }, []);
 
   return (
-    <div className="sv5" ref={racine}>
-      <style dangerouslySetInnerHTML={{ __html: SV5_CSS }} />
+    <div className="sv5 sv5-accueil" ref={racine}>
+      <style dangerouslySetInnerHTML={{ __html: SV5_CSS + ACCUEIL_CSS }} />
       <section className="situations" id="votre-situation" aria-labelledby="situationTitleAccueil">
         <div className="container">
           <div className="section-head"><span className="eyebrow">Votre situation · Notre réponse</span><span className="section-ref">Trouver le bon point de départ</span></div>
-          <div className="situation-head"><h2 id="situationTitleAccueil" className="reveal">Une idée. Plusieurs chemins possibles.</h2><p className="reveal">Vous connaissez votre besoin, mais pas nécessairement la solution. Choisissez la situation qui vous correspond pour découvrir comment NYAKA peut vous accompagner.</p></div>
+          <div className="situation-head"><h2 id="situationTitleAccueil" className="reveal">Une idée. Plusieurs chemins <span className="mot-or">possibles.</span></h2><p className="reveal">Vous connaissez votre besoin, mais pas nécessairement la solution. Choisissez la situation qui vous correspond pour découvrir comment NYAKA peut vous accompagner.</p></div>
           <div className="situation-grid">
             <div className="situation-options" aria-label="Choisir votre situation">
               {SITUATIONS.map((item, i) => (

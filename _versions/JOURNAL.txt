@@ -1001,3 +1001,19 @@ v61 — Accueil : couleurs du haut de page harmonisées (maquette 2)   (11/11/20
     - Textes, boutons et sections suivantes inchangés.
   FICHIERS : app/page.tsx, components/accueil/AccueilV2.tsx
   RESTAURER : copier les fichiers de « v61/avant » (retirer « .txt »).
+
+==============================================================================
+v62 — Accueil : couleurs des sections harmonisées (prototype 3)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (page d'accueil, sous le haut de page)
+    - Fonds ivoire #f5f3ef / beige #efebe4 comme les autres pages (plus de
+      blanc pur dans « Nos réalisations »).
+    - Un seul or : or du logo #D8A53A, or foncé #9a7426 pour les petits
+      titres sur fond clair, or clair #e8c477 sur fond sombre.
+    - Dernier mot des grands titres en or : « vision. », « possibles. »,
+      « ici. », « questions. », « Parlons-en. ».
+    - Onglet actif des expertises entouré d'or ; « Découvrir NYAKA » avec le
+      dégradé sombre du haut de page.
+    - Textes inchangés. La page Solutions garde ses couleurs.
+  FICHIERS : components/accueil/AccueilV2.tsx, components/accueil/AccueilSituations.tsx
+  RESTAURER : copier les fichiers de « v62/avant » (retirer « .txt »).
