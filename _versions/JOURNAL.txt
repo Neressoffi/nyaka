@@ -898,3 +898,16 @@ v54 — Réalisations : nouvelle vidéo THE VISION (1 min 30)   (11/11/2026)
   FICHIER : content/realisations/portfolio.json
   RESTAURER : copier « v54/avant/content_realisations_portfolio.json.txt »
     vers content/realisations/portfolio.json (retirer « .txt »).
+
+==============================================================================
+v55 — Réalisations : vraie vidéo BRIRENA HAIR ajoutée   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - « Vidéo publicitaire » (BRIRENA HAIR) apparaît dans « Vidéos &
+      campagnes » avec la vraie vidéo (IMG_5636, 38 s, verticale), convertie
+      pour le web (540 x 960, 7,7 Mo). Elle remplace la vidéo provisoire.
+    - Nouveaux fichiers : public/media/realisations/VID/VID_BRIRENA_02_video.mp4
+      et VID_BRIRENA_02_miniature.jpg.
+  FICHIER : content/realisations/portfolio.json
+  RESTAURER : copier « v55/avant/content_realisations_portfolio.json.txt »
+    vers content/realisations/portfolio.json (retirer « .txt »).

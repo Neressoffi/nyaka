@@ -447,13 +447,13 @@
     {
       "titre": "Vidéo publicitaire",
       "client": "BRIRENA HAIR",
-      "miniature": "/media/realisations/VID/VID_BRIRENA_01_miniature.jpg",
-      "video": "/media/realisations/VID/VID_BRIRENA_01_video.mp4",
+      "miniature": "/media/realisations/VID/VID_BRIRENA_02_miniature.jpg",
+      "video": "/media/realisations/VID/VID_BRIRENA_02_video.mp4",
       "format": "vertical",
       "description": "Production audiovisuelle réalisée pour accompagner la communication de la marque.",
-      "alt": "Miniature de la vidéo Vidéo publicitaire — BRIRENA HAIR (provisoire)",
-      "statut": "brouillon",
-      "note": "En attente de la vraie vidéo : invisible sur le site tant qu’elle est en brouillon."
+      "alt": "Miniature de la vidéo BRIRENA HAIR : deux femmes en promenade, logo BRIRENA en haut",
+      "statut": "publie",
+      "note": ""
     },
     {
       "titre": "Vidéo publicitaire",
