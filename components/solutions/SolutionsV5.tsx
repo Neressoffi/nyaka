@@ -46,7 +46,7 @@ export function SolutionsV5() {
        <h1 id="heroTitle">Des idées à faire <em>grandir.</em><br />Des marques à faire vivre.</h1>
        <p>Branding, design, vidéo et intelligence artificielle : des expertises qui se complètent pour donner la bonne forme à votre projet.</p>
        <div className="hero-actions"><a className="btn btn-light" href="#expertises">Explorer les expertises <span aria-hidden="true">↘</span></a><a className="btn btn-night-ghost" href="/realisations">Voir nos réalisations <span aria-hidden="true">↗</span></a></div>
-       <div className="hero-meta"><span>Communication créative</span><i /><span>Solutions IA &amp; Data</span></div>
+       <div className="hero-meta"><span>Communication créative</span><span>Solutions IA &amp; Data</span></div>
      </div>
      <div className="hero-stage" aria-label="Composition créative conceptuelle : objet de marque, cadre vidéo et interface numérique. Aucun projet client n’est représenté ici." role="img">
        <div className="ambient"></div><div className="orbital"></div><div className="orbital second"></div><div className="floor"></div>
@@ -62,7 +62,7 @@ export function SolutionsV5() {
  <section className="intro" id="expertises">
    <div className="container"><div className="eyebrow reveal">Quatre expertises. Une même vision.</div><div className="intro-grid">
      <h2 className="reveal">Chaque besoin appelle une réponse <span style={{color:"var(--gold-dark)"}}>différente.</span></h2>
-     <div className="intro-right reveal"><p>Une marque à créer, une offre à présenter, une campagne à lancer ou un processus à simplifier : NYAKA mobilise les compétences adaptées à votre projet.</p><div className="intro-meta"><i /><span>De l’idée à la mise en œuvre</span></div></div>
+     <div className="intro-right reveal"><p>Une marque à créer, une offre à présenter, une campagne à lancer ou un processus à simplifier : NYAKA mobilise les compétences adaptées à votre projet.</p><div className="intro-meta"><span>De l’idée à la mise en œuvre</span></div></div>
    </div></div>
  </section>
  <section className="chapter cream" id="branding" aria-labelledby="brandTitle">

@@ -856,3 +856,20 @@ v51 — Fiches réalisations : photo de couverture en plein écran   (11/11/2026
   FICHIER : app/realisations/[slug]/page.tsx
   RESTAURER : copier « v51/avant/app_realisations_slug_page.tsx.txt » vers
     app/realisations/[slug]/page.tsx (retirer « .txt »).
+
+==============================================================================
+v52 — Petits traits décoratifs retirés   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (uniquement les petits traits, textes inchangés)
+    - Solutions, haut de page : trait doré entre « Communication créative »
+      et « Solutions IA & Data ».
+    - Solutions : trait doré devant « De l'idée à la mise en œuvre ».
+    - À propos : trait devant « Une ambition portée par la création et
+      l'utilité ».
+    - Bloc « Votre projet peut être le prochain. » (page Réalisations et
+      fiches) : petit trait doré au-dessus du titre.
+  FICHIERS : components/solutions/SolutionsV5.tsx,
+    components/apropos/AproposV2.tsx,
+    components/realisations/RealisationsFinalCta.tsx
+  RESTAURER : copier les fichiers de « v52/avant » (retirer « .txt » ; les
+    « _ » du nom = dossiers).

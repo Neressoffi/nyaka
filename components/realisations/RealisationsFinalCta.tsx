@@ -12,7 +12,6 @@ export function RealisationsFinalCta() {
       <div className="pointer-events-none absolute -right-24 -top-56 h-[680px] w-[680px] rounded-full border border-[#D8A53A]/30 shadow-[0_0_0_70px_rgba(216,165,58,0.03),0_0_0_150px_rgba(216,165,58,0.03)]" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <span className="mb-6 h-px w-10 bg-[#D8A53A]" aria-hidden />
         <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">{TXT.texte_01}</h2>
         <p className="mt-5 text-[15px] leading-relaxed text-[#d1c7bd] sm:text-base lg:text-[17px]">{TXT.texte_02}</p>
 

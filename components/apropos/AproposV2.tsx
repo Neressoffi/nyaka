@@ -289,7 +289,6 @@ export function AproposV2() {
               Nous voulons aider les entrepreneurs et les entreprises à construire une identité forte, à communiquer avec justesse et à intégrer des solutions capables d’accompagner leur développement.
             </p>
             <p className="mt-10 flex items-center gap-4 text-[11px] uppercase tracking-[0.15em] text-[#afa8a0]">
-              <span className="h-px w-12 bg-[#b8afa6]" />
               Une ambition portée par la création et l’utilité
             </p>
           </div>
