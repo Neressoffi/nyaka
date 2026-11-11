@@ -884,3 +884,17 @@ v53 — Réalisations : vidéo « Vidéo de communication 01 » (THE VISION) ret
   RESTAURER : copier « v53/avant/content_realisations_portfolio.json.txt »
     vers content/realisations/portfolio.json (retirer « .txt »), ou remettre
     son statut sur « publié » dans l'administration.
+
+==============================================================================
+v54 — Réalisations : nouvelle vidéo THE VISION (1 min 30)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE
+    - « Vidéo de communication 01 » (THE VISION) revient dans « Vidéos &
+      campagnes » avec la nouvelle vidéo : IMG_7205 coupée à 1 min 30 dans
+      Clipchamp, puis compressée (480p, 12,4 Mo).
+    - Nouveaux fichiers : public/media/realisations/VID/VID_THEVISION_03_video.mp4
+      et VID_THEVISION_03_miniature.jpg (image des locaux THE VISION).
+    - L'ancienne vidéo (VID_THEVISION_01) n'est plus utilisée.
+  FICHIER : content/realisations/portfolio.json
+  RESTAURER : copier « v54/avant/content_realisations_portfolio.json.txt »
+    vers content/realisations/portfolio.json (retirer « .txt »).

@@ -425,12 +425,12 @@
     {
       "titre": "Vidéo de communication 01",
       "client": "THE VISION",
-      "miniature": "/media/realisations/VID/VID_THEVISION_01_miniature.jpg",
-      "video": "/media/realisations/VID/VID_THEVISION_01_video.mp4",
+      "miniature": "/media/realisations/VID/VID_THEVISION_03_miniature.jpg",
+      "video": "/media/realisations/VID/VID_THEVISION_03_video.mp4",
       "format": "horizontal",
       "description": "Vidéos de communication et publicités présentant différentes offres.",
-      "alt": "Miniature de la vidéo THE VISION : étudiants en préparation d’examen",
-      "statut": "brouillon",
+      "alt": "Miniature de la vidéo THE VISION : façade des locaux de THE VISION",
+      "statut": "publie",
       "note": ""
     },
     {

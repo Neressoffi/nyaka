@@ -1,0 +1,470 @@
+{
+  "page": {
+    "titre": "Nos réalisations.",
+    "introduction": "Des projets, des idées et des solutions qui prennent vie.",
+    "filtres": {
+      "tous": "Tous les projets",
+      "branding": "Branding & Design",
+      "videos": "Vidéos & campagnes",
+      "ia": "IA & Data"
+    },
+    "etiquettes": {
+      "defi": "Le défi",
+      "reponse": "Notre réponse",
+      "realisations": "Les réalisations",
+      "resultat": "Le résultat"
+    }
+  },
+  "videos_intro": {
+    "titre": "Vidéos & campagnes",
+    "accroche": "Des idées qui prennent vie à l’écran.",
+    "description": "Découvrez nos productions audiovisuelles réalisées pour accompagner la communication de nos clients."
+  },
+  "projets": [
+    {
+      "slug": "kawa-menu-experience",
+      "titre": "KAWA Menu Experience",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Design éditorial · Expérience digitale",
+      "accroche": "Quand le menu devient une expérience de marque.",
+      "couverture": {
+        "image": "/media/realisations/KME/KME_couverture.jpg",
+        "alt": "Menu KAWA tenu en main à une table du coffee shop"
+      },
+      "defi": {
+        "accroche": "Repenser le menu. Préserver l’âme du lieu.",
+        "texte": "Moderniser la présentation de l’offre tout en conservant l’atmosphère chaleureuse, vintage et élégante de KAWA."
+      },
+      "reponse": {
+        "accroche": "Une identité visuelle à découvrir page après page.",
+        "texte": "Textures vintage, teintes chaleureuses et ornements classiques composent une direction artistique fidèle à l’univers du coffee shop."
+      },
+      "realisations": {
+        "accroche": "Du papier au digital.",
+        "texte": "Carte physique et menu digital accessible grâce à un QR code intégré."
+      },
+      "resultat": {
+        "accroche": "Deux supports. Une même expérience.",
+        "texte": "KAWA dispose de deux menus complémentaires pour présenter son offre sur papier et sur smartphone."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/KME/KME_photo_01.jpg",
+          "type": "Photos en situation",
+          "legende": "Le menu en main.",
+          "alt": "Cliente consultant le menu KAWA ouvert",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KME/KME_photo_02.jpg",
+          "type": "Photos en situation",
+          "legende": "Le QR code en situation.",
+          "alt": "Menu KAWA tenu en main avec son QR code visible",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KME/KME_page_01.jpg",
+          "type": "Pages intérieures",
+          "legende": "Deux pages intérieures.",
+          "alt": "Deux pages intérieures du menu KAWA au style vintage",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KME/KME_capture_digitale.jpg",
+          "type": "Menu digital",
+          "legende": "Le menu sur smartphone.",
+          "alt": "Menu digital KAWA affiché sur deux smartphones",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "kawa-institutional-presentation",
+      "titre": "KAWA Institutional Presentation",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Photographie institutionnelle · Design éditorial",
+      "accroche": "Présenter KAWA au-delà du coffee shop.",
+      "couverture": {
+        "image": "/media/realisations/KIP/KIP_couverture.jpg",
+        "alt": "Dépliant institutionnel KAWA ouvert à côté d’un café"
+      },
+      "defi": {
+        "accroche": "S’adresser à une clientèle professionnelle.",
+        "texte": "Présenter le savoir-faire et les prestations de KAWA aux entreprises, ambassades et organisations."
+      },
+      "reponse": {
+        "accroche": "Photographier le service. Faire vivre la marque.",
+        "texte": "Un shooting dédié et une présentation éditoriale qui valorisent les produits, l’expérience et les offres professionnelles."
+      },
+      "realisations": {
+        "accroche": "Une présentation pensée pour les professionnels.",
+        "texte": "Shooting institutionnel et dépliant présentant réunions, coffee breaks, working lunches et événements."
+      },
+      "resultat": {
+        "accroche": "Une nouvelle façon de présenter KAWA.",
+        "texte": "Des photographies et un support institutionnel disponibles pour ses échanges avec les organisations."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/KIP/KIP_photo_01.jpg",
+          "type": "Shooting institutionnel",
+          "legende": "Shooting institutionnel.",
+          "alt": "Salle du coffee shop KAWA éclairée par des suspensions",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KIP/KIP_photo_02.jpg",
+          "type": "Shooting institutionnel",
+          "legende": "Shooting institutionnel.",
+          "alt": "Cliente lisant la carte KAWA en terrasse",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KIP/KIP_photo_03.jpg",
+          "type": "Shooting institutionnel",
+          "legende": "Shooting institutionnel.",
+          "alt": "Jus d’orange servi sur une table KAWA",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KIP/KIP_photo_04.jpg",
+          "type": "Shooting institutionnel",
+          "legende": "Shooting institutionnel.",
+          "alt": "Assiette servie par l’équipe KAWA",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KIP/KIP_depliant_couverture.jpg",
+          "type": "Dépliant",
+          "legende": "Couverture du dépliant.",
+          "alt": "Recto et verso du dépliant institutionnel KAWA",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/KIP/KIP_depliant_extrait.jpg",
+          "type": "Dépliant",
+          "legende": "Un extrait intérieur.",
+          "alt": "Pages intérieures du dépliant KAWA présentant les solutions professionnelles",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "the-vision",
+      "titre": "THE VISION",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Design graphique · Communication visuelle · Design éditorial",
+      "accroche": "Des messages clairs. Une communication qui marque.",
+      "couverture": {
+        "image": "/media/realisations/TV/TV_couverture.jpg",
+        "alt": "Trois visuels publicitaires THE VISION sur les études et l’immigration"
+      },
+      "defi": {
+        "accroche": "Rendre les opportunités plus accessibles.",
+        "texte": "Avec des offres variées et des informations parfois complexes, communiquer de manière claire, attractive et adaptée à chaque public."
+      },
+      "reponse": {
+        "accroche": "Donner de la clarté à chaque message.",
+        "texte": "Des supports graphiques qui valorisent les offres et facilitent la compréhension des informations."
+      },
+      "realisations": {
+        "accroche": "Une communication déclinée sur plusieurs supports.",
+        "texte": "Catalogues, brochures, visuels publicitaires et supports adaptés aux réseaux sociaux."
+      },
+      "resultat": {
+        "accroche": "Des supports cohérents pour des messages mieux structurés.",
+        "texte": "Des créations permettant de présenter les offres de THE VISION de manière claire et professionnelle."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/TV/TV_catalogue_couverture.jpg",
+          "type": "Catalogue",
+          "legende": "Couverture du catalogue.",
+          "alt": "Couverture de la brochure Programme Ambassadeur de THE VISION",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_catalogue_extrait.jpg",
+          "type": "Catalogue",
+          "legende": "Un extrait intérieur.",
+          "alt": "Pages intérieures de la brochure Programme Ambassadeur de THE VISION",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_visuel_01.jpg",
+          "type": "Visuels publicitaires",
+          "legende": "Visuel publicitaire.",
+          "alt": "Affiche THE VISION « Rentrées décalées 2027 »",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/TV/TV_visuel_02.jpg",
+          "type": "Réseaux sociaux",
+          "legende": "Publications pour les réseaux sociaux.",
+          "alt": "Publications THE VISION « Étudier en France » et « Enfin c’est vendredi »",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "7g-services-7g-pay",
+      "titre": "7G Services & 7G PAY",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Design graphique · Communication publicitaire · Identité visuelle",
+      "accroche": "Une communication claire. Une identité qui inspire confiance.",
+      "couverture": {
+        "image": "/media/realisations/7G/7G_couverture.jpg",
+        "alt": "Visuels publicitaires 7G Services et 7G PAY"
+      },
+      "defi": {
+        "accroche": "Rendre chaque service immédiatement compréhensible.",
+        "texte": "Présenter les offres de 7G Services avec une communication attractive, claire et rassurante."
+      },
+      "reponse": {
+        "accroche": "Des visuels pensés pour chaque message.",
+        "texte": "Des supports publicitaires pour 7G Services et une identité graphique dédiée à l’application 7G PAY."
+      },
+      "realisations": {
+        "accroche": "Deux volets complémentaires.",
+        "texte": "7G Services : visuels pour les transferts, paiements et autres prestations. 7G PAY : création du logo et des visuels promotionnels."
+      },
+      "resultat": {
+        "accroche": "Une communication cohérente, du service à l’application.",
+        "texte": "Des supports adaptés aux offres de 7G Services, et une identité dédiée à 7G PAY."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/7G/7G_services_transferts.jpg",
+          "type": "7G Services — Visuels",
+          "legende": "Transferts.",
+          "alt": "Affiche 7G Services « Your trusted partner for your money transfers »",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/7G/7G_services_paiements.jpg",
+          "type": "7G Services — Visuels",
+          "legende": "Paiements.",
+          "alt": "Affiche 7G Services « Envoyez, recevez, souriez »",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/7G/7G_pay_logo.jpg",
+          "type": "7G PAY — Logo",
+          "legende": "Logo 7G PAY.",
+          "alt": "Logo de l’application 7G PAY en forme de bouclier vert et or",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/7G/7G_pay_promo.jpg",
+          "type": "7G PAY — Visuels promotionnels",
+          "legende": "Visuel promotionnel.",
+          "alt": "Visuel promotionnel 7G PAY présentant l’application sur smartphone",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "brirena-hair",
+      "titre": "BRIRENA HAIR",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Branding · Création de logo · Identité visuelle",
+      "accroche": "Une identité pensée pour se démarquer.",
+      "couverture": {
+        "image": "/media/realisations/BRI/BRI_couverture.jpg",
+        "alt": "Coffret beige BRIRENA HAIR orné du logo cuivré, entouré d’accessoires capillaires"
+      },
+      "defi": {
+        "accroche": "Donner une identité à la marque.",
+        "texte": "Construire une image distinctive et cohérente pour accompagner BRIRENA HAIR dans l’univers capillaire."
+      },
+      "reponse": {
+        "accroche": "Une marque qui affirme sa personnalité.",
+        "texte": "Conception d’un logo et d’un univers graphique offrant une signature visuelle reconnaissable."
+      },
+      "realisations": {
+        "accroche": "Du logo à l’identité visuelle.",
+        "texte": "Logo, univers graphique et déclinaisons de l’identité sur les supports de marque."
+      },
+      "resultat": {
+        "accroche": "Une identité prête à prendre vie.",
+        "texte": "BRIRENA HAIR dispose d’une base visuelle cohérente pour présenter sa marque et développer sa communication."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/BRI/BRI_logo_variante.jpg",
+          "type": "Logo",
+          "legende": "Déclinaison du logo.",
+          "alt": "Quatre versions du logo BRIRENA HAIR : horizontale, verticale, monogramme noir et monogramme blanc",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/BRI/BRI_palette.jpg",
+          "type": "Palette & typographies",
+          "legende": "Palette et typographies.",
+          "alt": "Typographies Cormorant et Montserrat, palette chocolat, terracotta, beige et or de BRIRENA HAIR",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/BRI/BRI_application.jpg",
+          "type": "Applications",
+          "legende": "Applications de l’identité.",
+          "alt": "Sac, coffret cadeau, étiquette et autocollant aux couleurs de BRIRENA HAIR",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "perfecta",
+      "titre": "Perfecta",
+      "categorie": "branding-design",
+      "statut": "publie",
+      "expertises": "Rebranding · Design graphique · Design éditorial",
+      "accroche": "Une nouvelle identité. Une image qui se distingue.",
+      "couverture": {
+        "image": "/media/realisations/PER/PER_couverture.jpg",
+        "alt": "Ancien et nouveau logo Perfecta imprimés sur des cartes"
+      },
+      "defi": {
+        "accroche": "Faire évoluer l’image de Perfecta.",
+        "texte": "Moderniser l’identité visuelle de l’institut et valoriser ses prestations à travers des supports harmonieux."
+      },
+      "reponse": {
+        "accroche": "Une identité revisitée, des supports repensés.",
+        "texte": "Refonte du logo et conception de supports graphiques reflétant l’univers de Perfecta."
+      },
+      "realisations": {
+        "accroche": "Du logo aux supports de communication.",
+        "texte": "Refonte du logo, catalogue des prestations et tarifs, et visuels publicitaires."
+      },
+      "resultat": {
+        "accroche": "Une image renouvelée, une communication plus cohérente.",
+        "texte": "Perfecta dispose d’une nouvelle identité graphique et de supports adaptés à la présentation de ses services."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/PER/PER_logos.jpg",
+          "type": "Logo",
+          "legende": "Ancien et nouveau logo.",
+          "alt": "Comparaison de l’ancien logo Perfecta et du nouveau logo Institut Perfecta",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/PER/PER_catalogue_couverture.jpg",
+          "type": "Catalogue",
+          "legende": "Couverture du catalogue.",
+          "alt": "Couverture du catalogue des prix de l’Institut Perfecta",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/PER/PER_catalogue_extrait.jpg",
+          "type": "Catalogue",
+          "legende": "Un extrait intérieur.",
+          "alt": "Pages intérieures du catalogue Perfecta : gommages et hammam",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/PER/PER_visuel_01.jpg",
+          "type": "Visuels publicitaires",
+          "legende": "Visuel publicitaire.",
+          "alt": "Affiche « Promo by Perfecta » pour les fêtes de fin d’année",
+          "autorise": true
+        }
+      ]
+    },
+    {
+      "slug": "assistant-ia-nyaka",
+      "titre": "Assistant IA NYAKA",
+      "categorie": "ia-data",
+      "statut": "publie",
+      "expertises": "Intelligence artificielle · Assistant conversationnel",
+      "accroche": "Des réponses intelligentes. Une communication simplifiée.",
+      "couverture": {
+        "image": "/media/realisations/IA/IA_couverture.jpg",
+        "alt": "Interface de l’Assistant IA NYAKA (visuel provisoire)"
+      },
+      "defi": {
+        "accroche": "Faciliter les échanges avec les clients.",
+        "texte": "Permettre aux entreprises de répondre aux demandes courantes et de rendre leurs informations plus accessibles."
+      },
+      "reponse": {
+        "accroche": "Un assistant intelligent et conversationnel.",
+        "texte": "NYAKA a développé un assistant IA capable d’échanger avec les utilisateurs, de répondre à leurs questions et de les orienter vers les services adaptés."
+      },
+      "realisations": {
+        "accroche": "Une solution IA opérationnelle.",
+        "texte": "Un assistant conversationnel fonctionnel, conçu pour présenter les services et accompagner les échanges avec les utilisateurs."
+      },
+      "resultat": {
+        "accroche": "Des informations accessibles, des échanges simplifiés.",
+        "texte": "Les utilisateurs peuvent obtenir des réponses et découvrir les services d’une entreprise à travers une conversation naturelle."
+      },
+      "galerie": [
+        {
+          "image": "/media/realisations/IA/IA_capture_01.jpg",
+          "type": "Captures d’échanges",
+          "legende": "Une question sur les services.",
+          "alt": "Échange avec l’Assistant IA NYAKA sur les services (visuel provisoire)",
+          "autorise": true
+        },
+        {
+          "image": "/media/realisations/IA/IA_capture_02.jpg",
+          "type": "Captures d’échanges",
+          "legende": "Orientation vers le bon service.",
+          "alt": "L’Assistant IA NYAKA oriente l’utilisateur vers un service (visuel provisoire)",
+          "autorise": true
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "titre": "Vidéo de communication 01",
+      "client": "THE VISION",
+      "miniature": "/media/realisations/VID/VID_THEVISION_01_miniature.jpg",
+      "video": "/media/realisations/VID/VID_THEVISION_01_video.mp4",
+      "format": "horizontal",
+      "description": "Vidéos de communication et publicités présentant différentes offres.",
+      "alt": "Miniature de la vidéo THE VISION : étudiants en préparation d’examen",
+      "statut": "brouillon",
+      "note": ""
+    },
+    {
+      "titre": "Vidéo publicitaire 02",
+      "client": "THE VISION",
+      "miniature": "/media/realisations/VID/VID_THEVISION_02_miniature.jpg",
+      "video": "/media/realisations/VID/VID_THEVISION_02_video.mp4",
+      "format": "vertical",
+      "description": "Vidéos de communication et publicités présentant différentes offres.",
+      "alt": "Miniature de la vidéo THE VISION sur les frais d’études en France",
+      "statut": "publie",
+      "note": ""
+    },
+    {
+      "titre": "Vidéo publicitaire",
+      "client": "BRIRENA HAIR",
+      "miniature": "/media/realisations/VID/VID_BRIRENA_01_miniature.jpg",
+      "video": "/media/realisations/VID/VID_BRIRENA_01_video.mp4",
+      "format": "vertical",
+      "description": "Production audiovisuelle réalisée pour accompagner la communication de la marque.",
+      "alt": "Miniature de la vidéo Vidéo publicitaire — BRIRENA HAIR (provisoire)",
+      "statut": "brouillon",
+      "note": "En attente de la vraie vidéo : invisible sur le site tant qu’elle est en brouillon."
+    },
+    {
+      "titre": "Vidéo publicitaire",
+      "client": "Perfecta",
+      "miniature": "/media/realisations/VID/VID_PERFECTA_01_miniature.jpg",
+      "video": "/media/realisations/VID/VID_PERFECTA_01_video.mp4",
+      "format": "vertical",
+      "description": "Production conçue pour valoriser la communication de Perfecta.",
+      "alt": "Miniature de la vidéo Perfecta : présentation du centre de formation",
+      "statut": "publie",
+      "note": ""
+    }
+  ]
+}
