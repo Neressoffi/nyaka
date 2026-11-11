@@ -911,3 +911,14 @@ v55 — Réalisations : vraie vidéo BRIRENA HAIR ajoutée   (11/11/2026)
   FICHIER : content/realisations/portfolio.json
   RESTAURER : copier « v55/avant/content_realisations_portfolio.json.txt »
     vers content/realisations/portfolio.json (retirer « .txt »).
+
+==============================================================================
+v56 — Réalisations : nouvelle couverture de la vidéo Perfecta   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE : seule l'image de couverture de « Vidéo publicitaire »
+    (Perfecta) change : image tirée de la vidéo (27,9 s, pose d'extensions
+    de cils), au même format que les autres couvertures. La vidéo ne change pas.
+  FICHIERS : content/realisations/portfolio.json ;
+    public/media/realisations/VID/VID_PERFECTA_02_miniature.jpg (ajouté)
+  RESTAURER : copier « v56/avant/content_realisations_portfolio.json.txt »
+    vers content/realisations/portfolio.json (retirer « .txt »).

@@ -458,11 +458,11 @@
     {
       "titre": "Vidéo publicitaire",
       "client": "Perfecta",
-      "miniature": "/media/realisations/VID/VID_PERFECTA_01_miniature.jpg",
+      "miniature": "/media/realisations/VID/VID_PERFECTA_02_miniature.jpg",
       "video": "/media/realisations/VID/VID_PERFECTA_01_video.mp4",
       "format": "vertical",
       "description": "Production conçue pour valoriser la communication de Perfecta.",
-      "alt": "Miniature de la vidéo Perfecta : présentation du centre de formation",
+      "alt": "Miniature de la vidéo Perfecta : pose d’extensions de cils à l’institut",
       "statut": "publie",
       "note": ""
     }
