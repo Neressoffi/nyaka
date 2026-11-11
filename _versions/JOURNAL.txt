@@ -932,3 +932,14 @@ v57 — À propos : tiret retiré dans « NYAKA · L'empreinte de votre marque. 
   FICHIER : components/apropos/AproposV2.tsx
   RESTAURER : copier « v57/avant/components_apropos_AproposV2.tsx.txt » vers
     components/apropos/AproposV2.tsx (retirer « .txt »).
+
+==============================================================================
+v58 — Réalisations : titre et introduction aux couleurs or (prototype 2)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (haut de la page Réalisations uniquement)
+    - « réalisations. » (dernier mot du titre) en or du logo #D8A53A.
+    - « prennent vie. » (fin de l'introduction) en or clair #e8c477.
+    - Textes, fond et reste de la page inchangés.
+  FICHIER : app/realisations/page.tsx
+  RESTAURER : copier « v58/avant/app_realisations_page.tsx.txt » vers
+    app/realisations/page.tsx (retirer « .txt »).

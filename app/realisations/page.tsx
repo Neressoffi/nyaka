@@ -23,7 +23,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Couleurs (v58, prototype 2) : dernier mot du titre en or du logo (#D8A53A),
+// « prennent vie. » en or clair (#e8c477). Les textes restent modifiables
+// dans l'administration.
+function couper(texte: string, repere: string) {
+  const i = texte.lastIndexOf(repere);
+  return i > 0 ? [texte.slice(0, i), texte.slice(i)] : [texte, ""];
+}
+
 export default function RealisationsPage() {
+  const titre = portfolioPage.titre.trim();
+  const [titreDebut, titreFin] = couper(titre, titre.slice(titre.lastIndexOf(" ") + 1));
+  const [introDebut, introFin] = couper(portfolioPage.introduction, "prennent vie");
+
   return (
     <main className="bg-[#f5f3ef]">
       <TopBanner />
@@ -33,10 +45,12 @@ export default function RealisationsPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-[#181615] via-[#2b211d] to-[#171515] px-4 pb-14 pt-32 lg:px-8 lg:pb-20 lg:pt-40">
         <div className="mx-auto w-full max-w-screen-xl">
           <h1 className="text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-[52px] lg:text-[72px]">
-            {portfolioPage.titre}
+            {titreDebut}
+            <span className="text-[#D8A53A]">{titreFin}</span>
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#bfb6aa] sm:text-lg">
-            {portfolioPage.introduction}
+            {introDebut}
+            {introFin && <span className="text-[#e8c477]">{introFin}</span>}
           </p>
         </div>
       </section>
