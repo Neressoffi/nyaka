@@ -825,3 +825,17 @@ v49 — Accueil : vraies images pour les onglets Branding et Design   (11/11/202
     public/media/accueil/expertise-branding.jpg et expertise-design.jpg (ajoutés)
   RESTAURER : copier « v49/avant/components_accueil_AccueilV2.tsx.txt » vers
     components/accueil/AccueilV2.tsx (retirer « .txt »).
+
+==============================================================================
+v50 — Accueil : images Branding et Design agrandies   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (section « Quatre expertises » uniquement)
+    - Les 2 images remplissent maintenant tout le cadre de droite (zoom),
+      au lieu d'être réduites au centre d'un fond flouté.
+    - Branding : cadrage sur la partie droite du dépliant (palette, logo,
+      direction artistique), sans le texte et le bouton intégrés à la photo.
+    - Design : cadrage sur le livre ouvert avec les logos NYAKA.
+    - Textes, onglets et design inchangés.
+  FICHIER : components/accueil/AccueilV2.tsx
+  RESTAURER : copier « v50/avant/components_accueil_AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt ») pour revenir à v49.
