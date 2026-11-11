@@ -119,7 +119,7 @@ export function AproposV2() {
       <style dangerouslySetInnerHTML={{ __html: ANIM }} />
 
       {/* 01 · Hero */}
-      <section id="intro" className="overflow-hidden bg-[#191716] px-4 pb-14 pt-32 text-white lg:px-8 lg:pb-16 lg:pt-40">
+      <section id="intro" className="overflow-hidden bg-[linear-gradient(130deg,#181615,#2b211d_67%,#171515)] px-4 pb-14 pt-32 text-white lg:px-8 lg:pb-16 lg:pt-40">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 flex items-center justify-between gap-5 lg:mb-11">
             <Eyebrow className="!text-[#D8A53A]">Notre identité · L’agence</Eyebrow>
@@ -198,13 +198,13 @@ export function AproposV2() {
       </section>
 
       {/* 02 · Ce qui nous anime */}
-      <section id="conviction" className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
+      <section id="conviction" className="border-t border-[#ddd7cc] bg-[#f5f3ef] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-screen-xl">
           <IntroLigne gauche="01 · Ce qui nous anime" droite="La conviction avant la forme" />
           <div className="grid items-end gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <h2 className={`ap-reveal max-w-[760px] ${H2} lg:text-[68px]`}>
               Une marque ne se résume pas à{" "}
-              <span className="bg-[linear-gradient(transparent_82%,rgba(216,165,58,0.35)_82%)]">ce qu’elle montre.</span>
+              <span className="bg-[linear-gradient(transparent_82%,rgba(216,165,58,0.35)_82%)]">ce qu’elle <span className="text-[#9a7426]">montre.</span></span>
             </h2>
             <div className="ap-reveal max-w-[440px] border-t border-[#dedad4] pt-6 lg:justify-self-end">
               <p className="text-base leading-[1.85] text-[#484440] sm:text-[17px]">
@@ -220,11 +220,11 @@ export function AproposV2() {
       </section>
 
       {/* 03 · Qui nous accompagnons */}
-      <section id="publics" className="border-t border-[#dedad4] px-4 py-20 lg:px-8 lg:py-28">
+      <section id="publics" className="border-t border-[#dedad4] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-screen-xl">
           <IntroLigne gauche="02 · Qui nous accompagnons" droite="Des ambitions de toutes tailles" />
           <div className="ap-reveal mb-10 grid items-end gap-5 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-            <h2 className={`max-w-[620px] ${H2}`}>À chaque étape de votre développement.</h2>
+            <h2 className={`max-w-[620px] ${H2}`}>À chaque étape de votre <span className="text-[#9a7426]">développement.</span></h2>
             <p className="max-w-[390px] text-[15px] leading-[1.8] text-[#6b6964] sm:text-base lg:justify-self-end">
               De la première idée à une organisation établie, nous adaptons notre accompagnement à votre situation, à vos ressources et à vos objectifs.
             </p>
@@ -273,7 +273,7 @@ export function AproposV2() {
       </section>
 
       {/* 04 · Notre vision */}
-      <section id="vision" className="relative scroll-mt-4 overflow-hidden bg-[#211e1d] text-white px-4 py-20 lg:px-8 lg:py-32">
+      <section id="vision" className="relative scroll-mt-4 overflow-hidden bg-[linear-gradient(130deg,#181615,#2b211d_67%,#171515)] text-white px-4 py-20 lg:px-8 lg:py-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)] [background-size:76px_76px] [mask-image:linear-gradient(to_right,transparent_15%,black_100%)]"
@@ -281,7 +281,7 @@ export function AproposV2() {
         <div className="relative mx-auto grid max-w-screen-xl items-center gap-6 lg:grid-cols-2 lg:gap-16">
           <div className="ap-reveal">
             <Eyebrow className="!text-[#b7b1ac]">03 · Notre vision</Eyebrow>
-            <h2 className={`my-6 ${H2} !text-white lg:text-[64px]`}>Faire avancer les marques et les idées qui les portent.</h2>
+            <h2 className={`my-6 ${H2} !text-white lg:text-[64px]`}>Faire avancer les marques et les idées qui les <span className="text-[#D8A53A]">portent.</span></h2>
             <p className="max-w-[630px] text-[15px] leading-[1.88] text-[#c8c2bb] sm:text-base">
               Notre vision est de faire de NYAKA une agence de référence à la rencontre de la communication créative, du design, de la stratégie et de l’intelligence artificielle.
             </p>
@@ -319,12 +319,12 @@ export function AproposV2() {
       </section>
 
       {/* 05 · Notre manière de travailler */}
-      <section id="methode" className="scroll-mt-4 border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-32">
+      <section id="methode" className="scroll-mt-4 border-t border-[#ddd7cc] bg-[#f5f3ef] px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-screen-xl">
           <IntroLigne gauche="04 · Notre manière de travailler" droite="Une méthode simple et structurée" />
           <div className="ap-reveal mb-14 grid items-end gap-5 lg:mb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <h2 className={H2}>
-              Comprendre.<br />Concevoir.<br />Déployer.
+              Comprendre.<br />Concevoir.<br /><span className="text-[#9a7426]">Déployer.</span>
             </h2>
             <p className="max-w-[390px] text-[15px] leading-[1.8] text-[#6b6964] sm:text-base lg:justify-self-end">
               Chaque projet commence par une question essentielle&nbsp;: quel résultat voulons-nous construire ensemble&nbsp;?
@@ -353,11 +353,11 @@ export function AproposV2() {
       </section>
 
       {/* 06 · Le collectif */}
-      <section id="collectif" className="border-t border-[#dedad4] px-4 py-20 lg:px-8 lg:py-32">
+      <section id="collectif" className="border-t border-[#dedad4] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto grid max-w-screen-xl items-center gap-8 lg:grid-cols-[0.93fr_1.07fr] lg:gap-16">
           <div className="ap-reveal">
             <Eyebrow>05 · Le collectif</Eyebrow>
-            <h2 className={`my-6 ${H2}`}>Des regards différents. Une vision commune.</h2>
+            <h2 className={`my-6 ${H2}`}>Des regards différents. Une vision <span className="text-[#9a7426]">commune.</span></h2>
             <p className="max-w-[505px] text-[15px] leading-[1.9] text-[#6b6964] sm:text-base">
               NYAKA s’appuie sur une équipe créative et des compétences complémentaires, mobilisées selon la nature de chaque projet.
             </p>
@@ -410,25 +410,25 @@ export function AproposV2() {
       </section>
 
       {/* 07 · Contact */}
-      <section id="contact" className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
+      <section id="contact" className="bg-[linear-gradient(130deg,#181615,#2b211d_67%,#171515)] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-screen-xl items-end gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:gap-16">
           <div className="ap-reveal">
             <Eyebrow>Et maintenant&nbsp;?</Eyebrow>
-            <h2 className={`mt-5 max-w-[720px] ${H2} lg:text-[66px]`}>Votre projet mérite une direction juste.</h2>
+            <h2 className={`mt-5 max-w-[720px] ${H2} !text-white lg:text-[66px]`}>Votre projet mérite une direction <span className="text-[#D8A53A]">juste.</span></h2>
           </div>
           <div className="ap-reveal flex flex-col items-start gap-6">
-            <p className="max-w-[375px] text-base leading-[1.8] text-[#6b6964] sm:text-[17px]">
+            <p className="max-w-[375px] text-base leading-[1.8] text-[#bfb6aa] sm:text-[17px]">
               Une idée à lancer, une identité à construire, une communication à repenser ou une solution à développer&nbsp;? Parlons-en.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/demarrer-un-projet" className={`${BTN} bg-[#161616] text-white hover:opacity-90`}>
+              <Link href="/demarrer-un-projet" className={`${BTN} bg-[#f6f3ee] text-[#161616] hover:opacity-90`}>
                 Démarrer un projet <ArrowUpRight className="h-4 w-4" />
               </Link>
               <a
                 href="https://wa.me/79152135853"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${BTN} border border-[#dedad4] text-[#1f1d1b] hover:border-[#161616]`}
+                className={`${BTN} border border-[#5a4f47] text-white hover:border-[#D8A53A]`}
               >
                 Échanger sur WhatsApp <ArrowUpRight className="h-4 w-4" />
               </a>

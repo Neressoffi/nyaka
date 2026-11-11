@@ -1017,3 +1017,19 @@ v62 — Accueil : couleurs des sections harmonisées (prototype 3)   (11/11/2026
     - Textes inchangés. La page Solutions garde ses couleurs.
   FICHIERS : components/accueil/AccueilV2.tsx, components/accueil/AccueilSituations.tsx
   RESTAURER : copier les fichiers de « v62/avant » (retirer « .txt »).
+
+==============================================================================
+v63 — À propos : couleurs harmonisées comme l'accueil (prototype A)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (page À propos, couleurs uniquement)
+    - Fonds ivoire #f5f3ef (Ce qui nous anime, Notre manière de travailler)
+      et beige #efebe4 (Qui nous accompagnons, Le collectif).
+    - Haut de page et « Notre vision » : dégradé sombre de l'accueil.
+    - Dernier mot doré dans les grands titres : « montre. »,
+      « développement. », « portent. », « Déployer. », « commune. », « juste. ».
+    - Bloc final « Votre projet mérite une direction juste. » en sombre,
+      boutons adaptés (Démarrer un projet clair, WhatsApp en contour).
+    - Textes inchangés.
+  FICHIER : components/apropos/AproposV2.tsx
+  RESTAURER : copier « v63/avant/components_apropos_AproposV2.tsx.txt » vers
+    components/apropos/AproposV2.tsx (retirer « .txt »).
