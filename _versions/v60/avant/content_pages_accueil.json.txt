@@ -1,0 +1,264 @@
+{
+  "hero": {
+    "image": "/nyaka-hero-bg.png",
+    "pastille": "BRANDING · DESIGN · VIDÉO · INTELLIGENCE ARTIFICIELLE & DONNÉES",
+    "titre": "Des idées qui prennent forme. Des marques qui laissent une trace.",
+    "sous_texte": "Branding, design, vidéo et intelligence artificielle : nous donnons vie à vos projets.",
+    "bouton_principal": {
+      "texte": "Voir nos réalisations",
+      "lien": "/realisations"
+    },
+    "bouton_secondaire": {
+      "texte": "Parler de votre projet",
+      "lien": "/demarrer-un-projet"
+    },
+    "mention": "Votre projet peut encore être au stade de l'idée. Nous commencerons par le clarifier avec vous.",
+    "sequence_dynamique": [
+      "Une identité qui marque",
+      "Une communication claire",
+      "Des contenus qui engagent",
+      "Une présence digitale cohérente",
+      "Une campagne créative",
+      "Une solution data & IA",
+      "Un repositionnement de marque",
+      "Une expérience digitale"
+    ]
+  },
+  "references": {
+    "titre": "Ils nous font confiance",
+    "logos": [
+      {
+        "nom": "KAWA",
+        "logo": "/references/kawa.png"
+      },
+      {
+        "nom": "THE VISION",
+        "logo": "/references/the-vision.png"
+      },
+      {
+        "nom": "7G Services",
+        "logo": "/references/7g-services.png"
+      },
+      {
+        "nom": "BRIRENA HAIR",
+        "logo": "/references/brirena-hair.png"
+      },
+      {
+        "nom": "Perfecta",
+        "logo": "/references/perfecta.png"
+      }
+    ]
+  },
+  "poles": {
+    "surtitre": "Nos quatre pôles",
+    "titre": "Quatre expertises. Une même vision.",
+    "sous_texte": "Du branding à l'intelligence artificielle, nous donnons forme à vos idées avec les expertises adaptées à chaque projet."
+  },
+  "besoins": {
+    "titre": "Que souhaitez-vous construire ?",
+    "sous_texte": "Choisissez le point de départ qui correspond le mieux à votre besoin. Vous n'avez pas besoin d'avoir déjà défini toute la solution.",
+    "lien_bas": {
+      "texte": "Je ne sais pas encore quelle solution choisir",
+      "lien": "/demarrer-un-projet"
+    },
+    "cartes": [
+      {
+        "titre": "Une identité de marque",
+        "description": "Créer ou repenser votre positionnement, votre logo et votre univers visuel.",
+        "icone": "image",
+        "couleur": "violet",
+        "lien": "/solutions#branding"
+      },
+      {
+        "titre": "Des supports professionnels",
+        "description": "Présenter vos offres à travers des flyers, brochures, catalogues, menus ou documents commerciaux.",
+        "icone": "agrandir",
+        "couleur": "bleu-ciel",
+        "lien": "/solutions#design"
+      },
+      {
+        "titre": "Une vidéo publicitaire",
+        "description": "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.",
+        "icone": "video",
+        "couleur": "bleu",
+        "lien": "/solutions#video"
+      },
+      {
+        "titre": "Une campagne créative",
+        "description": "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.",
+        "icone": "ciseaux",
+        "couleur": "bleu",
+        "lien": "/solutions#video"
+      },
+      {
+        "titre": "Une expérience digitale simple",
+        "description": "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.",
+        "icone": "baguette",
+        "couleur": "vert",
+        "lien": "/solutions#design"
+      },
+      {
+        "titre": "Un assistant intelligent",
+        "description": "Concevoir un assistant ou un chatbot à partir d'un usage, de données et d'un objectif précis.",
+        "icone": "micro",
+        "couleur": "orange",
+        "lien": "/solutions#ia-data"
+      },
+      {
+        "titre": "Un système de collecte de données",
+        "description": "Organiser la collecte d'informations clients afin de mieux comprendre, segmenter ou accompagner vos publics.",
+        "icone": "musique",
+        "couleur": "orange",
+        "lien": "/solutions#ia-data"
+      },
+      {
+        "titre": "Un projet encore à clarifier",
+        "description": "Présentez-nous votre situation. Nous vous aiderons à identifier le bon point de départ.",
+        "icone": "boite",
+        "couleur": "vert",
+        "lien": "/demarrer-un-projet"
+      }
+    ]
+  },
+  "realisations": {
+    "surtitre": "Nos réalisations",
+    "titre": "Nos idées prennent vie ici.",
+    "sous_texte": "Découvrez une sélection de projets imaginés et réalisés par NYAKA.",
+    "etiquette_phare": "Projet phare",
+    "projet_phare": {
+      "nom": "KAWA Coffee Shop",
+      "categorie": "Restauration / Coffee shop",
+      "texte": "Une carte de menu repensée comme une expérience de marque.",
+      "image": "/media/1060.jpg",
+      "lien": "/realisations/kawa-menu-experience"
+    },
+    "projets": [
+      {
+        "nom": "THE VISION",
+        "categorie": "Éducation / Orientation internationale",
+        "texte": "Des contenus et des campagnes pour valoriser les opportunités de mobilité internationale.",
+        "image": "/media/1015.jpg",
+        "lien": "/realisations/the-vision"
+      },
+      {
+        "nom": "7G Services",
+        "categorie": "Services financiers et assistance",
+        "texte": "Des communications visuelles pour rendre les services financiers plus accessibles.",
+        "image": "/media/1043.jpg",
+        "lien": "/realisations/7g-services-7g-pay"
+      },
+      {
+        "nom": "BRIRENA HAIR",
+        "categorie": "Beauté / Afro-luxury",
+        "texte": "Une identité visuelle élégante pour une marque de beauté capillaire.",
+        "image": "/media/1067.jpg",
+        "lien": "/realisations/brirena-hair"
+      },
+      {
+        "nom": "Perfecta",
+        "categorie": "Support commercial / Catalogue",
+        "texte": "Des supports commerciaux conçus pour valoriser l'offre de l'entreprise.",
+        "image": "/media/1062.jpg",
+        "lien": "/realisations/perfecta"
+      }
+    ],
+    "bouton": {
+      "texte": "Explorer toutes nos réalisations",
+      "lien": "/realisations"
+    }
+  },
+  "pourquoi": {
+    "surtitre": "Pourquoi NYAKA ?",
+    "titre": "Chaque projet mérite une réponse juste.",
+    "cartes": [
+      {
+        "titre": "Comprendre avant de créer",
+        "texte": "Nous identifions vos besoins et vos objectifs avant de proposer une solution.",
+        "icone": "balance"
+      },
+      {
+        "titre": "Des expertises complémentaires",
+        "texte": "Nos compétences se combinent pour répondre aux exigences de votre projet.",
+        "icone": "calques"
+      },
+      {
+        "titre": "Une approche sur mesure",
+        "texte": "Chaque solution est adaptée à vos priorités, vos contraintes et votre ambition.",
+        "icone": "branches"
+      },
+      {
+        "titre": "Penser au-delà du présent",
+        "texte": "Nous concevons des solutions capables d’accompagner votre évolution.",
+        "icone": "etincelles"
+      }
+    ],
+    "signature": "NYAKA — L'empreinte de votre marque.",
+    "bouton_principal": {
+      "texte": "Découvrir notre approche",
+      "lien": "/notre-approche"
+    },
+    "bouton_secondaire": {
+      "texte": "Parler de votre projet",
+      "lien": "/demarrer-un-projet"
+    }
+  },
+  "faq": {
+    "titre": "Réponses à vos questions",
+    "bouton": {
+      "texte": "Parler de votre projet",
+      "lien": "/demarrer-un-projet"
+    },
+    "questions": [
+      {
+        "question": "Quels types de projets NYAKA accompagne-t-elle ?",
+        "reponse": "NYAKA intervient sur des projets de branding et d'identité de marque, de design et de supports de communication, de contenus vidéo et de campagnes créatives, ainsi que sur certains besoins liés à l'intelligence artificielle, à l'automatisation et aux données."
+      },
+      {
+        "question": "Puis-je vous contacter si mon idée n'est pas encore bien structurée ?",
+        "reponse": "Oui. Vous pouvez nous présenter une idée, un besoin ou une difficulté encore imprécise. Le premier échange sert justement à clarifier la situation, le résultat attendu et le bon point de départ."
+      },
+      {
+        "question": "Travaillez-vous seulement avec des entreprises déjà établies ?",
+        "reponse": "Non. NYAKA peut accompagner un projet au stade de l'idée, une marque en lancement, une organisation déjà active ou une entreprise qui prépare une évolution importante."
+      },
+      {
+        "question": "Puis-je commander uniquement un logo, une vidéo ou un support précis ?",
+        "reponse": "Oui, lorsqu'une intervention ciblée correspond réellement au besoin. Nous prendrons néanmoins le temps de comprendre le contexte afin que le livrable soit cohérent avec votre objectif et votre organisation."
+      },
+      {
+        "question": "Comment se déroule un projet avec NYAKA ?",
+        "reponse": "Après la présentation du besoin, nous cadrons la mission, clarifions les objectifs, proposons une démarche et un périmètre, puis nous avançons après validation. Selon le projet, NYAKA produit directement, coordonne des partenaires et peut accompagner la mise en œuvre ou l'évolution."
+      },
+      {
+        "question": "Travaillez-vous avec des clients situés dans d'autres pays ?",
+        "reponse": "Oui. Une partie des projets peut être conduite à distance. Lorsque le projet exige une présence locale ou une compétence particulière, nous définissons les modalités et les partenaires nécessaires."
+      },
+      {
+        "question": "Que propose NYAKA en intelligence artificielle et en données ?",
+        "reponse": "Nous aidons à identifier des usages utiles, puis à concevoir ou coordonner des assistants intelligents, des automatisations ciblées, des systèmes de collecte et de structuration de données ou des expériences connectées. Le périmètre dépend du besoin, des données disponibles et de la faisabilité technique."
+      },
+      {
+        "question": "Comment sont calculés les tarifs ?",
+        "reponse": "Les tarifs dépendent du périmètre, de la complexité, des livrables, des délais et des expertises mobilisées. Après un premier échange, nous transmettons une proposition claire avec les étapes, les responsabilités et les conditions de collaboration."
+      },
+      {
+        "question": "Combien de temps faut-il pour réaliser un projet ?",
+        "reponse": "La durée varie selon la nature du besoin et les validations nécessaires. Le calendrier est défini avant le démarrage et ajusté uniquement lorsque le périmètre évolue ou qu'une dépendance externe le nécessite."
+      }
+    ]
+  },
+  "appel_final": {
+    "surtitre": "Parlons de votre projet",
+    "titre": "Un projet en tête ? Parlons-en.",
+    "description": "Partagez-nous votre idée ou votre besoin. Ensemble, donnons-lui la bonne direction.",
+    "bouton_principal": {
+      "texte": "Démarrer un projet",
+      "lien": "/demarrer-un-projet"
+    },
+    "bouton_whatsapp": {
+      "texte": "Échanger sur WhatsApp",
+      "lien": "https://wa.me/79152135853"
+    },
+    "mention": "Premier échange sans engagement."
+  }
+}

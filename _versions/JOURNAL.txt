@@ -964,3 +964,40 @@ v59 — Tirets longs « — » retirés sur tout le site   (11/11/2026)
     app/anne-arena/page.tsx
   RESTAURER : copier les fichiers de « v59/avant » (retirer « .txt » ; les
     « _ » du nom = dossiers).
+
+==============================================================================
+v60 — Ponctuation harmonisée sur tout le site   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (ponctuation uniquement, le sens des textes ne change pas)
+    - Petits titres : « / » remplacé par « · » (ex. « 01 · Branding »,
+      « Votre situation · Notre réponse », « 03 · Notre vision »).
+    - Points retirés en fin de titres d'un seul mot (Solutions : « Branding »,
+      « Design », « Vidéo & campagnes », « IA & Data »), après le numéro de
+      « Une réponse adaptée » et à la fin des 27 légendes de photos des fiches.
+    - Surtitres « NYAKA · L'empreinte de votre marque » sans point final.
+    - Fiche 7G : « Pour 7G Services, des visuels consacrés aux transferts, aux
+      paiements et aux autres prestations. Pour 7G PAY, la création du logo et
+      des visuels promotionnels. » (plus de « : »). Virgules en trop retirées
+      (7G et Perfecta).
+    - « Partagez-nous votre idée ou votre besoin. » corrigé en « Faites-nous
+      part de votre idée ou de votre besoin. » (Accueil et Solutions).
+    - À propos : « Faire avancer les marques et les idées qui les portent. »
+  FICHIERS : components/accueil/AccueilV2.tsx, components/accueil/AccueilSituations.tsx,
+    components/solutions/SolutionsV5.tsx, components/apropos/AproposV2.tsx,
+    content/realisations/portfolio.json, content/pages/accueil.json,
+    app/a-propos/page.tsx
+  RESTAURER : copier les fichiers de « v60/avant » (retirer « .txt » ; les
+    « _ » du nom = dossiers).
+
+==============================================================================
+v61 — Accueil : couleurs du haut de page harmonisées (maquette 2)   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (haut de la page d'accueil uniquement)
+    - Menu en version sombre, comme sur Solutions, À propos et Réalisations
+      (plus de bande claire au-dessus du haut de page).
+    - Ors du site : surtitre, « Des marques qui laissent une trace. » et
+      détails de la carte animée en or du logo #D8A53A (or clair #e8c477 pour
+      le compteur) ; phrase d'introduction en gris clair #bfb6aa.
+    - Textes, boutons et sections suivantes inchangés.
+  FICHIERS : app/page.tsx, components/accueil/AccueilV2.tsx
+  RESTAURER : copier les fichiers de « v61/avant » (retirer « .txt »).

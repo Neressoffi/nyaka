@@ -52,28 +52,28 @@
         {
           "image": "/media/realisations/KME/KME_photo_01.jpg",
           "type": "Photos en situation",
-          "legende": "Le menu en main.",
+          "legende": "Le menu en main",
           "alt": "Cliente consultant le menu KAWA ouvert",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_photo_02.jpg",
           "type": "Photos en situation",
-          "legende": "Le QR code en situation.",
+          "legende": "Le QR code en situation",
           "alt": "Menu KAWA tenu en main avec son QR code visible",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_page_01.jpg",
           "type": "Pages intérieures",
-          "legende": "Deux pages intérieures.",
+          "legende": "Deux pages intérieures",
           "alt": "Deux pages intérieures du menu KAWA au style vintage",
           "autorise": true
         },
         {
           "image": "/media/realisations/KME/KME_capture_digitale.jpg",
           "type": "Menu digital",
-          "legende": "Le menu sur smartphone.",
+          "legende": "Le menu sur smartphone",
           "alt": "Menu digital KAWA affiché sur deux smartphones",
           "autorise": true
         }
@@ -110,42 +110,42 @@
         {
           "image": "/media/realisations/KIP/KIP_photo_01.jpg",
           "type": "Shooting institutionnel",
-          "legende": "Shooting institutionnel.",
+          "legende": "Shooting institutionnel",
           "alt": "Salle du coffee shop KAWA éclairée par des suspensions",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_02.jpg",
           "type": "Shooting institutionnel",
-          "legende": "Shooting institutionnel.",
+          "legende": "Shooting institutionnel",
           "alt": "Cliente lisant la carte KAWA en terrasse",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_03.jpg",
           "type": "Shooting institutionnel",
-          "legende": "Shooting institutionnel.",
+          "legende": "Shooting institutionnel",
           "alt": "Jus d’orange servi sur une table KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_photo_04.jpg",
           "type": "Shooting institutionnel",
-          "legende": "Shooting institutionnel.",
+          "legende": "Shooting institutionnel",
           "alt": "Assiette servie par l’équipe KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_depliant_couverture.jpg",
           "type": "Dépliant",
-          "legende": "Couverture du dépliant.",
+          "legende": "Couverture du dépliant",
           "alt": "Recto et verso du dépliant institutionnel KAWA",
           "autorise": true
         },
         {
           "image": "/media/realisations/KIP/KIP_depliant_extrait.jpg",
           "type": "Dépliant",
-          "legende": "Un extrait intérieur.",
+          "legende": "Un extrait intérieur",
           "alt": "Pages intérieures du dépliant KAWA présentant les solutions professionnelles",
           "autorise": true
         }
@@ -182,28 +182,28 @@
         {
           "image": "/media/realisations/TV/TV_catalogue_couverture.jpg",
           "type": "Catalogue",
-          "legende": "Couverture du catalogue.",
+          "legende": "Couverture du catalogue",
           "alt": "Couverture de la brochure Programme Ambassadeur de THE VISION",
           "autorise": true
         },
         {
           "image": "/media/realisations/TV/TV_catalogue_extrait.jpg",
           "type": "Catalogue",
-          "legende": "Un extrait intérieur.",
+          "legende": "Un extrait intérieur",
           "alt": "Pages intérieures de la brochure Programme Ambassadeur de THE VISION",
           "autorise": true
         },
         {
           "image": "/media/realisations/TV/TV_visuel_01.jpg",
           "type": "Visuels publicitaires",
-          "legende": "Visuel publicitaire.",
+          "legende": "Visuel publicitaire",
           "alt": "Affiche THE VISION « Rentrées décalées 2027 »",
           "autorise": true
         },
         {
           "image": "/media/realisations/TV/TV_visuel_02.jpg",
           "type": "Réseaux sociaux",
-          "legende": "Publications pour les réseaux sociaux.",
+          "legende": "Publications pour les réseaux sociaux",
           "alt": "Publications THE VISION « Étudier en France » et « Enfin c’est vendredi »",
           "autorise": true
         }
@@ -230,38 +230,38 @@
       },
       "realisations": {
         "accroche": "Deux volets complémentaires.",
-        "texte": "7G Services : visuels pour les transferts, paiements et autres prestations. 7G PAY : création du logo et des visuels promotionnels."
+        "texte": "Pour 7G Services, des visuels consacrés aux transferts, aux paiements et aux autres prestations. Pour 7G PAY, la création du logo et des visuels promotionnels."
       },
       "resultat": {
         "accroche": "Une communication cohérente, du service à l’application.",
-        "texte": "Des supports adaptés aux offres de 7G Services, et une identité dédiée à 7G PAY."
+        "texte": "Des supports adaptés aux offres de 7G Services et une identité dédiée à 7G PAY."
       },
       "galerie": [
         {
           "image": "/media/realisations/7G/7G_services_transferts.jpg",
           "type": "7G Services · Visuels",
-          "legende": "Transferts.",
+          "legende": "Transferts",
           "alt": "Affiche 7G Services « Your trusted partner for your money transfers »",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_services_paiements.jpg",
           "type": "7G Services · Visuels",
-          "legende": "Paiements.",
+          "legende": "Paiements",
           "alt": "Affiche 7G Services « Envoyez, recevez, souriez »",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_pay_logo.jpg",
           "type": "7G PAY · Logo",
-          "legende": "Logo 7G PAY.",
+          "legende": "Logo 7G PAY",
           "alt": "Logo de l’application 7G PAY en forme de bouclier vert et or",
           "autorise": true
         },
         {
           "image": "/media/realisations/7G/7G_pay_promo.jpg",
           "type": "7G PAY · Visuels promotionnels",
-          "legende": "Visuel promotionnel.",
+          "legende": "Visuel promotionnel",
           "alt": "Visuel promotionnel 7G PAY présentant l’application sur smartphone",
           "autorise": true
         }
@@ -298,21 +298,21 @@
         {
           "image": "/media/realisations/BRI/BRI_logo_variante.jpg",
           "type": "Logo",
-          "legende": "Déclinaison du logo.",
+          "legende": "Déclinaison du logo",
           "alt": "Quatre versions du logo BRIRENA HAIR : horizontale, verticale, monogramme noir et monogramme blanc",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_palette.jpg",
           "type": "Palette & typographies",
-          "legende": "Palette et typographies.",
+          "legende": "Palette et typographies",
           "alt": "Typographies Cormorant et Montserrat, palette chocolat, terracotta, beige et or de BRIRENA HAIR",
           "autorise": true
         },
         {
           "image": "/media/realisations/BRI/BRI_application.jpg",
           "type": "Applications",
-          "legende": "Applications de l’identité.",
+          "legende": "Applications de l’identité",
           "alt": "Sac, coffret cadeau, étiquette et autocollant aux couleurs de BRIRENA HAIR",
           "autorise": true
         }
@@ -339,7 +339,7 @@
       },
       "realisations": {
         "accroche": "Du logo aux supports de communication.",
-        "texte": "Refonte du logo, catalogue des prestations et tarifs, et visuels publicitaires."
+        "texte": "Refonte du logo, catalogue des prestations et des tarifs, visuels publicitaires."
       },
       "resultat": {
         "accroche": "Une image renouvelée, une communication plus cohérente.",
@@ -349,28 +349,28 @@
         {
           "image": "/media/realisations/PER/PER_logos.jpg",
           "type": "Logo",
-          "legende": "Ancien et nouveau logo.",
+          "legende": "Ancien et nouveau logo",
           "alt": "Comparaison de l’ancien logo Perfecta et du nouveau logo Institut Perfecta",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_catalogue_couverture.jpg",
           "type": "Catalogue",
-          "legende": "Couverture du catalogue.",
+          "legende": "Couverture du catalogue",
           "alt": "Couverture du catalogue des prix de l’Institut Perfecta",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_catalogue_extrait.jpg",
           "type": "Catalogue",
-          "legende": "Un extrait intérieur.",
+          "legende": "Un extrait intérieur",
           "alt": "Pages intérieures du catalogue Perfecta : gommages et hammam",
           "autorise": true
         },
         {
           "image": "/media/realisations/PER/PER_visuel_01.jpg",
           "type": "Visuels publicitaires",
-          "legende": "Visuel publicitaire.",
+          "legende": "Visuel publicitaire",
           "alt": "Affiche « Promo by Perfecta » pour les fêtes de fin d’année",
           "autorise": true
         }
@@ -407,14 +407,14 @@
         {
           "image": "/media/realisations/IA/IA_capture_01.jpg",
           "type": "Captures d’échanges",
-          "legende": "Une question sur les services.",
+          "legende": "Une question sur les services",
           "alt": "Échange avec l’Assistant IA NYAKA sur les services (visuel provisoire)",
           "autorise": true
         },
         {
           "image": "/media/realisations/IA/IA_capture_02.jpg",
           "type": "Captures d’échanges",
-          "legende": "Orientation vers le bon service.",
+          "legende": "Orientation vers le bon service",
           "alt": "L’Assistant IA NYAKA oriente l’utilisateur vers un service (visuel provisoire)",
           "autorise": true
         }

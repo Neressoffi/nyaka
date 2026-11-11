@@ -250,7 +250,7 @@
   "appel_final": {
     "surtitre": "Parlons de votre projet",
     "titre": "Un projet en tête ? Parlons-en.",
-    "description": "Partagez-nous votre idée ou votre besoin. Ensemble, donnons-lui la bonne direction.",
+    "description": "Faites-nous part de votre idée ou de votre besoin. Ensemble, donnons-lui la bonne direction.",
     "bouton_principal": {
       "texte": "Démarrer un projet",
       "lien": "/demarrer-un-projet"

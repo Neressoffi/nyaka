@@ -30,7 +30,7 @@ export function AccueilSituations() {
       <style dangerouslySetInnerHTML={{ __html: SV5_CSS }} />
       <section className="situations" id="votre-situation" aria-labelledby="situationTitleAccueil">
         <div className="container">
-          <div className="section-head"><span className="eyebrow">Votre situation / Notre réponse</span><span className="section-ref">Trouver le bon point de départ</span></div>
+          <div className="section-head"><span className="eyebrow">Votre situation · Notre réponse</span><span className="section-ref">Trouver le bon point de départ</span></div>
           <div className="situation-head"><h2 id="situationTitleAccueil" className="reveal">Une idée. Plusieurs chemins possibles.</h2><p className="reveal">Vous connaissez votre besoin, mais pas nécessairement la solution. Choisissez la situation qui vous correspond pour découvrir comment NYAKA peut vous accompagner.</p></div>
           <div className="situation-grid">
             <div className="situation-options" aria-label="Choisir votre situation">
@@ -43,7 +43,7 @@ export function AccueilSituations() {
             </div>
             <div className="situation-detail" aria-live="polite" aria-atomic="true">
               <span className="detail-kicker">Une réponse adaptée</span>
-              <div className="detail-index">{String(choix + 1).padStart(2, "0")}.</div>
+              <div className="detail-index">{String(choix + 1).padStart(2, "0")}</div>
               <h3>{s.titre}</h3>
               <p>{s.texte}</p>
               <div className="detail-tags">{s.tags.map((t) => <span key={t}>{t}</span>)}</div>

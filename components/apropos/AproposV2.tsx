@@ -10,21 +10,21 @@ import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-reac
 
 const PUBLICS = [
   {
-    surtitre: "01 / Les idées qui démarrent",
+    surtitre: "01 · Les idées qui démarrent",
     titre: "Entrepreneurs & porteurs de projets",
     texte: "Donner une direction, une identité et des outils solides aux idées qui prennent forme.",
     bas: "Votre point de départ",
     resultat: "Transformer une idée en projet clairement présenté et identifiable.",
   },
   {
-    surtitre: "02 / Les activités qui grandissent",
+    surtitre: "02 · Les activités qui grandissent",
     titre: "Petites & moyennes entreprises",
     texte: "Renforcer leur image, structurer leur communication et soutenir leur croissance.",
     bas: "Votre prochaine étape",
     resultat: "Renforcer la cohérence de l’image et donner plus de portée à la communication.",
   },
   {
-    surtitre: "03 / Les structures qui évoluent",
+    surtitre: "03 · Les structures qui évoluent",
     titre: "Grandes entreprises & organisations",
     texte: "Accompagner des projets plus complexes avec créativité, rigueur et solutions adaptées.",
     bas: "Vos nouveaux enjeux",
@@ -122,8 +122,8 @@ export function AproposV2() {
       <section id="intro" className="overflow-hidden bg-[#191716] px-4 pb-14 pt-32 text-white lg:px-8 lg:pb-16 lg:pt-40">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 flex items-center justify-between gap-5 lg:mb-11">
-            <Eyebrow className="!text-[#D8A53A]">Notre identité / L’agence</Eyebrow>
-            <Tiny className="hidden !text-[#a59c90] sm:inline">NYAKA · L’empreinte de votre marque.</Tiny>
+            <Eyebrow className="!text-[#D8A53A]">Notre identité · L’agence</Eyebrow>
+            <Tiny className="hidden !text-[#a59c90] sm:inline">NYAKA · L’empreinte de votre marque</Tiny>
           </div>
 
           <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8 [&>*]:min-w-0">
@@ -200,7 +200,7 @@ export function AproposV2() {
       {/* 02 · Ce qui nous anime */}
       <section id="conviction" className="border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-screen-xl">
-          <IntroLigne gauche="01 / Ce qui nous anime" droite="La conviction avant la forme" />
+          <IntroLigne gauche="01 · Ce qui nous anime" droite="La conviction avant la forme" />
           <div className="grid items-end gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <h2 className={`ap-reveal max-w-[760px] ${H2} lg:text-[68px]`}>
               Une marque ne se résume pas à{" "}
@@ -222,7 +222,7 @@ export function AproposV2() {
       {/* 03 · Qui nous accompagnons */}
       <section id="publics" className="border-t border-[#dedad4] px-4 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-screen-xl">
-          <IntroLigne gauche="02 / Qui nous accompagnons" droite="Des ambitions de toutes tailles" />
+          <IntroLigne gauche="02 · Qui nous accompagnons" droite="Des ambitions de toutes tailles" />
           <div className="ap-reveal mb-10 grid items-end gap-5 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <h2 className={`max-w-[620px] ${H2}`}>À chaque étape de votre développement.</h2>
             <p className="max-w-[390px] text-[15px] leading-[1.8] text-[#6b6964] sm:text-base lg:justify-self-end">
@@ -280,8 +280,8 @@ export function AproposV2() {
         />
         <div className="relative mx-auto grid max-w-screen-xl items-center gap-6 lg:grid-cols-2 lg:gap-16">
           <div className="ap-reveal">
-            <Eyebrow className="!text-[#b7b1ac]">03 / Notre vision</Eyebrow>
-            <h2 className={`my-6 ${H2} !text-white lg:text-[64px]`}>Faire avancer les marques. Et les idées qui les portent.</h2>
+            <Eyebrow className="!text-[#b7b1ac]">03 · Notre vision</Eyebrow>
+            <h2 className={`my-6 ${H2} !text-white lg:text-[64px]`}>Faire avancer les marques et les idées qui les portent.</h2>
             <p className="max-w-[630px] text-[15px] leading-[1.88] text-[#c8c2bb] sm:text-base">
               Notre vision est de faire de NYAKA une agence de référence à la rencontre de la communication créative, du design, de la stratégie et de l’intelligence artificielle.
             </p>
@@ -321,7 +321,7 @@ export function AproposV2() {
       {/* 05 · Notre manière de travailler */}
       <section id="methode" className="scroll-mt-4 border-t border-[#ddd7cc] bg-[#efebe4] px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-screen-xl">
-          <IntroLigne gauche="04 / Notre manière de travailler" droite="Une méthode simple et structurée" />
+          <IntroLigne gauche="04 · Notre manière de travailler" droite="Une méthode simple et structurée" />
           <div className="ap-reveal mb-14 grid items-end gap-5 lg:mb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <h2 className={H2}>
               Comprendre.<br />Concevoir.<br />Déployer.
@@ -356,7 +356,7 @@ export function AproposV2() {
       <section id="collectif" className="border-t border-[#dedad4] px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto grid max-w-screen-xl items-center gap-8 lg:grid-cols-[0.93fr_1.07fr] lg:gap-16">
           <div className="ap-reveal">
-            <Eyebrow>05 / Le collectif</Eyebrow>
+            <Eyebrow>05 · Le collectif</Eyebrow>
             <h2 className={`my-6 ${H2}`}>Des regards différents. Une vision commune.</h2>
             <p className="max-w-[505px] text-[15px] leading-[1.9] text-[#6b6964] sm:text-base">
               NYAKA s’appuie sur une équipe créative et des compétences complémentaires, mobilisées selon la nature de chaque projet.
