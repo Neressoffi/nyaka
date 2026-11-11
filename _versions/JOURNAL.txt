@@ -839,3 +839,20 @@ v50 — Accueil : images Branding et Design agrandies   (11/11/2026)
   FICHIER : components/accueil/AccueilV2.tsx
   RESTAURER : copier « v50/avant/components_accueil_AccueilV2.tsx.txt » vers
     components/accueil/AccueilV2.tsx (retirer « .txt ») pour revenir à v49.
+
+==============================================================================
+v51 — Fiches réalisations : photo de couverture en plein écran   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (haut des 7 fiches : KAWA Menu Experience, KAWA Institutional
+    Presentation, THE VISION, 7G Services & 7G PAY, BRIRENA HAIR, Perfecta,
+    Assistant IA NYAKA)
+    - La photo de couverture occupe tout le haut de la page, jusque derrière
+      le menu (au lieu d'un cadre arrondi sous le menu).
+    - Voile sombre en haut (menu lisible) et dégradé vers le noir en bas.
+    - « ← Toutes les réalisations », titre, accroche et expertises écrits
+      par-dessus la photo, en bas à gauche.
+    - Le reste de la fiche (Le défi, Notre réponse, Les réalisations,
+      Le résultat) ne change pas.
+  FICHIER : app/realisations/[slug]/page.tsx
+  RESTAURER : copier « v51/avant/app_realisations_slug_page.tsx.txt » vers
+    app/realisations/[slug]/page.tsx (retirer « .txt »).
