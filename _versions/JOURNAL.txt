@@ -808,3 +808,20 @@ v48 — Réalisations : surtitre « Portfolio NYAKA » retiré   (10/11/2026)
   FICHIER : app/realisations/page.tsx
   RESTAURER : copier « v48/avant/app_realisations_page.tsx.txt » vers
     app/realisations/page.tsx (retirer « .txt »).
+
+==============================================================================
+v49 — Accueil : vraies images pour les onglets Branding et Design   (11/11/2026)
+==============================================================================
+  CE QUI CHANGE (section « Quatre expertises. Une même vision. » uniquement)
+    - Onglet Branding : l'illustration dessinée est remplacée par l'image du
+      manuel d'identité NYAKA déplié (public/media/accueil/expertise-branding.jpg).
+    - Onglet Design : l'illustration est remplacée par l'image du livre de
+      charte NYAKA (public/media/accueil/expertise-design.jpg).
+    - Les images sont affichées en entier (réduites, sans être coupées), sur
+      un fond flouté tiré de la même image.
+    - Textes, onglets, boutons et design inchangés. Vidéo & campagnes et
+      IA & Data inchangés.
+  FICHIERS : components/accueil/AccueilV2.tsx (modifié),
+    public/media/accueil/expertise-branding.jpg et expertise-design.jpg (ajoutés)
+  RESTAURER : copier « v49/avant/components_accueil_AccueilV2.tsx.txt » vers
+    components/accueil/AccueilV2.tsx (retirer « .txt »).
